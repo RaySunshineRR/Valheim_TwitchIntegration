@@ -1182,19 +1182,52 @@ def build_store(data: dict) -> dict:
         ],
     }
 
-    # Tabs that get a second "By tier" block with full progression sets
-    tier_appendix_tabs = ("weapons", "food", "potions", "materials")
+    # Tabs with progression tiers listed first, then by type/family
+    tier_first_tabs = ("weapons", "food", "potions", "materials")
 
     for tab, order in section_order.items():
         help_text = {
-            "weapons": "Jump buttons = weapon family. Scroll further for By tier full sets (T0–T6).",
-            "armor": "Unified tiers — each T# holds the full armor sets for that step (Troll+Bronze under T1, etc.).",
-            "food": "Raw first, then cooked, then prepared, then crops. Below: By tier full food sets.",
-            "potions": "By type first (meads, bases…). Below: By tier full potion sets.",
-            "materials": "By type first (wood, metals…). Below: By tier full material sets.",
+            "weapons": "Gold row = tiers (T0–T6). Second row = weapon family. Catalog starts with tier sets.",
+            "armor": "Unified tiers — each T# holds the full armor sets for that step.",
+            "food": "Gold row = tiers. Second row = raw / cooked / prepared / crops. Catalog starts with tiers.",
+            "potions": "Gold row = tiers. Second row = meads / bases / wines. Catalog starts with tiers.",
+            "materials": "Gold row = tiers. Second row = wood / metals / etc. Catalog starts with tiers.",
             "misc": "Tools, lights, mounts, fireworks, chests — streamer-useful leftovers.",
         }[tab]
         store[tab].append({"type": "help", "text": help_text})
+
+        if tab in tier_first_tabs:
+            tab_items: dict[str, dict] = {}
+            for section, lst in buckets[tab].items():
+                for it in lst:
+                    tab_items[it["prefab"]] = it
+            by_tier: dict[str, list] = defaultdict(list)
+            for it in tab_items.values():
+                by_tier[progression_tier(it["prefab"])].append(it)
+
+            store[tab].append(
+                {
+                    "type": "help",
+                    "text": "By tier — full sets for that progression step.",
+                }
+            )
+            for tier in TIER_ORDER:
+                lst = by_tier.get(tier) or []
+                if not lst:
+                    continue
+                store[tab].append({"type": "section", "title": tier})
+                for it in sorted(lst, key=lambda x: x["prefab"].lower()):
+                    store[tab].append(
+                        entry(it["prefab"], it.get("alias"), it.get("command"))
+                    )
+
+            store[tab].append(
+                {
+                    "type": "help",
+                    "text": "By type — same items grouped by family / category.",
+                }
+            )
+
         seen = set()
         for section in order:
             lst = buckets[tab].get(section) or []
@@ -1207,34 +1240,10 @@ def build_store(data: dict) -> dict:
         for section, lst in sorted(buckets[tab].items()):
             if section in seen or not lst:
                 continue
-            store[tab].append({"type": "section", "title": section})
-            for it in sorted(lst, key=lambda x: x["prefab"].lower()):
-                store[tab].append(entry(it["prefab"], it.get("alias"), it.get("command")))
-
-        if tab not in tier_appendix_tabs:
-            continue
-
-        # Flatten unique items already classified into this tab, regroup by progression tier
-        tab_items: dict[str, dict] = {}
-        for section, lst in buckets[tab].items():
-            for it in lst:
-                tab_items[it["prefab"]] = it
-        by_tier: dict[str, list] = defaultdict(list)
-        for it in tab_items.values():
-            by_tier[progression_tier(it["prefab"])].append(it)
-
-        store[tab].append(
-            {
-                "type": "help",
-                "text": "By tier — full sets for that progression step (same items as above, regrouped).",
-            }
-        )
-        store[tab].append({"type": "section", "title": "By tier"})
-        for tier in TIER_ORDER:
-            lst = by_tier.get(tier) or []
-            if not lst:
+            # Skip bare tier titles already emitted above for tier_first tabs
+            if tab in tier_first_tabs and section in TIER_ORDER:
                 continue
-            store[tab].append({"type": "section", "title": tier})
+            store[tab].append({"type": "section", "title": section})
             for it in sorted(lst, key=lambda x: x["prefab"].lower()):
                 store[tab].append(entry(it["prefab"], it.get("alias"), it.get("command")))
 

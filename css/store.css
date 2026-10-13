@@ -75,6 +75,8 @@ body {
 .hero,
 .tabs,
 .subtabs,
+.tiertabs,
+.typetabs,
 .store,
 .foot {
   position: relative;
@@ -145,18 +147,33 @@ body {
 }
 
 /* Gold submenu: flowing button list (no forced column grid) */
-.subtabs {
+.subtabs,
+.tiertabs,
+.typetabs {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 0.35rem;
-  padding: 0.2rem 0 0.45rem;
+  padding: 0.2rem 0 0.35rem;
   max-height: none;
   overflow: visible;
   animation: rise 0.45s ease-out both;
 }
 
-.subtabs.hidden {
+.tiertabs {
+  padding-top: 0.15rem;
+  padding-bottom: 0.15rem;
+}
+
+.typetabs {
+  padding-top: 0.1rem;
+  padding-bottom: 0.45rem;
+  border-top: 1px solid rgba(201, 162, 39, 0.18);
+}
+
+.subtabs.hidden,
+.tiertabs.hidden,
+.typetabs.hidden {
   display: none;
 }
 

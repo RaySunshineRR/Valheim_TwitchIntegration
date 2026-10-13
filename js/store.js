@@ -39,23 +39,39 @@
     "misc",
   ]);
 
-  /** Weapons keep family-only jump buttons (tier blocks are scroll-only). */
-  const WEAPON_MENU = new Set([
-    "Swords",
-    "Axes",
-    "Maces & clubs",
-    "Spears",
-    "Knives",
-    "Bows",
-    "Arrows & bolts",
-    "Shields",
-    "Magic",
-    "Throwables",
-    "Utility weapons",
-    "Other weapons",
+  /** Gold top row: progression tiers (T0–T6). */
+  const TIER_TABS = new Set([
+    "weapons",
+    "armor",
+    "food",
+    "potions",
+    "materials",
+  ]);
+
+  /** Second row: type / family jumps under the tier row. */
+  const TYPE_TABS = new Set([
+    "weapons",
+    "food",
+    "potions",
+    "materials",
+    "misc",
+  ]);
+
+  /** Section titles that belong on the tier jump row. */
+  const TIER_TITLES = new Set([
+    "T0 · Meadows",
+    "T1 · Black Forest",
+    "T2 · Swamp",
+    "T3 · Mountain",
+    "T4 · Plains",
+    "T5 · Mistlands",
+    "T6 · Ashlands",
+    "Special",
+    "Other",
   ]);
 
   const tabs = Array.from(document.querySelectorAll(".tab"));
+  const tiertabsEl = document.getElementById("tiertabs");
   const subtabsEl = document.getElementById("subtabs");
   const catalog = document.getElementById("catalog");
   const empty = document.getElementById("empty");
@@ -315,27 +331,54 @@
     window.setTimeout(() => el.classList.remove("is-jump-flash"), 900);
   }
 
+  function clearNav(el) {
+    if (!el) return;
+    el.innerHTML = "";
+    el.classList.add("hidden");
+  }
+
+  function appendJumpButtons(container, titles) {
+    container.innerHTML = "";
+    if (!titles.length) {
+      container.classList.add("hidden");
+      return;
+    }
+    container.classList.remove("hidden");
+    for (const title of titles) {
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "subtab subtab-jump";
+      btn.setAttribute("role", "link");
+      btn.dataset.section = title;
+      btn.textContent = title;
+      btn.addEventListener("click", () => jumpToSection(title));
+      container.append(btn);
+    }
+  }
+
   function renderSubtabs() {
     const isMobs = activeTab === "mobs";
     const isJump = JUMP_TABS.has(activeTab);
     const q = (search.value || "").trim();
     const show = (isMobs || isJump) && !q;
-    subtabsEl.classList.toggle("hidden", !show);
     document.body.classList.toggle("is-mobs-tab", isMobs);
     document.body.classList.toggle("is-jump-tab", isJump);
-    subtabsEl.setAttribute(
-      "aria-label",
-      isMobs ? "Biome regions" : "Jump to subcategory",
+    document.body.classList.toggle(
+      "is-tier-tab",
+      show && TIER_TABS.has(activeTab),
     );
 
     if (!show) {
-      subtabsEl.innerHTML = "";
+      clearNav(tiertabsEl);
+      clearNav(subtabsEl);
       return;
     }
 
-    subtabsEl.innerHTML = "";
-
     if (isMobs) {
+      clearNav(tiertabsEl);
+      subtabsEl.classList.remove("hidden");
+      subtabsEl.setAttribute("aria-label", "Biome regions");
+      subtabsEl.innerHTML = "";
       const biomes = biomeSections(entriesFor("mobs"));
       if (!activeBiome || !biomes.includes(activeBiome)) {
         activeBiome = biomes[0] || null;
@@ -358,21 +401,26 @@
       return;
     }
 
-    // Jump mode — keep full list; buttons travel to section headers
-    let titles = sectionTitles(entriesFor(activeTab));
-    if (activeTab === "weapons") {
-      // Do not add tier buttons to the weapons submenu
-      titles = titles.filter((t) => WEAPON_MENU.has(t));
+    const titles = sectionTitles(entriesFor(activeTab)).filter(
+      (t) => t !== "By tier",
+    );
+    const tiers = titles.filter((t) => TIER_TITLES.has(t));
+    const types = titles.filter((t) => !TIER_TITLES.has(t));
+
+    if (tiertabsEl) {
+      tiertabsEl.setAttribute("aria-label", "Progression tiers");
+      if (TIER_TABS.has(activeTab) && tiers.length) {
+        appendJumpButtons(tiertabsEl, tiers);
+      } else {
+        clearNav(tiertabsEl);
+      }
     }
-    for (const title of titles) {
-      const btn = document.createElement("button");
-      btn.type = "button";
-      btn.className = "subtab subtab-jump";
-      btn.setAttribute("role", "link");
-      btn.dataset.section = title;
-      btn.textContent = title;
-      btn.addEventListener("click", () => jumpToSection(title));
-      subtabsEl.append(btn);
+
+    subtabsEl.setAttribute("aria-label", "Jump to subcategory");
+    if (TYPE_TABS.has(activeTab) && types.length) {
+      appendJumpButtons(subtabsEl, types);
+    } else {
+      clearNav(subtabsEl);
     }
   }
 
