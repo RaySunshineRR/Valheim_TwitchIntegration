@@ -290,14 +290,26 @@
       main.append(desc);
     }
 
+    const actions = document.createElement("div");
+    actions.className = "row-actions";
+
+    if (entry.cost != null && Number(entry.cost) > 0) {
+      const cost = document.createElement("span");
+      cost.className = "coin-cost";
+      cost.title = "Heim 🪙 cost (★1 base for creatures)";
+      cost.textContent = `🪙 ${entry.cost}`;
+      actions.append(cost);
+    }
+
     const btn = document.createElement("button");
     btn.type = "button";
     btn.className = "copy-btn";
     btn.textContent = "COPY";
     btn.setAttribute("aria-label", `Copy ${entry.cmd}`);
     btn.addEventListener("click", () => copyText(entry.cmd, btn));
+    actions.append(btn);
 
-    row.append(main, btn);
+    row.append(main, actions);
     return row;
   }
 

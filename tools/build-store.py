@@ -15,9 +15,14 @@ ROOT = Path(__file__).resolve().parents[1]
 CATALOG = Path(
     "/media/rayray/BigChungus/000_AI_WORKSPACE/ZZ_Heim-Heim/docs/prefab-catalog.json"
 )
+ECONOMY_CATALOG = Path(
+    "/media/rayray/BigChungus/000_AI_WORKSPACE/ZZ_Heim-Heim/docs/heimheim-catalog.json"
+)
 OUT_JS = ROOT / "js" / "commands-data.js"
 ICON_DIR = ROOT / "assets" / "icons"
 ICON_MAP = ROOT / "assets" / "icon-map.json"
+# prefab → coinCost from heimheim-catalog.json (filled in main)
+COIN_COSTS: dict[str, int] = {}
 WIKI_IMG = "https://valheim.weirdgloop.org/images/"
 WIKI_API = "https://valheim.weirdgloop.org/api.php"
 UA = {"User-Agent": "ValheimTwitchStore/0.6 (+https://github.com/raysunshinerr/Valheim_TwitchIntegration)"}
@@ -115,9 +120,31 @@ def entry(prefab: str, alias: str | None, command: str | None = None, desc: str 
         "cmd": command or f"#{(alias or prefab).lower()}",
         "prefab": prefab,
     }
+    cost = COIN_COSTS.get(prefab)
+    if cost is not None:
+        e["cost"] = int(cost)
     if desc:
         e["desc"] = desc
     return e
+
+
+def load_coin_costs(path: Path = ECONOMY_CATALOG) -> dict[str, int]:
+    """Map prefab id → coinCost from Heim-Heim economy catalog."""
+    if not path.is_file():
+        print(f"WARNING: economy catalog missing at {path} — cards will omit 🪙")
+        return {}
+    raw = json.loads(path.read_text())
+    out: dict[str, int] = {}
+    rows = raw.get("entries") or list((raw.get("byId") or {}).values())
+    for row in rows:
+        pid = row.get("id") or row.get("prefab")
+        if not pid:
+            continue
+        try:
+            out[str(pid)] = max(1, int(round(float(row.get("coinCost") or 1))))
+        except (TypeError, ValueError):
+            continue
+    return out
 
 
 # ---- Item classification ----
@@ -1105,7 +1132,7 @@ def build_store(data: dict) -> dict:
     store["mobs"].append(
         {
             "type": "help",
-            "text": "Pick a biome sub-tab. Bosses are separate. Bare #alias · optional ★ level (#boar 2). Count is always 1 for now.",
+            "text": "Pick a biome sub-tab. Bosses are separate. Bare #alias · optional ★ level (#boar 2). ★ costs: ★1 = base 🪙 · ★2 = ×1.75 · ★3 = ×2.5. Count is always 1 for now.",
         }
     )
     by_biome: dict[str, list] = defaultdict(list)
@@ -1387,9 +1414,15 @@ def main() -> None:
     )
     args = ap.parse_args()
 
+    global COIN_COSTS
+    COIN_COSTS = load_coin_costs()
+    print(f"Loaded {len(COIN_COSTS)} coin costs from {ECONOMY_CATALOG}")
+
     data = json.loads(CATALOG.read_text())
     print("Building store from", CATALOG)
     store = build_store(data)
+    store.setdefault("meta", {})["currency"] = "🪙"
+    store["meta"]["economySource"] = str(ECONOMY_CATALOG)
     write_js(store)
 
     if args.no_icons:

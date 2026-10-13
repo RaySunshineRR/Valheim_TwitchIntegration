@@ -401,6 +401,21 @@ body.is-jump-tab .catalog .copy-btn {
   line-height: 1.45;
 }
 
+.row-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  justify-self: end;
+}
+
+.coin-cost {
+  color: var(--gold);
+  font-size: 0.42rem;
+  white-space: nowrap;
+  line-height: 1.2;
+  text-shadow: 0 0 12px rgba(201, 162, 39, 0.25);
+}
+
 .copy-btn {
   appearance: none;
   border: 2px solid var(--accent);
