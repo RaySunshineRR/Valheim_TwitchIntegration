@@ -169,6 +169,8 @@ ARMOR_TIER_HINTS = [
     ("Fenring", "T3 · Mountain"),
     ("DeepNorth", "T3 · Mountain"),
     ("Wolf", "T3 · Mountain"),
+    # Full Lox set (chest/legs/helmet/cape) stays with Padded on Plains
+    ("Lox", "T4 · Plains"),
     ("Padded", "T4 · Plains"),
     ("Carapace", "T5 · Mistlands"),
     ("Eitr", "T5 · Mistlands"),
