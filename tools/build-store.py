@@ -482,7 +482,7 @@ def build_store(data: dict) -> dict:
             "Utility weapons",
             "Other weapons",
         ],
-        "armor": [s for _, s in ARMOR_TIER_HINTS] + ["Other armor"],
+        "armor": list(dict.fromkeys([s for _, s in ARMOR_TIER_HINTS] + ["Other armor"])),
         "food": [
             "Cooked meals",
             "Prepared dishes",
