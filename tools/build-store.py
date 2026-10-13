@@ -215,12 +215,16 @@ CORE_MATERIAL_PREFABS = {
     "Root",
     "SerpentScale",
     "Guck",
+    "Ooze",
+    "OozeMork",
     "Resin",
     "Coal",
     "Stone",
     "Flint",
     "Obsidian",
     "Crystal",
+    "BlackMarble",
+    "Grausten",
     "Chitin",
     "Feathers",
     "LeatherScraps",
@@ -236,6 +240,17 @@ CORE_MATERIAL_PREFABS = {
     "BonemawSerpentTooth",
     "GiantBloodSack",
     "WrithanRoots",
+    "Needle",
+    "FreezeGland",
+    "GreydwarfEye",
+    "JuteBlue",
+    "JuteRed",
+    "LinenThread",
+    "QueenBee",
+    "ProustitePowder",
+    "WolfClaw",
+    "WolfFang",
+    "WolfHairBundle",
 }
 
 # Keyword → tier for weapons / food / potions / materials (checked T6→T0)
@@ -531,16 +546,164 @@ def potion_section(prefab: str) -> str:
 
 
 def food_section(prefab: str) -> str:
-    if FOOD_COOKED.search(prefab) or prefab.startswith("Cooked"):
+    if FOOD_COOKED.search(prefab) or prefab.startswith(("Cooked", "Smoked", "Grilled")):
         return "Cooked meals"
+    if prefab.endswith("Uncooked") or prefab.startswith(
+        ("Feast", "Spice", "Baked", "Oven", "Mashed", "Mince", "Marinated", "Seeker", "Shocklate", "Sizzling", "Sparkling", "Scorching", "Fiery", "Pulled", "Magically", "GreydwarfSurprise", "Viking", "SealSoup", "Pancakes", "Lingondricka")
+    ):
+        return "Prepared dishes"
+    if any(
+        x in prefab
+        for x in (
+            "Pie",
+            "Soup",
+            "Stew",
+            "Sauce",
+            "Skewer",
+            "Pancake",
+            "Broth",
+            "Aspic",
+            "Medley",
+            "Smoothie",
+            "Shake",
+            "Cupcake",
+            "Ham",
+            "Jerky",
+            "Salad",
+            "Platter",
+            "Omelette",
+            "Marmalade",
+            "Wraps",
+            "Pudding",
+            "Bread",
+            "Sausages",
+        )
+    ):
+        return "Prepared dishes"
     if prefab in FOOD_CROP or any(
         prefab.startswith(x)
-        for x in ("Mushroom", "Berry", "Honey", "Onion", "Carrot", "Turnip", "Barley")
+        for x in (
+            "Mushroom",
+            "Berry",
+            "Honey",
+            "Onion",
+            "Carrot",
+            "Turnip",
+            "Barley",
+            "Lingon",
+            "Vineberry",
+            "Pukeberr",
+            "FreshSeaweed",
+            "Poteitr",
+        )
     ):
         return "Crops & forage"
-    if FOOD_RAW.search(prefab) or "Meat" in prefab:
+    if (
+        FOOD_RAW.search(prefab)
+        or prefab.endswith("Meat")
+        or "Meat" in prefab
+        or prefab
+        in {
+            "WolfMeat",
+            "DeerMeat",
+            "BjornMeat",
+            "BugMeat",
+            "MooseMeat",
+            "RottenMeat",
+            "BoneMawSerpentMeat",
+            "SealBlubber",
+            "Larva",
+            "NeckTail",
+        }
+    ):
         return "Raw ingredients"
     return "Prepared dishes"
+
+
+def is_food_item(prefab: str) -> bool:
+    """Meats / meals / forage that the catalog often tags as Misc."""
+    if is_potion_item(prefab):
+        return False
+    if prefab.startswith(("Staff", "Armor", "Helmet", "Cape", "Trophy", "Pickable")):
+        return False
+    p = prefab.lower()
+    if prefab in FOOD_CROP:
+        return True
+    if FOOD_COOKED.search(prefab) or FOOD_RAW.search(prefab):
+        return True
+    if prefab.endswith(("Meat", "Uncooked", "Skewer", "Jerky", "Blubber")):
+        return True
+    if "meat" in p and not prefab.startswith("Trophy"):
+        return True
+    if any(
+        x in p
+        for x in (
+            "pie",
+            "soup",
+            "stew",
+            "sauce",
+            "pancake",
+            "broth",
+            "aspic",
+            "medley",
+            "smoothie",
+            "shake",
+            "cupcake",
+            "sausage",
+            "pudding",
+            "omelette",
+            "marmalade",
+            "wraps",
+            "salad",
+            "platter",
+            "porridge",
+            "dricka",
+            "kebab",
+            "ham",
+            "berry",
+            "seaweed",
+            "lingon",
+            "vineberry",
+            "pukeberr",
+            "feast",
+            "spice",
+        )
+    ):
+        return True
+    if prefab.startswith(("Cooked", "Smoked", "Grilled", "Feast", "Spice", "Baked", "Oven")):
+        return True
+    return False
+
+
+def is_accessory_item(prefab: str) -> bool:
+    """Keys, belts, wishbone, demister, etc."""
+    if prefab.startswith("Mold"):
+        return False
+    if prefab in {
+        "Wishbone",
+        "BarberKit",
+        "BeltStrength",
+        "Demister",
+        "IceSkates",
+        "CryptKey",
+        "DvergrKey",
+        "DvergrKeyFragment",
+        "BloodGoldKey",
+        "KeysGoldUncooked",
+        "GoblinTotem",
+        "CrownJewel",
+        "Wisp",
+        "DragonTear",
+        "HardAntler",
+    }:
+        return True
+    if prefab.startswith("HildirKey"):
+        return True
+    if prefab.endswith("Key") or "Key_" in prefab:
+        return True
+    if prefab.startswith("Trinket"):
+        return True
+    return False
 
 
 def is_weapon_like(prefab: str) -> bool:
@@ -654,6 +817,9 @@ def looks_like_material(prefab: str) -> bool:
 
 def material_section(prefab: str) -> str:
     p = prefab.lower()
+    # Trophies first — never let metal substrings steal them
+    if prefab.startswith("Trophy") or "trophy" in p:
+        return "Boss & rare drops"
     if any(
         x in p
         for x in (
@@ -667,51 +833,98 @@ def material_section(prefab: str) -> str:
             "frostwood",
             "barkabranch",
         )
-    ) and "trophy" not in p:
+    ):
         return "Wood & plant"
-    # Plant fiber / roots that are crafting mats (not Root armor — that is Armor*)
     if prefab in {"Root", "WrithanRoots"} or p.endswith("roots"):
         return "Wood & plant"
-    if any(x in p for x in ("stone", "flint", "obsidian", "crystal", "grausten", "blackmarble", "thunderstone")):
+    if prefab in {"BlackMarble", "Grausten", "Ice"} or any(
+        x in p for x in ("stone", "flint", "obsidian", "crystal", "thunderstone")
+    ):
         return "Stone & crystal"
-    # Cores before metals — "ore" is a substring of "core"
+    # Hides / fiber before metals (LeatherScraps ends with scrap)
+    if any(
+        x in p
+        for x in (
+            "hide",
+            "leather",
+            "pelt",
+            "wool",
+            "hair",
+            "scale",
+            "chitin",
+            "carapace",
+            "jute",
+            "linen",
+            "feather",
+        )
+    ):
+        return "Hides & scales"
     if prefab.endswith("Core") or any(
         x in p for x in ("surtlingcore", "blackcore", "frostcore", "moltencore")
     ):
         return "Boss & rare drops"
-    if (
-        any(
-            x in p
-            for x in (
-                "bronze",
-                "copper",
-                "blackmetal",
-                "flametal",
-                "ironscrap",
-                "silver",
-                "scrap",
-            )
+    if any(
+        x in p
+        for x in (
+            "bloodbag",
+            "ooze",
+            "guck",
+            "entrails",
+            "freezegland",
+            "greydwarfeye",
+            "needle",
+            "wolfclaw",
+            "wolffang",
+            "chain",
+            "proustite",
+            "queenbee",
+            "ectoplasm",
+            "mandible",
+            "sinew",
+            "bladder",
+            "carrion",
+            "resin",
+            "coal",
+            "withbone",
+            "withere",
+            "charredbone",
+            "bonefragments",
         )
-        or p.endswith("ore")
-        or prefab
-        in {
-            "Copper",
-            "Tin",
-            "Iron",
-            "Silver",
-            "Bronze",
-            "BlackMetal",
-            "Flametal",
-            "TinOre",
-            "CopperOre",
-            "SilverOre",
-            "FlametalOre",
-        }
+    ) or prefab in {"WitheredBone", "CharredBone", "Chain", "Ooze", "Bloodbag", "Needle"}:
+        return "Crafting parts"
+    metal_prefabs = {
+        "Copper",
+        "Tin",
+        "Iron",
+        "Silver",
+        "Bronze",
+        "BlackMetal",
+        "Flametal",
+        "FlametalNew",
+        "TinOre",
+        "CopperOre",
+        "SilverOre",
+        "FlametalOre",
+        "FlametalOreNew",
+        "GoldOre",
+        "IronOre",
+        "IronScrap",
+        "CopperScrap",
+        "BronzeScrap",
+        "BlackMetalScrap",
+        "BronzeNails",
+    }
+    if prefab in metal_prefabs or (
+        not prefab.startswith("Trinket")
+        and (
+            any(x in p for x in ("bronze", "copper", "blackmetal", "flametal", "ironscrap"))
+            or p.endswith("ore")
+            or (p.endswith("scrap") and "leather" not in p)
+            or prefab in {"Silver", "Iron", "Tin", "Copper", "Bronze"}
+        )
     ):
         return "Metals"
-    if any(x in p for x in ("hide", "leather", "pelt", "wool", "hair", "scale", "chitin", "carapace")):
-        return "Hides & scales"
-    if any(x in p for x in ("trophy", "boss", "egg", "queen", "eitr")):
+    if any(x in p for x in ("boss", "egg", "queen", "eitr", "dragontear", "yagluth", "fader", "ymir")):
         return "Boss & rare drops"
     if any(x in p for x in ("coin", "amber", "ruby", "pearl", "gem", "silvernecklace")):
         return "Valuables"
@@ -735,20 +948,24 @@ def misc_section(prefab: str) -> str:
     p = prefab.lower()
     if prefab.startswith("Mold") or "mold" in p:
         return "Crafting molds"
-    if "treasure" in p or "chest" in p or "coffer" in p:
+    if "treasure" in p or "chest" in p or "coffer" in p or prefab.startswith("loot_"):
         return "Chests & treasure"
-    if "firework" in p or "bell" in p:
+    if "firework" in p or "bell" in p or "sparkler" in p:
         return "Fun & fireworks"
-    if "trinket" in p or "wishbone" in p or "barber" in p:
+    if is_accessory_item(prefab):
         return "Accessories"
     if "saddle" in p or ("asksvin" in p and "egg" in p) or prefab.endswith("Egg"):
         return "Mounts & eggs"
     if any(x in p for x in ("torch", "lantern", "candle", "firepit", "campfire")):
         return "Light sources"
-    if any(x in p for x in ("hammer", "hoe", "cultivator", "pickaxe", "fishing", "harpoon")):
+    if any(
+        x in p for x in ("hammer", "hoe", "cultivator", "pickaxe", "fishing", "harpoon", "shovel")
+    ) or prefab in {"Shovel", "GrapplingHook", "Hook"}:
         return "Tools"
     if "trophy" in p:
         return "Trophies"
+    if any(x in p for x in ("seed", "cone", "acorn")) or prefab.endswith("Seeds"):
+        return "Utility & oddities"
     return "Utility & oddities"
 
 
@@ -762,51 +979,44 @@ def classify_item(it: dict) -> tuple[str, str]:
     if is_tool_item(prefab):
         return "misc", "Tools"
     if is_weapon_like(prefab) or prefab.startswith(("Tankard", "Torch")):
-        # Torch/Tankard stay utility weapons; true tools already handled above
         if prefab.startswith("Torch") or prefab.startswith("Tankard"):
             return "weapons", "Utility weapons"
         return "weapons", weapon_section(prefab)
 
-    # Core mats before Food/Misc category — catalog tags RoundLog/ElderBark as Misc,
-    # YggdrasilWood as Food, etc.
-    if looks_like_material(prefab):
+    # Trinkets / armor wearables before material keyword rescue (TrinketBronze ≠ metal bar)
+    if (
+        prefab.startswith("Trinket")
+        or prefab.startswith("SP_Armor")
+        or prefab.startswith("Armor")
+        or prefab.startswith("Helmet")
+        or prefab.startswith("Cape")
+    ):
+        return "armor", armor_section(prefab)
+
+    # Accessories (CryptKey / skeleton-dungeon keys, wishbone, megingjord…)
+    if is_accessory_item(prefab):
+        return "misc", "Accessories"
+
+    # Food before material rescue — WolfMeat / meals must not sit in Utility
+    if cat == "Food" or is_food_item(prefab):
+        return "food", food_section(prefab)
+
+    # Core mats (RoundLog, ElderBark, Bloodbag, BlackMarble…)
+    if looks_like_material(prefab) or cat == "Materials":
+        if is_weapon_like(prefab):
+            return "weapons", weapon_section(prefab)
         return "materials", material_section(prefab)
 
     if cat == "Weapons":
         return "weapons", weapon_section(prefab)
     if cat == "Armor":
         return "armor", armor_section(prefab)
-    if cat == "Food":
-        return "food", food_section(prefab)
-    if cat == "Materials":
-        # Mis-tagged weapon prefabs (e.g. THSwordWood) must not land in Wood & plant
-        if is_weapon_like(prefab):
-            return "weapons", weapon_section(prefab)
-        return "materials", material_section(prefab)
     if cat == "Valuables":
         return "materials", "Valuables"
-    # Misc — rescue into better tabs
     if prefab.startswith(("THSword", "Dyrnwyn")):
         return "weapons", "Swords"
-    if (
-        prefab.startswith("SP_Armor")
-        or prefab.startswith("Armor")
-        or prefab.startswith("Helmet")
-        or prefab.startswith("Cape")
-        or prefab.startswith("Trinket")
-    ):
-        return "armor", armor_section(prefab)
-    if (
-        prefab in FOOD_CROP
-        or prefab.startswith("Cooked")
-        or prefab.startswith("Feast")
-        or prefab.startswith("Spice")
-        or prefab.startswith("Baked")
-        or any(prefab.startswith(x) for x in ("Kale", "Oat", "Piquant", "Misthare"))
-    ):
-        if prefab.startswith("Feast") or prefab.startswith("Spice"):
-            return "food", "Prepared dishes"
-        return "food", food_section(prefab)
+    if prefab.startswith("Trophy"):
+        return "materials", "Boss & rare drops"
     return "misc", misc_section(prefab)
 
 

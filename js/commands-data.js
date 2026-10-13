@@ -2001,11 +2001,6 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "FistGold_FrostFire"
     },
     {
-      "name": "Fist Gold Uncooked",
-      "cmd": "#fistgolduncooked",
-      "prefab": "FistGoldUncooked"
-    },
-    {
       "name": "Mold Fistweapon",
       "cmd": "#moldfistweapon",
       "prefab": "MoldFistweapon"
@@ -2916,11 +2911,6 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "FistGold_BloodLightning"
     },
     {
-      "name": "Fist Gold Uncooked",
-      "cmd": "#fistgolduncooked",
-      "prefab": "FistGoldUncooked"
-    },
-    {
       "name": "Butcher Knife",
       "cmd": "#knifebutcher",
       "prefab": "KnifeButcher"
@@ -3390,6 +3380,21 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "HelmetTrollLeather"
     },
     {
+      "name": "Trinket Bronze Health",
+      "cmd": "#trinketbronzehealth",
+      "prefab": "TrinketBronzeHealth"
+    },
+    {
+      "name": "Trinket Bronze Stamina",
+      "cmd": "#trinketbronzestamina",
+      "prefab": "TrinketBronzeStamina"
+    },
+    {
+      "name": "Trinket Chitin Swim",
+      "cmd": "#trinketchitinswim",
+      "prefab": "TrinketChitinSwim"
+    },
+    {
       "type": "section",
       "title": "T2 · Swamp"
     },
@@ -3427,6 +3432,16 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Helmet Root Crown",
       "cmd": "#helmetrootcrown",
       "prefab": "HelmetRootCrown"
+    },
+    {
+      "name": "Trinket Iron Health",
+      "cmd": "#trinketironhealth",
+      "prefab": "TrinketIronHealth"
+    },
+    {
+      "name": "Trinket Iron Stamina",
+      "cmd": "#trinketironstamina",
+      "prefab": "TrinketIronStamina"
     },
     {
       "type": "section",
@@ -3511,6 +3526,11 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Helmet Fenring",
       "cmd": "#helmetfenring",
       "prefab": "HelmetFenring"
+    },
+    {
+      "name": "Trinket Silver Resist",
+      "cmd": "#trinketsilverresist",
+      "prefab": "TrinketSilverResist"
     },
     {
       "type": "section",
@@ -3646,9 +3666,19 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "TrinketBlackDamageHealth"
     },
     {
+      "name": "Trinket Carapace Eitr",
+      "cmd": "#trinketcarapaceeitr",
+      "prefab": "TrinketCarapaceEitr"
+    },
+    {
       "name": "Trinket Scale Stamina Damage",
       "cmd": "#trinketscalestaminadamage",
       "prefab": "TrinketScaleStaminaDamage"
+    },
+    {
+      "name": "Trinket Silver Damage",
+      "cmd": "#trinketsilverdamage",
+      "prefab": "TrinketSilverDamage"
     },
     {
       "type": "section",
@@ -3723,6 +3753,16 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Helmet Flametal",
       "cmd": "#helmetflametal",
       "prefab": "HelmetFlametal"
+    },
+    {
+      "name": "Trinket Flametal Eitr",
+      "cmd": "#trinketflametaleitr",
+      "prefab": "TrinketFlametalEitr"
+    },
+    {
+      "name": "Trinket Flametal Stamina Health",
+      "cmd": "#trinketflametalstaminahealth",
+      "prefab": "TrinketFlametalStaminaHealth"
     },
     {
       "type": "section",
@@ -4004,14 +4044,49 @@ window.VALHEIM_TWITCH_STORE = {
       "title": "Raw ingredients"
     },
     {
+      "name": "Asksvin Egg",
+      "cmd": "#asksvinegg",
+      "prefab": "AsksvinEgg"
+    },
+    {
       "name": "Asksvin Meat",
       "cmd": "#asksvinmeat",
       "prefab": "AsksvinMeat"
     },
     {
+      "name": "Bjorn Meat",
+      "cmd": "#bjornmeat",
+      "prefab": "BjornMeat"
+    },
+    {
+      "name": "Bone Maw Serpent Meat",
+      "cmd": "#bonemawserpentmeat",
+      "prefab": "BoneMawSerpentMeat"
+    },
+    {
+      "name": "Bug Meat",
+      "cmd": "#bugmeat",
+      "prefab": "BugMeat"
+    },
+    {
+      "name": "Chicken Egg",
+      "cmd": "#chickenegg",
+      "prefab": "ChickenEgg"
+    },
+    {
       "name": "Chicken Meat",
       "cmd": "#chickenmeat",
       "prefab": "ChickenMeat"
+    },
+    {
+      "name": "Deer Meat",
+      "cmd": "#deermeat",
+      "prefab": "DeerMeat"
+    },
+    {
+      "name": "Dragon Egg",
+      "cmd": "#dragonegg",
+      "prefab": "DragonEgg"
     },
     {
       "name": "Hare Meat",
@@ -4029,9 +4104,9 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "MeatballsMashedPoteitr"
     },
     {
-      "name": "Meat Platter Uncooked",
-      "cmd": "#meatplatteruncooked",
-      "prefab": "MeatPlatterUncooked"
+      "name": "Moose Meat",
+      "cmd": "#moosemeat",
+      "prefab": "MooseMeat"
     },
     {
       "name": "Neck Tail",
@@ -4039,9 +4114,24 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "NeckTail"
     },
     {
+      "name": "Powdered Dragon Egg",
+      "cmd": "#powdereddragonegg",
+      "prefab": "PowderedDragonEgg"
+    },
+    {
       "name": "Raw Meat",
       "cmd": "#rawmeat",
       "prefab": "RawMeat"
+    },
+    {
+      "name": "Rotten Meat",
+      "cmd": "#rottenmeat",
+      "prefab": "RottenMeat"
+    },
+    {
+      "name": "Seal Blubber",
+      "cmd": "#sealblubber",
+      "prefab": "SealBlubber"
     },
     {
       "name": "Serpent Meat",
@@ -4057,6 +4147,11 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Volture Meat",
       "cmd": "#volturemeat",
       "prefab": "VoltureMeat"
+    },
+    {
+      "name": "Wolf Meat",
+      "cmd": "#wolfmeat",
+      "prefab": "WolfMeat"
     },
     {
       "type": "section",
@@ -4143,6 +4238,16 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "SerpentMeatCooked"
     },
     {
+      "name": "Smoked Fish",
+      "cmd": "#smokedfish",
+      "prefab": "SmokedFish"
+    },
+    {
+      "name": "Smoked Moose Meat",
+      "cmd": "#smokedmoosemeat",
+      "prefab": "SmokedMooseMeat"
+    },
+    {
       "type": "section",
       "title": "Prepared dishes"
     },
@@ -4162,9 +4267,44 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "Bilebag"
     },
     {
+      "name": "Black Soup",
+      "cmd": "#blacksoup",
+      "prefab": "BlackSoup"
+    },
+    {
+      "name": "Blood Pudding",
+      "cmd": "#bloodpudding",
+      "prefab": "BloodPudding"
+    },
+    {
+      "name": "Boar Jerky",
+      "cmd": "#boarjerky",
+      "prefab": "BoarJerky"
+    },
+    {
+      "name": "Bread",
+      "cmd": "#bread",
+      "prefab": "Bread"
+    },
+    {
       "name": "Bread Dough",
       "cmd": "#breaddough",
       "prefab": "BreadDough"
+    },
+    {
+      "name": "Carrot Soup",
+      "cmd": "#carrotsoup",
+      "prefab": "CarrotSoup"
+    },
+    {
+      "name": "Cured Squirrel Hamstring",
+      "cmd": "#curedsquirrelhamstring",
+      "prefab": "CuredSquirrelHamstring"
+    },
+    {
+      "name": "Deer Stew",
+      "cmd": "#deerstew",
+      "prefab": "DeerStew"
     },
     {
       "name": "Feast Ashlands Material",
@@ -4215,6 +4355,11 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Feast Swamps Material",
       "cmd": "#feastswampsmaterial",
       "prefab": "FeastSwamps_Material"
+    },
+    {
+      "name": "Fiery Svinstew",
+      "cmd": "#fierysvinstew",
+      "prefab": "FierySvinstew"
     },
     {
       "name": "Fish And Bread",
@@ -4287,14 +4432,24 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "FishSoup"
     },
     {
-      "name": "Kale",
-      "cmd": "#kale",
-      "prefab": "Kale"
+      "name": "Fish Wraps",
+      "cmd": "#fishwraps",
+      "prefab": "FishWraps"
     },
     {
-      "name": "Kale Chips",
-      "cmd": "#kalechips",
-      "prefab": "KaleChips"
+      "name": "Fist Gold Uncooked",
+      "cmd": "#fistgolduncooked",
+      "prefab": "FistGoldUncooked"
+    },
+    {
+      "name": "Generic Mold Uncooked",
+      "cmd": "#genericmolduncooked",
+      "prefab": "GenericMoldUncooked"
+    },
+    {
+      "name": "Honey Glazed Chicken Uncooked",
+      "cmd": "#honeyglazedchickenuncooked",
+      "prefab": "HoneyGlazedChickenUncooked"
     },
     {
       "name": "Kale Chips Uncooked",
@@ -4302,9 +4457,44 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "KaleChipsUncooked"
     },
     {
-      "name": "Kale Seeds",
-      "cmd": "#kaleseeds",
-      "prefab": "KaleSeeds"
+      "name": "Lingondricka",
+      "cmd": "#lingondricka",
+      "prefab": "Lingondricka"
+    },
+    {
+      "name": "Lox Pie",
+      "cmd": "#loxpie",
+      "prefab": "LoxPie"
+    },
+    {
+      "name": "Lox Pie Uncooked",
+      "cmd": "#loxpieuncooked",
+      "prefab": "LoxPieUncooked"
+    },
+    {
+      "name": "Magically Stuffed Shroom Uncooked",
+      "cmd": "#magicallystuffedshroomuncooked",
+      "prefab": "MagicallyStuffedShroomUncooked"
+    },
+    {
+      "name": "Mashed Meat",
+      "cmd": "#mashedmeat",
+      "prefab": "MashedMeat"
+    },
+    {
+      "name": "Meat Platter",
+      "cmd": "#meatplatter",
+      "prefab": "MeatPlatter"
+    },
+    {
+      "name": "Meat Platter Uncooked",
+      "cmd": "#meatplatteruncooked",
+      "prefab": "MeatPlatterUncooked"
+    },
+    {
+      "name": "Mince Meat Sauce",
+      "cmd": "#mincemeatsauce",
+      "prefab": "MinceMeatSauce"
     },
     {
       "name": "Misthare Supreme Uncooked",
@@ -4312,19 +4502,19 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "MisthareSupremeUncooked"
     },
     {
+      "name": "Moose Kebab",
+      "cmd": "#moosekebab",
+      "prefab": "MooseKebab"
+    },
+    {
+      "name": "Mushroom Omelette",
+      "cmd": "#mushroomomelette",
+      "prefab": "MushroomOmelette"
+    },
+    {
       "name": "Neck Tail Grilled",
       "cmd": "#necktailgrilled",
       "prefab": "NeckTailGrilled"
-    },
-    {
-      "name": "Oat",
-      "cmd": "#oat",
-      "prefab": "Oat"
-    },
-    {
-      "name": "Oat Flour",
-      "cmd": "#oatflour",
-      "prefab": "OatFlour"
     },
     {
       "name": "Oatmeal Lingonberry Jam",
@@ -4332,14 +4522,29 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "OatmealLingonberryJam"
     },
     {
-      "name": "Oat Milk",
-      "cmd": "#oatmilk",
-      "prefab": "OatMilk"
+      "name": "Onion Soup",
+      "cmd": "#onionsoup",
+      "prefab": "OnionSoup"
     },
     {
-      "name": "Oat Seeds",
-      "cmd": "#oatseeds",
-      "prefab": "OatSeeds"
+      "name": "Oven Pancake",
+      "cmd": "#ovenpancake",
+      "prefab": "OvenPancake"
+    },
+    {
+      "name": "Oven Pancake Uncooked",
+      "cmd": "#ovenpancakeuncooked",
+      "prefab": "OvenPancakeUncooked"
+    },
+    {
+      "name": "Pancakes",
+      "cmd": "#pancakes",
+      "prefab": "Pancakes"
+    },
+    {
+      "name": "Piquant Pie",
+      "cmd": "#piquantpie",
+      "prefab": "PiquantPie"
     },
     {
       "name": "Piquant Pie Uncooked",
@@ -4347,9 +4552,69 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "PiquantPieUncooked"
     },
     {
+      "name": "Roasted Crust Pie",
+      "cmd": "#roastedcrustpie",
+      "prefab": "RoastedCrustPie"
+    },
+    {
+      "name": "Roasted Crust Pie Uncooked",
+      "cmd": "#roastedcrustpieuncooked",
+      "prefab": "RoastedCrustPieUncooked"
+    },
+    {
       "name": "Royal Jelly",
       "cmd": "#royaljelly",
       "prefab": "RoyalJelly"
+    },
+    {
+      "name": "Salad",
+      "cmd": "#salad",
+      "prefab": "Salad"
+    },
+    {
+      "name": "Sausages",
+      "cmd": "#sausages",
+      "prefab": "Sausages"
+    },
+    {
+      "name": "Scorching Medley",
+      "cmd": "#scorchingmedley",
+      "prefab": "ScorchingMedley"
+    },
+    {
+      "name": "Seal Soup",
+      "cmd": "#sealsoup",
+      "prefab": "SealSoup"
+    },
+    {
+      "name": "Seeker Aspic",
+      "cmd": "#seekeraspic",
+      "prefab": "SeekerAspic"
+    },
+    {
+      "name": "Serpent Stew",
+      "cmd": "#serpentstew",
+      "prefab": "SerpentStew"
+    },
+    {
+      "name": "Shocklate Smoothie",
+      "cmd": "#shocklatesmoothie",
+      "prefab": "ShocklateSmoothie"
+    },
+    {
+      "name": "Sizzling Berry Broth",
+      "cmd": "#sizzlingberrybroth",
+      "prefab": "SizzlingBerryBroth"
+    },
+    {
+      "name": "Small Parts Gold Uncooked",
+      "cmd": "#smallpartsgolduncooked",
+      "prefab": "SmallPartsGoldUncooked"
+    },
+    {
+      "name": "Sparkling Shroomshake",
+      "cmd": "#sparklingshroomshake",
+      "prefab": "SparklingShroomshake"
     },
     {
       "name": "Spice Ashlands",
@@ -4387,9 +4652,44 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "SpicePlains"
     },
     {
+      "name": "Spicy Marmalade",
+      "cmd": "#spicymarmalade",
+      "prefab": "SpicyMarmalade"
+    },
+    {
+      "name": "Turnip Stew",
+      "cmd": "#turnipstew",
+      "prefab": "TurnipStew"
+    },
+    {
+      "name": "Viking Cupcake",
+      "cmd": "#vikingcupcake",
+      "prefab": "VikingCupcake"
+    },
+    {
+      "name": "Viking Cupcake Uncooked",
+      "cmd": "#vikingcupcakeuncooked",
+      "prefab": "VikingCupcakeUncooked"
+    },
+    {
+      "name": "Wolf Jerky",
+      "cmd": "#wolfjerky",
+      "prefab": "WolfJerky"
+    },
+    {
+      "name": "Wolf Meat Skewer",
+      "cmd": "#wolfmeatskewer",
+      "prefab": "WolfMeatSkewer"
+    },
+    {
       "name": "Yggdrasil Porridge",
       "cmd": "#yggdrasilporridge",
       "prefab": "YggdrasilPorridge"
+    },
+    {
+      "name": "Yggdrasil Wood",
+      "cmd": "#yggdrasilwood",
+      "prefab": "YggdrasilWood"
     },
     {
       "type": "section",
@@ -4406,29 +4706,9 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "BarleyFlour"
     },
     {
-      "name": "Black Soup",
-      "cmd": "#blacksoup",
-      "prefab": "BlackSoup"
-    },
-    {
-      "name": "Blood Pudding",
-      "cmd": "#bloodpudding",
-      "prefab": "BloodPudding"
-    },
-    {
       "name": "Blueberries",
       "cmd": "#blueberries",
       "prefab": "Blueberries"
-    },
-    {
-      "name": "Boar Jerky",
-      "cmd": "#boarjerky",
-      "prefab": "BoarJerky"
-    },
-    {
-      "name": "Bread",
-      "cmd": "#bread",
-      "prefab": "Bread"
     },
     {
       "name": "Carrot",
@@ -4441,11 +4721,6 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "CarrotSeeds"
     },
     {
-      "name": "Carrot Soup",
-      "cmd": "#carrotsoup",
-      "prefab": "CarrotSoup"
-    },
-    {
       "name": "Cloudberry",
       "cmd": "#cloudberry",
       "prefab": "Cloudberry"
@@ -4454,11 +4729,6 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Dandelion",
       "cmd": "#dandelion",
       "prefab": "Dandelion"
-    },
-    {
-      "name": "Deer Stew",
-      "cmd": "#deerstew",
-      "prefab": "DeerStew"
     },
     {
       "name": "Eyescream",
@@ -4471,14 +4741,14 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "Fiddleheadfern"
     },
     {
-      "name": "Fish Wraps",
-      "cmd": "#fishwraps",
-      "prefab": "FishWraps"
-    },
-    {
       "name": "Flax",
       "cmd": "#flax",
       "prefab": "Flax"
+    },
+    {
+      "name": "Fresh Seaweed",
+      "cmd": "#freshseaweed",
+      "prefab": "FreshSeaweed"
     },
     {
       "name": "Honey",
@@ -4491,19 +4761,9 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "HoneyGlazedChicken"
     },
     {
-      "name": "Honey Glazed Chicken Uncooked",
-      "cmd": "#honeyglazedchickenuncooked",
-      "prefab": "HoneyGlazedChickenUncooked"
-    },
-    {
-      "name": "Lox Pie",
-      "cmd": "#loxpie",
-      "prefab": "LoxPie"
-    },
-    {
-      "name": "Meat Platter",
-      "cmd": "#meatplatter",
-      "prefab": "MeatPlatter"
+      "name": "Lingonberry",
+      "cmd": "#lingonberry",
+      "prefab": "Lingonberry"
     },
     {
       "name": "Misthare Supreme",
@@ -4536,11 +4796,6 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "MushroomMagecap"
     },
     {
-      "name": "Mushroom Omelette",
-      "cmd": "#mushroomomelette",
-      "prefab": "MushroomOmelette"
-    },
-    {
       "name": "Mushroom Smoke Puff",
       "cmd": "#mushroomsmokepuff",
       "prefab": "MushroomSmokePuff"
@@ -4561,14 +4816,9 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "OnionSeeds"
     },
     {
-      "name": "Onion Soup",
-      "cmd": "#onionsoup",
-      "prefab": "OnionSoup"
-    },
-    {
-      "name": "Piquant Pie",
-      "cmd": "#piquantpie",
-      "prefab": "PiquantPie"
+      "name": "Pukeberries",
+      "cmd": "#pukeberries",
+      "prefab": "Pukeberries"
     },
     {
       "name": "Queens Jam",
@@ -4579,31 +4829,6 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Raspberry",
       "cmd": "#raspberry",
       "prefab": "Raspberry"
-    },
-    {
-      "name": "Roasted Crust Pie",
-      "cmd": "#roastedcrustpie",
-      "prefab": "RoastedCrustPie"
-    },
-    {
-      "name": "Salad",
-      "cmd": "#salad",
-      "prefab": "Salad"
-    },
-    {
-      "name": "Sausages",
-      "cmd": "#sausages",
-      "prefab": "Sausages"
-    },
-    {
-      "name": "Serpent Stew",
-      "cmd": "#serpentstew",
-      "prefab": "SerpentStew"
-    },
-    {
-      "name": "Spicy Marmalade",
-      "cmd": "#spicymarmalade",
-      "prefab": "SpicyMarmalade"
     },
     {
       "name": "Thistle",
@@ -4621,14 +4846,9 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "TurnipSeeds"
     },
     {
-      "name": "Turnip Stew",
-      "cmd": "#turnipstew",
-      "prefab": "TurnipStew"
-    },
-    {
-      "name": "Wolf Jerky",
-      "cmd": "#wolfjerky",
-      "prefab": "WolfJerky"
+      "name": "Vineberry",
+      "cmd": "#vineberry",
+      "prefab": "Vineberry"
     },
     {
       "type": "help",
@@ -4653,6 +4873,11 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "Dandelion"
     },
     {
+      "name": "Dragon Egg",
+      "cmd": "#dragonegg",
+      "prefab": "DragonEgg"
+    },
+    {
       "name": "Honey",
       "cmd": "#honey",
       "prefab": "Honey"
@@ -4671,6 +4896,11 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Neck Tail Grilled",
       "cmd": "#necktailgrilled",
       "prefab": "NeckTailGrilled"
+    },
+    {
+      "name": "Powdered Dragon Egg",
+      "cmd": "#powdereddragonegg",
+      "prefab": "PowderedDragonEgg"
     },
     {
       "type": "section",
@@ -4707,6 +4937,11 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "CookedDeerMeat"
     },
     {
+      "name": "Deer Meat",
+      "cmd": "#deermeat",
+      "prefab": "DeerMeat"
+    },
+    {
       "name": "Deer Stew",
       "cmd": "#deerstew",
       "prefab": "DeerStew"
@@ -4734,6 +4969,11 @@ window.VALHEIM_TWITCH_STORE = {
     {
       "type": "section",
       "title": "T2 · Swamp"
+    },
+    {
+      "name": "Bone Maw Serpent Meat",
+      "cmd": "#bonemawserpentmeat",
+      "prefab": "BoneMawSerpentMeat"
     },
     {
       "name": "Cooked Bone Maw Serpent Meat",
@@ -4798,6 +5038,16 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Wolf Jerky",
       "cmd": "#wolfjerky",
       "prefab": "WolfJerky"
+    },
+    {
+      "name": "Wolf Meat",
+      "cmd": "#wolfmeat",
+      "prefab": "WolfMeat"
+    },
+    {
+      "name": "Wolf Meat Skewer",
+      "cmd": "#wolfmeatskewer",
+      "prefab": "WolfMeatSkewer"
     },
     {
       "type": "section",
@@ -4872,6 +5122,11 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Lox Pie",
       "cmd": "#loxpie",
       "prefab": "LoxPie"
+    },
+    {
+      "name": "Lox Pie Uncooked",
+      "cmd": "#loxpieuncooked",
+      "prefab": "LoxPieUncooked"
     },
     {
       "name": "Meat Platter",
@@ -4968,6 +5223,11 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "RoyalJelly"
     },
     {
+      "name": "Seeker Aspic",
+      "cmd": "#seekeraspic",
+      "prefab": "SeekerAspic"
+    },
+    {
       "name": "Spice Mistlands",
       "cmd": "#spicemistlands",
       "prefab": "SpiceMistlands"
@@ -4978,8 +5238,18 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "YggdrasilPorridge"
     },
     {
+      "name": "Yggdrasil Wood",
+      "cmd": "#yggdrasilwood",
+      "prefab": "YggdrasilWood"
+    },
+    {
       "type": "section",
       "title": "T6 · Ashlands"
+    },
+    {
+      "name": "Asksvin Egg",
+      "cmd": "#asksvinegg",
+      "prefab": "AsksvinEgg"
     },
     {
       "name": "Asksvin Meat",
@@ -5016,9 +5286,24 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "Bilebag"
     },
     {
+      "name": "Bjorn Meat",
+      "cmd": "#bjornmeat",
+      "prefab": "BjornMeat"
+    },
+    {
       "name": "Black Soup",
       "cmd": "#blacksoup",
       "prefab": "BlackSoup"
+    },
+    {
+      "name": "Bug Meat",
+      "cmd": "#bugmeat",
+      "prefab": "BugMeat"
+    },
+    {
+      "name": "Chicken Egg",
+      "cmd": "#chickenegg",
+      "prefab": "ChickenEgg"
     },
     {
       "name": "Chicken Meat",
@@ -5066,6 +5351,11 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "CookedVoltureMeat"
     },
     {
+      "name": "Cured Squirrel Hamstring",
+      "cmd": "#curedsquirrelhamstring",
+      "prefab": "CuredSquirrelHamstring"
+    },
+    {
       "name": "Feast Blackforest Material",
       "cmd": "#feastblackforestmaterial",
       "prefab": "FeastBlackforest_Material"
@@ -5109,6 +5399,11 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Fiddleheadfern",
       "cmd": "#fiddleheadfern",
       "prefab": "Fiddleheadfern"
+    },
+    {
+      "name": "Fiery Svinstew",
+      "cmd": "#fierysvinstew",
+      "prefab": "FierySvinstew"
     },
     {
       "name": "Fish Angler Raw",
@@ -5166,19 +5461,24 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "FishSoup"
     },
     {
+      "name": "Fist Gold Uncooked",
+      "cmd": "#fistgolduncooked",
+      "prefab": "FistGoldUncooked"
+    },
+    {
+      "name": "Fresh Seaweed",
+      "cmd": "#freshseaweed",
+      "prefab": "FreshSeaweed"
+    },
+    {
+      "name": "Generic Mold Uncooked",
+      "cmd": "#genericmolduncooked",
+      "prefab": "GenericMoldUncooked"
+    },
+    {
       "name": "Hare Meat",
       "cmd": "#haremeat",
       "prefab": "HareMeat"
-    },
-    {
-      "name": "Kale",
-      "cmd": "#kale",
-      "prefab": "Kale"
-    },
-    {
-      "name": "Kale Chips",
-      "cmd": "#kalechips",
-      "prefab": "KaleChips"
     },
     {
       "name": "Kale Chips Uncooked",
@@ -5186,9 +5486,39 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "KaleChipsUncooked"
     },
     {
-      "name": "Kale Seeds",
-      "cmd": "#kaleseeds",
-      "prefab": "KaleSeeds"
+      "name": "Lingonberry",
+      "cmd": "#lingonberry",
+      "prefab": "Lingonberry"
+    },
+    {
+      "name": "Lingondricka",
+      "cmd": "#lingondricka",
+      "prefab": "Lingondricka"
+    },
+    {
+      "name": "Magically Stuffed Shroom Uncooked",
+      "cmd": "#magicallystuffedshroomuncooked",
+      "prefab": "MagicallyStuffedShroomUncooked"
+    },
+    {
+      "name": "Mashed Meat",
+      "cmd": "#mashedmeat",
+      "prefab": "MashedMeat"
+    },
+    {
+      "name": "Mince Meat Sauce",
+      "cmd": "#mincemeatsauce",
+      "prefab": "MinceMeatSauce"
+    },
+    {
+      "name": "Moose Kebab",
+      "cmd": "#moosekebab",
+      "prefab": "MooseKebab"
+    },
+    {
+      "name": "Moose Meat",
+      "cmd": "#moosemeat",
+      "prefab": "MooseMeat"
     },
     {
       "name": "Mushroom",
@@ -5226,29 +5556,24 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "NeckTail"
     },
     {
-      "name": "Oat",
-      "cmd": "#oat",
-      "prefab": "Oat"
-    },
-    {
-      "name": "Oat Flour",
-      "cmd": "#oatflour",
-      "prefab": "OatFlour"
-    },
-    {
       "name": "Oatmeal Lingonberry Jam",
       "cmd": "#oatmeallingonberryjam",
       "prefab": "OatmealLingonberryJam"
     },
     {
-      "name": "Oat Milk",
-      "cmd": "#oatmilk",
-      "prefab": "OatMilk"
+      "name": "Oven Pancake",
+      "cmd": "#ovenpancake",
+      "prefab": "OvenPancake"
     },
     {
-      "name": "Oat Seeds",
-      "cmd": "#oatseeds",
-      "prefab": "OatSeeds"
+      "name": "Oven Pancake Uncooked",
+      "cmd": "#ovenpancakeuncooked",
+      "prefab": "OvenPancakeUncooked"
+    },
+    {
+      "name": "Pancakes",
+      "cmd": "#pancakes",
+      "prefab": "Pancakes"
     },
     {
       "name": "Piquant Pie",
@@ -5261,6 +5586,11 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "PiquantPieUncooked"
     },
     {
+      "name": "Pukeberries",
+      "cmd": "#pukeberries",
+      "prefab": "Pukeberries"
+    },
+    {
       "name": "Raw Meat",
       "cmd": "#rawmeat",
       "prefab": "RawMeat"
@@ -5271,9 +5601,79 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "RoastedCrustPie"
     },
     {
+      "name": "Roasted Crust Pie Uncooked",
+      "cmd": "#roastedcrustpieuncooked",
+      "prefab": "RoastedCrustPieUncooked"
+    },
+    {
+      "name": "Rotten Meat",
+      "cmd": "#rottenmeat",
+      "prefab": "RottenMeat"
+    },
+    {
+      "name": "Scorching Medley",
+      "cmd": "#scorchingmedley",
+      "prefab": "ScorchingMedley"
+    },
+    {
+      "name": "Seal Blubber",
+      "cmd": "#sealblubber",
+      "prefab": "SealBlubber"
+    },
+    {
+      "name": "Seal Soup",
+      "cmd": "#sealsoup",
+      "prefab": "SealSoup"
+    },
+    {
+      "name": "Shocklate Smoothie",
+      "cmd": "#shocklatesmoothie",
+      "prefab": "ShocklateSmoothie"
+    },
+    {
+      "name": "Sizzling Berry Broth",
+      "cmd": "#sizzlingberrybroth",
+      "prefab": "SizzlingBerryBroth"
+    },
+    {
+      "name": "Small Parts Gold Uncooked",
+      "cmd": "#smallpartsgolduncooked",
+      "prefab": "SmallPartsGoldUncooked"
+    },
+    {
+      "name": "Smoked Fish",
+      "cmd": "#smokedfish",
+      "prefab": "SmokedFish"
+    },
+    {
+      "name": "Smoked Moose Meat",
+      "cmd": "#smokedmoosemeat",
+      "prefab": "SmokedMooseMeat"
+    },
+    {
+      "name": "Sparkling Shroomshake",
+      "cmd": "#sparklingshroomshake",
+      "prefab": "SparklingShroomshake"
+    },
+    {
       "name": "Spicy Marmalade",
       "cmd": "#spicymarmalade",
       "prefab": "SpicyMarmalade"
+    },
+    {
+      "name": "Viking Cupcake",
+      "cmd": "#vikingcupcake",
+      "prefab": "VikingCupcake"
+    },
+    {
+      "name": "Viking Cupcake Uncooked",
+      "cmd": "#vikingcupcakeuncooked",
+      "prefab": "VikingCupcakeUncooked"
+    },
+    {
+      "name": "Vineberry",
+      "cmd": "#vineberry",
+      "prefab": "Vineberry"
     },
     {
       "name": "Volture Egg",
@@ -5859,13 +6259,13 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "WrithanRoots"
     },
     {
-      "name": "Yggdrasil Wood",
-      "cmd": "#yggdrasilwood",
-      "prefab": "YggdrasilWood"
-    },
-    {
       "type": "section",
       "title": "Stone & crystal"
+    },
+    {
+      "name": "Black Marble",
+      "cmd": "#blackmarble",
+      "prefab": "BlackMarble"
     },
     {
       "name": "Crystal",
@@ -5876,6 +6276,11 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Flint",
       "cmd": "#flint",
       "prefab": "Flint"
+    },
+    {
+      "name": "Grausten",
+      "cmd": "#grausten",
+      "prefab": "Grausten"
     },
     {
       "name": "Obsidian",
@@ -5997,11 +6402,6 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "IronScrap"
     },
     {
-      "name": "Leather Scraps",
-      "cmd": "#leatherscraps",
-      "prefab": "LeatherScraps"
-    },
-    {
       "name": "Silver",
       "cmd": "#silver",
       "prefab": "Silver"
@@ -6020,36 +6420,6 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Tin Ore",
       "cmd": "#tinore",
       "prefab": "TinOre"
-    },
-    {
-      "name": "Trinket Bronze Health",
-      "cmd": "#trinketbronzehealth",
-      "prefab": "TrinketBronzeHealth"
-    },
-    {
-      "name": "Trinket Bronze Stamina",
-      "cmd": "#trinketbronzestamina",
-      "prefab": "TrinketBronzeStamina"
-    },
-    {
-      "name": "Trinket Flametal Eitr",
-      "cmd": "#trinketflametaleitr",
-      "prefab": "TrinketFlametalEitr"
-    },
-    {
-      "name": "Trinket Flametal Stamina Health",
-      "cmd": "#trinketflametalstaminahealth",
-      "prefab": "TrinketFlametalStaminaHealth"
-    },
-    {
-      "name": "Trinket Silver Damage",
-      "cmd": "#trinketsilverdamage",
-      "prefab": "TrinketSilverDamage"
-    },
-    {
-      "name": "Trinket Silver Resist",
-      "cmd": "#trinketsilverresist",
-      "prefab": "TrinketSilverResist"
     },
     {
       "type": "section",
@@ -6076,6 +6446,11 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "Carapace"
     },
     {
+      "name": "Celestial Feather",
+      "cmd": "#celestialfeather",
+      "prefab": "CelestialFeather"
+    },
+    {
       "name": "Chitin",
       "cmd": "#chitin",
       "prefab": "Chitin"
@@ -6084,6 +6459,31 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Deer Hide",
       "cmd": "#deerhide",
       "prefab": "DeerHide"
+    },
+    {
+      "name": "Feathers",
+      "cmd": "#feathers",
+      "prefab": "Feathers"
+    },
+    {
+      "name": "Jute Blue",
+      "cmd": "#juteblue",
+      "prefab": "JuteBlue"
+    },
+    {
+      "name": "Jute Red",
+      "cmd": "#jutered",
+      "prefab": "JuteRed"
+    },
+    {
+      "name": "Leather Scraps",
+      "cmd": "#leatherscraps",
+      "prefab": "LeatherScraps"
+    },
+    {
+      "name": "Linen Thread",
+      "cmd": "#linenthread",
+      "prefab": "LinenThread"
     },
     {
       "name": "Lox Pelt",
@@ -6111,19 +6511,14 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "SerpentScale"
     },
     {
-      "name": "Trinket Carapace Eitr",
-      "cmd": "#trinketcarapaceeitr",
-      "prefab": "TrinketCarapaceEitr"
-    },
-    {
-      "name": "Trinket Chitin Swim",
-      "cmd": "#trinketchitinswim",
-      "prefab": "TrinketChitinSwim"
-    },
-    {
       "name": "Troll Hide",
       "cmd": "#trollhide",
       "prefab": "TrollHide"
+    },
+    {
+      "name": "Wolf Hair Bundle",
+      "cmd": "#wolfhairbundle",
+      "prefab": "WolfHairBundle"
     },
     {
       "name": "Wolf Pelt",
@@ -6613,11 +7008,6 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "BonemawSerpentTooth"
     },
     {
-      "name": "Celestial Feather",
-      "cmd": "#celestialfeather",
-      "prefab": "CelestialFeather"
-    },
-    {
       "name": "Chain",
       "cmd": "#chain",
       "prefab": "Chain"
@@ -6643,14 +7033,19 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "Entrails"
     },
     {
-      "name": "Feathers",
-      "cmd": "#feathers",
-      "prefab": "Feathers"
+      "name": "Freeze Gland",
+      "cmd": "#freezegland",
+      "prefab": "FreezeGland"
     },
     {
       "name": "Giant Blood Sack",
       "cmd": "#giantbloodsack",
       "prefab": "GiantBloodSack"
+    },
+    {
+      "name": "Greydwarf Eye",
+      "cmd": "#greydwarfeye",
+      "prefab": "GreydwarfEye"
     },
     {
       "name": "Guck",
@@ -6678,6 +7073,31 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "MemorialCoal"
     },
     {
+      "name": "Needle",
+      "cmd": "#needle",
+      "prefab": "Needle"
+    },
+    {
+      "name": "Ooze",
+      "cmd": "#ooze",
+      "prefab": "Ooze"
+    },
+    {
+      "name": "Ooze Mork",
+      "cmd": "#oozemork",
+      "prefab": "OozeMork"
+    },
+    {
+      "name": "Proustite Powder",
+      "cmd": "#proustitepowder",
+      "prefab": "ProustitePowder"
+    },
+    {
+      "name": "Queen Bee",
+      "cmd": "#queenbee",
+      "prefab": "QueenBee"
+    },
+    {
       "name": "Resin",
       "cmd": "#resin",
       "prefab": "Resin"
@@ -6698,19 +7118,19 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "Tar"
     },
     {
-      "name": "Trinket Iron Health",
-      "cmd": "#trinketironhealth",
-      "prefab": "TrinketIronHealth"
-    },
-    {
-      "name": "Trinket Iron Stamina",
-      "cmd": "#trinketironstamina",
-      "prefab": "TrinketIronStamina"
-    },
-    {
       "name": "Withered Bone",
       "cmd": "#witheredbone",
       "prefab": "WitheredBone"
+    },
+    {
+      "name": "Wolf Claw",
+      "cmd": "#wolfclaw",
+      "prefab": "WolfClaw"
+    },
+    {
+      "name": "Wolf Fang",
+      "cmd": "#wolffang",
+      "prefab": "WolfFang"
     },
     {
       "type": "help",
@@ -6889,6 +7309,11 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "FineWood"
     },
     {
+      "name": "Greydwarf Eye",
+      "cmd": "#greydwarfeye",
+      "prefab": "GreydwarfEye"
+    },
+    {
       "name": "Tin",
       "cmd": "#tin",
       "prefab": "Tin"
@@ -6897,21 +7322,6 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Tin Ore",
       "cmd": "#tinore",
       "prefab": "TinOre"
-    },
-    {
-      "name": "Trinket Bronze Health",
-      "cmd": "#trinketbronzehealth",
-      "prefab": "TrinketBronzeHealth"
-    },
-    {
-      "name": "Trinket Bronze Stamina",
-      "cmd": "#trinketbronzestamina",
-      "prefab": "TrinketBronzeStamina"
-    },
-    {
-      "name": "Trinket Chitin Swim",
-      "cmd": "#trinketchitinswim",
-      "prefab": "TrinketChitinSwim"
     },
     {
       "name": "Troll Hide",
@@ -7018,6 +7428,16 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "IronScrap"
     },
     {
+      "name": "Ooze",
+      "cmd": "#ooze",
+      "prefab": "Ooze"
+    },
+    {
+      "name": "Ooze Mork",
+      "cmd": "#oozemork",
+      "prefab": "OozeMork"
+    },
+    {
       "name": "Root",
       "cmd": "#root",
       "prefab": "Root"
@@ -7031,16 +7451,6 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Surtling Core",
       "cmd": "#surtlingcore",
       "prefab": "SurtlingCore"
-    },
-    {
-      "name": "Trinket Iron Health",
-      "cmd": "#trinketironhealth",
-      "prefab": "TrinketIronHealth"
-    },
-    {
-      "name": "Trinket Iron Stamina",
-      "cmd": "#trinketironstamina",
-      "prefab": "TrinketIronStamina"
     },
     {
       "name": "Trophy Abomination",
@@ -7107,6 +7517,11 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "Crystal"
     },
     {
+      "name": "Freeze Gland",
+      "cmd": "#freezegland",
+      "prefab": "FreezeGland"
+    },
+    {
       "name": "Frost Core",
       "cmd": "#frostcore",
       "prefab": "FrostCore"
@@ -7135,11 +7550,6 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Silver Ore",
       "cmd": "#silverore",
       "prefab": "SilverOre"
-    },
-    {
-      "name": "Trinket Silver Resist",
-      "cmd": "#trinketsilverresist",
-      "prefab": "TrinketSilverResist"
     },
     {
       "name": "Trophy Blob Frost",
@@ -7182,6 +7592,21 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "TrophyWolf"
     },
     {
+      "name": "Wolf Claw",
+      "cmd": "#wolfclaw",
+      "prefab": "WolfClaw"
+    },
+    {
+      "name": "Wolf Fang",
+      "cmd": "#wolffang",
+      "prefab": "WolfFang"
+    },
+    {
+      "name": "Wolf Hair Bundle",
+      "cmd": "#wolfhairbundle",
+      "prefab": "WolfHairBundle"
+    },
+    {
       "name": "Wolf Pelt",
       "cmd": "#wolfpelt",
       "prefab": "WolfPelt"
@@ -7204,6 +7629,11 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Lox Pelt",
       "cmd": "#loxpelt",
       "prefab": "LoxPelt"
+    },
+    {
+      "name": "Needle",
+      "cmd": "#needle",
+      "prefab": "Needle"
     },
     {
       "name": "Tar",
@@ -7285,16 +7715,6 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "Softtissue"
     },
     {
-      "name": "Trinket Carapace Eitr",
-      "cmd": "#trinketcarapaceeitr",
-      "prefab": "TrinketCarapaceEitr"
-    },
-    {
-      "name": "Trinket Silver Damage",
-      "cmd": "#trinketsilverdamage",
-      "prefab": "TrinketSilverDamage"
-    },
-    {
       "name": "Trophy Gjall",
       "cmd": "#trophygjall",
       "prefab": "TrophyGjall"
@@ -7330,11 +7750,6 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "TrophyTick"
     },
     {
-      "name": "Yggdrasil Wood",
-      "cmd": "#yggdrasilwood",
-      "prefab": "YggdrasilWood"
-    },
-    {
       "type": "section",
       "title": "T6 · Ashlands"
     },
@@ -7364,19 +7779,19 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "FlametalOreNew"
     },
     {
+      "name": "Grausten",
+      "cmd": "#grausten",
+      "prefab": "Grausten"
+    },
+    {
+      "name": "Proustite Powder",
+      "cmd": "#proustitepowder",
+      "prefab": "ProustitePowder"
+    },
+    {
       "name": "Sulfur Stone",
       "cmd": "#sulfurstone",
       "prefab": "SulfurStone"
-    },
-    {
-      "name": "Trinket Flametal Eitr",
-      "cmd": "#trinketflametaleitr",
-      "prefab": "TrinketFlametalEitr"
-    },
-    {
-      "name": "Trinket Flametal Stamina Health",
-      "cmd": "#trinketflametalstaminahealth",
-      "prefab": "TrinketFlametalStaminaHealth"
     },
     {
       "name": "Trophy Asksvin",
@@ -7443,6 +7858,11 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "BjornHide"
     },
     {
+      "name": "Black Marble",
+      "cmd": "#blackmarble",
+      "prefab": "BlackMarble"
+    },
+    {
       "name": "Coal",
       "cmd": "#coal",
       "prefab": "Coal"
@@ -7473,6 +7893,21 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "GoldOre"
     },
     {
+      "name": "Jute Blue",
+      "cmd": "#juteblue",
+      "prefab": "JuteBlue"
+    },
+    {
+      "name": "Jute Red",
+      "cmd": "#jutered",
+      "prefab": "JuteRed"
+    },
+    {
+      "name": "Linen Thread",
+      "cmd": "#linenthread",
+      "prefab": "LinenThread"
+    },
+    {
       "name": "Mechanical Spring",
       "cmd": "#mechanicalspring",
       "prefab": "MechanicalSpring"
@@ -7491,6 +7926,11 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Moose Hide",
       "cmd": "#moosehide",
       "prefab": "MooseHide"
+    },
+    {
+      "name": "Queen Bee",
+      "cmd": "#queenbee",
+      "prefab": "QueenBee"
     },
     {
       "name": "Ruby",
@@ -7653,6 +8093,11 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "FishingRodFloat"
     },
     {
+      "name": "Grappling Hook",
+      "cmd": "#grapplinghook",
+      "prefab": "GrapplingHook"
+    },
+    {
       "name": "Hammer",
       "cmd": "#hammer",
       "prefab": "Hammer"
@@ -7661,6 +8106,11 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Hoe",
       "cmd": "#hoe",
       "prefab": "Hoe"
+    },
+    {
+      "name": "Hook",
+      "cmd": "#hook",
+      "prefab": "Hook"
     },
     {
       "name": "Ice Shoes",
@@ -7693,6 +8143,11 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "PickaxeStone"
     },
     {
+      "name": "Shovel",
+      "cmd": "#shovel",
+      "prefab": "Shovel"
+    },
+    {
       "type": "section",
       "title": "Light sources"
     },
@@ -7721,26 +8176,6 @@ window.VALHEIM_TWITCH_STORE = {
       "title": "Mounts & eggs"
     },
     {
-      "name": "Asksvin Egg",
-      "cmd": "#asksvinegg",
-      "prefab": "AsksvinEgg"
-    },
-    {
-      "name": "Chicken Egg",
-      "cmd": "#chickenegg",
-      "prefab": "ChickenEgg"
-    },
-    {
-      "name": "Dragon Egg",
-      "cmd": "#dragonegg",
-      "prefab": "DragonEgg"
-    },
-    {
-      "name": "Powdered Dragon Egg",
-      "cmd": "#powdereddragonegg",
-      "prefab": "PowderedDragonEgg"
-    },
-    {
       "name": "Saddle Asksvin",
       "cmd": "#saddleasksvin",
       "prefab": "SaddleAsksvin"
@@ -7765,9 +8200,89 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "BarberKit"
     },
     {
+      "name": "Belt Strength",
+      "cmd": "#beltstrength",
+      "prefab": "BeltStrength"
+    },
+    {
+      "name": "Blood Gold Key",
+      "cmd": "#bloodgoldkey",
+      "prefab": "BloodGoldKey"
+    },
+    {
+      "name": "Crown Jewel",
+      "cmd": "#crownjewel",
+      "prefab": "CrownJewel"
+    },
+    {
+      "name": "Crypt Key",
+      "cmd": "#cryptkey",
+      "prefab": "CryptKey"
+    },
+    {
+      "name": "Demister",
+      "cmd": "#demister",
+      "prefab": "Demister"
+    },
+    {
+      "name": "Dragon Tear",
+      "cmd": "#dragontear",
+      "prefab": "DragonTear"
+    },
+    {
+      "name": "Dvergr Key",
+      "cmd": "#dvergrkey",
+      "prefab": "DvergrKey"
+    },
+    {
+      "name": "Dvergr Key Fragment",
+      "cmd": "#dvergrkeyfragment",
+      "prefab": "DvergrKeyFragment"
+    },
+    {
+      "name": "Goblin Totem",
+      "cmd": "#goblintotem",
+      "prefab": "GoblinTotem"
+    },
+    {
+      "name": "Hard Antler",
+      "cmd": "#hardantler",
+      "prefab": "HardAntler"
+    },
+    {
+      "name": "Hildir Key Forestcrypt",
+      "cmd": "#hildirkeyforestcrypt",
+      "prefab": "HildirKey_forestcrypt"
+    },
+    {
+      "name": "Hildir Key Mountaincave",
+      "cmd": "#hildirkeymountaincave",
+      "prefab": "HildirKey_mountaincave"
+    },
+    {
+      "name": "Hildir Key Plainsfortress",
+      "cmd": "#hildirkeyplainsfortress",
+      "prefab": "HildirKey_plainsfortress"
+    },
+    {
+      "name": "Ice Skates",
+      "cmd": "#iceskates",
+      "prefab": "IceSkates"
+    },
+    {
+      "name": "Keys Gold Uncooked",
+      "cmd": "#keysgolduncooked",
+      "prefab": "KeysGoldUncooked"
+    },
+    {
       "name": "Wishbone",
       "cmd": "#wishbone",
       "prefab": "Wishbone"
+    },
+    {
+      "name": "Wisp",
+      "cmd": "#wisp",
+      "prefab": "Wisp"
     },
     {
       "type": "section",
@@ -7819,6 +8334,11 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "FireworksRocket_Yellow"
     },
     {
+      "name": "Sparkler",
+      "cmd": "#sparkler",
+      "prefab": "Sparkler"
+    },
+    {
       "type": "section",
       "title": "Chests & treasure"
     },
@@ -7831,6 +8351,16 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Loot Chest Wood",
       "cmd": "#lootchestwood",
       "prefab": "loot_chest_wood"
+    },
+    {
+      "name": "Loot Deep North Granary",
+      "cmd": "#lootdeepnorthgranary",
+      "prefab": "loot_deepNorth_Granary"
+    },
+    {
+      "name": "Loot Deep North Timber Hall",
+      "cmd": "#lootdeepnorthtimberhall",
+      "prefab": "loot_deepNorth_TimberHall"
     },
     {
       "name": "Treasure Chest Ashland Stone",
@@ -7945,11 +8475,6 @@ window.VALHEIM_TWITCH_STORE = {
     {
       "type": "section",
       "title": "Crafting molds"
-    },
-    {
-      "name": "Generic Mold Uncooked",
-      "cmd": "#genericmolduncooked",
-      "prefab": "GenericMoldUncooked"
     },
     {
       "name": "Mold Atgeir",
@@ -8096,19 +8621,9 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "BeechSeeds"
     },
     {
-      "name": "Belt Strength",
-      "cmd": "#beltstrength",
-      "prefab": "BeltStrength"
-    },
-    {
       "name": "Birch Seeds",
       "cmd": "#birchseeds",
       "prefab": "BirchSeeds"
-    },
-    {
-      "name": "Bjorn Meat",
-      "cmd": "#bjornmeat",
-      "prefab": "BjornMeat"
     },
     {
       "name": "Bjorn Paw",
@@ -8116,29 +8631,9 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "BjornPaw"
     },
     {
-      "name": "Black Marble",
-      "cmd": "#blackmarble",
-      "prefab": "BlackMarble"
-    },
-    {
       "name": "Blob Vial",
       "cmd": "#blobvial",
       "prefab": "BlobVial"
-    },
-    {
-      "name": "Blood Gold Key",
-      "cmd": "#bloodgoldkey",
-      "prefab": "BloodGoldKey"
-    },
-    {
-      "name": "Bone Maw Serpent Meat",
-      "cmd": "#bonemawserpentmeat",
-      "prefab": "BoneMawSerpentMeat"
-    },
-    {
-      "name": "Bug Meat",
-      "cmd": "#bugmeat",
-      "prefab": "BugMeat"
     },
     {
       "name": "Ceramic Plate",
@@ -8166,49 +8661,9 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "Charredskull"
     },
     {
-      "name": "Crown Jewel",
-      "cmd": "#crownjewel",
-      "prefab": "CrownJewel"
-    },
-    {
-      "name": "Crypt Key",
-      "cmd": "#cryptkey",
-      "prefab": "CryptKey"
-    },
-    {
-      "name": "Cured Squirrel Hamstring",
-      "cmd": "#curedsquirrelhamstring",
-      "prefab": "CuredSquirrelHamstring"
-    },
-    {
       "name": "Dead Speak Base",
       "cmd": "#deadspeakbase",
       "prefab": "DeadSpeak_Base"
-    },
-    {
-      "name": "Deer Meat",
-      "cmd": "#deermeat",
-      "prefab": "DeerMeat"
-    },
-    {
-      "name": "Demister",
-      "cmd": "#demister",
-      "prefab": "Demister"
-    },
-    {
-      "name": "Dragon Tear",
-      "cmd": "#dragontear",
-      "prefab": "DragonTear"
-    },
-    {
-      "name": "Dvergr Key",
-      "cmd": "#dvergrkey",
-      "prefab": "DvergrKey"
-    },
-    {
-      "name": "Dvergr Key Fragment",
-      "cmd": "#dvergrkeyfragment",
-      "prefab": "DvergrKeyFragment"
     },
     {
       "name": "Dvergr Needle",
@@ -8236,11 +8691,6 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "FaderEmber"
     },
     {
-      "name": "Fiery Svinstew",
-      "cmd": "#fierysvinstew",
-      "prefab": "FierySvinstew"
-    },
-    {
       "name": "Fir Cone",
       "cmd": "#fircone",
       "prefab": "FirCone"
@@ -8254,16 +8704,6 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Fragrant Bundle",
       "cmd": "#fragrantbundle",
       "prefab": "FragrantBundle"
-    },
-    {
-      "name": "Freeze Gland",
-      "cmd": "#freezegland",
-      "prefab": "FreezeGland"
-    },
-    {
-      "name": "Fresh Seaweed",
-      "cmd": "#freshseaweed",
-      "prefab": "FreshSeaweed"
     },
     {
       "name": "Frozen Fuel",
@@ -8286,16 +8726,6 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "GlowWorm"
     },
     {
-      "name": "Goblin Totem",
-      "cmd": "#goblintotem",
-      "prefab": "GoblinTotem"
-    },
-    {
-      "name": "Grappling Hook",
-      "cmd": "#grapplinghook",
-      "prefab": "GrapplingHook"
-    },
-    {
       "name": "Grappling Point",
       "cmd": "#grapplingpoint",
       "prefab": "GrapplingPoint"
@@ -8306,24 +8736,9 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "GrapplingPointSecondary"
     },
     {
-      "name": "Grausten",
-      "cmd": "#grausten",
-      "prefab": "Grausten"
-    },
-    {
-      "name": "Greydwarf Eye",
-      "cmd": "#greydwarfeye",
-      "prefab": "GreydwarfEye"
-    },
-    {
       "name": "Greydwarf Surprise",
       "cmd": "#greydwarfsurprise",
       "prefab": "GreydwarfSurprise"
-    },
-    {
-      "name": "Hard Antler",
-      "cmd": "#hardantler",
-      "prefab": "HardAntler"
     },
     {
       "name": "Hateful Blood",
@@ -8341,49 +8756,24 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "HealthUpgrade_GDKing"
     },
     {
-      "name": "Hildir Key Forestcrypt",
-      "cmd": "#hildirkeyforestcrypt",
-      "prefab": "HildirKey_forestcrypt"
-    },
-    {
-      "name": "Hildir Key Mountaincave",
-      "cmd": "#hildirkeymountaincave",
-      "prefab": "HildirKey_mountaincave"
-    },
-    {
-      "name": "Hildir Key Plainsfortress",
-      "cmd": "#hildirkeyplainsfortress",
-      "prefab": "HildirKey_plainsfortress"
-    },
-    {
-      "name": "Hook",
-      "cmd": "#hook",
-      "prefab": "Hook"
-    },
-    {
       "name": "Ice",
       "cmd": "#ice",
       "prefab": "Ice"
     },
     {
-      "name": "Ice Skates",
-      "cmd": "#iceskates",
-      "prefab": "IceSkates"
+      "name": "Kale",
+      "cmd": "#kale",
+      "prefab": "Kale"
     },
     {
-      "name": "Jute Blue",
-      "cmd": "#juteblue",
-      "prefab": "JuteBlue"
+      "name": "Kale Chips",
+      "cmd": "#kalechips",
+      "prefab": "KaleChips"
     },
     {
-      "name": "Jute Red",
-      "cmd": "#jutered",
-      "prefab": "JuteRed"
-    },
-    {
-      "name": "Keys Gold Uncooked",
-      "cmd": "#keysgolduncooked",
-      "prefab": "KeysGoldUncooked"
+      "name": "Kale Seeds",
+      "cmd": "#kaleseeds",
+      "prefab": "KaleSeeds"
     },
     {
       "name": "Large Bone",
@@ -8416,49 +8806,14 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "Leatherstraps"
     },
     {
-      "name": "Linen Thread",
-      "cmd": "#linenthread",
-      "prefab": "LinenThread"
-    },
-    {
-      "name": "Lingonberry",
-      "cmd": "#lingonberry",
-      "prefab": "Lingonberry"
-    },
-    {
-      "name": "Lingondricka",
-      "cmd": "#lingondricka",
-      "prefab": "Lingondricka"
-    },
-    {
-      "name": "Loot Deep North Granary",
-      "cmd": "#lootdeepnorthgranary",
-      "prefab": "loot_deepNorth_Granary"
-    },
-    {
-      "name": "Loot Deep North Timber Hall",
-      "cmd": "#lootdeepnorthtimberhall",
-      "prefab": "loot_deepNorth_TimberHall"
-    },
-    {
       "name": "Loot Spawner Pineforest",
       "cmd": "#lootspawnerpineforest",
       "prefab": "LootSpawner_pineforest"
     },
     {
-      "name": "Lox Pie Uncooked",
-      "cmd": "#loxpieuncooked",
-      "prefab": "LoxPieUncooked"
-    },
-    {
       "name": "Magically Stuffed Shroom",
       "cmd": "#magicallystuffedshroom",
       "prefab": "MagicallyStuffedShroom"
-    },
-    {
-      "name": "Magically Stuffed Shroom Uncooked",
-      "cmd": "#magicallystuffedshroomuncooked",
-      "prefab": "MagicallyStuffedShroomUncooked"
     },
     {
       "name": "Mandible",
@@ -8471,29 +8826,9 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "MarinatedGreens"
     },
     {
-      "name": "Mashed Meat",
-      "cmd": "#mashedmeat",
-      "prefab": "MashedMeat"
-    },
-    {
-      "name": "Mince Meat Sauce",
-      "cmd": "#mincemeatsauce",
-      "prefab": "MinceMeatSauce"
-    },
-    {
       "name": "Mole Claws",
       "cmd": "#moleclaws",
       "prefab": "MoleClaws"
-    },
-    {
-      "name": "Moose Kebab",
-      "cmd": "#moosekebab",
-      "prefab": "MooseKebab"
-    },
-    {
-      "name": "Moose Meat",
-      "cmd": "#moosemeat",
-      "prefab": "MooseMeat"
     },
     {
       "name": "Moose Sinew",
@@ -8511,24 +8846,29 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "MorgenSinew"
     },
     {
-      "name": "Needle",
-      "cmd": "#needle",
-      "prefab": "Needle"
-    },
-    {
       "name": "Norn Thread",
       "cmd": "#nornthread",
       "prefab": "NornThread"
     },
     {
-      "name": "Ooze",
-      "cmd": "#ooze",
-      "prefab": "Ooze"
+      "name": "Oat",
+      "cmd": "#oat",
+      "prefab": "Oat"
     },
     {
-      "name": "Ooze Mork",
-      "cmd": "#oozemork",
-      "prefab": "OozeMork"
+      "name": "Oat Flour",
+      "cmd": "#oatflour",
+      "prefab": "OatFlour"
+    },
+    {
+      "name": "Oat Milk",
+      "cmd": "#oatmilk",
+      "prefab": "OatMilk"
+    },
+    {
+      "name": "Oat Seeds",
+      "cmd": "#oatseeds",
+      "prefab": "OatSeeds"
     },
     {
       "name": "Orb Frost Fire",
@@ -8539,21 +8879,6 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Orb Thunder Blood",
       "cmd": "#orbthunderblood",
       "prefab": "OrbThunderBlood"
-    },
-    {
-      "name": "Oven Pancake",
-      "cmd": "#ovenpancake",
-      "prefab": "OvenPancake"
-    },
-    {
-      "name": "Oven Pancake Uncooked",
-      "cmd": "#ovenpancakeuncooked",
-      "prefab": "OvenPancakeUncooked"
-    },
-    {
-      "name": "Pancakes",
-      "cmd": "#pancakes",
-      "prefab": "Pancakes"
     },
     {
       "name": "Pine Cone",
@@ -8586,16 +8911,6 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "PoteitrSeeds"
     },
     {
-      "name": "Proustite Powder",
-      "cmd": "#proustitepowder",
-      "prefab": "ProustitePowder"
-    },
-    {
-      "name": "Pukeberries",
-      "cmd": "#pukeberries",
-      "prefab": "Pukeberries"
-    },
-    {
       "name": "Pulled Bear",
       "cmd": "#pulledbear",
       "prefab": "PulledBear"
@@ -8606,11 +8921,6 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "PungentPebbles"
     },
     {
-      "name": "Queen Bee",
-      "cmd": "#queenbee",
-      "prefab": "QueenBee"
-    },
-    {
       "name": "Queen Drop",
       "cmd": "#queendrop",
       "prefab": "QueenDrop"
@@ -8619,66 +8929,6 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Radiation",
       "cmd": "#radiation",
       "prefab": "radiation"
-    },
-    {
-      "name": "Roasted Crust Pie Uncooked",
-      "cmd": "#roastedcrustpieuncooked",
-      "prefab": "RoastedCrustPieUncooked"
-    },
-    {
-      "name": "Rotten Meat",
-      "cmd": "#rottenmeat",
-      "prefab": "RottenMeat"
-    },
-    {
-      "name": "Scorching Medley",
-      "cmd": "#scorchingmedley",
-      "prefab": "ScorchingMedley"
-    },
-    {
-      "name": "Seal Blubber",
-      "cmd": "#sealblubber",
-      "prefab": "SealBlubber"
-    },
-    {
-      "name": "Seal Soup",
-      "cmd": "#sealsoup",
-      "prefab": "SealSoup"
-    },
-    {
-      "name": "Seeker Aspic",
-      "cmd": "#seekeraspic",
-      "prefab": "SeekerAspic"
-    },
-    {
-      "name": "Shocklate Smoothie",
-      "cmd": "#shocklatesmoothie",
-      "prefab": "ShocklateSmoothie"
-    },
-    {
-      "name": "Shovel",
-      "cmd": "#shovel",
-      "prefab": "Shovel"
-    },
-    {
-      "name": "Sizzling Berry Broth",
-      "cmd": "#sizzlingberrybroth",
-      "prefab": "SizzlingBerryBroth"
-    },
-    {
-      "name": "Small Parts Gold Uncooked",
-      "cmd": "#smallpartsgolduncooked",
-      "prefab": "SmallPartsGoldUncooked"
-    },
-    {
-      "name": "Smoked Fish",
-      "cmd": "#smokedfish",
-      "prefab": "SmokedFish"
-    },
-    {
-      "name": "Smoked Moose Meat",
-      "cmd": "#smokedmoosemeat",
-      "prefab": "SmokedMooseMeat"
     },
     {
       "name": "Snowball",
@@ -8694,16 +8944,6 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Snow Roller",
       "cmd": "#snowroller",
       "prefab": "SnowRoller"
-    },
-    {
-      "name": "Sparkler",
-      "cmd": "#sparkler",
-      "prefab": "Sparkler"
-    },
-    {
-      "name": "Sparkling Shroomshake",
-      "cmd": "#sparklingshroomshake",
-      "prefab": "SparklingShroomshake"
     },
     {
       "name": "Staff Greenroots Spawn",
@@ -8806,54 +9046,9 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "VegvisirShard_Bonemass"
     },
     {
-      "name": "Viking Cupcake",
-      "cmd": "#vikingcupcake",
-      "prefab": "VikingCupcake"
-    },
-    {
-      "name": "Viking Cupcake Uncooked",
-      "cmd": "#vikingcupcakeuncooked",
-      "prefab": "VikingCupcakeUncooked"
-    },
-    {
-      "name": "Vineberry",
-      "cmd": "#vineberry",
-      "prefab": "Vineberry"
-    },
-    {
       "name": "Voidplasm",
       "cmd": "#voidplasm",
       "prefab": "Voidplasm"
-    },
-    {
-      "name": "Wisp",
-      "cmd": "#wisp",
-      "prefab": "Wisp"
-    },
-    {
-      "name": "Wolf Claw",
-      "cmd": "#wolfclaw",
-      "prefab": "WolfClaw"
-    },
-    {
-      "name": "Wolf Fang",
-      "cmd": "#wolffang",
-      "prefab": "WolfFang"
-    },
-    {
-      "name": "Wolf Hair Bundle",
-      "cmd": "#wolfhairbundle",
-      "prefab": "WolfHairBundle"
-    },
-    {
-      "name": "Wolf Meat",
-      "cmd": "#wolfmeat",
-      "prefab": "WolfMeat"
-    },
-    {
-      "name": "Wolf Meat Skewer",
-      "cmd": "#wolfmeatskewer",
-      "prefab": "WolfMeatSkewer"
     },
     {
       "name": "Yagluth Drop",
