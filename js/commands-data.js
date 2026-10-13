@@ -162,7 +162,7 @@ window.VALHEIM_TWITCH_STORE = {
   "mobs": [
     {
       "type": "help",
-      "text": "Pick a biome sub-tab. Bosses are separate. Bare #alias · optional amount (#troll 1)."
+      "text": "Pick a biome sub-tab. Bosses are separate. Bare #alias · optional ★ level (#boar 2). Count is always 1 for now."
     },
     {
       "type": "section",

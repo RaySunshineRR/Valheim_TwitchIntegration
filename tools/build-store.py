@@ -490,7 +490,7 @@ def build_store(data: dict) -> dict:
     store["mobs"].append(
         {
             "type": "help",
-            "text": "Pick a biome sub-tab. Bosses are separate. Bare #alias · optional amount (#troll 1).",
+            "text": "Pick a biome sub-tab. Bosses are separate. Bare #alias · optional ★ level (#boar 2). Count is always 1 for now.",
         }
     )
     by_biome: dict[str, list] = defaultdict(list)
