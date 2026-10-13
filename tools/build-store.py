@@ -1106,7 +1106,6 @@ def classify_item(it: dict) -> tuple[str, str]:
 QUICK_PREFABS = [
     ("Greyling", "Starter mob — soft chaos"),
     ("Boar", "Meadows pest"),
-    ("Troll", "Big smash"),
     ("Skeleton", "Raid filler"),
     ("Neck", "Shore pest"),
     ("Wood", "Building basics"),
@@ -1117,14 +1116,16 @@ QUICK_PREFABS = [
     ("Iron", "Mid-game metal"),
     ("Bronze", "Early metal"),
     ("Coal", "Smelting fuel"),
+    ("Resin", "Torch fuel"),
     ("CookedMeat", "Quick food"),
     ("Honey", "Mead base"),
     ("MeadHealthMinor", "Heal up"),
     ("MeadStaminaMinor", "Stamina up"),
     ("ArrowFire", "Ranged spice"),
-    ("SwordIron", "Solid blade"),
+    ("MaceBronze", "Early smash"),
+    ("MaceWood", "Starter club"),
     ("ShieldWood", "Starter block"),
-    ("ArmorBronzeChest", "Early plate"),
+    ("ShieldBronzeBuckler", "Bronze block"),
     ("Torch", "Light"),
 ]
 

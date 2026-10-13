@@ -51,13 +51,6 @@ window.VALHEIM_TWITCH_STORE = {
       "desc": "Meadows pest"
     },
     {
-      "name": "Troll",
-      "cmd": "#troll",
-      "prefab": "Troll",
-      "cost": 60,
-      "desc": "Big smash"
-    },
-    {
       "name": "Skeleton",
       "cmd": "#skeleton",
       "prefab": "Skeleton",
@@ -132,6 +125,13 @@ window.VALHEIM_TWITCH_STORE = {
       "desc": "Smelting fuel"
     },
     {
+      "name": "Resin",
+      "cmd": "#resin",
+      "prefab": "Resin",
+      "cost": 1,
+      "desc": "Torch fuel"
+    },
+    {
       "name": "Cooked Boar Meat",
       "cmd": "#cookedboarmeat",
       "prefab": "CookedMeat",
@@ -167,11 +167,18 @@ window.VALHEIM_TWITCH_STORE = {
       "desc": "Ranged spice"
     },
     {
-      "name": "Iron Sword",
-      "cmd": "#swordiron",
-      "prefab": "SwordIron",
-      "cost": 20,
-      "desc": "Solid blade"
+      "name": "Bronze Mace",
+      "cmd": "#macebronze",
+      "prefab": "MaceBronze",
+      "cost": 13,
+      "desc": "Early smash"
+    },
+    {
+      "name": "Wood Mace",
+      "cmd": "#macewood",
+      "prefab": "MaceWood",
+      "cost": 2,
+      "desc": "Starter club"
     },
     {
       "name": "Wood Shield",
@@ -181,11 +188,11 @@ window.VALHEIM_TWITCH_STORE = {
       "desc": "Starter block"
     },
     {
-      "name": "Bronze Chest",
-      "cmd": "#armorbronzechest",
-      "prefab": "ArmorBronzeChest",
-      "cost": 15,
-      "desc": "Early plate"
+      "name": "Bronze Buckler Shield",
+      "cmd": "#shieldbronzebuckler",
+      "prefab": "ShieldBronzeBuckler",
+      "cost": 13,
+      "desc": "Bronze block"
     },
     {
       "name": "Torch",
