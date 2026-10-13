@@ -3682,6 +3682,31 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "HelmetBerserkerUndead"
     },
     {
+      "name": "Trinket Black Damage Health",
+      "cmd": "#trinketblackdamagehealth",
+      "prefab": "TrinketBlackDamageHealth"
+    },
+    {
+      "name": "Trinket Black Stamina",
+      "cmd": "#trinketblackstamina",
+      "prefab": "TrinketBlackStamina"
+    },
+    {
+      "name": "Trinket Blood Gold Health",
+      "cmd": "#trinketbloodgoldhealth",
+      "prefab": "TrinketBloodGoldHealth"
+    },
+    {
+      "name": "Trinket Blood Gold Stamina",
+      "cmd": "#trinketbloodgoldstamina",
+      "prefab": "TrinketBloodGoldStamina"
+    },
+    {
+      "name": "Trinket Scale Stamina Damage",
+      "cmd": "#trinketscalestaminadamage",
+      "prefab": "TrinketScaleStaminaDamage"
+    },
+    {
       "type": "section",
       "title": "Other"
     },
@@ -3959,35 +3984,6 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "SP Armor Tunic5",
       "cmd": "#sparmortunic5",
       "prefab": "SP_ArmorTunic5"
-    },
-    {
-      "type": "section",
-      "title": "Special · Capes & misc"
-    },
-    {
-      "name": "Trinket Black Damage Health",
-      "cmd": "#trinketblackdamagehealth",
-      "prefab": "TrinketBlackDamageHealth"
-    },
-    {
-      "name": "Trinket Black Stamina",
-      "cmd": "#trinketblackstamina",
-      "prefab": "TrinketBlackStamina"
-    },
-    {
-      "name": "Trinket Blood Gold Health",
-      "cmd": "#trinketbloodgoldhealth",
-      "prefab": "TrinketBloodGoldHealth"
-    },
-    {
-      "name": "Trinket Blood Gold Stamina",
-      "cmd": "#trinketbloodgoldstamina",
-      "prefab": "TrinketBloodGoldStamina"
-    },
-    {
-      "name": "Trinket Scale Stamina Damage",
-      "cmd": "#trinketscalestaminadamage",
-      "prefab": "TrinketScaleStaminaDamage"
     }
   ],
   "food": [

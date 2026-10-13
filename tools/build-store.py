@@ -617,7 +617,7 @@ def classify_item(it: dict) -> tuple[str, str]:
             return "food", "Prepared dishes"
         return "food", food_section(prefab)
     if prefab.startswith("Trinket"):
-        return "armor", "Special · Capes & misc"
+        return "armor", "Special"
     return "misc", misc_section(prefab)
 
 
