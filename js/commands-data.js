@@ -9,7 +9,7 @@ window.VALHEIM_TWITCH_STORE = {
   "quick": [
     {
       "type": "help",
-      "text": "Streamer favourites first. Full lists live in the other tabs. #visit also works in chat."
+      "text": "Streamer favourites first. Full lists live in the other tabs. Amounts: #wood 50 · arrows default to 10 · stack-capped."
     },
     {
       "type": "section",
@@ -26,9 +26,9 @@ window.VALHEIM_TWITCH_STORE = {
       "desc": "Explicit spawn form"
     },
     {
-      "name": "Item (legacy)",
-      "cmd": "#item Wood",
-      "desc": "Explicit item form"
+      "name": "Give / item",
+      "cmd": "#give Wood 50",
+      "desc": "#give or #item · amount optional · capped to stack"
     },
     {
       "type": "section",
@@ -162,7 +162,7 @@ window.VALHEIM_TWITCH_STORE = {
   "mobs": [
     {
       "type": "help",
-      "text": "Pick a biome sub-tab. Bosses are separate. Commands are bare #aliases (no args)."
+      "text": "Pick a biome sub-tab. Bosses are separate. Bare #alias · optional amount (#troll 1)."
     },
     {
       "type": "section",
@@ -798,7 +798,7 @@ window.VALHEIM_TWITCH_STORE = {
   "weapons": [
     {
       "type": "help",
-      "text": "Ordered by weapon family — swords before arrows. Prefer mid-tier for fun without ending the run."
+      "text": "Jump buttons below jump to a family. Prefer mid-tier for fun without ending the run."
     },
     {
       "type": "section",
@@ -948,6 +948,11 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "TH Sword Slayer Nature",
       "cmd": "#thswordslayernature",
       "prefab": "THSwordSlayerNature"
+    },
+    {
+      "name": "TH Sword Wood",
+      "cmd": "#thswordwood",
+      "prefab": "THSwordWood"
     },
     {
       "type": "section",
@@ -1929,21 +1934,6 @@ window.VALHEIM_TWITCH_STORE = {
       "title": "Other weapons"
     },
     {
-      "name": "Cultivator",
-      "cmd": "#cultivator",
-      "prefab": "Cultivator"
-    },
-    {
-      "name": "Fishing Rod",
-      "cmd": "#fishingrod",
-      "prefab": "FishingRod"
-    },
-    {
-      "name": "Fishing Rod Float",
-      "cmd": "#fishingrodfloat",
-      "prefab": "FishingRodFloat"
-    },
-    {
       "name": "Fist Bjorn Claw",
       "cmd": "#fistbjornclaw",
       "prefab": "FistBjornClaw"
@@ -1979,44 +1969,9 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "FistGoldUncooked"
     },
     {
-      "name": "Hammer",
-      "cmd": "#hammer",
-      "prefab": "Hammer"
-    },
-    {
-      "name": "Hoe",
-      "cmd": "#hoe",
-      "prefab": "Hoe"
-    },
-    {
       "name": "Mold Fistweapon",
       "cmd": "#moldfistweapon",
       "prefab": "MoldFistweapon"
-    },
-    {
-      "name": "Antler Pickaxe",
-      "cmd": "#pickaxeantler",
-      "prefab": "PickaxeAntler"
-    },
-    {
-      "name": "Black Metal Pickaxe",
-      "cmd": "#pickaxeblackmetal",
-      "prefab": "PickaxeBlackMetal"
-    },
-    {
-      "name": "Bronze Pickaxe",
-      "cmd": "#pickaxebronze",
-      "prefab": "PickaxeBronze"
-    },
-    {
-      "name": "Iron Pickaxe",
-      "cmd": "#pickaxeiron",
-      "prefab": "PickaxeIron"
-    },
-    {
-      "name": "Stone Pickaxe",
-      "cmd": "#pickaxestone",
-      "prefab": "PickaxeStone"
     },
     {
       "name": "Scythe",
@@ -2097,7 +2052,7 @@ window.VALHEIM_TWITCH_STORE = {
   "armor": [
     {
       "type": "help",
-      "text": "Tiered by progression (T0 rags → T6 Ashlands). Capes & odd pieces at the end."
+      "text": "Tiered by progression (T0 rags → T6 Ashlands). Use jump buttons to travel tiers."
     },
     {
       "type": "section",
@@ -2115,6 +2070,30 @@ window.VALHEIM_TWITCH_STORE = {
     },
     {
       "type": "section",
+      "title": "T1 · Troll"
+    },
+    {
+      "name": "Troll Leather Chest",
+      "cmd": "#armortrollleatherchest",
+      "prefab": "ArmorTrollLeatherChest"
+    },
+    {
+      "name": "Troll Leather Legs",
+      "cmd": "#armortrollleatherlegs",
+      "prefab": "ArmorTrollLeatherLegs"
+    },
+    {
+      "name": "Cape Troll Hide",
+      "cmd": "#capetrollhide",
+      "prefab": "CapeTrollHide"
+    },
+    {
+      "name": "Helmet Troll Leather",
+      "cmd": "#helmettrollleather",
+      "prefab": "HelmetTrollLeather"
+    },
+    {
+      "type": "section",
       "title": "T1 · Leather"
     },
     {
@@ -2128,38 +2107,14 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "ArmorLeatherLegs"
     },
     {
-      "name": "Troll Leather Chest",
-      "cmd": "#armortrollleatherchest",
-      "prefab": "ArmorTrollLeatherChest"
-    },
-    {
-      "name": "Troll Leather Legs",
-      "cmd": "#armortrollleatherlegs",
-      "prefab": "ArmorTrollLeatherLegs"
-    },
-    {
       "name": "Helmet Leather",
       "cmd": "#helmetleather",
       "prefab": "HelmetLeather"
     },
     {
-      "name": "Helmet Troll Leather",
-      "cmd": "#helmettrollleather",
-      "prefab": "HelmetTrollLeather"
-    },
-    {
       "name": "SP Armor Leather Legs",
       "cmd": "#sparmorleatherlegs",
       "prefab": "SP_ArmorLeatherLegs"
-    },
-    {
-      "type": "section",
-      "title": "T1 · Troll"
-    },
-    {
-      "name": "Cape Troll Hide",
-      "cmd": "#capetrollhide",
-      "prefab": "CapeTrollHide"
     },
     {
       "type": "section",
@@ -2222,6 +2177,25 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Helmet Iron",
       "cmd": "#helmetiron",
       "prefab": "HelmetIron"
+    },
+    {
+      "type": "section",
+      "title": "T3 · Fenring"
+    },
+    {
+      "name": "Fenring Chest",
+      "cmd": "#armorfenringchest",
+      "prefab": "ArmorFenringChest"
+    },
+    {
+      "name": "Fenring Legs",
+      "cmd": "#armorfenringlegs",
+      "prefab": "ArmorFenringLegs"
+    },
+    {
+      "name": "Helmet Fenring",
+      "cmd": "#helmetfenring",
+      "prefab": "HelmetFenring"
     },
     {
       "type": "section",
@@ -2574,16 +2548,6 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "ArmorDress9"
     },
     {
-      "name": "Fenring Chest",
-      "cmd": "#armorfenringchest",
-      "prefab": "ArmorFenringChest"
-    },
-    {
-      "name": "Fenring Legs",
-      "cmd": "#armorfenringlegs",
-      "prefab": "ArmorFenringLegs"
-    },
-    {
       "name": "Gold Heavy Chest Uncooked",
       "cmd": "#armorgoldheavychestuncooked",
       "prefab": "ArmorGoldHeavyChestUncooked"
@@ -2714,11 +2678,6 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "HelmetDverger"
     },
     {
-      "name": "Helmet Fenring",
-      "cmd": "#helmetfenring",
-      "prefab": "HelmetFenring"
-    },
-    {
       "name": "Helmet Fishing Hat",
       "cmd": "#helmetfishinghat",
       "prefab": "HelmetFishingHat"
@@ -2822,7 +2781,7 @@ window.VALHEIM_TWITCH_STORE = {
   "food": [
     {
       "type": "help",
-      "text": "Cooked & prepared first (actual usefulness), then meads, crops, raw."
+      "text": "Cooked & prepared first, then crops and raw. Meads live under Potions."
     },
     {
       "type": "section",
@@ -2951,6 +2910,11 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Feaster",
       "cmd": "#feaster",
       "prefab": "Feaster"
+    },
+    {
+      "name": "Feast Meadows Material",
+      "cmd": "#feastmeadowsmaterial",
+      "prefab": "FeastMeadows_Material"
     },
     {
       "name": "Feast Mistlands Material",
@@ -3156,245 +3120,6 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Yggdrasil Wood",
       "cmd": "#yggdrasilwood",
       "prefab": "YggdrasilWood"
-    },
-    {
-      "type": "section",
-      "title": "Meads & flasks"
-    },
-    {
-      "name": "Barley Wine",
-      "cmd": "#barleywine",
-      "prefab": "BarleyWine"
-    },
-    {
-      "name": "Barley Wine Base",
-      "cmd": "#barleywinebase",
-      "prefab": "BarleyWineBase"
-    },
-    {
-      "name": "Feast Meadows Material",
-      "cmd": "#feastmeadowsmaterial",
-      "prefab": "FeastMeadows_Material"
-    },
-    {
-      "name": "Mead Base Bug Repellent",
-      "cmd": "#meadbasebugrepellent",
-      "prefab": "MeadBaseBugRepellent"
-    },
-    {
-      "name": "Mead Base Bzerker",
-      "cmd": "#meadbasebzerker",
-      "prefab": "MeadBaseBzerker"
-    },
-    {
-      "name": "Mead Base Eitr Lingering",
-      "cmd": "#meadbaseeitrlingering",
-      "prefab": "MeadBaseEitrLingering"
-    },
-    {
-      "name": "Mead Base Eitr Minor",
-      "cmd": "#meadbaseeitrminor",
-      "prefab": "MeadBaseEitrMinor"
-    },
-    {
-      "name": "Mead Base Frost Resist",
-      "cmd": "#meadbasefrostresist",
-      "prefab": "MeadBaseFrostResist"
-    },
-    {
-      "name": "Mead Base Hasty",
-      "cmd": "#meadbasehasty",
-      "prefab": "MeadBaseHasty"
-    },
-    {
-      "name": "Mead Base Health Lingering",
-      "cmd": "#meadbasehealthlingering",
-      "prefab": "MeadBaseHealthLingering"
-    },
-    {
-      "name": "Mead Base Health Major",
-      "cmd": "#meadbasehealthmajor",
-      "prefab": "MeadBaseHealthMajor"
-    },
-    {
-      "name": "Mead Base Health Medium",
-      "cmd": "#meadbasehealthmedium",
-      "prefab": "MeadBaseHealthMedium"
-    },
-    {
-      "name": "Mead Base Health Minor",
-      "cmd": "#meadbasehealthminor",
-      "prefab": "MeadBaseHealthMinor"
-    },
-    {
-      "name": "Mead Base Light Foot",
-      "cmd": "#meadbaselightfoot",
-      "prefab": "MeadBaseLightFoot"
-    },
-    {
-      "name": "Mead Base Poison Resist",
-      "cmd": "#meadbasepoisonresist",
-      "prefab": "MeadBasePoisonResist"
-    },
-    {
-      "name": "Mead Base Stamina Lingering",
-      "cmd": "#meadbasestaminalingering",
-      "prefab": "MeadBaseStaminaLingering"
-    },
-    {
-      "name": "Mead Base Stamina Medium",
-      "cmd": "#meadbasestaminamedium",
-      "prefab": "MeadBaseStaminaMedium"
-    },
-    {
-      "name": "Mead Base Stamina Minor",
-      "cmd": "#meadbasestaminaminor",
-      "prefab": "MeadBaseStaminaMinor"
-    },
-    {
-      "name": "Mead Base Strength",
-      "cmd": "#meadbasestrength",
-      "prefab": "MeadBaseStrength"
-    },
-    {
-      "name": "Mead Base Swimmer",
-      "cmd": "#meadbaseswimmer",
-      "prefab": "MeadBaseSwimmer"
-    },
-    {
-      "name": "Mead Base Tamer",
-      "cmd": "#meadbasetamer",
-      "prefab": "MeadBaseTamer"
-    },
-    {
-      "name": "Mead Base Tasty",
-      "cmd": "#meadbasetasty",
-      "prefab": "MeadBaseTasty"
-    },
-    {
-      "name": "Mead Bug Repellent",
-      "cmd": "#meadbugrepellent",
-      "prefab": "MeadBugRepellent"
-    },
-    {
-      "name": "Mead Bzerker",
-      "cmd": "#meadbzerker",
-      "prefab": "MeadBzerker"
-    },
-    {
-      "name": "Mead Eitr Lingering",
-      "cmd": "#meadeitrlingering",
-      "prefab": "MeadEitrLingering"
-    },
-    {
-      "name": "Mead Eitr Minor",
-      "cmd": "#meadeitrminor",
-      "prefab": "MeadEitrMinor"
-    },
-    {
-      "name": "Mead Frost Resist",
-      "cmd": "#meadfrostresist",
-      "prefab": "MeadFrostResist"
-    },
-    {
-      "name": "Mead Hasty",
-      "cmd": "#meadhasty",
-      "prefab": "MeadHasty"
-    },
-    {
-      "name": "Mead Health Lingering",
-      "cmd": "#meadhealthlingering",
-      "prefab": "MeadHealthLingering"
-    },
-    {
-      "name": "Mead Health Major",
-      "cmd": "#meadhealthmajor",
-      "prefab": "MeadHealthMajor"
-    },
-    {
-      "name": "Mead Health Medium",
-      "cmd": "#meadhealthmedium",
-      "prefab": "MeadHealthMedium"
-    },
-    {
-      "name": "Mead Health Minor",
-      "cmd": "#meadhealthminor",
-      "prefab": "MeadHealthMinor"
-    },
-    {
-      "name": "Mead Lightfoot",
-      "cmd": "#meadlightfoot",
-      "prefab": "MeadLightfoot"
-    },
-    {
-      "name": "Mead Poison Resist",
-      "cmd": "#meadpoisonresist",
-      "prefab": "MeadPoisonResist"
-    },
-    {
-      "name": "Mead Stamina Lingering",
-      "cmd": "#meadstaminalingering",
-      "prefab": "MeadStaminaLingering"
-    },
-    {
-      "name": "Mead Stamina Medium",
-      "cmd": "#meadstaminamedium",
-      "prefab": "MeadStaminaMedium"
-    },
-    {
-      "name": "Mead Stamina Minor",
-      "cmd": "#meadstaminaminor",
-      "prefab": "MeadStaminaMinor"
-    },
-    {
-      "name": "Mead Strength",
-      "cmd": "#meadstrength",
-      "prefab": "MeadStrength"
-    },
-    {
-      "name": "Mead Swimmer",
-      "cmd": "#meadswimmer",
-      "prefab": "MeadSwimmer"
-    },
-    {
-      "name": "Mead Tamer",
-      "cmd": "#meadtamer",
-      "prefab": "MeadTamer"
-    },
-    {
-      "name": "Mead Tasty",
-      "cmd": "#meadtasty",
-      "prefab": "MeadTasty"
-    },
-    {
-      "name": "Mead Troll Pheromones",
-      "cmd": "#meadtrollpheromones",
-      "prefab": "MeadTrollPheromones"
-    },
-    {
-      "name": "Treasure Chest Meadows",
-      "cmd": "#treasurechestmeadows",
-      "prefab": "TreasureChest_meadows"
-    },
-    {
-      "name": "Treasure Chest Meadows 01",
-      "cmd": "#treasurechestmeadows01",
-      "prefab": "TreasureChest_meadows_01"
-    },
-    {
-      "name": "Treasure Chest Meadows 02",
-      "cmd": "#treasurechestmeadows02",
-      "prefab": "TreasureChest_meadows_02"
-    },
-    {
-      "name": "Treasure Chest Meadows Buried",
-      "cmd": "#treasurechestmeadowsburied",
-      "prefab": "TreasureChest_meadows_buried"
-    },
-    {
-      "name": "Treasure Chest Meadows Combat",
-      "cmd": "#treasurechestmeadowscombat",
-      "prefab": "TreasureChest_meadows_combat"
     },
     {
       "type": "section",
@@ -3695,6 +3420,258 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "VoltureMeat"
     }
   ],
+  "potions": [
+    {
+      "type": "help",
+      "text": "Meads, brew bases, wines, and flasks — separated from food."
+    },
+    {
+      "type": "section",
+      "title": "Meads"
+    },
+    {
+      "name": "Mead Bug Repellent",
+      "cmd": "#meadbugrepellent",
+      "prefab": "MeadBugRepellent"
+    },
+    {
+      "name": "Mead Bzerker",
+      "cmd": "#meadbzerker",
+      "prefab": "MeadBzerker"
+    },
+    {
+      "name": "Mead Eitr Lingering",
+      "cmd": "#meadeitrlingering",
+      "prefab": "MeadEitrLingering"
+    },
+    {
+      "name": "Mead Eitr Minor",
+      "cmd": "#meadeitrminor",
+      "prefab": "MeadEitrMinor"
+    },
+    {
+      "name": "Mead Frost Resist",
+      "cmd": "#meadfrostresist",
+      "prefab": "MeadFrostResist"
+    },
+    {
+      "name": "Mead Hasty",
+      "cmd": "#meadhasty",
+      "prefab": "MeadHasty"
+    },
+    {
+      "name": "Mead Health Lingering",
+      "cmd": "#meadhealthlingering",
+      "prefab": "MeadHealthLingering"
+    },
+    {
+      "name": "Mead Health Major",
+      "cmd": "#meadhealthmajor",
+      "prefab": "MeadHealthMajor"
+    },
+    {
+      "name": "Mead Health Medium",
+      "cmd": "#meadhealthmedium",
+      "prefab": "MeadHealthMedium"
+    },
+    {
+      "name": "Mead Health Minor",
+      "cmd": "#meadhealthminor",
+      "prefab": "MeadHealthMinor"
+    },
+    {
+      "name": "Mead Lightfoot",
+      "cmd": "#meadlightfoot",
+      "prefab": "MeadLightfoot"
+    },
+    {
+      "name": "Mead Poison Resist",
+      "cmd": "#meadpoisonresist",
+      "prefab": "MeadPoisonResist"
+    },
+    {
+      "name": "Mead Stamina Lingering",
+      "cmd": "#meadstaminalingering",
+      "prefab": "MeadStaminaLingering"
+    },
+    {
+      "name": "Mead Stamina Medium",
+      "cmd": "#meadstaminamedium",
+      "prefab": "MeadStaminaMedium"
+    },
+    {
+      "name": "Mead Stamina Minor",
+      "cmd": "#meadstaminaminor",
+      "prefab": "MeadStaminaMinor"
+    },
+    {
+      "name": "Mead Strength",
+      "cmd": "#meadstrength",
+      "prefab": "MeadStrength"
+    },
+    {
+      "name": "Mead Swimmer",
+      "cmd": "#meadswimmer",
+      "prefab": "MeadSwimmer"
+    },
+    {
+      "name": "Mead Tamer",
+      "cmd": "#meadtamer",
+      "prefab": "MeadTamer"
+    },
+    {
+      "name": "Mead Tasty",
+      "cmd": "#meadtasty",
+      "prefab": "MeadTasty"
+    },
+    {
+      "name": "Mead Troll Pheromones",
+      "cmd": "#meadtrollpheromones",
+      "prefab": "MeadTrollPheromones"
+    },
+    {
+      "type": "section",
+      "title": "Bases"
+    },
+    {
+      "name": "Barley Wine Base",
+      "cmd": "#barleywinebase",
+      "prefab": "BarleyWineBase"
+    },
+    {
+      "name": "Mead Base Bug Repellent",
+      "cmd": "#meadbasebugrepellent",
+      "prefab": "MeadBaseBugRepellent"
+    },
+    {
+      "name": "Mead Base Bzerker",
+      "cmd": "#meadbasebzerker",
+      "prefab": "MeadBaseBzerker"
+    },
+    {
+      "name": "Mead Base Eitr Lingering",
+      "cmd": "#meadbaseeitrlingering",
+      "prefab": "MeadBaseEitrLingering"
+    },
+    {
+      "name": "Mead Base Eitr Minor",
+      "cmd": "#meadbaseeitrminor",
+      "prefab": "MeadBaseEitrMinor"
+    },
+    {
+      "name": "Mead Base Frost Resist",
+      "cmd": "#meadbasefrostresist",
+      "prefab": "MeadBaseFrostResist"
+    },
+    {
+      "name": "Mead Base Hasty",
+      "cmd": "#meadbasehasty",
+      "prefab": "MeadBaseHasty"
+    },
+    {
+      "name": "Mead Base Health Lingering",
+      "cmd": "#meadbasehealthlingering",
+      "prefab": "MeadBaseHealthLingering"
+    },
+    {
+      "name": "Mead Base Health Major",
+      "cmd": "#meadbasehealthmajor",
+      "prefab": "MeadBaseHealthMajor"
+    },
+    {
+      "name": "Mead Base Health Medium",
+      "cmd": "#meadbasehealthmedium",
+      "prefab": "MeadBaseHealthMedium"
+    },
+    {
+      "name": "Mead Base Health Minor",
+      "cmd": "#meadbasehealthminor",
+      "prefab": "MeadBaseHealthMinor"
+    },
+    {
+      "name": "Mead Base Light Foot",
+      "cmd": "#meadbaselightfoot",
+      "prefab": "MeadBaseLightFoot"
+    },
+    {
+      "name": "Mead Base Poison Resist",
+      "cmd": "#meadbasepoisonresist",
+      "prefab": "MeadBasePoisonResist"
+    },
+    {
+      "name": "Mead Base Stamina Lingering",
+      "cmd": "#meadbasestaminalingering",
+      "prefab": "MeadBaseStaminaLingering"
+    },
+    {
+      "name": "Mead Base Stamina Medium",
+      "cmd": "#meadbasestaminamedium",
+      "prefab": "MeadBaseStaminaMedium"
+    },
+    {
+      "name": "Mead Base Stamina Minor",
+      "cmd": "#meadbasestaminaminor",
+      "prefab": "MeadBaseStaminaMinor"
+    },
+    {
+      "name": "Mead Base Strength",
+      "cmd": "#meadbasestrength",
+      "prefab": "MeadBaseStrength"
+    },
+    {
+      "name": "Mead Base Swimmer",
+      "cmd": "#meadbaseswimmer",
+      "prefab": "MeadBaseSwimmer"
+    },
+    {
+      "name": "Mead Base Tamer",
+      "cmd": "#meadbasetamer",
+      "prefab": "MeadBaseTamer"
+    },
+    {
+      "name": "Mead Base Tasty",
+      "cmd": "#meadbasetasty",
+      "prefab": "MeadBaseTasty"
+    },
+    {
+      "type": "section",
+      "title": "Wines"
+    },
+    {
+      "name": "Barley Wine",
+      "cmd": "#barleywine",
+      "prefab": "BarleyWine"
+    },
+    {
+      "type": "section",
+      "title": "Other potions"
+    },
+    {
+      "name": "Treasure Chest Meadows",
+      "cmd": "#treasurechestmeadows",
+      "prefab": "TreasureChest_meadows"
+    },
+    {
+      "name": "Treasure Chest Meadows 01",
+      "cmd": "#treasurechestmeadows01",
+      "prefab": "TreasureChest_meadows_01"
+    },
+    {
+      "name": "Treasure Chest Meadows 02",
+      "cmd": "#treasurechestmeadows02",
+      "prefab": "TreasureChest_meadows_02"
+    },
+    {
+      "name": "Treasure Chest Meadows Buried",
+      "cmd": "#treasurechestmeadowsburied",
+      "prefab": "TreasureChest_meadows_buried"
+    },
+    {
+      "name": "Treasure Chest Meadows Combat",
+      "cmd": "#treasurechestmeadowscombat",
+      "prefab": "TreasureChest_meadows_combat"
+    }
+  ],
   "materials": [
     {
       "type": "help",
@@ -3708,11 +3685,6 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Fine Wood",
       "cmd": "#finewood",
       "prefab": "FineWood"
-    },
-    {
-      "name": "TH Sword Wood",
-      "cmd": "#thswordwood",
-      "prefab": "THSwordWood"
     },
     {
       "name": "Wood",
@@ -4499,9 +4471,59 @@ window.VALHEIM_TWITCH_STORE = {
       "title": "Tools"
     },
     {
+      "name": "Cultivator",
+      "cmd": "#cultivator",
+      "prefab": "Cultivator"
+    },
+    {
+      "name": "Fishing Rod",
+      "cmd": "#fishingrod",
+      "prefab": "FishingRod"
+    },
+    {
+      "name": "Fishing Rod Float",
+      "cmd": "#fishingrodfloat",
+      "prefab": "FishingRodFloat"
+    },
+    {
+      "name": "Hammer",
+      "cmd": "#hammer",
+      "prefab": "Hammer"
+    },
+    {
+      "name": "Hoe",
+      "cmd": "#hoe",
+      "prefab": "Hoe"
+    },
+    {
       "name": "Ice Shoes",
       "cmd": "#iceshoes",
       "prefab": "IceShoes"
+    },
+    {
+      "name": "Antler Pickaxe",
+      "cmd": "#pickaxeantler",
+      "prefab": "PickaxeAntler"
+    },
+    {
+      "name": "Black Metal Pickaxe",
+      "cmd": "#pickaxeblackmetal",
+      "prefab": "PickaxeBlackMetal"
+    },
+    {
+      "name": "Bronze Pickaxe",
+      "cmd": "#pickaxebronze",
+      "prefab": "PickaxeBronze"
+    },
+    {
+      "name": "Iron Pickaxe",
+      "cmd": "#pickaxeiron",
+      "prefab": "PickaxeIron"
+    },
+    {
+      "name": "Stone Pickaxe",
+      "cmd": "#pickaxestone",
+      "prefab": "PickaxeStone"
     },
     {
       "type": "section",

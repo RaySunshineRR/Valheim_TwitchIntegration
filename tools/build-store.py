@@ -146,12 +146,13 @@ WEAPON_PREFIX = {
 
 ARMOR_TIER_HINTS = [
     ("Rags", "T0 · Rags"),
-    ("Leather", "T1 · Leather"),
+    # Troll before Leather — ArmorTrollLeather* must not land in T1 · Leather
     ("Troll", "T1 · Troll"),
+    ("Leather", "T1 · Leather"),
     ("Bronze", "T2 · Bronze"),
     ("Root", "T2 · Root"),
     ("Iron", "T3 · Iron"),
-    ("Fenris", "T3 · Fenris"),
+    ("Fenring", "T3 · Fenring"),
     ("Wolf", "T4 · Wolf"),
     ("Padded", "T4 · Padded"),
     ("Carapace", "T5 · Carapace"),
@@ -167,7 +168,12 @@ ARMOR_TIER_HINTS = [
 ]
 
 FOOD_COOKED = re.compile(r"^(Cooked|Grilled|Smoke|SerpentMeatCooked|FishCooked)", re.I)
-FOOD_MEAD = re.compile(r"(Mead|BarleyWine|Flask|Potion)", re.I)
+# Word-boundary style: avoid matching "Mead" inside "Meadows"
+POTION_ITEM = re.compile(
+    r"(?:^|_)(?:Mead|MeadBase|BarleyWine|BarleyWineBase|Flask|Potion)",
+    re.I,
+)
+POTION_NAME = re.compile(r"^(Mead|MeadBase|BarleyWine|BarleyWineBase|Flask|Potion)", re.I)
 FOOD_RAW = re.compile(r"(Meat|Egg|Fish|Tail|Blubber)$", re.I)
 FOOD_CROP = {
     "Carrot",
@@ -227,9 +233,23 @@ def armor_section(prefab: str) -> str:
     return "Other armor"
 
 
+def is_potion_item(prefab: str) -> bool:
+    return bool(POTION_NAME.match(prefab) or POTION_ITEM.search(prefab))
+
+
+def potion_section(prefab: str) -> str:
+    if prefab.startswith("MeadBase") or prefab.startswith("BarleyWineBase"):
+        return "Bases"
+    if prefab.startswith("BarleyWine"):
+        return "Wines"
+    if prefab.startswith("Mead"):
+        return "Meads"
+    if "Flask" in prefab or "Potion" in prefab:
+        return "Flasks & potions"
+    return "Other potions"
+
+
 def food_section(prefab: str) -> str:
-    if FOOD_MEAD.search(prefab) or "Mead" in prefab:
-        return "Meads & flasks"
     if FOOD_COOKED.search(prefab) or prefab.startswith("Cooked"):
         return "Cooked meals"
     if prefab in FOOD_CROP or any(
@@ -240,6 +260,39 @@ def food_section(prefab: str) -> str:
     if FOOD_RAW.search(prefab) or "Meat" in prefab:
         return "Raw ingredients"
     return "Prepared dishes"
+
+
+def is_weapon_like(prefab: str) -> bool:
+    return prefab.startswith(
+        (
+            "Sword",
+            "THSword",
+            "Dyrnwyn",
+            "Axe",
+            "Battleaxe",
+            "Mace",
+            "Sledge",
+            "Club",
+            "Spear",
+            "Atgeir",
+            "Knife",
+            "Bow",
+            "Crossbow",
+            "Arrow",
+            "Bolt",
+            "Shield",
+            "Staff",
+        )
+    )
+
+
+def is_tool_item(prefab: str) -> bool:
+    p = prefab.lower()
+    if prefab.startswith(("Hammer", "Hoe", "Cultivator", "Pickaxe", "FishingRod")):
+        return True
+    if "harpoon" in p:
+        return True
+    return False
 
 
 def material_section(prefab: str) -> str:
@@ -311,6 +364,17 @@ def classify_item(it: dict) -> tuple[str, str]:
     """Return (tab, section)."""
     prefab = it["prefab"]
     cat = it.get("category") or "Misc"
+
+    if is_potion_item(prefab):
+        return "potions", potion_section(prefab)
+    if is_tool_item(prefab):
+        return "misc", "Tools"
+    if is_weapon_like(prefab) or prefab.startswith(("Tankard", "Torch")):
+        # Torch/Tankard stay utility weapons; true tools already handled above
+        if prefab.startswith("Torch") or prefab.startswith("Tankard"):
+            return "weapons", "Utility weapons"
+        return "weapons", weapon_section(prefab)
+
     if cat == "Weapons":
         return "weapons", weapon_section(prefab)
     if cat == "Armor":
@@ -318,36 +382,19 @@ def classify_item(it: dict) -> tuple[str, str]:
     if cat == "Food":
         return "food", food_section(prefab)
     if cat == "Materials":
+        # Mis-tagged weapon prefabs (e.g. THSwordWood) must not land in Wood & plant
+        if is_weapon_like(prefab):
+            return "weapons", weapon_section(prefab)
         return "materials", material_section(prefab)
     if cat == "Valuables":
         return "materials", "Valuables"
     # Misc — rescue into better tabs
     if prefab.startswith(("THSword", "Dyrnwyn")):
         return "weapons", "Swords"
-    if prefab.startswith(
-        (
-            "Sword",
-            "Axe",
-            "Bow",
-            "Arrow",
-            "Shield",
-            "Spear",
-            "Knife",
-            "Mace",
-            "Atgeir",
-            "Staff",
-            "Crossbow",
-            "Bolt",
-            "Battleaxe",
-            "Sledge",
-        )
-    ):
-        return "weapons", weapon_section(prefab)
     if prefab.startswith("SP_Armor") or prefab.startswith("Armor") or "Cape" in prefab:
         return "armor", armor_section(prefab)
     if (
-        "Mead" in prefab
-        or prefab in FOOD_CROP
+        prefab in FOOD_CROP
         or prefab.startswith("Cooked")
         or prefab.startswith("Feast")
         or prefab.startswith("Spice")
@@ -405,17 +452,18 @@ def build_store(data: dict) -> dict:
         "quick": [
             {
                 "type": "help",
-                "text": "Streamer favourites first. Full lists live in the other tabs. #visit also works in chat.",
+                "text": "Streamer favourites first. Full lists live in the other tabs. Amounts: #wood 50 · arrows default to 10 · stack-capped.",
             },
             {"type": "section", "title": "Chat basics"},
             {"name": "Visit", "cmd": "#visit", "desc": "Spawn your named Greyling"},
             {"name": "Spawn (legacy)", "cmd": "#spawn Greyling", "desc": "Explicit spawn form"},
-            {"name": "Item (legacy)", "cmd": "#item Wood", "desc": "Explicit item form"},
+            {"name": "Give / item", "cmd": "#give Wood 50", "desc": "#give or #item · amount optional · capped to stack"},
         ],
         "mobs": [],
         "weapons": [],
         "armor": [],
         "food": [],
+        "potions": [],
         "materials": [],
         "misc": [],
     }
@@ -442,7 +490,7 @@ def build_store(data: dict) -> dict:
     store["mobs"].append(
         {
             "type": "help",
-            "text": "Pick a biome sub-tab. Bosses are separate. Commands are bare #aliases (no args).",
+            "text": "Pick a biome sub-tab. Bosses are separate. Bare #alias · optional amount (#troll 1).",
         }
     )
     by_biome: dict[str, list] = defaultdict(list)
@@ -486,9 +534,15 @@ def build_store(data: dict) -> dict:
         "food": [
             "Cooked meals",
             "Prepared dishes",
-            "Meads & flasks",
             "Crops & forage",
             "Raw ingredients",
+        ],
+        "potions": [
+            "Meads",
+            "Bases",
+            "Wines",
+            "Flasks & potions",
+            "Other potions",
         ],
         "materials": [
             "Wood & plant",
@@ -514,9 +568,10 @@ def build_store(data: dict) -> dict:
 
     for tab, order in section_order.items():
         help_text = {
-            "weapons": "Ordered by weapon family — swords before arrows. Prefer mid-tier for fun without ending the run.",
-            "armor": "Tiered by progression (T0 rags → T6 Ashlands). Capes & odd pieces at the end.",
-            "food": "Cooked & prepared first (actual usefulness), then meads, crops, raw.",
+            "weapons": "Jump buttons below jump to a family. Prefer mid-tier for fun without ending the run.",
+            "armor": "Tiered by progression (T0 rags → T6 Ashlands). Use jump buttons to travel tiers.",
+            "food": "Cooked & prepared first, then crops and raw. Meads live under Potions.",
+            "potions": "Meads, brew bases, wines, and flasks — separated from food.",
             "materials": "Building & crafting staples up top; boss drops and valuables lower.",
             "misc": "Tools, lights, mounts, fireworks, chests — streamer-useful leftovers.",
         }[tab]
@@ -667,10 +722,24 @@ def write_js(store: dict) -> None:
 
 
 def main() -> None:
+    import argparse
+
+    ap = argparse.ArgumentParser(description="Build Valheim Twitch command store")
+    ap.add_argument(
+        "--no-icons",
+        action="store_true",
+        help="Skip wiki icon fetch (regenerate JS catalog only)",
+    )
+    args = ap.parse_args()
+
     data = json.loads(CATALOG.read_text())
     print("Building store from", CATALOG)
     store = build_store(data)
     write_js(store)
+
+    if args.no_icons:
+        print("Skipping icon fetch (--no-icons)")
+        return
 
     # Icons: all creatures + prioritized items + first N of each tab
     prefabs: list[str] = []

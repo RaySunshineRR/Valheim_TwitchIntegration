@@ -24,6 +24,17 @@
     "weapons",
     "armor",
     "food",
+    "potions",
+    "materials",
+    "misc",
+  ]);
+
+  /** Tabs that show subcategory buttons as jump-to-section links (not filters). */
+  const JUMP_TABS = new Set([
+    "weapons",
+    "armor",
+    "food",
+    "potions",
     "materials",
     "misc",
   ]);
@@ -45,7 +56,7 @@
     return Array.isArray(store[tab]) ? store[tab] : [];
   }
 
-  function biomeSections(list) {
+  function sectionTitles(list, preferredOrder) {
     const names = [];
     const seen = new Set();
     for (const e of list) {
@@ -54,11 +65,16 @@
         names.push(e.title);
       }
     }
-    const ordered = BIOME_ORDER.filter((b) => seen.has(b));
+    if (!preferredOrder || !preferredOrder.length) return names;
+    const ordered = preferredOrder.filter((b) => seen.has(b));
     for (const n of names) {
-      if (!BIOME_ORDER.includes(n)) ordered.push(n);
+      if (!preferredOrder.includes(n)) ordered.push(n);
     }
     return ordered;
+  }
+
+  function biomeSections(list) {
+    return sectionTitles(list, BIOME_ORDER);
   }
 
   function filterByBiome(list, biome) {
@@ -78,6 +94,17 @@
       if (keep) out.push(e);
     }
     return out;
+  }
+
+  function sectionSlug(title) {
+    return String(title || "")
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-|-$/g, "");
+  }
+
+  function sectionId(title) {
+    return `sec-${sectionSlug(title)}`;
   }
 
   function matches(entry, q) {
@@ -167,6 +194,7 @@
   function renderSection(entry) {
     const el = document.createElement("h3");
     el.className = "section-title";
+    el.id = sectionId(entry.title);
     el.textContent = entry.title;
     return el;
   }
@@ -247,17 +275,14 @@
       all = filterByBiome(all, activeBiome);
     }
     if (!q) return all;
-    // Searching: show all biomes, keep matching section headers near hits
     return all.filter((e) => {
       if (e.type === "help") return false;
       if (e.type === "section") {
-        // keep section if any following entry until next section matches
         return true;
       }
       return matches(e, q);
     }).filter((e, i, arr) => {
       if (e.type !== "section") return true;
-      // drop empty section headers under search
       for (let j = i + 1; j < arr.length; j++) {
         if (arr[j].type === "section") break;
         if (arr[j].type !== "help" && matches(arr[j], q)) return true;
@@ -266,34 +291,66 @@
     }).filter((e) => e.type === "section" || matches(e, q));
   }
 
+  function jumpToSection(title) {
+    const el = document.getElementById(sectionId(title));
+    if (!el) return;
+    el.scrollIntoView({ behavior: "smooth", block: "start" });
+    el.classList.add("is-jump-flash");
+    window.setTimeout(() => el.classList.remove("is-jump-flash"), 900);
+  }
+
   function renderSubtabs() {
     const isMobs = activeTab === "mobs";
+    const isJump = JUMP_TABS.has(activeTab);
     const q = (search.value || "").trim();
-    subtabsEl.classList.toggle("hidden", !isMobs || !!q);
+    const show = (isMobs || isJump) && !q;
+    subtabsEl.classList.toggle("hidden", !show);
     document.body.classList.toggle("is-mobs-tab", isMobs);
-    if (!isMobs) {
+    document.body.classList.toggle("is-jump-tab", isJump);
+    subtabsEl.setAttribute(
+      "aria-label",
+      isMobs ? "Biome regions" : "Jump to subcategory",
+    );
+
+    if (!show) {
       subtabsEl.innerHTML = "";
       return;
     }
 
-    const biomes = biomeSections(entriesFor("mobs"));
-    if (!activeBiome || !biomes.includes(activeBiome)) {
-      activeBiome = biomes[0] || null;
+    subtabsEl.innerHTML = "";
+
+    if (isMobs) {
+      const biomes = biomeSections(entriesFor("mobs"));
+      if (!activeBiome || !biomes.includes(activeBiome)) {
+        activeBiome = biomes[0] || null;
+      }
+      for (const biome of biomes) {
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "subtab" + (biome === activeBiome ? " is-active" : "");
+        btn.setAttribute("role", "tab");
+        btn.setAttribute("aria-selected", biome === activeBiome ? "true" : "false");
+        btn.dataset.biome = biome;
+        btn.textContent = biome;
+        btn.addEventListener("click", () => {
+          activeBiome = biome;
+          render();
+        });
+        subtabsEl.append(btn);
+      }
+      return;
     }
 
-    subtabsEl.innerHTML = "";
-    for (const biome of biomes) {
+    // Jump mode — keep full list; buttons travel to section headers
+    const titles = sectionTitles(entriesFor(activeTab));
+    for (const title of titles) {
       const btn = document.createElement("button");
       btn.type = "button";
-      btn.className = "subtab" + (biome === activeBiome ? " is-active" : "");
-      btn.setAttribute("role", "tab");
-      btn.setAttribute("aria-selected", biome === activeBiome ? "true" : "false");
-      btn.dataset.biome = biome;
-      btn.textContent = biome;
-      btn.addEventListener("click", () => {
-        activeBiome = biome;
-        render();
-      });
+      btn.className = "subtab subtab-jump";
+      btn.setAttribute("role", "link");
+      btn.dataset.section = title;
+      btn.textContent = title;
+      btn.addEventListener("click", () => jumpToSection(title));
       subtabsEl.append(btn);
     }
   }
@@ -314,13 +371,11 @@
 
     for (const entry of list) {
       if (entry.type === "help") {
-        // hide biome help when a subtab is active (less noise)
         if (activeTab === "mobs" && !q) continue;
         frag.append(renderHelp(entry));
         continue;
       }
       if (entry.type === "section") {
-        // biome title already shown in subtab — skip duplicate under mobs
         if (activeTab === "mobs" && !q) continue;
         frag.append(renderSection(entry));
         continue;
