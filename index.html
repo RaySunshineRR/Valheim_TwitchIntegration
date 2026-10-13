@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Heim-Heim Command Store</title>
+  <meta name="description" content="Copy Heim-Heim #commands for Twitch chat — mobs by biome, weapons, armor, food, materials." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🗡</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/store.css" />
+</head>
+<body>
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-glow" aria-hidden="true"></div>
+
+  <header class="hero">
+    <p class="eyebrow">0x Heim-Heim · Valheim Twitch library</p>
+    <h1>Command Store</h1>
+    <p class="tagline">Pick a tab · hit COPY · paste in Twitch chat</p>
+    <div class="search-wrap">
+      <label class="sr-only" for="search">Search commands</label>
+      <input id="search" type="search" placeholder="Search name or #command…" autocomplete="off" />
+    </div>
+  </header>
+
+  <nav class="tabs" role="tablist" aria-label="Command categories">
+    <button class="tab is-active" role="tab" aria-selected="true" data-tab="quick">Quick</button>
+    <button class="tab" role="tab" aria-selected="false" data-tab="mobs">Mobs</button>
+    <button class="tab" role="tab" aria-selected="false" data-tab="weapons">Weapons</button>
+    <button class="tab" role="tab" aria-selected="false" data-tab="armor">Armor</button>
+    <button class="tab" role="tab" aria-selected="false" data-tab="food">Food</button>
+    <button class="tab" role="tab" aria-selected="false" data-tab="materials">Materials</button>
+    <button class="tab" role="tab" aria-selected="false" data-tab="misc">Misc</button>
+  </nav>
+
+  <nav id="subtabs" class="subtabs hidden" role="tablist" aria-label="Biome regions"></nav>
+
+  <main class="store">
+    <div class="store-meta">
+      <span id="count-label">0 commands</span>
+      <span class="hint">Bare #aliases · Twitch-ready</span>
+    </div>
+    <div id="catalog" class="catalog" role="tabpanel"></div>
+    <p id="empty" class="empty hidden">No matches in this tab.</p>
+  </main>
+
+  <footer class="foot">
+    <p>Prefix <code>#</code> · Streamer settings can rename tags, blacklist prefabs, or tune bits/follow/raid defaults.</p>
+    <p>Icons from <a href="https://valheim.weirdgloop.org/" rel="noopener">valheim.weirdgloop.org</a> wiki · <a href="https://github.com/raysunshinerr/Valheim_TwitchIntegration">github.com/raysunshinerr/Valheim_TwitchIntegration</a></p>
+  </footer>
+
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden>Copied</div>
+
+  <script src="js/commands-data.js"></script>
+  <script src="js/store.js"></script>
+</body>
+</html>
