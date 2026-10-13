@@ -71,6 +71,7 @@ body {
   border: 0;
 }
 
+/* Same content width on every tab (Quick was narrower than Weapons/etc.) */
 .hero,
 .tabs,
 .subtabs,
@@ -78,25 +79,8 @@ body {
 .foot {
   position: relative;
   z-index: 1;
-  width: min(980px, calc(100% - 1.25rem));
-  margin-inline: auto;
-}
-
-body.is-mobs-tab .hero,
-body.is-mobs-tab .tabs,
-body.is-mobs-tab .subtabs,
-body.is-mobs-tab .store,
-body.is-mobs-tab .foot {
-  width: min(1100px, calc(100% - 1.25rem));
-}
-
-/* Wide enough for 3-column catalogs on weapons / armor / food / etc. */
-body.is-jump-tab .hero,
-body.is-jump-tab .tabs,
-body.is-jump-tab .subtabs,
-body.is-jump-tab .store,
-body.is-jump-tab .foot {
   width: min(1280px, calc(100% - 1.25rem));
+  margin-inline: auto;
 }
 
 .hero {
@@ -160,26 +144,16 @@ body.is-jump-tab .foot {
   animation: rise 0.7s ease-out 0.08s both;
 }
 
+/* All submenus (mobs + jump tabs): same 3-column gold button grid as Weapons */
 .subtabs {
-  display: flex;
-  flex-wrap: wrap;
-  align-content: flex-start;
-  gap: 0.25rem;
-  padding: 0.15rem 0 0.35rem;
-  /* Cap ~3 wrapped rows for mob biome filters */
-  max-height: calc(3 * (0.4rem + 0.7rem + 4px) + 2 * 0.25rem + 0.2rem);
-  overflow-x: hidden;
-  overflow-y: auto;
-  animation: rise 0.45s ease-out both;
-}
-
-/* Jump categories: 3-column submenu so section names fit without tall stacks */
-body.is-jump-tab .subtabs {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-content: flex-start;
+  gap: 0.3rem;
+  padding: 0.15rem 0 0.35rem;
   max-height: none;
   overflow: visible;
-  gap: 0.3rem;
+  animation: rise 0.45s ease-out both;
 }
 
 .subtabs.hidden {
@@ -497,14 +471,14 @@ body.is-jump-tab .catalog .copy-btn {
 }
 
 @media (max-width: 960px) {
-  body.is-jump-tab .subtabs,
+  .subtabs,
   body.is-jump-tab .catalog {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
 @media (max-width: 640px) {
-  body.is-jump-tab .subtabs,
+  .subtabs,
   body.is-jump-tab .catalog {
     grid-template-columns: 1fr;
   }

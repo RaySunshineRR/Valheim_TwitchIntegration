@@ -343,7 +343,8 @@
       for (const biome of biomes) {
         const btn = document.createElement("button");
         btn.type = "button";
-        btn.className = "subtab" + (biome === activeBiome ? " is-active" : "");
+        btn.className =
+          "subtab subtab-jump" + (biome === activeBiome ? " is-active" : "");
         btn.setAttribute("role", "tab");
         btn.setAttribute("aria-selected", biome === activeBiome ? "true" : "false");
         btn.dataset.biome = biome;
