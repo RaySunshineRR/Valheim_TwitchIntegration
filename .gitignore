@@ -2,3 +2,6 @@ __pycache__/
 *.pyc
 .DS_Store
 .directory
+
+# Archived pre-optimize icons (local only)
+assets/oldIcons/
