@@ -159,6 +159,7 @@ TIER_ORDER = [
 
 # Armor → unified tier (first substring match wins; Troll before Leather)
 ARMOR_TIER_HINTS = [
+    ("Berserker", "T6 · Ashlands"),
     ("Rags", "T0 · Meadows"),
     ("Troll", "T1 · Black Forest"),
     ("Leather", "T0 · Meadows"),
@@ -166,6 +167,7 @@ ARMOR_TIER_HINTS = [
     ("Root", "T2 · Swamp"),
     ("Iron", "T2 · Swamp"),
     ("Fenring", "T3 · Mountain"),
+    ("DeepNorth", "T3 · Mountain"),
     ("Wolf", "T3 · Mountain"),
     ("Padded", "T4 · Plains"),
     ("Carapace", "T5 · Mistlands"),
@@ -174,11 +176,65 @@ ARMOR_TIER_HINTS = [
     ("Asksvin", "T6 · Ashlands"),
     ("Flametal", "T6 · Ashlands"),
     ("Ashlands", "T6 · Ashlands"),
-    ("Berserker", "Special"),
-    ("Emblem", "Special"),
-    ("Cape", "Special"),
-    ("Circlet", "Special"),
 ]
+
+# Capes / hoods that must land in a biome tier (not a separate Special bucket)
+CAPE_TIER = {
+    "CapeDeerHide": "T0 · Meadows",
+    "CapeTrollHide": "T1 · Black Forest",
+    "CapeWolf": "T3 · Mountain",
+    "CapeLox": "T4 · Plains",
+    "CapeLinen": "T4 · Plains",
+    "CapeFeather": "T5 · Mistlands",
+    "CapeAsh": "T6 · Ashlands",
+    "CapeDeepNorth": "T3 · Mountain",
+    "CapeOdin": "T0 · Meadows",
+}
+
+# Core building / crafting mats often mis-tagged Misc or Food in the prefab catalog
+CORE_MATERIAL_PREFABS = {
+    "Wood",
+    "FineWood",
+    "RoundLog",  # Core wood
+    "ElderBark",  # Ancient bark
+    "Blackwood",
+    "Frostwood",
+    "YggdrasilWood",
+    "BarkaBranch",
+    "Chain",
+    "Entrails",
+    "WitheredBone",
+    "AncientSeed",
+    "Thunderstone",
+    "BlackCore",
+    "Softtissue",
+    "MechanicalSpring",
+    "Bloodbag",
+    "Root",
+    "SerpentScale",
+    "Guck",
+    "Resin",
+    "Coal",
+    "Stone",
+    "Flint",
+    "Obsidian",
+    "Crystal",
+    "Chitin",
+    "Feathers",
+    "LeatherScraps",
+    "DeerHide",
+    "TrollHide",
+    "WolfPelt",
+    "LoxPelt",
+    "SurtlingCore",
+    "MoltenCore",
+    "FrostCore",
+    "CharredBone",
+    "BonemawSerpentScale",
+    "BonemawSerpentTooth",
+    "GiantBloodSack",
+    "WrithanRoots",
+}
 
 # Keyword → tier for weapons / food / potions / materials (checked T6→T0)
 TIER_KEYWORDS = [
@@ -411,12 +467,23 @@ def weapon_section(prefab: str) -> str:
     for prefix, section in WEAPON_PREFIX.items():
         if prefab.startswith(prefix):
             return section
+    if prefab.startswith("TurretBolt") or prefab.startswith("Turret"):
+        return "Arrows & bolts"
     if "Bomb" in prefab or "Grenade" in prefab:
         return "Throwables"
     return "Other weapons"
 
 
 def armor_section(prefab: str) -> str:
+    if prefab in CAPE_TIER:
+        return CAPE_TIER[prefab]
+    if prefab.startswith("Cape"):
+        # Unknown cape — try material keywords, else progression_tier
+        return progression_tier(prefab)
+    if prefab.startswith("Trinket"):
+        return progression_tier(prefab)
+    if "DNHeavy" in prefab or "DNMedium" in prefab:
+        return "T3 · Mountain"
     for key, section in ARMOR_TIER_HINTS:
         if key.lower() in prefab.lower():
             return section
@@ -492,6 +559,7 @@ def is_weapon_like(prefab: str) -> bool:
             "Crossbow",
             "Arrow",
             "Bolt",
+            "TurretBolt",
             "Shield",
             "Staff",
         )
@@ -507,26 +575,136 @@ def is_tool_item(prefab: str) -> bool:
     return False
 
 
-def material_section(prefab: str) -> str:
+def looks_like_material(prefab: str) -> bool:
+    """Rescue core mats mis-tagged as Misc/Food so RoundLog / ElderBark / etc. are never missed."""
+    if prefab in CORE_MATERIAL_PREFABS:
+        return True
+    if prefab.startswith(
+        (
+            "Pickable",
+            "TreasureChest",
+            "loot_chest",
+            "LootSpawner",
+            "Vegvisir",
+            "HealthUpgrade",
+            "HildirKey",
+            "Trinket",
+            "Armor",
+            "Helmet",
+            "Cape",
+            "Feast",
+            "Spice",
+            "Mold",
+            "THSword",
+            "Orb",
+        )
+    ):
+        return False
     p = prefab.lower()
-    if any(x in p for x in ("wood", "roundlog", "finewood", "corewood", "ygg")):
-        return "Wood & plant"
-    if any(x in p for x in ("stone", "flint", "obsidian", "crystal", "grausten", "blackmarble")):
-        return "Stone & crystal"
+    if "projectile" in p or "ragdoll" in p:
+        return False
+    if prefab.endswith(("Ore", "Scrap", "Hide", "Pelt", "Core")):
+        return True
     if any(
         x in p
         for x in (
-            "bronze",
-            "copper",
-            "tin",
-            "iron",
-            "silver",
-            "blackmetal",
-            "flametal",
-            "scrap",
-            "ore",
-            "bar",
+            "roundlog",
+            "elderbark",
+            "blackwood",
+            "frostwood",
+            "yggdrasilwood",
+            "finewood",
         )
+    ):
+        return True
+    # Heuristic: material_section recognized a real family (not the catch-all)
+    if material_section(prefab) != "Crafting parts" and not is_weapon_like(prefab):
+        # Avoid pulling random Misc junk that substring-matches "iron" etc. via section only
+        if any(
+            x in p
+            for x in (
+                "wood",
+                "bark",
+                "ore",
+                "scrap",
+                "hide",
+                "pelt",
+                "resin",
+                "coal",
+                "flint",
+                "obsidian",
+                "crystal",
+                "chitin",
+                "scale",
+                "wool",
+                "entrails",
+                "guck",
+                "bone",
+                "feather",
+                "bloodbag",
+                "chain",
+                "core",
+            )
+        ):
+            return True
+    return False
+
+
+def material_section(prefab: str) -> str:
+    p = prefab.lower()
+    if any(
+        x in p
+        for x in (
+            "wood",
+            "roundlog",
+            "finewood",
+            "corewood",
+            "yggdrasilwood",
+            "elderbark",
+            "blackwood",
+            "frostwood",
+            "barkabranch",
+        )
+    ) and "trophy" not in p:
+        return "Wood & plant"
+    # Plant fiber / roots that are crafting mats (not Root armor — that is Armor*)
+    if prefab in {"Root", "WrithanRoots"} or p.endswith("roots"):
+        return "Wood & plant"
+    if any(x in p for x in ("stone", "flint", "obsidian", "crystal", "grausten", "blackmarble", "thunderstone")):
+        return "Stone & crystal"
+    # Cores before metals — "ore" is a substring of "core"
+    if prefab.endswith("Core") or any(
+        x in p for x in ("surtlingcore", "blackcore", "frostcore", "moltencore")
+    ):
+        return "Boss & rare drops"
+    if (
+        any(
+            x in p
+            for x in (
+                "bronze",
+                "copper",
+                "blackmetal",
+                "flametal",
+                "ironscrap",
+                "silver",
+                "scrap",
+            )
+        )
+        or p.endswith("ore")
+        or prefab
+        in {
+            "Copper",
+            "Tin",
+            "Iron",
+            "Silver",
+            "Bronze",
+            "BlackMetal",
+            "Flametal",
+            "TinOre",
+            "CopperOre",
+            "SilverOre",
+            "FlametalOre",
+        }
     ):
         return "Metals"
     if any(x in p for x in ("hide", "leather", "pelt", "wool", "hair", "scale", "chitin", "carapace")):
@@ -587,6 +765,11 @@ def classify_item(it: dict) -> tuple[str, str]:
             return "weapons", "Utility weapons"
         return "weapons", weapon_section(prefab)
 
+    # Core mats before Food/Misc category — catalog tags RoundLog/ElderBark as Misc,
+    # YggdrasilWood as Food, etc.
+    if looks_like_material(prefab):
+        return "materials", material_section(prefab)
+
     if cat == "Weapons":
         return "weapons", weapon_section(prefab)
     if cat == "Armor":
@@ -603,7 +786,13 @@ def classify_item(it: dict) -> tuple[str, str]:
     # Misc — rescue into better tabs
     if prefab.startswith(("THSword", "Dyrnwyn")):
         return "weapons", "Swords"
-    if prefab.startswith("SP_Armor") or prefab.startswith("Armor") or "Cape" in prefab:
+    if (
+        prefab.startswith("SP_Armor")
+        or prefab.startswith("Armor")
+        or prefab.startswith("Helmet")
+        or prefab.startswith("Cape")
+        or prefab.startswith("Trinket")
+    ):
         return "armor", armor_section(prefab)
     if (
         prefab in FOOD_CROP
@@ -616,8 +805,6 @@ def classify_item(it: dict) -> tuple[str, str]:
         if prefab.startswith("Feast") or prefab.startswith("Spice"):
             return "food", "Prepared dishes"
         return "food", food_section(prefab)
-    if prefab.startswith("Trinket"):
-        return "armor", "Special"
     return "misc", misc_section(prefab)
 
 
@@ -631,6 +818,8 @@ QUICK_PREFABS = [
     ("Wood", "Building basics"),
     ("Stone", "Building basics"),
     ("FineWood", "Quality builds"),
+    ("RoundLog", "Core wood"),
+    ("ElderBark", "Ancient bark"),
     ("Iron", "Mid-game metal"),
     ("Bronze", "Early metal"),
     ("Coal", "Smelting fuel"),
@@ -745,10 +934,10 @@ def build_store(data: dict) -> dict:
         "weapons": weapon_families,
         "armor": list(TIER_ORDER),
         "food": [
+            "Raw ingredients",
             "Cooked meals",
             "Prepared dishes",
             "Crops & forage",
-            "Raw ingredients",
         ],
         "potions": [
             "Meads",
@@ -786,7 +975,7 @@ def build_store(data: dict) -> dict:
         help_text = {
             "weapons": "Jump buttons = weapon family. Scroll further for By tier full sets (T0–T6).",
             "armor": "Unified tiers — each T# holds the full armor sets for that step (Troll+Bronze under T1, etc.).",
-            "food": "By type first (cooked, crops…). Below: By tier full food sets per biome step.",
+            "food": "Raw first, then cooked, then prepared, then crops. Below: By tier full food sets.",
             "potions": "By type first (meads, bases…). Below: By tier full potion sets.",
             "materials": "By type first (wood, metals…). Below: By tier full material sets.",
             "misc": "Tools, lights, mounts, fireworks, chests — streamer-useful leftovers.",

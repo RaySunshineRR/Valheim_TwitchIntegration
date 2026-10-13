@@ -87,6 +87,18 @@ window.VALHEIM_TWITCH_STORE = {
       "desc": "Quality builds"
     },
     {
+      "name": "Round Log",
+      "cmd": "#roundlog",
+      "prefab": "RoundLog",
+      "desc": "Core wood"
+    },
+    {
+      "name": "Elder Bark",
+      "cmd": "#elderbark",
+      "prefab": "ElderBark",
+      "desc": "Ancient bark"
+    },
+    {
       "name": "Iron",
       "cmd": "#iron",
       "prefab": "Iron",
@@ -1619,6 +1631,31 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "BoltIron"
     },
     {
+      "name": "Turret Bolt",
+      "cmd": "#turretbolt",
+      "prefab": "TurretBolt"
+    },
+    {
+      "name": "Turret Bolt Bloodgold",
+      "cmd": "#turretboltbloodgold",
+      "prefab": "TurretBoltBloodgold"
+    },
+    {
+      "name": "Turret Bolt Bone",
+      "cmd": "#turretboltbone",
+      "prefab": "TurretBoltBone"
+    },
+    {
+      "name": "Turret Bolt Flametal",
+      "cmd": "#turretboltflametal",
+      "prefab": "TurretBoltFlametal"
+    },
+    {
+      "name": "Turret Bolt Wood",
+      "cmd": "#turretboltwood",
+      "prefab": "TurretBoltWood"
+    },
+    {
       "type": "section",
       "title": "Shields"
     },
@@ -1982,31 +2019,6 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Scythe Handle",
       "cmd": "#scythehandle",
       "prefab": "ScytheHandle"
-    },
-    {
-      "name": "Turret Bolt",
-      "cmd": "#turretbolt",
-      "prefab": "TurretBolt"
-    },
-    {
-      "name": "Turret Bolt Bloodgold",
-      "cmd": "#turretboltbloodgold",
-      "prefab": "TurretBoltBloodgold"
-    },
-    {
-      "name": "Turret Bolt Bone",
-      "cmd": "#turretboltbone",
-      "prefab": "TurretBoltBone"
-    },
-    {
-      "name": "Turret Bolt Flametal",
-      "cmd": "#turretboltflametal",
-      "prefab": "TurretBoltFlametal"
-    },
-    {
-      "name": "Turret Bolt Wood",
-      "cmd": "#turretboltwood",
-      "prefab": "TurretBoltWood"
     },
     {
       "name": "Upgrader0Weapon",
@@ -3319,6 +3331,16 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "ArmorRagsLegs"
     },
     {
+      "name": "Cape Deer Hide",
+      "cmd": "#capedeerhide",
+      "prefab": "CapeDeerHide"
+    },
+    {
+      "name": "Cape Odin",
+      "cmd": "#capeodin",
+      "prefab": "CapeOdin"
+    },
+    {
       "name": "Helmet Leather",
       "cmd": "#helmetleather",
       "prefab": "HelmetLeather"
@@ -3411,6 +3433,36 @@ window.VALHEIM_TWITCH_STORE = {
       "title": "T3 · Mountain"
     },
     {
+      "name": "Deep North Heavy Chest",
+      "cmd": "#armordeepnorthheavychest",
+      "prefab": "ArmorDeepNorthHeavyChest"
+    },
+    {
+      "name": "Deep North Heavylegs",
+      "cmd": "#armordeepnorthheavylegs",
+      "prefab": "ArmorDeepNorthHeavylegs"
+    },
+    {
+      "name": "Deep North Mage Chest",
+      "cmd": "#armordeepnorthmagechest",
+      "prefab": "ArmorDeepNorthMageChest"
+    },
+    {
+      "name": "Deep North Magelegs",
+      "cmd": "#armordeepnorthmagelegs",
+      "prefab": "ArmorDeepNorthMagelegs"
+    },
+    {
+      "name": "Deep North Medium Chest",
+      "cmd": "#armordeepnorthmediumchest",
+      "prefab": "ArmorDeepNorthMediumChest"
+    },
+    {
+      "name": "Deep North Mediumlegs",
+      "cmd": "#armordeepnorthmediumlegs",
+      "prefab": "ArmorDeepNorthMediumlegs"
+    },
+    {
       "name": "Fenring Chest",
       "cmd": "#armorfenringchest",
       "prefab": "ArmorFenringChest"
@@ -3431,9 +3483,24 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "ArmorWolfLegs"
     },
     {
+      "name": "Cape Deep North",
+      "cmd": "#capedeepnorth",
+      "prefab": "CapeDeepNorth"
+    },
+    {
       "name": "Cape Wolf",
       "cmd": "#capewolf",
       "prefab": "CapeWolf"
+    },
+    {
+      "name": "Helmet DN Heavy",
+      "cmd": "#helmetdnheavy",
+      "prefab": "HelmetDNHeavy"
+    },
+    {
+      "name": "Helmet DN Medium Hood",
+      "cmd": "#helmetdnmediumhood",
+      "prefab": "HelmetDNMediumHood"
     },
     {
       "name": "Helmet Drake",
@@ -3470,6 +3537,16 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "ArmorPaddedGreaves"
     },
     {
+      "name": "Cape Linen",
+      "cmd": "#capelinen",
+      "prefab": "CapeLinen"
+    },
+    {
+      "name": "Cape Lox",
+      "cmd": "#capelox",
+      "prefab": "CapeLox"
+    },
+    {
       "name": "Helmet Lox",
       "cmd": "#helmetlox",
       "prefab": "HelmetLox"
@@ -3492,16 +3569,6 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Carapace Legs",
       "cmd": "#armorcarapacelegs",
       "prefab": "ArmorCarapaceLegs"
-    },
-    {
-      "name": "Deep North Mage Chest",
-      "cmd": "#armordeepnorthmagechest",
-      "prefab": "ArmorDeepNorthMageChest"
-    },
-    {
-      "name": "Deep North Magelegs",
-      "cmd": "#armordeepnorthmagelegs",
-      "prefab": "ArmorDeepNorthMagelegs"
     },
     {
       "name": "Gold Mage Chest Uncooked",
@@ -3544,6 +3611,11 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "CapeDeepNorthMage"
     },
     {
+      "name": "Cape Feather",
+      "cmd": "#capefeather",
+      "prefab": "CapeFeather"
+    },
+    {
       "name": "Helmet Carapace",
       "cmd": "#helmetcarapace",
       "prefab": "HelmetCarapace"
@@ -3569,6 +3641,16 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "HelmetMage_Ashlands"
     },
     {
+      "name": "Trinket Black Damage Health",
+      "cmd": "#trinketblackdamagehealth",
+      "prefab": "TrinketBlackDamageHealth"
+    },
+    {
+      "name": "Trinket Scale Stamina Damage",
+      "cmd": "#trinketscalestaminadamage",
+      "prefab": "TrinketScaleStaminaDamage"
+    },
+    {
       "type": "section",
       "title": "T6 · Ashlands"
     },
@@ -3581,35 +3663,6 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Ashlands Mediumlegs",
       "cmd": "#armorashlandsmediumlegs",
       "prefab": "ArmorAshlandsMediumlegs"
-    },
-    {
-      "name": "Flametal Chest",
-      "cmd": "#armorflametalchest",
-      "prefab": "ArmorFlametalChest"
-    },
-    {
-      "name": "Flametal Legs",
-      "cmd": "#armorflametallegs",
-      "prefab": "ArmorFlametalLegs"
-    },
-    {
-      "name": "Cape Asksvin",
-      "cmd": "#capeasksvin",
-      "prefab": "CapeAsksvin"
-    },
-    {
-      "name": "Helmet Ashlands Medium Hood",
-      "cmd": "#helmetashlandsmediumhood",
-      "prefab": "HelmetAshlandsMediumHood"
-    },
-    {
-      "name": "Helmet Flametal",
-      "cmd": "#helmetflametal",
-      "prefab": "HelmetFlametal"
-    },
-    {
-      "type": "section",
-      "title": "Special"
     },
     {
       "name": "Berserker Chest",
@@ -3632,44 +3685,29 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "ArmorBerserkerUndeadLegs"
     },
     {
+      "name": "Flametal Chest",
+      "cmd": "#armorflametalchest",
+      "prefab": "ArmorFlametalChest"
+    },
+    {
+      "name": "Flametal Legs",
+      "cmd": "#armorflametallegs",
+      "prefab": "ArmorFlametalLegs"
+    },
+    {
       "name": "Cape Ash",
       "cmd": "#capeash",
       "prefab": "CapeAsh"
     },
     {
-      "name": "Cape Deep North",
-      "cmd": "#capedeepnorth",
-      "prefab": "CapeDeepNorth"
+      "name": "Cape Asksvin",
+      "cmd": "#capeasksvin",
+      "prefab": "CapeAsksvin"
     },
     {
-      "name": "Cape Deer Hide",
-      "cmd": "#capedeerhide",
-      "prefab": "CapeDeerHide"
-    },
-    {
-      "name": "Cape Feather",
-      "cmd": "#capefeather",
-      "prefab": "CapeFeather"
-    },
-    {
-      "name": "Cape Linen",
-      "cmd": "#capelinen",
-      "prefab": "CapeLinen"
-    },
-    {
-      "name": "Cape Lox",
-      "cmd": "#capelox",
-      "prefab": "CapeLox"
-    },
-    {
-      "name": "Cape Odin",
-      "cmd": "#capeodin",
-      "prefab": "CapeOdin"
-    },
-    {
-      "name": "Cape Test",
-      "cmd": "#capetest",
-      "prefab": "CapeTest"
+      "name": "Helmet Ashlands Medium Hood",
+      "cmd": "#helmetashlandsmediumhood",
+      "prefab": "HelmetAshlandsMediumHood"
     },
     {
       "name": "Helmet Berserker Hood",
@@ -3682,53 +3720,13 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "HelmetBerserkerUndead"
     },
     {
-      "name": "Trinket Black Damage Health",
-      "cmd": "#trinketblackdamagehealth",
-      "prefab": "TrinketBlackDamageHealth"
-    },
-    {
-      "name": "Trinket Black Stamina",
-      "cmd": "#trinketblackstamina",
-      "prefab": "TrinketBlackStamina"
-    },
-    {
-      "name": "Trinket Blood Gold Health",
-      "cmd": "#trinketbloodgoldhealth",
-      "prefab": "TrinketBloodGoldHealth"
-    },
-    {
-      "name": "Trinket Blood Gold Stamina",
-      "cmd": "#trinketbloodgoldstamina",
-      "prefab": "TrinketBloodGoldStamina"
-    },
-    {
-      "name": "Trinket Scale Stamina Damage",
-      "cmd": "#trinketscalestaminadamage",
-      "prefab": "TrinketScaleStaminaDamage"
+      "name": "Helmet Flametal",
+      "cmd": "#helmetflametal",
+      "prefab": "HelmetFlametal"
     },
     {
       "type": "section",
       "title": "Other"
-    },
-    {
-      "name": "Deep North Heavy Chest",
-      "cmd": "#armordeepnorthheavychest",
-      "prefab": "ArmorDeepNorthHeavyChest"
-    },
-    {
-      "name": "Deep North Heavylegs",
-      "cmd": "#armordeepnorthheavylegs",
-      "prefab": "ArmorDeepNorthHeavylegs"
-    },
-    {
-      "name": "Deep North Medium Chest",
-      "cmd": "#armordeepnorthmediumchest",
-      "prefab": "ArmorDeepNorthMediumChest"
-    },
-    {
-      "name": "Deep North Mediumlegs",
-      "cmd": "#armordeepnorthmediumlegs",
-      "prefab": "ArmorDeepNorthMediumlegs"
     },
     {
       "name": "Armor Dress1",
@@ -3871,6 +3869,11 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "ArmorTunic9"
     },
     {
+      "name": "Cape Test",
+      "cmd": "#capetest",
+      "prefab": "CapeTest"
+    },
+    {
       "name": "Helmet Celebration",
       "cmd": "#helmetcelebration",
       "prefab": "HelmetCelebration"
@@ -3879,16 +3882,6 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Helmet Crownof Valheim",
       "cmd": "#helmetcrownofvalheim",
       "prefab": "HelmetCrownofValheim"
-    },
-    {
-      "name": "Helmet DN Heavy",
-      "cmd": "#helmetdnheavy",
-      "prefab": "HelmetDNHeavy"
-    },
-    {
-      "name": "Helmet DN Medium Hood",
-      "cmd": "#helmetdnmediumhood",
-      "prefab": "HelmetDNMediumHood"
     },
     {
       "name": "Helmet Fishing Hat",
@@ -3984,12 +3977,86 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "SP Armor Tunic5",
       "cmd": "#sparmortunic5",
       "prefab": "SP_ArmorTunic5"
+    },
+    {
+      "name": "Trinket Black Stamina",
+      "cmd": "#trinketblackstamina",
+      "prefab": "TrinketBlackStamina"
+    },
+    {
+      "name": "Trinket Blood Gold Health",
+      "cmd": "#trinketbloodgoldhealth",
+      "prefab": "TrinketBloodGoldHealth"
+    },
+    {
+      "name": "Trinket Blood Gold Stamina",
+      "cmd": "#trinketbloodgoldstamina",
+      "prefab": "TrinketBloodGoldStamina"
     }
   ],
   "food": [
     {
       "type": "help",
-      "text": "By type first (cooked, crops…). Below: By tier full food sets per biome step."
+      "text": "Raw first, then cooked, then prepared, then crops. Below: By tier full food sets."
+    },
+    {
+      "type": "section",
+      "title": "Raw ingredients"
+    },
+    {
+      "name": "Asksvin Meat",
+      "cmd": "#asksvinmeat",
+      "prefab": "AsksvinMeat"
+    },
+    {
+      "name": "Chicken Meat",
+      "cmd": "#chickenmeat",
+      "prefab": "ChickenMeat"
+    },
+    {
+      "name": "Hare Meat",
+      "cmd": "#haremeat",
+      "prefab": "HareMeat"
+    },
+    {
+      "name": "Lox Meat",
+      "cmd": "#loxmeat",
+      "prefab": "LoxMeat"
+    },
+    {
+      "name": "Meatballs Mashed Poteitr",
+      "cmd": "#meatballsmashedpoteitr",
+      "prefab": "MeatballsMashedPoteitr"
+    },
+    {
+      "name": "Meat Platter Uncooked",
+      "cmd": "#meatplatteruncooked",
+      "prefab": "MeatPlatterUncooked"
+    },
+    {
+      "name": "Neck Tail",
+      "cmd": "#necktail",
+      "prefab": "NeckTail"
+    },
+    {
+      "name": "Raw Meat",
+      "cmd": "#rawmeat",
+      "prefab": "RawMeat"
+    },
+    {
+      "name": "Serpent Meat",
+      "cmd": "#serpentmeat",
+      "prefab": "SerpentMeat"
+    },
+    {
+      "name": "Volture Egg",
+      "cmd": "#voltureegg",
+      "prefab": "VoltureEgg"
+    },
+    {
+      "name": "Volture Meat",
+      "cmd": "#volturemeat",
+      "prefab": "VoltureMeat"
     },
     {
       "type": "section",
@@ -4325,11 +4392,6 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "YggdrasilPorridge"
     },
     {
-      "name": "Yggdrasil Wood",
-      "cmd": "#yggdrasilwood",
-      "prefab": "YggdrasilWood"
-    },
-    {
       "type": "section",
       "title": "Crops & forage"
     },
@@ -4567,65 +4629,6 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Wolf Jerky",
       "cmd": "#wolfjerky",
       "prefab": "WolfJerky"
-    },
-    {
-      "type": "section",
-      "title": "Raw ingredients"
-    },
-    {
-      "name": "Asksvin Meat",
-      "cmd": "#asksvinmeat",
-      "prefab": "AsksvinMeat"
-    },
-    {
-      "name": "Chicken Meat",
-      "cmd": "#chickenmeat",
-      "prefab": "ChickenMeat"
-    },
-    {
-      "name": "Hare Meat",
-      "cmd": "#haremeat",
-      "prefab": "HareMeat"
-    },
-    {
-      "name": "Lox Meat",
-      "cmd": "#loxmeat",
-      "prefab": "LoxMeat"
-    },
-    {
-      "name": "Meatballs Mashed Poteitr",
-      "cmd": "#meatballsmashedpoteitr",
-      "prefab": "MeatballsMashedPoteitr"
-    },
-    {
-      "name": "Meat Platter Uncooked",
-      "cmd": "#meatplatteruncooked",
-      "prefab": "MeatPlatterUncooked"
-    },
-    {
-      "name": "Neck Tail",
-      "cmd": "#necktail",
-      "prefab": "NeckTail"
-    },
-    {
-      "name": "Raw Meat",
-      "cmd": "#rawmeat",
-      "prefab": "RawMeat"
-    },
-    {
-      "name": "Serpent Meat",
-      "cmd": "#serpentmeat",
-      "prefab": "SerpentMeat"
-    },
-    {
-      "name": "Volture Egg",
-      "cmd": "#voltureegg",
-      "prefab": "VoltureEgg"
-    },
-    {
-      "name": "Volture Meat",
-      "cmd": "#volturemeat",
-      "prefab": "VoltureMeat"
     },
     {
       "type": "help",
@@ -4973,11 +4976,6 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Yggdrasil Porridge",
       "cmd": "#yggdrasilporridge",
       "prefab": "YggdrasilPorridge"
-    },
-    {
-      "name": "Yggdrasil Wood",
-      "cmd": "#yggdrasilwood",
-      "prefab": "YggdrasilWood"
     },
     {
       "type": "section",
@@ -5816,14 +5814,54 @@ window.VALHEIM_TWITCH_STORE = {
       "title": "Wood & plant"
     },
     {
+      "name": "Barka Branch",
+      "cmd": "#barkabranch",
+      "prefab": "BarkaBranch"
+    },
+    {
+      "name": "Blackwood",
+      "cmd": "#blackwood",
+      "prefab": "Blackwood"
+    },
+    {
+      "name": "Elder Bark",
+      "cmd": "#elderbark",
+      "prefab": "ElderBark"
+    },
+    {
       "name": "Fine Wood",
       "cmd": "#finewood",
       "prefab": "FineWood"
     },
     {
+      "name": "Frostwood",
+      "cmd": "#frostwood",
+      "prefab": "Frostwood"
+    },
+    {
+      "name": "Root",
+      "cmd": "#root",
+      "prefab": "Root"
+    },
+    {
+      "name": "Round Log",
+      "cmd": "#roundlog",
+      "prefab": "RoundLog"
+    },
+    {
       "name": "Wood",
       "cmd": "#wood",
       "prefab": "Wood"
+    },
+    {
+      "name": "Writhan Roots",
+      "cmd": "#writhanroots",
+      "prefab": "WrithanRoots"
+    },
+    {
+      "name": "Yggdrasil Wood",
+      "cmd": "#yggdrasilwood",
+      "prefab": "YggdrasilWood"
     },
     {
       "type": "section",
@@ -5870,6 +5908,11 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "SulfurStone"
     },
     {
+      "name": "Thunderstone",
+      "cmd": "#thunderstone",
+      "prefab": "Thunderstone"
+    },
+    {
       "type": "section",
       "title": "Metals"
     },
@@ -5897,11 +5940,6 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Bronze Scrap",
       "cmd": "#bronzescrap",
       "prefab": "BronzeScrap"
-    },
-    {
-      "name": "Chitin",
-      "cmd": "#chitin",
-      "prefab": "Chitin"
     },
     {
       "name": "Copper",
@@ -5949,19 +5987,9 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "Iron"
     },
     {
-      "name": "Iron Nails",
-      "cmd": "#ironnails",
-      "prefab": "IronNails"
-    },
-    {
       "name": "Iron Ore",
       "cmd": "#ironore",
       "prefab": "IronOre"
-    },
-    {
-      "name": "Ironpit",
-      "cmd": "#ironpit",
-      "prefab": "Ironpit"
     },
     {
       "name": "Iron Scrap",
@@ -5984,11 +6012,6 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "SilverOre"
     },
     {
-      "name": "Surtling Core",
-      "cmd": "#surtlingcore",
-      "prefab": "SurtlingCore"
-    },
-    {
       "name": "Tin",
       "cmd": "#tin",
       "prefab": "Tin"
@@ -6009,11 +6032,6 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "TrinketBronzeStamina"
     },
     {
-      "name": "Trinket Chitin Swim",
-      "cmd": "#trinketchitinswim",
-      "prefab": "TrinketChitinSwim"
-    },
-    {
       "name": "Trinket Flametal Eitr",
       "cmd": "#trinketflametaleitr",
       "prefab": "TrinketFlametalEitr"
@@ -6024,16 +6042,6 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "TrinketFlametalStaminaHealth"
     },
     {
-      "name": "Trinket Iron Health",
-      "cmd": "#trinketironhealth",
-      "prefab": "TrinketIronHealth"
-    },
-    {
-      "name": "Trinket Iron Stamina",
-      "cmd": "#trinketironstamina",
-      "prefab": "TrinketIronStamina"
-    },
-    {
       "name": "Trinket Silver Damage",
       "cmd": "#trinketsilverdamage",
       "prefab": "TrinketSilverDamage"
@@ -6042,16 +6050,6 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Trinket Silver Resist",
       "cmd": "#trinketsilverresist",
       "prefab": "TrinketSilverResist"
-    },
-    {
-      "name": "Trophy Barka",
-      "cmd": "#trophybarka",
-      "prefab": "TrophyBarka"
-    },
-    {
-      "name": "Trophy Forest Troll",
-      "cmd": "#trophyforesttroll",
-      "prefab": "TrophyForestTroll"
     },
     {
       "type": "section",
@@ -6068,9 +6066,19 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "BjornHide"
     },
     {
+      "name": "Bonemaw Serpent Scale",
+      "cmd": "#bonemawserpentscale",
+      "prefab": "BonemawSerpentScale"
+    },
+    {
       "name": "Carapace",
       "cmd": "#carapace",
       "prefab": "Carapace"
+    },
+    {
+      "name": "Chitin",
+      "cmd": "#chitin",
+      "prefab": "Chitin"
     },
     {
       "name": "Deer Hide",
@@ -6098,9 +6106,19 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "SealHide"
     },
     {
+      "name": "Serpent Scale",
+      "cmd": "#serpentscale",
+      "prefab": "SerpentScale"
+    },
+    {
       "name": "Trinket Carapace Eitr",
       "cmd": "#trinketcarapaceeitr",
       "prefab": "TrinketCarapaceEitr"
+    },
+    {
+      "name": "Trinket Chitin Swim",
+      "cmd": "#trinketchitinswim",
+      "prefab": "TrinketChitinSwim"
     },
     {
       "name": "Troll Hide",
@@ -6117,9 +6135,29 @@ window.VALHEIM_TWITCH_STORE = {
       "title": "Boss & rare drops"
     },
     {
+      "name": "Black Core",
+      "cmd": "#blackcore",
+      "prefab": "BlackCore"
+    },
+    {
       "name": "Eitr",
       "cmd": "#eitr",
       "prefab": "Eitr"
+    },
+    {
+      "name": "Frost Core",
+      "cmd": "#frostcore",
+      "prefab": "FrostCore"
+    },
+    {
+      "name": "Molten Core",
+      "cmd": "#moltencore",
+      "prefab": "MoltenCore"
+    },
+    {
+      "name": "Surtling Core",
+      "cmd": "#surtlingcore",
+      "prefab": "SurtlingCore"
     },
     {
       "name": "Trophy Abomination",
@@ -6130,6 +6168,11 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Trophy Asksvin",
       "cmd": "#trophyasksvin",
       "prefab": "TrophyAsksvin"
+    },
+    {
+      "name": "Trophy Barka",
+      "cmd": "#trophybarka",
+      "prefab": "TrophyBarka"
     },
     {
       "name": "Trophy Bjorn",
@@ -6265,6 +6308,11 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Trophy Fenring",
       "cmd": "#trophyfenring",
       "prefab": "TrophyFenring"
+    },
+    {
+      "name": "Trophy Forest Troll",
+      "cmd": "#trophyforesttroll",
+      "prefab": "TrophyForestTroll"
     },
     {
       "name": "Trophy Frost Troll",
@@ -6545,9 +6593,24 @@ window.VALHEIM_TWITCH_STORE = {
       "title": "Crafting parts"
     },
     {
+      "name": "Ancient Seed",
+      "cmd": "#ancientseed",
+      "prefab": "AncientSeed"
+    },
+    {
+      "name": "Bloodbag",
+      "cmd": "#bloodbag",
+      "prefab": "Bloodbag"
+    },
+    {
       "name": "Bone Fragments",
       "cmd": "#bonefragments",
       "prefab": "BoneFragments"
+    },
+    {
+      "name": "Bonemaw Serpent Tooth",
+      "cmd": "#bonemawserpenttooth",
+      "prefab": "BonemawSerpentTooth"
     },
     {
       "name": "Celestial Feather",
@@ -6555,9 +6618,19 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "CelestialFeather"
     },
     {
+      "name": "Chain",
+      "cmd": "#chain",
+      "prefab": "Chain"
+    },
+    {
       "name": "Charcoal Resin",
       "cmd": "#charcoalresin",
       "prefab": "CharcoalResin"
+    },
+    {
+      "name": "Charred Bone",
+      "cmd": "#charredbone",
+      "prefab": "CharredBone"
     },
     {
       "name": "Coal",
@@ -6565,14 +6638,39 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "Coal"
     },
     {
+      "name": "Entrails",
+      "cmd": "#entrails",
+      "prefab": "Entrails"
+    },
+    {
       "name": "Feathers",
       "cmd": "#feathers",
       "prefab": "Feathers"
     },
     {
+      "name": "Giant Blood Sack",
+      "cmd": "#giantbloodsack",
+      "prefab": "GiantBloodSack"
+    },
+    {
       "name": "Guck",
       "cmd": "#guck",
       "prefab": "Guck"
+    },
+    {
+      "name": "Iron Nails",
+      "cmd": "#ironnails",
+      "prefab": "IronNails"
+    },
+    {
+      "name": "Ironpit",
+      "cmd": "#ironpit",
+      "prefab": "Ironpit"
+    },
+    {
+      "name": "Mechanical Spring",
+      "cmd": "#mechanicalspring",
+      "prefab": "MechanicalSpring"
     },
     {
       "name": "Memorial Coal",
@@ -6590,9 +6688,29 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "Sap"
     },
     {
+      "name": "Softtissue",
+      "cmd": "#softtissue",
+      "prefab": "Softtissue"
+    },
+    {
       "name": "Tar",
       "cmd": "#tar",
       "prefab": "Tar"
+    },
+    {
+      "name": "Trinket Iron Health",
+      "cmd": "#trinketironhealth",
+      "prefab": "TrinketIronHealth"
+    },
+    {
+      "name": "Trinket Iron Stamina",
+      "cmd": "#trinketironstamina",
+      "prefab": "TrinketIronStamina"
+    },
+    {
+      "name": "Withered Bone",
+      "cmd": "#witheredbone",
+      "prefab": "WitheredBone"
     },
     {
       "type": "help",
@@ -6625,6 +6743,11 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Ancient Gemstone Purple",
       "cmd": "#ancientgemstonepurple",
       "prefab": "AncientGemstonePurple"
+    },
+    {
+      "name": "Blackwood",
+      "cmd": "#blackwood",
+      "prefab": "Blackwood"
     },
     {
       "name": "Bone Fragments",
@@ -6682,6 +6805,11 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "Resin"
     },
     {
+      "name": "Round Log",
+      "cmd": "#roundlog",
+      "prefab": "RoundLog"
+    },
+    {
       "name": "Sharpening Stone",
       "cmd": "#sharpeningstone",
       "prefab": "SharpeningStone"
@@ -6695,6 +6823,11 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Stone Rock",
       "cmd": "#stonerock",
       "prefab": "StoneRock"
+    },
+    {
+      "name": "Thunderstone",
+      "cmd": "#thunderstone",
+      "prefab": "Thunderstone"
     },
     {
       "name": "Trophy Dragon Queen",
@@ -6830,6 +6963,31 @@ window.VALHEIM_TWITCH_STORE = {
       "title": "T2 · Swamp"
     },
     {
+      "name": "Bloodbag",
+      "cmd": "#bloodbag",
+      "prefab": "Bloodbag"
+    },
+    {
+      "name": "Bonemaw Serpent Scale",
+      "cmd": "#bonemawserpentscale",
+      "prefab": "BonemawSerpentScale"
+    },
+    {
+      "name": "Bonemaw Serpent Tooth",
+      "cmd": "#bonemawserpenttooth",
+      "prefab": "BonemawSerpentTooth"
+    },
+    {
+      "name": "Chain",
+      "cmd": "#chain",
+      "prefab": "Chain"
+    },
+    {
+      "name": "Entrails",
+      "cmd": "#entrails",
+      "prefab": "Entrails"
+    },
+    {
       "name": "Guck",
       "cmd": "#guck",
       "prefab": "Guck"
@@ -6858,6 +7016,16 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Iron Scrap",
       "cmd": "#ironscrap",
       "prefab": "IronScrap"
+    },
+    {
+      "name": "Root",
+      "cmd": "#root",
+      "prefab": "Root"
+    },
+    {
+      "name": "Serpent Scale",
+      "cmd": "#serpentscale",
+      "prefab": "SerpentScale"
     },
     {
       "name": "Surtling Core",
@@ -6920,6 +7088,16 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "TrophySurtling"
     },
     {
+      "name": "Withered Bone",
+      "cmd": "#witheredbone",
+      "prefab": "WitheredBone"
+    },
+    {
+      "name": "Writhan Roots",
+      "cmd": "#writhanroots",
+      "prefab": "WrithanRoots"
+    },
+    {
       "type": "section",
       "title": "T3 · Mountain"
     },
@@ -6927,6 +7105,16 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Crystal",
       "cmd": "#crystal",
       "prefab": "Crystal"
+    },
+    {
+      "name": "Frost Core",
+      "cmd": "#frostcore",
+      "prefab": "FrostCore"
+    },
+    {
+      "name": "Frostwood",
+      "cmd": "#frostwood",
+      "prefab": "Frostwood"
     },
     {
       "name": "Obsidian",
@@ -7067,6 +7255,11 @@ window.VALHEIM_TWITCH_STORE = {
       "title": "T5 · Mistlands"
     },
     {
+      "name": "Black Core",
+      "cmd": "#blackcore",
+      "prefab": "BlackCore"
+    },
+    {
       "name": "Carapace",
       "cmd": "#carapace",
       "prefab": "Carapace"
@@ -7085,6 +7278,11 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Scale Hide",
       "cmd": "#scalehide",
       "prefab": "ScaleHide"
+    },
+    {
+      "name": "Softtissue",
+      "cmd": "#softtissue",
+      "prefab": "Softtissue"
     },
     {
       "name": "Trinket Carapace Eitr",
@@ -7132,8 +7330,18 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "TrophyTick"
     },
     {
+      "name": "Yggdrasil Wood",
+      "cmd": "#yggdrasilwood",
+      "prefab": "YggdrasilWood"
+    },
+    {
       "type": "section",
       "title": "T6 · Ashlands"
+    },
+    {
+      "name": "Charred Bone",
+      "cmd": "#charredbone",
+      "prefab": "CharredBone"
     },
     {
       "name": "Flametal",
@@ -7215,9 +7423,19 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "AncientCoin"
     },
     {
+      "name": "Ancient Seed",
+      "cmd": "#ancientseed",
+      "prefab": "AncientSeed"
+    },
+    {
       "name": "Ask Hide",
       "cmd": "#askhide",
       "prefab": "AskHide"
+    },
+    {
+      "name": "Barka Branch",
+      "cmd": "#barkabranch",
+      "prefab": "BarkaBranch"
     },
     {
       "name": "Bjorn Hide",
@@ -7235,6 +7453,16 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "Coins"
     },
     {
+      "name": "Elder Bark",
+      "cmd": "#elderbark",
+      "prefab": "ElderBark"
+    },
+    {
+      "name": "Giant Blood Sack",
+      "cmd": "#giantbloodsack",
+      "prefab": "GiantBloodSack"
+    },
+    {
       "name": "Gold",
       "cmd": "#gold",
       "prefab": "Gold"
@@ -7245,9 +7473,19 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "GoldOre"
     },
     {
+      "name": "Mechanical Spring",
+      "cmd": "#mechanicalspring",
+      "prefab": "MechanicalSpring"
+    },
+    {
       "name": "Memorial Coal",
       "cmd": "#memorialcoal",
       "prefab": "MemorialCoal"
+    },
+    {
+      "name": "Molten Core",
+      "cmd": "#moltencore",
+      "prefab": "MoltenCore"
     },
     {
       "name": "Moose Hide",
@@ -7823,11 +8061,6 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "Acorn"
     },
     {
-      "name": "Ancient Seed",
-      "cmd": "#ancientseed",
-      "prefab": "AncientSeed"
-    },
-    {
       "name": "Ask Bladder",
       "cmd": "#askbladder",
       "prefab": "AskBladder"
@@ -7851,11 +8084,6 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Asksvin Carrion Skull",
       "cmd": "#asksvincarrionskull",
       "prefab": "AsksvinCarrionSkull"
-    },
-    {
-      "name": "Barka Branch",
-      "cmd": "#barkabranch",
-      "prefab": "BarkaBranch"
     },
     {
       "name": "Barrel Rings",
@@ -7888,29 +8116,14 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "BjornPaw"
     },
     {
-      "name": "Black Core",
-      "cmd": "#blackcore",
-      "prefab": "BlackCore"
-    },
-    {
       "name": "Black Marble",
       "cmd": "#blackmarble",
       "prefab": "BlackMarble"
     },
     {
-      "name": "Blackwood",
-      "cmd": "#blackwood",
-      "prefab": "Blackwood"
-    },
-    {
       "name": "Blob Vial",
       "cmd": "#blobvial",
       "prefab": "BlobVial"
-    },
-    {
-      "name": "Bloodbag",
-      "cmd": "#bloodbag",
-      "prefab": "Bloodbag"
     },
     {
       "name": "Blood Gold Key",
@@ -7923,16 +8136,6 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "BoneMawSerpentMeat"
     },
     {
-      "name": "Bonemaw Serpent Scale",
-      "cmd": "#bonemawserpentscale",
-      "prefab": "BonemawSerpentScale"
-    },
-    {
-      "name": "Bonemaw Serpent Tooth",
-      "cmd": "#bonemawserpenttooth",
-      "prefab": "BonemawSerpentTooth"
-    },
-    {
       "name": "Bug Meat",
       "cmd": "#bugmeat",
       "prefab": "BugMeat"
@@ -7943,11 +8146,6 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "CeramicPlate"
     },
     {
-      "name": "Chain",
-      "cmd": "#chain",
-      "prefab": "Chain"
-    },
-    {
       "name": "Chain Lightning",
       "cmd": "#chainlightning",
       "prefab": "ChainLightning"
@@ -7956,11 +8154,6 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Chain Lightning Red",
       "cmd": "#chainlightningred",
       "prefab": "ChainLightningRed"
-    },
-    {
-      "name": "Charred Bone",
-      "cmd": "#charredbone",
-      "prefab": "CharredBone"
     },
     {
       "name": "Charred Cogwheel",
@@ -8033,16 +8226,6 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "ElakingHairBundle"
     },
     {
-      "name": "Elder Bark",
-      "cmd": "#elderbark",
-      "prefab": "ElderBark"
-    },
-    {
-      "name": "Entrails",
-      "cmd": "#entrails",
-      "prefab": "Entrails"
-    },
-    {
       "name": "Fader Drop",
       "cmd": "#faderdrop",
       "prefab": "FaderDrop"
@@ -8083,16 +8266,6 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "FreshSeaweed"
     },
     {
-      "name": "Frost Core",
-      "cmd": "#frostcore",
-      "prefab": "FrostCore"
-    },
-    {
-      "name": "Frostwood",
-      "cmd": "#frostwood",
-      "prefab": "Frostwood"
-    },
-    {
       "name": "Frozen Fuel",
       "cmd": "#frozenfuel",
       "prefab": "FrozenFuel"
@@ -8106,11 +8279,6 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Ghost Skull",
       "cmd": "#ghostskull",
       "prefab": "GhostSkull"
-    },
-    {
-      "name": "Giant Blood Sack",
-      "cmd": "#giantbloodsack",
-      "prefab": "GiantBloodSack"
     },
     {
       "name": "Glow Worm",
@@ -8308,11 +8476,6 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "MashedMeat"
     },
     {
-      "name": "Mechanical Spring",
-      "cmd": "#mechanicalspring",
-      "prefab": "MechanicalSpring"
-    },
-    {
       "name": "Mince Meat Sauce",
       "cmd": "#mincemeatsauce",
       "prefab": "MinceMeatSauce"
@@ -8321,11 +8484,6 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Mole Claws",
       "cmd": "#moleclaws",
       "prefab": "MoleClaws"
-    },
-    {
-      "name": "Molten Core",
-      "cmd": "#moltencore",
-      "prefab": "MoltenCore"
     },
     {
       "name": "Moose Kebab",
@@ -8468,19 +8626,9 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "RoastedCrustPieUncooked"
     },
     {
-      "name": "Root",
-      "cmd": "#root",
-      "prefab": "Root"
-    },
-    {
       "name": "Rotten Meat",
       "cmd": "#rottenmeat",
       "prefab": "RottenMeat"
-    },
-    {
-      "name": "Round Log",
-      "cmd": "#roundlog",
-      "prefab": "RoundLog"
     },
     {
       "name": "Scorching Medley",
@@ -8501,11 +8649,6 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Seeker Aspic",
       "cmd": "#seekeraspic",
       "prefab": "SeekerAspic"
-    },
-    {
-      "name": "Serpent Scale",
-      "cmd": "#serpentscale",
-      "prefab": "SerpentScale"
     },
     {
       "name": "Shocklate Smoothie",
@@ -8551,11 +8694,6 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Snow Roller",
       "cmd": "#snowroller",
       "prefab": "SnowRoller"
-    },
-    {
-      "name": "Softtissue",
-      "cmd": "#softtissue",
-      "prefab": "Softtissue"
     },
     {
       "name": "Sparkler",
@@ -8611,11 +8749,6 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Stamina Upgrade Wraith",
       "cmd": "#staminaupgradewraith",
       "prefab": "StaminaUpgrade_Wraith"
-    },
-    {
-      "name": "Thunderstone",
-      "cmd": "#thunderstone",
-      "prefab": "Thunderstone"
     },
     {
       "name": "Undead Bjorn Ribcage",
@@ -8698,11 +8831,6 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "Wisp"
     },
     {
-      "name": "Withered Bone",
-      "cmd": "#witheredbone",
-      "prefab": "WitheredBone"
-    },
-    {
       "name": "Wolf Claw",
       "cmd": "#wolfclaw",
       "prefab": "WolfClaw"
@@ -8726,11 +8854,6 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Wolf Meat Skewer",
       "cmd": "#wolfmeatskewer",
       "prefab": "WolfMeatSkewer"
-    },
-    {
-      "name": "Writhan Roots",
-      "cmd": "#writhanroots",
-      "prefab": "WrithanRoots"
     },
     {
       "name": "Yagluth Drop",
