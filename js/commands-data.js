@@ -6283,6 +6283,11 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "Grausten"
     },
     {
+      "name": "Ice",
+      "cmd": "#ice",
+      "prefab": "Ice"
+    },
+    {
       "name": "Obsidian",
       "cmd": "#obsidian",
       "prefab": "Obsidian"
@@ -7893,6 +7898,11 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "GoldOre"
     },
     {
+      "name": "Ice",
+      "cmd": "#ice",
+      "prefab": "Ice"
+    },
+    {
       "name": "Jute Blue",
       "cmd": "#juteblue",
       "prefab": "JuteBlue"
@@ -8754,11 +8764,6 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Health Upgrade GD King",
       "cmd": "#healthupgradegdking",
       "prefab": "HealthUpgrade_GDKing"
-    },
-    {
-      "name": "Ice",
-      "cmd": "#ice",
-      "prefab": "Ice"
     },
     {
       "name": "Kale",

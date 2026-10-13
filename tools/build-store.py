@@ -251,6 +251,8 @@ CORE_MATERIAL_PREFABS = {
     "WolfClaw",
     "WolfFang",
     "WolfHairBundle",
+    "Ice",
+    "SulfurStone",
 }
 
 # Keyword → tier for weapons / food / potions / materials (checked T6→T0)
@@ -837,8 +839,8 @@ def material_section(prefab: str) -> str:
         return "Wood & plant"
     if prefab in {"Root", "WrithanRoots"} or p.endswith("roots"):
         return "Wood & plant"
-    if prefab in {"BlackMarble", "Grausten", "Ice"} or any(
-        x in p for x in ("stone", "flint", "obsidian", "crystal", "thunderstone")
+    if prefab in {"BlackMarble", "Grausten", "Ice", "SulfurStone"} or any(
+        x in p for x in ("stone", "flint", "obsidian", "crystal", "thunderstone", "grausten")
     ):
         return "Stone & crystal"
     # Hides / fiber before metals (LeatherScraps ends with scrap)
