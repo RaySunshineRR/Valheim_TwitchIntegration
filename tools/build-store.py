@@ -84,7 +84,22 @@ def title_case(words: list[str]) -> str:
     return " ".join(w[:1].upper() + w[1:] for w in words)
 
 
+# SoftRef ids → streamer-friendly labels (wiki names)
+DISPLAY_NAME = {
+    "RawMeat": "Boar Meat",
+    "CookedMeat": "Cooked Boar Meat",
+    "NeckTail": "Neck Tail",
+    "NeckTailGrilled": "Grilled Neck Tail",
+    "gd_king": "The Elder",
+    "GoblinKing": "Yagluth",
+    "Dragon": "Moder",
+    "SeekerQueen": "The Queen",
+}
+
+
 def human_name(prefab: str) -> str:
+    if prefab in DISPLAY_NAME:
+        return DISPLAY_NAME[prefab]
     words = split_words(prefab)
     # Reorder common prefixes
     if len(words) >= 2 and words[0] in {
@@ -300,6 +315,7 @@ TIER_KEYWORDS = [
             "sulfur",
             "proustite",
             "flametalweapon",
+            "volture",
         ),
     ),
     (
@@ -325,6 +341,8 @@ TIER_KEYWORDS = [
             "yggdrasil",
             "wispthroat",
             "sap",
+            "haremeat",
+            "bugmeat",
         ),
     ),
     (
@@ -348,6 +366,7 @@ TIER_KEYWORDS = [
             "spice",
             "salad",
             "meatplatter",
+            "loxmeat",
         ),
     ),
     (
@@ -366,7 +385,9 @@ TIER_KEYWORDS = [
             "ulv",
             "hatchling",
             "wolfjerky",
-            "eyescream",
+            "wolfmeat",
+            "bjornmeat",
+            "moosemeat",
         ),
     ),
     (
@@ -389,6 +410,7 @@ TIER_KEYWORDS = [
             "serpent",
             "poison",
             "abomination",
+            "serpentmeat",
         ),
     ),
     (
@@ -411,7 +433,10 @@ TIER_KEYWORDS = [
             "queensjam",
             "boarjerky",
             "deerstew",
+            "deermeat",
             "sausages",
+            "mincemeat",
+            "mashedmeat",
             "macebronze",
             "atgierbronze",
             "spearbronze",
@@ -436,8 +461,16 @@ TIER_KEYWORDS = [
             "honey",
             "dandelion",
             "cookedmeat",
+            "cookedboarmeat",
+            "cookedegg",
             "grilledneck",
             "grilled",
+            "necktail",
+            "rawmeat",
+            "boarmeat",
+            "chickenmeat",
+            "chickenegg",
+            "rottenmeat",
             "torch",
             "shieldwood",
             "arrowwood",
@@ -1076,6 +1109,33 @@ QUICK_PREFABS = [
 ]
 
 
+def inject_food_aliases(items: list[dict]) -> list[dict]:
+    """Ensure #boarmeat / #cookedboarmeat appear even if SoftRef id is RawMeat."""
+    by = {i["prefab"]: i for i in items}
+    extras = [
+        ("RawMeat", "boarmeat", "#boarmeat", "Boar drop (RawMeat)"),
+        ("CookedMeat", "cookedboarmeat", "#cookedboarmeat", "Cooked boar meat"),
+    ]
+    out = list(items)
+    seen_alias = {str(i.get("alias") or "").lower() for i in items}
+    for prefab, alias, cmd, _desc in extras:
+        if prefab not in by or alias in seen_alias:
+            continue
+        donor = by[prefab]
+        out.append(
+            {
+                **donor,
+                "alias": alias,
+                "command": cmd,
+                "bareCommand": True,
+                "category": "Food",
+                "_displayPrefab": prefab,
+            }
+        )
+        seen_alias.add(alias)
+    return out
+
+
 def build_store(data: dict) -> dict:
     creatures = data.get("creatures") or []
     items = [
@@ -1083,6 +1143,7 @@ def build_store(data: dict) -> dict:
         for i in (data.get("items") or [])
         if i.get("bareCommand") and not should_skip_item(i["prefab"])
     ]
+    items = inject_food_aliases(items)
 
     store: dict = {
         "meta": {
