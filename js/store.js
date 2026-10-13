@@ -39,6 +39,22 @@
     "misc",
   ]);
 
+  /** Weapons keep family-only jump buttons (tier blocks are scroll-only). */
+  const WEAPON_MENU = new Set([
+    "Swords",
+    "Axes",
+    "Maces & clubs",
+    "Spears",
+    "Knives",
+    "Bows",
+    "Arrows & bolts",
+    "Shields",
+    "Magic",
+    "Throwables",
+    "Utility weapons",
+    "Other weapons",
+  ]);
+
   const tabs = Array.from(document.querySelectorAll(".tab"));
   const subtabsEl = document.getElementById("subtabs");
   const catalog = document.getElementById("catalog");
@@ -342,7 +358,11 @@
     }
 
     // Jump mode — keep full list; buttons travel to section headers
-    const titles = sectionTitles(entriesFor(activeTab));
+    let titles = sectionTitles(entriesFor(activeTab));
+    if (activeTab === "weapons") {
+      // Do not add tier buttons to the weapons submenu
+      titles = titles.filter((t) => WEAPON_MENU.has(t));
+    }
     for (const title of titles) {
       const btn = document.createElement("button");
       btn.type = "button";

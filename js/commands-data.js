@@ -798,7 +798,7 @@ window.VALHEIM_TWITCH_STORE = {
   "weapons": [
     {
       "type": "help",
-      "text": "Jump buttons below jump to a family. Prefer mid-tier for fun without ending the run."
+      "text": "Jump buttons = weapon family. Scroll further for By tier full sets (T0–T6)."
     },
     {
       "type": "section",
@@ -2047,16 +2047,1266 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Upgrader7Weapon",
       "cmd": "#upgrader7weapon",
       "prefab": "Upgrader7Weapon"
+    },
+    {
+      "type": "help",
+      "text": "By tier — full sets for that progression step (same items as above, regrouped)."
+    },
+    {
+      "type": "section",
+      "title": "By tier"
+    },
+    {
+      "type": "section",
+      "title": "T0 · Meadows"
+    },
+    {
+      "name": "Flint Arrow",
+      "cmd": "#arrowflint",
+      "prefab": "ArrowFlint"
+    },
+    {
+      "name": "Wood Arrow",
+      "cmd": "#arrowwood",
+      "prefab": "ArrowWood"
+    },
+    {
+      "name": "Wood Atgeir",
+      "cmd": "#atgeirwood",
+      "prefab": "AtgeirWood"
+    },
+    {
+      "name": "Flint Axe",
+      "cmd": "#axeflint",
+      "prefab": "AxeFlint"
+    },
+    {
+      "name": "Stone Axe",
+      "cmd": "#axestone",
+      "prefab": "AxeStone"
+    },
+    {
+      "name": "Wood Axe",
+      "cmd": "#axewood",
+      "prefab": "AxeWood"
+    },
+    {
+      "name": "Wood Battleaxe",
+      "cmd": "#battleaxewood",
+      "prefab": "BattleaxeWood"
+    },
+    {
+      "name": "Club",
+      "cmd": "#club",
+      "prefab": "Club"
+    },
+    {
+      "name": "Dyrnwyn Blade Fragment",
+      "cmd": "#dyrnwynbladefragment",
+      "prefab": "DyrnwynBladeFragment"
+    },
+    {
+      "name": "Dyrnwyn Hilt Fragment",
+      "cmd": "#dyrnwynhiltfragment",
+      "prefab": "DyrnwynHiltFragment"
+    },
+    {
+      "name": "Dyrnwyn Tip Fragment",
+      "cmd": "#dyrnwyntipfragment",
+      "prefab": "DyrnwynTipFragment"
+    },
+    {
+      "name": "Flint Knife",
+      "cmd": "#knifeflint",
+      "prefab": "KnifeFlint"
+    },
+    {
+      "name": "Wood Knife",
+      "cmd": "#knifewood",
+      "prefab": "KnifeWood"
+    },
+    {
+      "name": "Wood Mace",
+      "cmd": "#macewood",
+      "prefab": "MaceWood"
+    },
+    {
+      "name": "Wood Shield",
+      "cmd": "#shieldwood",
+      "prefab": "ShieldWood"
+    },
+    {
+      "name": "Wood Tower Shield",
+      "cmd": "#shieldwoodtower",
+      "prefab": "ShieldWoodTower"
+    },
+    {
+      "name": "Wood Sledge",
+      "cmd": "#sledgewood",
+      "prefab": "SledgeWood"
+    },
+    {
+      "name": "Flint Spear",
+      "cmd": "#spearflint",
+      "prefab": "SpearFlint"
+    },
+    {
+      "name": "Wood Spear",
+      "cmd": "#spearwood",
+      "prefab": "SpearWood"
+    },
+    {
+      "name": "Wood Sword",
+      "cmd": "#swordwood",
+      "prefab": "SwordWood"
+    },
+    {
+      "name": "Tankard",
+      "cmd": "#tankard",
+      "prefab": "Tankard"
+    },
+    {
+      "name": "Tankard Dvergr",
+      "cmd": "#tankarddvergr",
+      "prefab": "Tankard_dvergr"
+    },
+    {
+      "name": "Tankard Anniversary",
+      "cmd": "#tankardanniversary",
+      "prefab": "TankardAnniversary"
+    },
+    {
+      "name": "Tankard Odin",
+      "cmd": "#tankardodin",
+      "prefab": "TankardOdin"
+    },
+    {
+      "name": "TH Sword Wood",
+      "cmd": "#thswordwood",
+      "prefab": "THSwordWood"
+    },
+    {
+      "name": "Torch",
+      "cmd": "#torch",
+      "prefab": "Torch"
+    },
+    {
+      "name": "Torch Mist",
+      "cmd": "#torchmist",
+      "prefab": "TorchMist"
+    },
+    {
+      "name": "Turret Bolt Wood",
+      "cmd": "#turretboltwood",
+      "prefab": "TurretBoltWood"
+    },
+    {
+      "type": "section",
+      "title": "T1 · Black Forest"
+    },
+    {
+      "name": "Bronze Arrow",
+      "cmd": "#arrowbronze",
+      "prefab": "ArrowBronze"
+    },
+    {
+      "name": "Bronze Atgeir",
+      "cmd": "#atgeirbronze",
+      "prefab": "AtgeirBronze"
+    },
+    {
+      "name": "Bronze Axe",
+      "cmd": "#axebronze",
+      "prefab": "AxeBronze"
+    },
+    {
+      "name": "Fine Wood Bow",
+      "cmd": "#bowfinewood",
+      "prefab": "BowFineWood"
+    },
+    {
+      "name": "Chitin Knife",
+      "cmd": "#knifechitin",
+      "prefab": "KnifeChitin"
+    },
+    {
+      "name": "Copper Knife",
+      "cmd": "#knifecopper",
+      "prefab": "KnifeCopper"
+    },
+    {
+      "name": "Bronze Mace",
+      "cmd": "#macebronze",
+      "prefab": "MaceBronze"
+    },
+    {
+      "name": "Bronze Buckler Shield",
+      "cmd": "#shieldbronzebuckler",
+      "prefab": "ShieldBronzeBuckler"
+    },
+    {
+      "name": "Bronze Spear",
+      "cmd": "#spearbronze",
+      "prefab": "SpearBronze"
+    },
+    {
+      "name": "Chitin Spear",
+      "cmd": "#spearchitin",
+      "prefab": "SpearChitin"
+    },
+    {
+      "name": "Skeleton Staff",
+      "cmd": "#staffskeleton",
+      "prefab": "StaffSkeleton"
+    },
+    {
+      "name": "Bronze Sword",
+      "cmd": "#swordbronze",
+      "prefab": "SwordBronze"
+    },
+    {
+      "type": "section",
+      "title": "T2 · Swamp"
+    },
+    {
+      "name": "Iron Arrow",
+      "cmd": "#arrowiron",
+      "prefab": "ArrowIron"
+    },
+    {
+      "name": "Poison Arrow",
+      "cmd": "#arrowpoison",
+      "prefab": "ArrowPoison"
+    },
+    {
+      "name": "Iron Atgeir",
+      "cmd": "#atgeiriron",
+      "prefab": "AtgeirIron"
+    },
+    {
+      "name": "Iron Axe",
+      "cmd": "#axeiron",
+      "prefab": "AxeIron"
+    },
+    {
+      "name": "Bolt Iron",
+      "cmd": "#boltiron",
+      "prefab": "BoltIron"
+    },
+    {
+      "name": "Bomb Blob Poison",
+      "cmd": "#bombblobpoison",
+      "prefab": "BombBlob_Poison"
+    },
+    {
+      "name": "Bomb Blob Poison Elite",
+      "cmd": "#bombblobpoisonelite",
+      "prefab": "BombBlob_PoisonElite"
+    },
+    {
+      "name": "Bomb Ooze",
+      "cmd": "#bombooze",
+      "prefab": "BombOoze"
+    },
+    {
+      "name": "Draugr Fang Bow",
+      "cmd": "#bowdraugrfang",
+      "prefab": "BowDraugrFang"
+    },
+    {
+      "name": "Iron Mace",
+      "cmd": "#maceiron",
+      "prefab": "MaceIron"
+    },
+    {
+      "name": "Iron Buckler Shield",
+      "cmd": "#shieldironbuckler",
+      "prefab": "ShieldIronBuckler"
+    },
+    {
+      "name": "Iron Square Shield",
+      "cmd": "#shieldironsquare",
+      "prefab": "ShieldIronSquare"
+    },
+    {
+      "name": "Iron Tower Shield",
+      "cmd": "#shieldirontower",
+      "prefab": "ShieldIronTower"
+    },
+    {
+      "name": "Roots Shield",
+      "cmd": "#shieldroots",
+      "prefab": "ShieldRoots"
+    },
+    {
+      "name": "Serpentscale Shield",
+      "cmd": "#shieldserpentscale",
+      "prefab": "ShieldSerpentscale"
+    },
+    {
+      "name": "Iron Sledge",
+      "cmd": "#sledgeiron",
+      "prefab": "SledgeIron"
+    },
+    {
+      "name": "Green Roots Staff",
+      "cmd": "#staffgreenroots",
+      "prefab": "StaffGreenRoots"
+    },
+    {
+      "name": "Iron Sword",
+      "cmd": "#swordiron",
+      "prefab": "SwordIron"
+    },
+    {
+      "name": "Iron Fire Sword",
+      "cmd": "#swordironfire",
+      "prefab": "SwordIronFire"
+    },
+    {
+      "type": "section",
+      "title": "T3 · Mountain"
+    },
+    {
+      "name": "Frost Arrow",
+      "cmd": "#arrowfrost",
+      "prefab": "ArrowFrost"
+    },
+    {
+      "name": "Obsidian Arrow",
+      "cmd": "#arrowobsidian",
+      "prefab": "ArrowObsidian"
+    },
+    {
+      "name": "Silver Arrow",
+      "cmd": "#arrowsilver",
+      "prefab": "ArrowSilver"
+    },
+    {
+      "name": "Gold Frost Fire Atgeir",
+      "cmd": "#atgeirgoldfrostfire",
+      "prefab": "AtgeirGold_FrostFire"
+    },
+    {
+      "name": "Gold Frost Fire Axe",
+      "cmd": "#axegoldfrostfire",
+      "prefab": "AxeGold_FrostFire"
+    },
+    {
+      "name": "Crystal Battleaxe",
+      "cmd": "#battleaxecrystal",
+      "prefab": "BattleaxeCrystal"
+    },
+    {
+      "name": "Gold Frost Fire Battleaxe",
+      "cmd": "#battleaxegoldfrostfire",
+      "prefab": "BattleaxeGold_FrostFire"
+    },
+    {
+      "name": "Bomb Blob Frost",
+      "cmd": "#bombblobfrost",
+      "prefab": "BombBlob_Frost"
+    },
+    {
+      "name": "Gold Frost Fire Bow",
+      "cmd": "#bowgoldfrostfire",
+      "prefab": "BowGold_FrostFire"
+    },
+    {
+      "name": "Gold Frost Fire Crossbow",
+      "cmd": "#crossbowgoldfrostfire",
+      "prefab": "CrossbowGold_FrostFire"
+    },
+    {
+      "name": "Fist Gold Frost Fire",
+      "cmd": "#fistgoldfrostfire",
+      "prefab": "FistGold_FrostFire"
+    },
+    {
+      "name": "Gold Frost Fire Knife",
+      "cmd": "#knifegoldfrostfire",
+      "prefab": "KnifeGold_FrostFire"
+    },
+    {
+      "name": "Silver Knife",
+      "cmd": "#knifesilver",
+      "prefab": "KnifeSilver"
+    },
+    {
+      "name": "Gold Frost Fire Mace",
+      "cmd": "#macegoldfrostfire",
+      "prefab": "MaceGold_FrostFire"
+    },
+    {
+      "name": "Silver Mace",
+      "cmd": "#macesilver",
+      "prefab": "MaceSilver"
+    },
+    {
+      "name": "Silver Shield",
+      "cmd": "#shieldsilver",
+      "prefab": "ShieldSilver"
+    },
+    {
+      "name": "Gold Frost Fire Sledge",
+      "cmd": "#sledgegoldfrostfire",
+      "prefab": "SledgeGold_FrostFire"
+    },
+    {
+      "name": "Gold Frost Fire Spear",
+      "cmd": "#speargoldfrostfire",
+      "prefab": "SpearGold_FrostFire"
+    },
+    {
+      "name": "Wolf Fang Spear",
+      "cmd": "#spearwolffang",
+      "prefab": "SpearWolfFang"
+    },
+    {
+      "name": "Frost Orbs Staff",
+      "cmd": "#stafffrostorbs",
+      "prefab": "StaffFrostOrbs"
+    },
+    {
+      "name": "Frost Orbs Uncooked Staff",
+      "cmd": "#stafffrostorbsuncooked",
+      "prefab": "StaffFrostOrbsUncooked"
+    },
+    {
+      "name": "Gold Frost Fire Sword",
+      "cmd": "#swordgoldfrostfire",
+      "prefab": "SwordGold_FrostFire"
+    },
+    {
+      "name": "Silver Sword",
+      "cmd": "#swordsilver",
+      "prefab": "SwordSilver"
+    },
+    {
+      "name": "TH Sword Gold Frost Fire",
+      "cmd": "#thswordgoldfrostfire",
+      "prefab": "THSwordGold_FrostFire"
+    },
+    {
+      "type": "section",
+      "title": "T4 · Plains"
+    },
+    {
+      "name": "Needle Arrow",
+      "cmd": "#arrowneedle",
+      "prefab": "ArrowNeedle"
+    },
+    {
+      "name": "Blackmetal Atgeir",
+      "cmd": "#atgeirblackmetal",
+      "prefab": "AtgeirBlackmetal"
+    },
+    {
+      "name": "Black Metal Axe",
+      "cmd": "#axeblackmetal",
+      "prefab": "AxeBlackMetal"
+    },
+    {
+      "name": "Blackmetal Battleaxe",
+      "cmd": "#battleaxeblackmetal",
+      "prefab": "BattleaxeBlackmetal"
+    },
+    {
+      "name": "Bolt Blackmetal",
+      "cmd": "#boltblackmetal",
+      "prefab": "BoltBlackmetal"
+    },
+    {
+      "name": "Bomb Blob Tar",
+      "cmd": "#bombblobtar",
+      "prefab": "BombBlob_Tar"
+    },
+    {
+      "name": "Black Metal Knife",
+      "cmd": "#knifeblackmetal",
+      "prefab": "KnifeBlackMetal"
+    },
+    {
+      "name": "Needle Mace",
+      "cmd": "#maceneedle",
+      "prefab": "MaceNeedle"
+    },
+    {
+      "name": "Blackmetal Shield",
+      "cmd": "#shieldblackmetal",
+      "prefab": "ShieldBlackmetal"
+    },
+    {
+      "name": "Blackmetal Tower Shield",
+      "cmd": "#shieldblackmetaltower",
+      "prefab": "ShieldBlackmetalTower"
+    },
+    {
+      "name": "Blackmetal Sword",
+      "cmd": "#swordblackmetal",
+      "prefab": "SwordBlackmetal"
+    },
+    {
+      "type": "section",
+      "title": "T5 · Mistlands"
+    },
+    {
+      "name": "Carapace Arrow",
+      "cmd": "#arrowcarapace",
+      "prefab": "ArrowCarapace"
+    },
+    {
+      "name": "Jotun Bane Axe",
+      "cmd": "#axejotunbane",
+      "prefab": "AxeJotunBane"
+    },
+    {
+      "name": "Bolt Carapace",
+      "cmd": "#boltcarapace",
+      "prefab": "BoltCarapace"
+    },
+    {
+      "name": "Carapace Shield",
+      "cmd": "#shieldcarapace",
+      "prefab": "ShieldCarapace"
+    },
+    {
+      "name": "Carapace Buckler Shield",
+      "cmd": "#shieldcarapacebuckler",
+      "prefab": "ShieldCarapaceBuckler"
+    },
+    {
+      "name": "Carapace Spear",
+      "cmd": "#spearcarapace",
+      "prefab": "SpearCarapace"
+    },
+    {
+      "type": "section",
+      "title": "T6 · Ashlands"
+    },
+    {
+      "name": "Charred Arrow",
+      "cmd": "#arrowcharred",
+      "prefab": "ArrowCharred"
+    },
+    {
+      "name": "Bolt Charred",
+      "cmd": "#boltcharred",
+      "prefab": "BoltCharred"
+    },
+    {
+      "name": "Ashlands Bow",
+      "cmd": "#bowashlands",
+      "prefab": "BowAshlands"
+    },
+    {
+      "name": "Ashlands Blood Bow",
+      "cmd": "#bowashlandsblood",
+      "prefab": "BowAshlandsBlood"
+    },
+    {
+      "name": "Ashlands Root Bow",
+      "cmd": "#bowashlandsroot",
+      "prefab": "BowAshlandsRoot"
+    },
+    {
+      "name": "Ashlands Storm Bow",
+      "cmd": "#bowashlandsstorm",
+      "prefab": "BowAshlandsStorm"
+    },
+    {
+      "name": "Flametal Shield",
+      "cmd": "#shieldflametal",
+      "prefab": "ShieldFlametal"
+    },
+    {
+      "name": "Flametal Tower Shield",
+      "cmd": "#shieldflametaltower",
+      "prefab": "ShieldFlametalTower"
+    },
+    {
+      "name": "Red Troll Staff",
+      "cmd": "#staffredtroll",
+      "prefab": "StaffRedTroll"
+    },
+    {
+      "name": "TH Sword Slayer",
+      "cmd": "#thswordslayer",
+      "prefab": "THSwordSlayer"
+    },
+    {
+      "name": "TH Sword Slayer Blood",
+      "cmd": "#thswordslayerblood",
+      "prefab": "THSwordSlayerBlood"
+    },
+    {
+      "name": "TH Sword Slayer Lightning",
+      "cmd": "#thswordslayerlightning",
+      "prefab": "THSwordSlayerLightning"
+    },
+    {
+      "name": "TH Sword Slayer Nature",
+      "cmd": "#thswordslayernature",
+      "prefab": "THSwordSlayerNature"
+    },
+    {
+      "name": "Turret Bolt Flametal",
+      "cmd": "#turretboltflametal",
+      "prefab": "TurretBoltFlametal"
+    },
+    {
+      "type": "section",
+      "title": "Other"
+    },
+    {
+      "name": "Blood Gold Arrow",
+      "cmd": "#arrowbloodgold",
+      "prefab": "ArrowBloodGold"
+    },
+    {
+      "name": "Fire Arrow",
+      "cmd": "#arrowfire",
+      "prefab": "ArrowFire"
+    },
+    {
+      "name": "Gold Atgeir",
+      "cmd": "#atgeirgold",
+      "prefab": "AtgeirGold"
+    },
+    {
+      "name": "Gold Blood Lightning Atgeir",
+      "cmd": "#atgeirgoldbloodlightning",
+      "prefab": "AtgeirGold_BloodLightning"
+    },
+    {
+      "name": "Gold Uncooked Atgeir",
+      "cmd": "#atgeirgolduncooked",
+      "prefab": "AtgeirGoldUncooked"
+    },
+    {
+      "name": "Himmin Afl Atgeir",
+      "cmd": "#atgeirhimminafl",
+      "prefab": "AtgeirHimminAfl"
+    },
+    {
+      "name": "Berzerkr Axe",
+      "cmd": "#axeberzerkr",
+      "prefab": "AxeBerzerkr"
+    },
+    {
+      "name": "Berzerkr Blood Axe",
+      "cmd": "#axeberzerkrblood",
+      "prefab": "AxeBerzerkrBlood"
+    },
+    {
+      "name": "Berzerkr Lightning Axe",
+      "cmd": "#axeberzerkrlightning",
+      "prefab": "AxeBerzerkrLightning"
+    },
+    {
+      "name": "Berzerkr Nature Axe",
+      "cmd": "#axeberzerkrnature",
+      "prefab": "AxeBerzerkrNature"
+    },
+    {
+      "name": "Early Axe",
+      "cmd": "#axeearly",
+      "prefab": "AxeEarly"
+    },
+    {
+      "name": "Gold Axe",
+      "cmd": "#axegold",
+      "prefab": "AxeGold"
+    },
+    {
+      "name": "Gold Blood Lightning Axe",
+      "cmd": "#axegoldbloodlightning",
+      "prefab": "AxeGold_BloodLightning"
+    },
+    {
+      "name": "Gold Uncooked Axe",
+      "cmd": "#axegolduncooked",
+      "prefab": "AxeGoldUncooked"
+    },
+    {
+      "name": "Head1 Axe",
+      "cmd": "#axehead1",
+      "prefab": "AxeHead1"
+    },
+    {
+      "name": "Head2 Axe",
+      "cmd": "#axehead2",
+      "prefab": "AxeHead2"
+    },
+    {
+      "name": "Battleaxe",
+      "cmd": "#battleaxe",
+      "prefab": "Battleaxe"
+    },
+    {
+      "name": "Gold Battleaxe",
+      "cmd": "#battleaxegold",
+      "prefab": "BattleaxeGold"
+    },
+    {
+      "name": "Gold Blood Lightning Battleaxe",
+      "cmd": "#battleaxegoldbloodlightning",
+      "prefab": "BattleaxeGold_BloodLightning"
+    },
+    {
+      "name": "Gold Uncooked Battleaxe",
+      "cmd": "#battleaxegolduncooked",
+      "prefab": "BattleaxeGoldUncooked"
+    },
+    {
+      "name": "Skull Splittur Battleaxe",
+      "cmd": "#battleaxeskullsplittur",
+      "prefab": "BattleaxeSkullSplittur"
+    },
+    {
+      "name": "Bolt Blood Gold",
+      "cmd": "#boltbloodgold",
+      "prefab": "BoltBloodGold"
+    },
+    {
+      "name": "Bolt Bone",
+      "cmd": "#boltbone",
+      "prefab": "BoltBone"
+    },
+    {
+      "name": "Bomb Bile",
+      "cmd": "#bombbile",
+      "prefab": "BombBile"
+    },
+    {
+      "name": "Bomb Blob Lava",
+      "cmd": "#bombbloblava",
+      "prefab": "BombBlob_Lava"
+    },
+    {
+      "name": "Bomb Blob Morkhalla",
+      "cmd": "#bombblobmorkhalla",
+      "prefab": "BombBlob_Morkhalla"
+    },
+    {
+      "name": "Bomb Dynamite",
+      "cmd": "#bombdynamite",
+      "prefab": "BombDynamite"
+    },
+    {
+      "name": "Bomb Lava",
+      "cmd": "#bomblava",
+      "prefab": "BombLava"
+    },
+    {
+      "name": "Bomb Siege",
+      "cmd": "#bombsiege",
+      "prefab": "BombSiege"
+    },
+    {
+      "name": "Bomb Smoke",
+      "cmd": "#bombsmoke",
+      "prefab": "BombSmoke"
+    },
+    {
+      "name": "Bow",
+      "cmd": "#bow",
+      "prefab": "Bow"
+    },
+    {
+      "name": "Gold Bow",
+      "cmd": "#bowgold",
+      "prefab": "BowGold"
+    },
+    {
+      "name": "Gold Blood Lightning Bow",
+      "cmd": "#bowgoldbloodlightning",
+      "prefab": "BowGold_BloodLightning"
+    },
+    {
+      "name": "Gold Uncooked Bow",
+      "cmd": "#bowgolduncooked",
+      "prefab": "BowGoldUncooked"
+    },
+    {
+      "name": "Huntsman Bow",
+      "cmd": "#bowhuntsman",
+      "prefab": "BowHuntsman"
+    },
+    {
+      "name": "Spine Snap Bow",
+      "cmd": "#bowspinesnap",
+      "prefab": "BowSpineSnap"
+    },
+    {
+      "name": "Arbalest Crossbow",
+      "cmd": "#crossbowarbalest",
+      "prefab": "CrossbowArbalest"
+    },
+    {
+      "name": "Gold Crossbow",
+      "cmd": "#crossbowgold",
+      "prefab": "CrossbowGold"
+    },
+    {
+      "name": "Gold Blood Lightning Crossbow",
+      "cmd": "#crossbowgoldbloodlightning",
+      "prefab": "CrossbowGold_BloodLightning"
+    },
+    {
+      "name": "Gold Uncooked Crossbow",
+      "cmd": "#crossbowgolduncooked",
+      "prefab": "CrossbowGoldUncooked"
+    },
+    {
+      "name": "Ripper Crossbow",
+      "cmd": "#crossbowripper",
+      "prefab": "CrossbowRipper"
+    },
+    {
+      "name": "Ripper Blood Crossbow",
+      "cmd": "#crossbowripperblood",
+      "prefab": "CrossbowRipperBlood"
+    },
+    {
+      "name": "Ripper Lightning Crossbow",
+      "cmd": "#crossbowripperlightning",
+      "prefab": "CrossbowRipperLightning"
+    },
+    {
+      "name": "Ripper Nature Crossbow",
+      "cmd": "#crossbowrippernature",
+      "prefab": "CrossbowRipperNature"
+    },
+    {
+      "name": "Fist Bjorn Claw",
+      "cmd": "#fistbjornclaw",
+      "prefab": "FistBjornClaw"
+    },
+    {
+      "name": "Fist Bjorn Undead Claw",
+      "cmd": "#fistbjornundeadclaw",
+      "prefab": "FistBjornUndeadClaw"
+    },
+    {
+      "name": "Fist Fenrir Claw",
+      "cmd": "#fistfenrirclaw",
+      "prefab": "FistFenrirClaw"
+    },
+    {
+      "name": "Fist Gold",
+      "cmd": "#fistgold",
+      "prefab": "FistGold"
+    },
+    {
+      "name": "Fist Gold Blood Lightning",
+      "cmd": "#fistgoldbloodlightning",
+      "prefab": "FistGold_BloodLightning"
+    },
+    {
+      "name": "Fist Gold Uncooked",
+      "cmd": "#fistgolduncooked",
+      "prefab": "FistGoldUncooked"
+    },
+    {
+      "name": "Butcher Knife",
+      "cmd": "#knifebutcher",
+      "prefab": "KnifeButcher"
+    },
+    {
+      "name": "Gold Knife",
+      "cmd": "#knifegold",
+      "prefab": "KnifeGold"
+    },
+    {
+      "name": "Gold Blood Lightning Knife",
+      "cmd": "#knifegoldbloodlightning",
+      "prefab": "KnifeGold_BloodLightning"
+    },
+    {
+      "name": "Gold Uncooked Knife",
+      "cmd": "#knifegolduncooked",
+      "prefab": "KnifeGoldUncooked"
+    },
+    {
+      "name": "Skoll And Hati Knife",
+      "cmd": "#knifeskollandhati",
+      "prefab": "KnifeSkollAndHati"
+    },
+    {
+      "name": "Void Knife",
+      "cmd": "#knifevoid",
+      "prefab": "KnifeVoid"
+    },
+    {
+      "name": "Eldner Mace",
+      "cmd": "#maceeldner",
+      "prefab": "MaceEldner"
+    },
+    {
+      "name": "Eldner Blood Mace",
+      "cmd": "#maceeldnerblood",
+      "prefab": "MaceEldnerBlood"
+    },
+    {
+      "name": "Eldner Lightning Mace",
+      "cmd": "#maceeldnerlightning",
+      "prefab": "MaceEldnerLightning"
+    },
+    {
+      "name": "Eldner Nature Mace",
+      "cmd": "#maceeldnernature",
+      "prefab": "MaceEldnerNature"
+    },
+    {
+      "name": "Gold Mace",
+      "cmd": "#macegold",
+      "prefab": "MaceGold"
+    },
+    {
+      "name": "Gold Blood Lightning Mace",
+      "cmd": "#macegoldbloodlightning",
+      "prefab": "MaceGold_BloodLightning"
+    },
+    {
+      "name": "Gold Uncooked Mace",
+      "cmd": "#macegolduncooked",
+      "prefab": "MaceGoldUncooked"
+    },
+    {
+      "name": "Mold Fistweapon",
+      "cmd": "#moldfistweapon",
+      "prefab": "MoldFistweapon"
+    },
+    {
+      "name": "Scythe",
+      "cmd": "#scythe",
+      "prefab": "Scythe"
+    },
+    {
+      "name": "Scythe Handle",
+      "cmd": "#scythehandle",
+      "prefab": "ScytheHandle"
+    },
+    {
+      "name": "Banded Shield",
+      "cmd": "#shieldbanded",
+      "prefab": "ShieldBanded"
+    },
+    {
+      "name": "Bone Tower Shield",
+      "cmd": "#shieldbonetower",
+      "prefab": "ShieldBoneTower"
+    },
+    {
+      "name": "Buckler Gold Uncooked Shield",
+      "cmd": "#shieldbucklergolduncooked",
+      "prefab": "ShieldBucklerGoldUncooked"
+    },
+    {
+      "name": "Core Shield",
+      "cmd": "#shieldcore",
+      "prefab": "ShieldCore"
+    },
+    {
+      "name": "Gold Shield",
+      "cmd": "#shieldgold",
+      "prefab": "ShieldGold"
+    },
+    {
+      "name": "Gold Buckler Shield",
+      "cmd": "#shieldgoldbuckler",
+      "prefab": "ShieldGoldBuckler"
+    },
+    {
+      "name": "Gold Tower Shield",
+      "cmd": "#shieldgoldtower",
+      "prefab": "ShieldGoldTower"
+    },
+    {
+      "name": "Knight Shield",
+      "cmd": "#shieldknight",
+      "prefab": "ShieldKnight"
+    },
+    {
+      "name": "Round Gold Uncooked Shield",
+      "cmd": "#shieldroundgolduncooked",
+      "prefab": "ShieldRoundGoldUncooked"
+    },
+    {
+      "name": "Tower Gold Uncooked Shield",
+      "cmd": "#shieldtowergolduncooked",
+      "prefab": "ShieldTowerGoldUncooked"
+    },
+    {
+      "name": "Cheat Sledge",
+      "cmd": "#sledgecheat",
+      "prefab": "SledgeCheat"
+    },
+    {
+      "name": "Demolisher Sledge",
+      "cmd": "#sledgedemolisher",
+      "prefab": "SledgeDemolisher"
+    },
+    {
+      "name": "Gold Sledge",
+      "cmd": "#sledgegold",
+      "prefab": "SledgeGold"
+    },
+    {
+      "name": "Gold Blood Lightning Sledge",
+      "cmd": "#sledgegoldbloodlightning",
+      "prefab": "SledgeGold_BloodLightning"
+    },
+    {
+      "name": "Gold Uncooked Sledge",
+      "cmd": "#sledgegolduncooked",
+      "prefab": "SledgeGoldUncooked"
+    },
+    {
+      "name": "Stagbreaker Sledge",
+      "cmd": "#sledgestagbreaker",
+      "prefab": "SledgeStagbreaker"
+    },
+    {
+      "name": "Elderbark Spear",
+      "cmd": "#spearelderbark",
+      "prefab": "SpearElderbark"
+    },
+    {
+      "name": "Gold Spear",
+      "cmd": "#speargold",
+      "prefab": "SpearGold"
+    },
+    {
+      "name": "Gold Blood Lightning Spear",
+      "cmd": "#speargoldbloodlightning",
+      "prefab": "SpearGold_BloodLightning"
+    },
+    {
+      "name": "Gold Uncooked Spear",
+      "cmd": "#speargolduncooked",
+      "prefab": "SpearGoldUncooked"
+    },
+    {
+      "name": "Splitner Spear",
+      "cmd": "#spearsplitner",
+      "prefab": "SpearSplitner"
+    },
+    {
+      "name": "Splitner Blood Spear",
+      "cmd": "#spearsplitnerblood",
+      "prefab": "SpearSplitner_Blood"
+    },
+    {
+      "name": "Splitner Lightning Spear",
+      "cmd": "#spearsplitnerlightning",
+      "prefab": "SpearSplitner_Lightning"
+    },
+    {
+      "name": "Splitner Nature Spear",
+      "cmd": "#spearsplitnernature",
+      "prefab": "SpearSplitner_Nature"
+    },
+    {
+      "name": "Clusterbomb Staff",
+      "cmd": "#staffclusterbomb",
+      "prefab": "StaffClusterbomb"
+    },
+    {
+      "name": "Fireball Staff",
+      "cmd": "#stafffireball",
+      "prefab": "StaffFireball"
+    },
+    {
+      "name": "Ice Shards Staff",
+      "cmd": "#stafficeshards",
+      "prefab": "StaffIceShards"
+    },
+    {
+      "name": "Lightning Staff",
+      "cmd": "#stafflightning",
+      "prefab": "StaffLightning"
+    },
+    {
+      "name": "Orbof Ahri Staff",
+      "cmd": "#stafforbofahri",
+      "prefab": "StaffOrbofAhri"
+    },
+    {
+      "name": "Orbof Ahri Uncooked Staff",
+      "cmd": "#stafforbofahriuncooked",
+      "prefab": "StaffOrbofAhriUncooked"
+    },
+    {
+      "name": "Shield Staff",
+      "cmd": "#staffshield",
+      "prefab": "StaffShield"
+    },
+    {
+      "name": "Spirit Caller Staff",
+      "cmd": "#staffspiritcaller",
+      "prefab": "StaffSpiritCaller"
+    },
+    {
+      "name": "Spirit Caller Uncooked Staff",
+      "cmd": "#staffspiritcalleruncooked",
+      "prefab": "StaffSpiritCallerUncooked"
+    },
+    {
+      "name": "Thunder Blood Staff",
+      "cmd": "#staffthunderblood",
+      "prefab": "StaffThunderBlood"
+    },
+    {
+      "name": "Thunderblood Uncooked Staff",
+      "cmd": "#staffthunderblooduncooked",
+      "prefab": "StaffThunderbloodUncooked"
+    },
+    {
+      "name": "Cheat Sword",
+      "cmd": "#swordcheat",
+      "prefab": "SwordCheat"
+    },
+    {
+      "name": "Dyrnwyn Sword",
+      "cmd": "#sworddyrnwyn",
+      "prefab": "SwordDyrnwyn"
+    },
+    {
+      "name": "Gold Sword",
+      "cmd": "#swordgold",
+      "prefab": "SwordGold"
+    },
+    {
+      "name": "Gold Blood Lightning Sword",
+      "cmd": "#swordgoldbloodlightning",
+      "prefab": "SwordGold_BloodLightning"
+    },
+    {
+      "name": "Gold Uncooked Sword",
+      "cmd": "#swordgolduncooked",
+      "prefab": "SwordGoldUncooked"
+    },
+    {
+      "name": "Mistwalker Sword",
+      "cmd": "#swordmistwalker",
+      "prefab": "SwordMistwalker"
+    },
+    {
+      "name": "Niedhogg Sword",
+      "cmd": "#swordniedhogg",
+      "prefab": "SwordNiedhogg"
+    },
+    {
+      "name": "Niedhogg Blood Sword",
+      "cmd": "#swordniedhoggblood",
+      "prefab": "SwordNiedhoggBlood"
+    },
+    {
+      "name": "Niedhogg Lightning Sword",
+      "cmd": "#swordniedhogglightning",
+      "prefab": "SwordNiedhoggLightning"
+    },
+    {
+      "name": "Niedhogg Nature Sword",
+      "cmd": "#swordniedhoggnature",
+      "prefab": "SwordNiedhoggNature"
+    },
+    {
+      "name": "TH Sword Gold",
+      "cmd": "#thswordgold",
+      "prefab": "THSwordGold"
+    },
+    {
+      "name": "TH Sword Gold Blood Lightning",
+      "cmd": "#thswordgoldbloodlightning",
+      "prefab": "THSwordGold_BloodLightning"
+    },
+    {
+      "name": "TH Sword Gold Uncooked",
+      "cmd": "#thswordgolduncooked",
+      "prefab": "THSwordGoldUncooked"
+    },
+    {
+      "name": "TH Sword Krom",
+      "cmd": "#thswordkrom",
+      "prefab": "THSwordKrom"
+    },
+    {
+      "name": "Turret Bolt",
+      "cmd": "#turretbolt",
+      "prefab": "TurretBolt"
+    },
+    {
+      "name": "Turret Bolt Bloodgold",
+      "cmd": "#turretboltbloodgold",
+      "prefab": "TurretBoltBloodgold"
+    },
+    {
+      "name": "Turret Bolt Bone",
+      "cmd": "#turretboltbone",
+      "prefab": "TurretBoltBone"
+    },
+    {
+      "name": "Upgrader0Weapon",
+      "cmd": "#upgrader0weapon",
+      "prefab": "Upgrader0Weapon"
+    },
+    {
+      "name": "Upgrader1Weapon",
+      "cmd": "#upgrader1weapon",
+      "prefab": "Upgrader1Weapon"
+    },
+    {
+      "name": "Upgrader2Weapon",
+      "cmd": "#upgrader2weapon",
+      "prefab": "Upgrader2Weapon"
+    },
+    {
+      "name": "Upgrader3Weapon",
+      "cmd": "#upgrader3weapon",
+      "prefab": "Upgrader3Weapon"
+    },
+    {
+      "name": "Upgrader4Weapon",
+      "cmd": "#upgrader4weapon",
+      "prefab": "Upgrader4Weapon"
+    },
+    {
+      "name": "Upgrader5Weapon",
+      "cmd": "#upgrader5weapon",
+      "prefab": "Upgrader5Weapon"
+    },
+    {
+      "name": "Upgrader6Weapon",
+      "cmd": "#upgrader6weapon",
+      "prefab": "Upgrader6Weapon"
+    },
+    {
+      "name": "Upgrader7Weapon",
+      "cmd": "#upgrader7weapon",
+      "prefab": "Upgrader7Weapon"
     }
   ],
   "armor": [
     {
       "type": "help",
-      "text": "Tiered by progression (T0 rags → T6 Ashlands). Use jump buttons to travel tiers."
+      "text": "Unified tiers — each T# holds the full armor sets for that step (Troll+Bronze under T1, etc.)."
     },
     {
       "type": "section",
-      "title": "T0 · Rags"
+      "title": "T0 · Meadows"
+    },
+    {
+      "name": "Leather Chest",
+      "cmd": "#armorleatherchest",
+      "prefab": "ArmorLeatherChest"
+    },
+    {
+      "name": "Leather Legs",
+      "cmd": "#armorleatherlegs",
+      "prefab": "ArmorLeatherLegs"
     },
     {
       "name": "Rags Chest",
@@ -2069,8 +3319,28 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "ArmorRagsLegs"
     },
     {
+      "name": "Helmet Leather",
+      "cmd": "#helmetleather",
+      "prefab": "HelmetLeather"
+    },
+    {
+      "name": "SP Armor Leather Legs",
+      "cmd": "#sparmorleatherlegs",
+      "prefab": "SP_ArmorLeatherLegs"
+    },
+    {
       "type": "section",
-      "title": "T1 · Troll"
+      "title": "T1 · Black Forest"
+    },
+    {
+      "name": "Bronze Chest",
+      "cmd": "#armorbronzechest",
+      "prefab": "ArmorBronzeChest"
+    },
+    {
+      "name": "Bronze Legs",
+      "cmd": "#armorbronzelegs",
+      "prefab": "ArmorBronzeLegs"
     },
     {
       "name": "Troll Leather Chest",
@@ -2088,56 +3358,28 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "CapeTrollHide"
     },
     {
+      "name": "Helmet Bronze",
+      "cmd": "#helmetbronze",
+      "prefab": "HelmetBronze"
+    },
+    {
       "name": "Helmet Troll Leather",
       "cmd": "#helmettrollleather",
       "prefab": "HelmetTrollLeather"
     },
     {
       "type": "section",
-      "title": "T1 · Leather"
+      "title": "T2 · Swamp"
     },
     {
-      "name": "Leather Chest",
-      "cmd": "#armorleatherchest",
-      "prefab": "ArmorLeatherChest"
+      "name": "Iron Chest",
+      "cmd": "#armorironchest",
+      "prefab": "ArmorIronChest"
     },
     {
-      "name": "Leather Legs",
-      "cmd": "#armorleatherlegs",
-      "prefab": "ArmorLeatherLegs"
-    },
-    {
-      "name": "Helmet Leather",
-      "cmd": "#helmetleather",
-      "prefab": "HelmetLeather"
-    },
-    {
-      "name": "SP Armor Leather Legs",
-      "cmd": "#sparmorleatherlegs",
-      "prefab": "SP_ArmorLeatherLegs"
-    },
-    {
-      "type": "section",
-      "title": "T2 · Bronze"
-    },
-    {
-      "name": "Bronze Chest",
-      "cmd": "#armorbronzechest",
-      "prefab": "ArmorBronzeChest"
-    },
-    {
-      "name": "Bronze Legs",
-      "cmd": "#armorbronzelegs",
-      "prefab": "ArmorBronzeLegs"
-    },
-    {
-      "name": "Helmet Bronze",
-      "cmd": "#helmetbronze",
-      "prefab": "HelmetBronze"
-    },
-    {
-      "type": "section",
-      "title": "T2 · Root"
+      "name": "Iron Legs",
+      "cmd": "#armorironlegs",
+      "prefab": "ArmorIronLegs"
     },
     {
       "name": "Root Chest",
@@ -2148,6 +3390,11 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Root Legs",
       "cmd": "#armorrootlegs",
       "prefab": "ArmorRootLegs"
+    },
+    {
+      "name": "Helmet Iron",
+      "cmd": "#helmetiron",
+      "prefab": "HelmetIron"
     },
     {
       "name": "Helmet Root",
@@ -2161,26 +3408,7 @@ window.VALHEIM_TWITCH_STORE = {
     },
     {
       "type": "section",
-      "title": "T3 · Iron"
-    },
-    {
-      "name": "Iron Chest",
-      "cmd": "#armorironchest",
-      "prefab": "ArmorIronChest"
-    },
-    {
-      "name": "Iron Legs",
-      "cmd": "#armorironlegs",
-      "prefab": "ArmorIronLegs"
-    },
-    {
-      "name": "Helmet Iron",
-      "cmd": "#helmetiron",
-      "prefab": "HelmetIron"
-    },
-    {
-      "type": "section",
-      "title": "T3 · Fenring"
+      "title": "T3 · Mountain"
     },
     {
       "name": "Fenring Chest",
@@ -2191,15 +3419,6 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Fenring Legs",
       "cmd": "#armorfenringlegs",
       "prefab": "ArmorFenringLegs"
-    },
-    {
-      "name": "Helmet Fenring",
-      "cmd": "#helmetfenring",
-      "prefab": "HelmetFenring"
-    },
-    {
-      "type": "section",
-      "title": "T4 · Wolf"
     },
     {
       "name": "Wolf Chest",
@@ -2217,8 +3436,28 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "CapeWolf"
     },
     {
+      "name": "Helmet Drake",
+      "cmd": "#helmetdrake",
+      "prefab": "HelmetDrake"
+    },
+    {
+      "name": "Helmet Fenring",
+      "cmd": "#helmetfenring",
+      "prefab": "HelmetFenring"
+    },
+    {
       "type": "section",
-      "title": "T4 · Padded"
+      "title": "T4 · Plains"
+    },
+    {
+      "name": "Lox Chest",
+      "cmd": "#armorloxchest",
+      "prefab": "ArmorLoxChest"
+    },
+    {
+      "name": "Lox Legs",
+      "cmd": "#armorloxlegs",
+      "prefab": "ArmorLoxLegs"
     },
     {
       "name": "Padded Cuirass",
@@ -2231,13 +3470,18 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "ArmorPaddedGreaves"
     },
     {
+      "name": "Helmet Lox",
+      "cmd": "#helmetlox",
+      "prefab": "HelmetLox"
+    },
+    {
       "name": "Helmet Padded",
       "cmd": "#helmetpadded",
       "prefab": "HelmetPadded"
     },
     {
       "type": "section",
-      "title": "T5 · Carapace"
+      "title": "T5 · Mistlands"
     },
     {
       "name": "Carapace Chest",
@@ -2248,15 +3492,6 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Carapace Legs",
       "cmd": "#armorcarapacelegs",
       "prefab": "ArmorCarapaceLegs"
-    },
-    {
-      "name": "Helmet Carapace",
-      "cmd": "#helmetcarapace",
-      "prefab": "HelmetCarapace"
-    },
-    {
-      "type": "section",
-      "title": "T5 · Mage"
     },
     {
       "name": "Deep North Mage Chest",
@@ -2309,9 +3544,19 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "CapeDeepNorthMage"
     },
     {
+      "name": "Helmet Carapace",
+      "cmd": "#helmetcarapace",
+      "prefab": "HelmetCarapace"
+    },
+    {
       "name": "Helmet DN Mage",
       "cmd": "#helmetdnmage",
       "prefab": "HelmetDNMage"
+    },
+    {
+      "name": "Helmet Dverger",
+      "cmd": "#helmetdverger",
+      "prefab": "HelmetDverger"
     },
     {
       "name": "Helmet Mage",
@@ -2322,34 +3567,6 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Helmet Mage Ashlands",
       "cmd": "#helmetmageashlands",
       "prefab": "HelmetMage_Ashlands"
-    },
-    {
-      "type": "section",
-      "title": "T6 · Asksvin"
-    },
-    {
-      "name": "Cape Asksvin",
-      "cmd": "#capeasksvin",
-      "prefab": "CapeAsksvin"
-    },
-    {
-      "type": "section",
-      "title": "T6 · Flametal"
-    },
-    {
-      "name": "Flametal Chest",
-      "cmd": "#armorflametalchest",
-      "prefab": "ArmorFlametalChest"
-    },
-    {
-      "name": "Flametal Legs",
-      "cmd": "#armorflametallegs",
-      "prefab": "ArmorFlametalLegs"
-    },
-    {
-      "name": "Helmet Flametal",
-      "cmd": "#helmetflametal",
-      "prefab": "HelmetFlametal"
     },
     {
       "type": "section",
@@ -2366,13 +3583,33 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "ArmorAshlandsMediumlegs"
     },
     {
+      "name": "Flametal Chest",
+      "cmd": "#armorflametalchest",
+      "prefab": "ArmorFlametalChest"
+    },
+    {
+      "name": "Flametal Legs",
+      "cmd": "#armorflametallegs",
+      "prefab": "ArmorFlametalLegs"
+    },
+    {
+      "name": "Cape Asksvin",
+      "cmd": "#capeasksvin",
+      "prefab": "CapeAsksvin"
+    },
+    {
       "name": "Helmet Ashlands Medium Hood",
       "cmd": "#helmetashlandsmediumhood",
       "prefab": "HelmetAshlandsMediumHood"
     },
     {
+      "name": "Helmet Flametal",
+      "cmd": "#helmetflametal",
+      "prefab": "HelmetFlametal"
+    },
+    {
       "type": "section",
-      "title": "Special · Berserker"
+      "title": "Special"
     },
     {
       "name": "Berserker Chest",
@@ -2393,20 +3630,6 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Berserker Undead Legs",
       "cmd": "#armorberserkerundeadlegs",
       "prefab": "ArmorBerserkerUndeadLegs"
-    },
-    {
-      "name": "Helmet Berserker Hood",
-      "cmd": "#helmetberserkerhood",
-      "prefab": "HelmetBerserkerHood"
-    },
-    {
-      "name": "Helmet Berserker Undead",
-      "cmd": "#helmetberserkerundead",
-      "prefab": "HelmetBerserkerUndead"
-    },
-    {
-      "type": "section",
-      "title": "Special · Capes & misc"
     },
     {
       "name": "Cape Ash",
@@ -2449,33 +3672,18 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "CapeTest"
     },
     {
-      "name": "Trinket Black Damage Health",
-      "cmd": "#trinketblackdamagehealth",
-      "prefab": "TrinketBlackDamageHealth"
+      "name": "Helmet Berserker Hood",
+      "cmd": "#helmetberserkerhood",
+      "prefab": "HelmetBerserkerHood"
     },
     {
-      "name": "Trinket Black Stamina",
-      "cmd": "#trinketblackstamina",
-      "prefab": "TrinketBlackStamina"
-    },
-    {
-      "name": "Trinket Blood Gold Health",
-      "cmd": "#trinketbloodgoldhealth",
-      "prefab": "TrinketBloodGoldHealth"
-    },
-    {
-      "name": "Trinket Blood Gold Stamina",
-      "cmd": "#trinketbloodgoldstamina",
-      "prefab": "TrinketBloodGoldStamina"
-    },
-    {
-      "name": "Trinket Scale Stamina Damage",
-      "cmd": "#trinketscalestaminadamage",
-      "prefab": "TrinketScaleStaminaDamage"
+      "name": "Helmet Berserker Undead",
+      "cmd": "#helmetberserkerundead",
+      "prefab": "HelmetBerserkerUndead"
     },
     {
       "type": "section",
-      "title": "Other armor"
+      "title": "Other"
     },
     {
       "name": "Deep North Heavy Chest",
@@ -2588,16 +3796,6 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "ArmorHarvester2"
     },
     {
-      "name": "Lox Chest",
-      "cmd": "#armorloxchest",
-      "prefab": "ArmorLoxChest"
-    },
-    {
-      "name": "Lox Legs",
-      "cmd": "#armorloxlegs",
-      "prefab": "ArmorLoxLegs"
-    },
-    {
       "name": "Armor Tunic1",
       "cmd": "#armortunic1",
       "prefab": "ArmorTunic1"
@@ -2668,16 +3866,6 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "HelmetDNMediumHood"
     },
     {
-      "name": "Helmet Drake",
-      "cmd": "#helmetdrake",
-      "prefab": "HelmetDrake"
-    },
-    {
-      "name": "Helmet Dverger",
-      "cmd": "#helmetdverger",
-      "prefab": "HelmetDverger"
-    },
-    {
       "name": "Helmet Fishing Hat",
       "cmd": "#helmetfishinghat",
       "prefab": "HelmetFishingHat"
@@ -2733,11 +3921,6 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "HelmetHat9"
     },
     {
-      "name": "Helmet Lox",
-      "cmd": "#helmetlox",
-      "prefab": "HelmetLox"
-    },
-    {
       "name": "Helmet Midsummer Crown",
       "cmd": "#helmetmidsummercrown",
       "prefab": "HelmetMidsummerCrown"
@@ -2776,12 +3959,41 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "SP Armor Tunic5",
       "cmd": "#sparmortunic5",
       "prefab": "SP_ArmorTunic5"
+    },
+    {
+      "type": "section",
+      "title": "Special · Capes & misc"
+    },
+    {
+      "name": "Trinket Black Damage Health",
+      "cmd": "#trinketblackdamagehealth",
+      "prefab": "TrinketBlackDamageHealth"
+    },
+    {
+      "name": "Trinket Black Stamina",
+      "cmd": "#trinketblackstamina",
+      "prefab": "TrinketBlackStamina"
+    },
+    {
+      "name": "Trinket Blood Gold Health",
+      "cmd": "#trinketbloodgoldhealth",
+      "prefab": "TrinketBloodGoldHealth"
+    },
+    {
+      "name": "Trinket Blood Gold Stamina",
+      "cmd": "#trinketbloodgoldstamina",
+      "prefab": "TrinketBloodGoldStamina"
+    },
+    {
+      "name": "Trinket Scale Stamina Damage",
+      "cmd": "#trinketscalestaminadamage",
+      "prefab": "TrinketScaleStaminaDamage"
     }
   ],
   "food": [
     {
       "type": "help",
-      "text": "Cooked & prepared first, then crops and raw. Meads live under Potions."
+      "text": "By type first (cooked, crops…). Below: By tier full food sets per biome step."
     },
     {
       "type": "section",
@@ -3418,12 +4630,672 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Volture Meat",
       "cmd": "#volturemeat",
       "prefab": "VoltureMeat"
+    },
+    {
+      "type": "help",
+      "text": "By tier — full sets for that progression step (same items as above, regrouped)."
+    },
+    {
+      "type": "section",
+      "title": "By tier"
+    },
+    {
+      "type": "section",
+      "title": "T0 · Meadows"
+    },
+    {
+      "name": "Cooked Meat",
+      "cmd": "#cookedmeat",
+      "prefab": "CookedMeat"
+    },
+    {
+      "name": "Dandelion",
+      "cmd": "#dandelion",
+      "prefab": "Dandelion"
+    },
+    {
+      "name": "Honey",
+      "cmd": "#honey",
+      "prefab": "Honey"
+    },
+    {
+      "name": "Honey Glazed Chicken",
+      "cmd": "#honeyglazedchicken",
+      "prefab": "HoneyGlazedChicken"
+    },
+    {
+      "name": "Honey Glazed Chicken Uncooked",
+      "cmd": "#honeyglazedchickenuncooked",
+      "prefab": "HoneyGlazedChickenUncooked"
+    },
+    {
+      "name": "Neck Tail Grilled",
+      "cmd": "#necktailgrilled",
+      "prefab": "NeckTailGrilled"
+    },
+    {
+      "type": "section",
+      "title": "T1 · Black Forest"
+    },
+    {
+      "name": "Blueberries",
+      "cmd": "#blueberries",
+      "prefab": "Blueberries"
+    },
+    {
+      "name": "Boar Jerky",
+      "cmd": "#boarjerky",
+      "prefab": "BoarJerky"
+    },
+    {
+      "name": "Carrot",
+      "cmd": "#carrot",
+      "prefab": "Carrot"
+    },
+    {
+      "name": "Carrot Seeds",
+      "cmd": "#carrotseeds",
+      "prefab": "CarrotSeeds"
+    },
+    {
+      "name": "Carrot Soup",
+      "cmd": "#carrotsoup",
+      "prefab": "CarrotSoup"
+    },
+    {
+      "name": "Cooked Deer Meat",
+      "cmd": "#cookeddeermeat",
+      "prefab": "CookedDeerMeat"
+    },
+    {
+      "name": "Deer Stew",
+      "cmd": "#deerstew",
+      "prefab": "DeerStew"
+    },
+    {
+      "name": "Queens Jam",
+      "cmd": "#queensjam",
+      "prefab": "QueensJam"
+    },
+    {
+      "name": "Raspberry",
+      "cmd": "#raspberry",
+      "prefab": "Raspberry"
+    },
+    {
+      "name": "Sausages",
+      "cmd": "#sausages",
+      "prefab": "Sausages"
+    },
+    {
+      "name": "Thistle",
+      "cmd": "#thistle",
+      "prefab": "Thistle"
+    },
+    {
+      "type": "section",
+      "title": "T2 · Swamp"
+    },
+    {
+      "name": "Cooked Bone Maw Serpent Meat",
+      "cmd": "#cookedbonemawserpentmeat",
+      "prefab": "CookedBoneMawSerpentMeat"
+    },
+    {
+      "name": "Serpent Meat",
+      "cmd": "#serpentmeat",
+      "prefab": "SerpentMeat"
+    },
+    {
+      "name": "Serpent Meat Cooked",
+      "cmd": "#serpentmeatcooked",
+      "prefab": "SerpentMeatCooked"
+    },
+    {
+      "name": "Serpent Stew",
+      "cmd": "#serpentstew",
+      "prefab": "SerpentStew"
+    },
+    {
+      "name": "Turnip",
+      "cmd": "#turnip",
+      "prefab": "Turnip"
+    },
+    {
+      "name": "Turnip Seeds",
+      "cmd": "#turnipseeds",
+      "prefab": "TurnipSeeds"
+    },
+    {
+      "name": "Turnip Stew",
+      "cmd": "#turnipstew",
+      "prefab": "TurnipStew"
+    },
+    {
+      "type": "section",
+      "title": "T3 · Mountain"
+    },
+    {
+      "name": "Cooked Wolf Meat",
+      "cmd": "#cookedwolfmeat",
+      "prefab": "CookedWolfMeat"
+    },
+    {
+      "name": "Onion",
+      "cmd": "#onion",
+      "prefab": "Onion"
+    },
+    {
+      "name": "Onion Seeds",
+      "cmd": "#onionseeds",
+      "prefab": "OnionSeeds"
+    },
+    {
+      "name": "Onion Soup",
+      "cmd": "#onionsoup",
+      "prefab": "OnionSoup"
+    },
+    {
+      "name": "Wolf Jerky",
+      "cmd": "#wolfjerky",
+      "prefab": "WolfJerky"
+    },
+    {
+      "type": "section",
+      "title": "T4 · Plains"
+    },
+    {
+      "name": "Barley",
+      "cmd": "#barley",
+      "prefab": "Barley"
+    },
+    {
+      "name": "Barley Flour",
+      "cmd": "#barleyflour",
+      "prefab": "BarleyFlour"
+    },
+    {
+      "name": "Blood Pudding",
+      "cmd": "#bloodpudding",
+      "prefab": "BloodPudding"
+    },
+    {
+      "name": "Bread",
+      "cmd": "#bread",
+      "prefab": "Bread"
+    },
+    {
+      "name": "Bread Dough",
+      "cmd": "#breaddough",
+      "prefab": "BreadDough"
+    },
+    {
+      "name": "Cloudberry",
+      "cmd": "#cloudberry",
+      "prefab": "Cloudberry"
+    },
+    {
+      "name": "Cooked Lox Meat",
+      "cmd": "#cookedloxmeat",
+      "prefab": "CookedLoxMeat"
+    },
+    {
+      "name": "Eyescream",
+      "cmd": "#eyescream",
+      "prefab": "Eyescream"
+    },
+    {
+      "name": "Fish And Bread",
+      "cmd": "#fishandbread",
+      "prefab": "FishAndBread"
+    },
+    {
+      "name": "Fish And Bread Uncooked",
+      "cmd": "#fishandbreaduncooked",
+      "prefab": "FishAndBreadUncooked"
+    },
+    {
+      "name": "Fish Wraps",
+      "cmd": "#fishwraps",
+      "prefab": "FishWraps"
+    },
+    {
+      "name": "Flax",
+      "cmd": "#flax",
+      "prefab": "Flax"
+    },
+    {
+      "name": "Lox Meat",
+      "cmd": "#loxmeat",
+      "prefab": "LoxMeat"
+    },
+    {
+      "name": "Lox Pie",
+      "cmd": "#loxpie",
+      "prefab": "LoxPie"
+    },
+    {
+      "name": "Meat Platter",
+      "cmd": "#meatplatter",
+      "prefab": "MeatPlatter"
+    },
+    {
+      "name": "Meat Platter Uncooked",
+      "cmd": "#meatplatteruncooked",
+      "prefab": "MeatPlatterUncooked"
+    },
+    {
+      "name": "Salad",
+      "cmd": "#salad",
+      "prefab": "Salad"
+    },
+    {
+      "name": "Spice Deep North",
+      "cmd": "#spicedeepnorth",
+      "prefab": "SpiceDeepNorth"
+    },
+    {
+      "name": "Spice Forests",
+      "cmd": "#spiceforests",
+      "prefab": "SpiceForests"
+    },
+    {
+      "name": "Spice Mountains",
+      "cmd": "#spicemountains",
+      "prefab": "SpiceMountains"
+    },
+    {
+      "name": "Spice Oceans",
+      "cmd": "#spiceoceans",
+      "prefab": "SpiceOceans"
+    },
+    {
+      "name": "Spice Plains",
+      "cmd": "#spiceplains",
+      "prefab": "SpicePlains"
+    },
+    {
+      "type": "section",
+      "title": "T5 · Mistlands"
+    },
+    {
+      "name": "Baked Poteitr",
+      "cmd": "#bakedpoteitr",
+      "prefab": "BakedPoteitr"
+    },
+    {
+      "name": "Baked Poteitr Uncooked",
+      "cmd": "#bakedpoteitruncooked",
+      "prefab": "BakedPoteitrUncooked"
+    },
+    {
+      "name": "Feast Mistlands Material",
+      "cmd": "#feastmistlandsmaterial",
+      "prefab": "FeastMistlands_Material"
+    },
+    {
+      "name": "Fishing Bait Mistlands",
+      "cmd": "#fishingbaitmistlands",
+      "prefab": "FishingBaitMistlands"
+    },
+    {
+      "name": "Meatballs Mashed Poteitr",
+      "cmd": "#meatballsmashedpoteitr",
+      "prefab": "MeatballsMashedPoteitr"
+    },
+    {
+      "name": "Misthare Supreme",
+      "cmd": "#mistharesupreme",
+      "prefab": "MisthareSupreme"
+    },
+    {
+      "name": "Misthare Supreme Uncooked",
+      "cmd": "#mistharesupremeuncooked",
+      "prefab": "MisthareSupremeUncooked"
+    },
+    {
+      "name": "Mushroom Jotun Puffs",
+      "cmd": "#mushroomjotunpuffs",
+      "prefab": "MushroomJotunPuffs"
+    },
+    {
+      "name": "Mushroom Magecap",
+      "cmd": "#mushroommagecap",
+      "prefab": "MushroomMagecap"
+    },
+    {
+      "name": "Royal Jelly",
+      "cmd": "#royaljelly",
+      "prefab": "RoyalJelly"
+    },
+    {
+      "name": "Spice Mistlands",
+      "cmd": "#spicemistlands",
+      "prefab": "SpiceMistlands"
+    },
+    {
+      "name": "Yggdrasil Porridge",
+      "cmd": "#yggdrasilporridge",
+      "prefab": "YggdrasilPorridge"
+    },
+    {
+      "name": "Yggdrasil Wood",
+      "cmd": "#yggdrasilwood",
+      "prefab": "YggdrasilWood"
+    },
+    {
+      "type": "section",
+      "title": "T6 · Ashlands"
+    },
+    {
+      "name": "Asksvin Meat",
+      "cmd": "#asksvinmeat",
+      "prefab": "AsksvinMeat"
+    },
+    {
+      "name": "Cooked Asksvin Meat",
+      "cmd": "#cookedasksvinmeat",
+      "prefab": "CookedAsksvinMeat"
+    },
+    {
+      "name": "Feast Ashlands Material",
+      "cmd": "#feastashlandsmaterial",
+      "prefab": "FeastAshlands_Material"
+    },
+    {
+      "name": "Fishing Bait Ashlands",
+      "cmd": "#fishingbaitashlands",
+      "prefab": "FishingBaitAshlands"
+    },
+    {
+      "name": "Spice Ashlands",
+      "cmd": "#spiceashlands",
+      "prefab": "SpiceAshlands"
+    },
+    {
+      "type": "section",
+      "title": "Other"
+    },
+    {
+      "name": "Bilebag",
+      "cmd": "#bilebag",
+      "prefab": "Bilebag"
+    },
+    {
+      "name": "Black Soup",
+      "cmd": "#blacksoup",
+      "prefab": "BlackSoup"
+    },
+    {
+      "name": "Chicken Meat",
+      "cmd": "#chickenmeat",
+      "prefab": "ChickenMeat"
+    },
+    {
+      "name": "Cooked Bjorn Meat",
+      "cmd": "#cookedbjornmeat",
+      "prefab": "CookedBjornMeat"
+    },
+    {
+      "name": "Cooked Bug Meat",
+      "cmd": "#cookedbugmeat",
+      "prefab": "CookedBugMeat"
+    },
+    {
+      "name": "Cooked Chicken Meat",
+      "cmd": "#cookedchickenmeat",
+      "prefab": "CookedChickenMeat"
+    },
+    {
+      "name": "Cooked Egg",
+      "cmd": "#cookedegg",
+      "prefab": "CookedEgg"
+    },
+    {
+      "name": "Cooked Hare Meat",
+      "cmd": "#cookedharemeat",
+      "prefab": "CookedHareMeat"
+    },
+    {
+      "name": "Cooked Moose Meat",
+      "cmd": "#cookedmoosemeat",
+      "prefab": "CookedMooseMeat"
+    },
+    {
+      "name": "Cooked Seal Blubber",
+      "cmd": "#cookedsealblubber",
+      "prefab": "CookedSealBlubber"
+    },
+    {
+      "name": "Cooked Volture Meat",
+      "cmd": "#cookedvolturemeat",
+      "prefab": "CookedVoltureMeat"
+    },
+    {
+      "name": "Feast Blackforest Material",
+      "cmd": "#feastblackforestmaterial",
+      "prefab": "FeastBlackforest_Material"
+    },
+    {
+      "name": "Feast Deep North Material",
+      "cmd": "#feastdeepnorthmaterial",
+      "prefab": "FeastDeepNorth_Material"
+    },
+    {
+      "name": "Feaster",
+      "cmd": "#feaster",
+      "prefab": "Feaster"
+    },
+    {
+      "name": "Feast Meadows Material",
+      "cmd": "#feastmeadowsmaterial",
+      "prefab": "FeastMeadows_Material"
+    },
+    {
+      "name": "Feast Mountains Material",
+      "cmd": "#feastmountainsmaterial",
+      "prefab": "FeastMountains_Material"
+    },
+    {
+      "name": "Feast Oceans Material",
+      "cmd": "#feastoceansmaterial",
+      "prefab": "FeastOceans_Material"
+    },
+    {
+      "name": "Feast Plains Material",
+      "cmd": "#feastplainsmaterial",
+      "prefab": "FeastPlains_Material"
+    },
+    {
+      "name": "Feast Swamps Material",
+      "cmd": "#feastswampsmaterial",
+      "prefab": "FeastSwamps_Material"
+    },
+    {
+      "name": "Fiddleheadfern",
+      "cmd": "#fiddleheadfern",
+      "prefab": "Fiddleheadfern"
+    },
+    {
+      "name": "Fish Angler Raw",
+      "cmd": "#fishanglerraw",
+      "prefab": "FishAnglerRaw"
+    },
+    {
+      "name": "Fish Cooked",
+      "cmd": "#fishcooked",
+      "prefab": "FishCooked"
+    },
+    {
+      "name": "Fishing Bait",
+      "cmd": "#fishingbait",
+      "prefab": "FishingBait"
+    },
+    {
+      "name": "Fishing Bait Cave",
+      "cmd": "#fishingbaitcave",
+      "prefab": "FishingBaitCave"
+    },
+    {
+      "name": "Fishing Bait Deep North",
+      "cmd": "#fishingbaitdeepnorth",
+      "prefab": "FishingBaitDeepNorth"
+    },
+    {
+      "name": "Fishing Bait Forest",
+      "cmd": "#fishingbaitforest",
+      "prefab": "FishingBaitForest"
+    },
+    {
+      "name": "Fishing Bait Ocean",
+      "cmd": "#fishingbaitocean",
+      "prefab": "FishingBaitOcean"
+    },
+    {
+      "name": "Fishing Bait Plains",
+      "cmd": "#fishingbaitplains",
+      "prefab": "FishingBaitPlains"
+    },
+    {
+      "name": "Fishing Bait Swamp",
+      "cmd": "#fishingbaitswamp",
+      "prefab": "FishingBaitSwamp"
+    },
+    {
+      "name": "Fish Raw",
+      "cmd": "#fishraw",
+      "prefab": "FishRaw"
+    },
+    {
+      "name": "Fish Soup",
+      "cmd": "#fishsoup",
+      "prefab": "FishSoup"
+    },
+    {
+      "name": "Hare Meat",
+      "cmd": "#haremeat",
+      "prefab": "HareMeat"
+    },
+    {
+      "name": "Kale",
+      "cmd": "#kale",
+      "prefab": "Kale"
+    },
+    {
+      "name": "Kale Chips",
+      "cmd": "#kalechips",
+      "prefab": "KaleChips"
+    },
+    {
+      "name": "Kale Chips Uncooked",
+      "cmd": "#kalechipsuncooked",
+      "prefab": "KaleChipsUncooked"
+    },
+    {
+      "name": "Kale Seeds",
+      "cmd": "#kaleseeds",
+      "prefab": "KaleSeeds"
+    },
+    {
+      "name": "Mushroom",
+      "cmd": "#mushroom",
+      "prefab": "Mushroom"
+    },
+    {
+      "name": "Mushroom Blue",
+      "cmd": "#mushroomblue",
+      "prefab": "MushroomBlue"
+    },
+    {
+      "name": "Mushroom Bzerker",
+      "cmd": "#mushroombzerker",
+      "prefab": "MushroomBzerker"
+    },
+    {
+      "name": "Mushroom Omelette",
+      "cmd": "#mushroomomelette",
+      "prefab": "MushroomOmelette"
+    },
+    {
+      "name": "Mushroom Smoke Puff",
+      "cmd": "#mushroomsmokepuff",
+      "prefab": "MushroomSmokePuff"
+    },
+    {
+      "name": "Mushroom Yellow",
+      "cmd": "#mushroomyellow",
+      "prefab": "MushroomYellow"
+    },
+    {
+      "name": "Neck Tail",
+      "cmd": "#necktail",
+      "prefab": "NeckTail"
+    },
+    {
+      "name": "Oat",
+      "cmd": "#oat",
+      "prefab": "Oat"
+    },
+    {
+      "name": "Oat Flour",
+      "cmd": "#oatflour",
+      "prefab": "OatFlour"
+    },
+    {
+      "name": "Oatmeal Lingonberry Jam",
+      "cmd": "#oatmeallingonberryjam",
+      "prefab": "OatmealLingonberryJam"
+    },
+    {
+      "name": "Oat Milk",
+      "cmd": "#oatmilk",
+      "prefab": "OatMilk"
+    },
+    {
+      "name": "Oat Seeds",
+      "cmd": "#oatseeds",
+      "prefab": "OatSeeds"
+    },
+    {
+      "name": "Piquant Pie",
+      "cmd": "#piquantpie",
+      "prefab": "PiquantPie"
+    },
+    {
+      "name": "Piquant Pie Uncooked",
+      "cmd": "#piquantpieuncooked",
+      "prefab": "PiquantPieUncooked"
+    },
+    {
+      "name": "Raw Meat",
+      "cmd": "#rawmeat",
+      "prefab": "RawMeat"
+    },
+    {
+      "name": "Roasted Crust Pie",
+      "cmd": "#roastedcrustpie",
+      "prefab": "RoastedCrustPie"
+    },
+    {
+      "name": "Spicy Marmalade",
+      "cmd": "#spicymarmalade",
+      "prefab": "SpicyMarmalade"
+    },
+    {
+      "name": "Volture Egg",
+      "cmd": "#voltureegg",
+      "prefab": "VoltureEgg"
+    },
+    {
+      "name": "Volture Meat",
+      "cmd": "#volturemeat",
+      "prefab": "VoltureMeat"
     }
   ],
   "potions": [
     {
       "type": "help",
-      "text": "Meads, brew bases, wines, and flasks — separated from food."
+      "text": "By type first (meads, bases…). Below: By tier full potion sets."
     },
     {
       "type": "section",
@@ -3670,12 +5542,278 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Treasure Chest Meadows Combat",
       "cmd": "#treasurechestmeadowscombat",
       "prefab": "TreasureChest_meadows_combat"
+    },
+    {
+      "type": "help",
+      "text": "By tier — full sets for that progression step (same items as above, regrouped)."
+    },
+    {
+      "type": "section",
+      "title": "By tier"
+    },
+    {
+      "type": "section",
+      "title": "T0 · Meadows"
+    },
+    {
+      "name": "Mead Base Bug Repellent",
+      "cmd": "#meadbasebugrepellent",
+      "prefab": "MeadBaseBugRepellent"
+    },
+    {
+      "name": "Mead Base Bzerker",
+      "cmd": "#meadbasebzerker",
+      "prefab": "MeadBaseBzerker"
+    },
+    {
+      "name": "Mead Base Hasty",
+      "cmd": "#meadbasehasty",
+      "prefab": "MeadBaseHasty"
+    },
+    {
+      "name": "Mead Base Health Medium",
+      "cmd": "#meadbasehealthmedium",
+      "prefab": "MeadBaseHealthMedium"
+    },
+    {
+      "name": "Mead Base Health Minor",
+      "cmd": "#meadbasehealthminor",
+      "prefab": "MeadBaseHealthMinor"
+    },
+    {
+      "name": "Mead Base Light Foot",
+      "cmd": "#meadbaselightfoot",
+      "prefab": "MeadBaseLightFoot"
+    },
+    {
+      "name": "Mead Base Stamina Medium",
+      "cmd": "#meadbasestaminamedium",
+      "prefab": "MeadBaseStaminaMedium"
+    },
+    {
+      "name": "Mead Base Stamina Minor",
+      "cmd": "#meadbasestaminaminor",
+      "prefab": "MeadBaseStaminaMinor"
+    },
+    {
+      "name": "Mead Base Strength",
+      "cmd": "#meadbasestrength",
+      "prefab": "MeadBaseStrength"
+    },
+    {
+      "name": "Mead Base Swimmer",
+      "cmd": "#meadbaseswimmer",
+      "prefab": "MeadBaseSwimmer"
+    },
+    {
+      "name": "Mead Base Tamer",
+      "cmd": "#meadbasetamer",
+      "prefab": "MeadBaseTamer"
+    },
+    {
+      "name": "Mead Base Tasty",
+      "cmd": "#meadbasetasty",
+      "prefab": "MeadBaseTasty"
+    },
+    {
+      "name": "Mead Bug Repellent",
+      "cmd": "#meadbugrepellent",
+      "prefab": "MeadBugRepellent"
+    },
+    {
+      "name": "Mead Bzerker",
+      "cmd": "#meadbzerker",
+      "prefab": "MeadBzerker"
+    },
+    {
+      "name": "Mead Hasty",
+      "cmd": "#meadhasty",
+      "prefab": "MeadHasty"
+    },
+    {
+      "name": "Mead Health Medium",
+      "cmd": "#meadhealthmedium",
+      "prefab": "MeadHealthMedium"
+    },
+    {
+      "name": "Mead Health Minor",
+      "cmd": "#meadhealthminor",
+      "prefab": "MeadHealthMinor"
+    },
+    {
+      "name": "Mead Lightfoot",
+      "cmd": "#meadlightfoot",
+      "prefab": "MeadLightfoot"
+    },
+    {
+      "name": "Mead Stamina Medium",
+      "cmd": "#meadstaminamedium",
+      "prefab": "MeadStaminaMedium"
+    },
+    {
+      "name": "Mead Stamina Minor",
+      "cmd": "#meadstaminaminor",
+      "prefab": "MeadStaminaMinor"
+    },
+    {
+      "name": "Mead Strength",
+      "cmd": "#meadstrength",
+      "prefab": "MeadStrength"
+    },
+    {
+      "name": "Mead Swimmer",
+      "cmd": "#meadswimmer",
+      "prefab": "MeadSwimmer"
+    },
+    {
+      "name": "Mead Tamer",
+      "cmd": "#meadtamer",
+      "prefab": "MeadTamer"
+    },
+    {
+      "name": "Mead Tasty",
+      "cmd": "#meadtasty",
+      "prefab": "MeadTasty"
+    },
+    {
+      "type": "section",
+      "title": "T1 · Black Forest"
+    },
+    {
+      "name": "Mead Troll Pheromones",
+      "cmd": "#meadtrollpheromones",
+      "prefab": "MeadTrollPheromones"
+    },
+    {
+      "type": "section",
+      "title": "T2 · Swamp"
+    },
+    {
+      "name": "Mead Base Health Lingering",
+      "cmd": "#meadbasehealthlingering",
+      "prefab": "MeadBaseHealthLingering"
+    },
+    {
+      "name": "Mead Base Health Major",
+      "cmd": "#meadbasehealthmajor",
+      "prefab": "MeadBaseHealthMajor"
+    },
+    {
+      "name": "Mead Base Poison Resist",
+      "cmd": "#meadbasepoisonresist",
+      "prefab": "MeadBasePoisonResist"
+    },
+    {
+      "name": "Mead Base Stamina Lingering",
+      "cmd": "#meadbasestaminalingering",
+      "prefab": "MeadBaseStaminaLingering"
+    },
+    {
+      "name": "Mead Health Lingering",
+      "cmd": "#meadhealthlingering",
+      "prefab": "MeadHealthLingering"
+    },
+    {
+      "name": "Mead Health Major",
+      "cmd": "#meadhealthmajor",
+      "prefab": "MeadHealthMajor"
+    },
+    {
+      "name": "Mead Poison Resist",
+      "cmd": "#meadpoisonresist",
+      "prefab": "MeadPoisonResist"
+    },
+    {
+      "name": "Mead Stamina Lingering",
+      "cmd": "#meadstaminalingering",
+      "prefab": "MeadStaminaLingering"
+    },
+    {
+      "type": "section",
+      "title": "T3 · Mountain"
+    },
+    {
+      "name": "Mead Base Frost Resist",
+      "cmd": "#meadbasefrostresist",
+      "prefab": "MeadBaseFrostResist"
+    },
+    {
+      "name": "Mead Frost Resist",
+      "cmd": "#meadfrostresist",
+      "prefab": "MeadFrostResist"
+    },
+    {
+      "type": "section",
+      "title": "T4 · Plains"
+    },
+    {
+      "name": "Barley Wine",
+      "cmd": "#barleywine",
+      "prefab": "BarleyWine"
+    },
+    {
+      "name": "Barley Wine Base",
+      "cmd": "#barleywinebase",
+      "prefab": "BarleyWineBase"
+    },
+    {
+      "type": "section",
+      "title": "T5 · Mistlands"
+    },
+    {
+      "name": "Mead Base Eitr Lingering",
+      "cmd": "#meadbaseeitrlingering",
+      "prefab": "MeadBaseEitrLingering"
+    },
+    {
+      "name": "Mead Base Eitr Minor",
+      "cmd": "#meadbaseeitrminor",
+      "prefab": "MeadBaseEitrMinor"
+    },
+    {
+      "name": "Mead Eitr Lingering",
+      "cmd": "#meadeitrlingering",
+      "prefab": "MeadEitrLingering"
+    },
+    {
+      "name": "Mead Eitr Minor",
+      "cmd": "#meadeitrminor",
+      "prefab": "MeadEitrMinor"
+    },
+    {
+      "type": "section",
+      "title": "Other"
+    },
+    {
+      "name": "Treasure Chest Meadows",
+      "cmd": "#treasurechestmeadows",
+      "prefab": "TreasureChest_meadows"
+    },
+    {
+      "name": "Treasure Chest Meadows 01",
+      "cmd": "#treasurechestmeadows01",
+      "prefab": "TreasureChest_meadows_01"
+    },
+    {
+      "name": "Treasure Chest Meadows 02",
+      "cmd": "#treasurechestmeadows02",
+      "prefab": "TreasureChest_meadows_02"
+    },
+    {
+      "name": "Treasure Chest Meadows Buried",
+      "cmd": "#treasurechestmeadowsburied",
+      "prefab": "TreasureChest_meadows_buried"
+    },
+    {
+      "name": "Treasure Chest Meadows Combat",
+      "cmd": "#treasurechestmeadowscombat",
+      "prefab": "TreasureChest_meadows_combat"
     }
   ],
   "materials": [
     {
       "type": "help",
-      "text": "Building & crafting staples up top; boss drops and valuables lower."
+      "text": "By type first (wood, metals…). Below: By tier full material sets."
     },
     {
       "type": "section",
@@ -4459,6 +6597,801 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Tar",
       "cmd": "#tar",
       "prefab": "Tar"
+    },
+    {
+      "type": "help",
+      "text": "By tier — full sets for that progression step (same items as above, regrouped)."
+    },
+    {
+      "type": "section",
+      "title": "By tier"
+    },
+    {
+      "type": "section",
+      "title": "T0 · Meadows"
+    },
+    {
+      "name": "Ancient Gemstone Black",
+      "cmd": "#ancientgemstoneblack",
+      "prefab": "AncientGemstoneBlack"
+    },
+    {
+      "name": "Ancient Gemstone Green",
+      "cmd": "#ancientgemstonegreen",
+      "prefab": "AncientGemstoneGreen"
+    },
+    {
+      "name": "Ancient Gemstone Orange",
+      "cmd": "#ancientgemstoneorange",
+      "prefab": "AncientGemstoneOrange"
+    },
+    {
+      "name": "Ancient Gemstone Purple",
+      "cmd": "#ancientgemstonepurple",
+      "prefab": "AncientGemstonePurple"
+    },
+    {
+      "name": "Bone Fragments",
+      "cmd": "#bonefragments",
+      "prefab": "BoneFragments"
+    },
+    {
+      "name": "Celestial Feather",
+      "cmd": "#celestialfeather",
+      "prefab": "CelestialFeather"
+    },
+    {
+      "name": "Charcoal Resin",
+      "cmd": "#charcoalresin",
+      "prefab": "CharcoalResin"
+    },
+    {
+      "name": "Feathers",
+      "cmd": "#feathers",
+      "prefab": "Feathers"
+    },
+    {
+      "name": "Flint",
+      "cmd": "#flint",
+      "prefab": "Flint"
+    },
+    {
+      "name": "Gemstone Blue",
+      "cmd": "#gemstoneblue",
+      "prefab": "GemstoneBlue"
+    },
+    {
+      "name": "Gemstone Green",
+      "cmd": "#gemstonegreen",
+      "prefab": "GemstoneGreen"
+    },
+    {
+      "name": "Gemstone Red",
+      "cmd": "#gemstonered",
+      "prefab": "GemstoneRed"
+    },
+    {
+      "name": "Leather Scraps",
+      "cmd": "#leatherscraps",
+      "prefab": "LeatherScraps"
+    },
+    {
+      "name": "Placeable Stone",
+      "cmd": "#placeablestone",
+      "prefab": "Placeable_Stone"
+    },
+    {
+      "name": "Resin",
+      "cmd": "#resin",
+      "prefab": "Resin"
+    },
+    {
+      "name": "Sharpening Stone",
+      "cmd": "#sharpeningstone",
+      "prefab": "SharpeningStone"
+    },
+    {
+      "name": "Stone",
+      "cmd": "#stone",
+      "prefab": "Stone"
+    },
+    {
+      "name": "Stone Rock",
+      "cmd": "#stonerock",
+      "prefab": "StoneRock"
+    },
+    {
+      "name": "Trophy Dragon Queen",
+      "cmd": "#trophydragonqueen",
+      "prefab": "TrophyDragonQueen"
+    },
+    {
+      "name": "Wood",
+      "cmd": "#wood",
+      "prefab": "Wood"
+    },
+    {
+      "type": "section",
+      "title": "T1 · Black Forest"
+    },
+    {
+      "name": "Bronze",
+      "cmd": "#bronze",
+      "prefab": "Bronze"
+    },
+    {
+      "name": "Bronze Nails",
+      "cmd": "#bronzenails",
+      "prefab": "BronzeNails"
+    },
+    {
+      "name": "Bronze Scrap",
+      "cmd": "#bronzescrap",
+      "prefab": "BronzeScrap"
+    },
+    {
+      "name": "Chitin",
+      "cmd": "#chitin",
+      "prefab": "Chitin"
+    },
+    {
+      "name": "Copper",
+      "cmd": "#copper",
+      "prefab": "Copper"
+    },
+    {
+      "name": "Copper Ore",
+      "cmd": "#copperore",
+      "prefab": "CopperOre"
+    },
+    {
+      "name": "Copper Scrap",
+      "cmd": "#copperscrap",
+      "prefab": "CopperScrap"
+    },
+    {
+      "name": "Deer Hide",
+      "cmd": "#deerhide",
+      "prefab": "DeerHide"
+    },
+    {
+      "name": "Fine Wood",
+      "cmd": "#finewood",
+      "prefab": "FineWood"
+    },
+    {
+      "name": "Tin",
+      "cmd": "#tin",
+      "prefab": "Tin"
+    },
+    {
+      "name": "Tin Ore",
+      "cmd": "#tinore",
+      "prefab": "TinOre"
+    },
+    {
+      "name": "Trinket Bronze Health",
+      "cmd": "#trinketbronzehealth",
+      "prefab": "TrinketBronzeHealth"
+    },
+    {
+      "name": "Trinket Bronze Stamina",
+      "cmd": "#trinketbronzestamina",
+      "prefab": "TrinketBronzeStamina"
+    },
+    {
+      "name": "Trinket Chitin Swim",
+      "cmd": "#trinketchitinswim",
+      "prefab": "TrinketChitinSwim"
+    },
+    {
+      "name": "Troll Hide",
+      "cmd": "#trollhide",
+      "prefab": "TrollHide"
+    },
+    {
+      "name": "Trophy Deer",
+      "cmd": "#trophydeer",
+      "prefab": "TrophyDeer"
+    },
+    {
+      "name": "Trophy Deer White",
+      "cmd": "#trophydeerwhite",
+      "prefab": "TrophyDeerWhite"
+    },
+    {
+      "name": "Trophy Forest Troll",
+      "cmd": "#trophyforesttroll",
+      "prefab": "TrophyForestTroll"
+    },
+    {
+      "name": "Trophy Greydwarf",
+      "cmd": "#trophygreydwarf",
+      "prefab": "TrophyGreydwarf"
+    },
+    {
+      "name": "Trophy Greydwarf Brute",
+      "cmd": "#trophygreydwarfbrute",
+      "prefab": "TrophyGreydwarfBrute"
+    },
+    {
+      "name": "Trophy Greydwarf Shaman",
+      "cmd": "#trophygreydwarfshaman",
+      "prefab": "TrophyGreydwarfShaman"
+    },
+    {
+      "name": "Trophy Skeleton",
+      "cmd": "#trophyskeleton",
+      "prefab": "TrophySkeleton"
+    },
+    {
+      "name": "Trophy Skeleton Hildir",
+      "cmd": "#trophyskeletonhildir",
+      "prefab": "TrophySkeletonHildir"
+    },
+    {
+      "type": "section",
+      "title": "T2 · Swamp"
+    },
+    {
+      "name": "Guck",
+      "cmd": "#guck",
+      "prefab": "Guck"
+    },
+    {
+      "name": "Iron",
+      "cmd": "#iron",
+      "prefab": "Iron"
+    },
+    {
+      "name": "Iron Nails",
+      "cmd": "#ironnails",
+      "prefab": "IronNails"
+    },
+    {
+      "name": "Iron Ore",
+      "cmd": "#ironore",
+      "prefab": "IronOre"
+    },
+    {
+      "name": "Ironpit",
+      "cmd": "#ironpit",
+      "prefab": "Ironpit"
+    },
+    {
+      "name": "Iron Scrap",
+      "cmd": "#ironscrap",
+      "prefab": "IronScrap"
+    },
+    {
+      "name": "Surtling Core",
+      "cmd": "#surtlingcore",
+      "prefab": "SurtlingCore"
+    },
+    {
+      "name": "Trinket Iron Health",
+      "cmd": "#trinketironhealth",
+      "prefab": "TrinketIronHealth"
+    },
+    {
+      "name": "Trinket Iron Stamina",
+      "cmd": "#trinketironstamina",
+      "prefab": "TrinketIronStamina"
+    },
+    {
+      "name": "Trophy Abomination",
+      "cmd": "#trophyabomination",
+      "prefab": "TrophyAbomination"
+    },
+    {
+      "name": "Trophy Bonemaw Serpent",
+      "cmd": "#trophybonemawserpent",
+      "prefab": "TrophyBonemawSerpent"
+    },
+    {
+      "name": "Trophy Draugr",
+      "cmd": "#trophydraugr",
+      "prefab": "TrophyDraugr"
+    },
+    {
+      "name": "Trophy Draugr Elite",
+      "cmd": "#trophydraugrelite",
+      "prefab": "TrophyDraugrElite"
+    },
+    {
+      "name": "Trophy Draugr Fem",
+      "cmd": "#trophydraugrfem",
+      "prefab": "TrophyDraugrFem"
+    },
+    {
+      "name": "Trophy Leech",
+      "cmd": "#trophyleech",
+      "prefab": "TrophyLeech"
+    },
+    {
+      "name": "Trophy Serpent",
+      "cmd": "#trophyserpent",
+      "prefab": "TrophySerpent"
+    },
+    {
+      "name": "Trophy Skeleton Poison",
+      "cmd": "#trophyskeletonpoison",
+      "prefab": "TrophySkeletonPoison"
+    },
+    {
+      "name": "Trophy Surtling",
+      "cmd": "#trophysurtling",
+      "prefab": "TrophySurtling"
+    },
+    {
+      "type": "section",
+      "title": "T3 · Mountain"
+    },
+    {
+      "name": "Crystal",
+      "cmd": "#crystal",
+      "prefab": "Crystal"
+    },
+    {
+      "name": "Obsidian",
+      "cmd": "#obsidian",
+      "prefab": "Obsidian"
+    },
+    {
+      "name": "Silver",
+      "cmd": "#silver",
+      "prefab": "Silver"
+    },
+    {
+      "name": "Silver Necklace",
+      "cmd": "#silvernecklace",
+      "prefab": "SilverNecklace"
+    },
+    {
+      "name": "Silver Ore",
+      "cmd": "#silverore",
+      "prefab": "SilverOre"
+    },
+    {
+      "name": "Trinket Silver Resist",
+      "cmd": "#trinketsilverresist",
+      "prefab": "TrinketSilverResist"
+    },
+    {
+      "name": "Trophy Blob Frost",
+      "cmd": "#trophyblobfrost",
+      "prefab": "TrophyBlob_Frost"
+    },
+    {
+      "name": "Trophy Cultist",
+      "cmd": "#trophycultist",
+      "prefab": "TrophyCultist"
+    },
+    {
+      "name": "Trophy Cultist Hildir",
+      "cmd": "#trophycultisthildir",
+      "prefab": "TrophyCultist_Hildir"
+    },
+    {
+      "name": "Trophy Fenring",
+      "cmd": "#trophyfenring",
+      "prefab": "TrophyFenring"
+    },
+    {
+      "name": "Trophy Frost Troll",
+      "cmd": "#trophyfrosttroll",
+      "prefab": "TrophyFrostTroll"
+    },
+    {
+      "name": "Trophy Hatchling",
+      "cmd": "#trophyhatchling",
+      "prefab": "TrophyHatchling"
+    },
+    {
+      "name": "Trophy Ulv",
+      "cmd": "#trophyulv",
+      "prefab": "TrophyUlv"
+    },
+    {
+      "name": "Trophy Wolf",
+      "cmd": "#trophywolf",
+      "prefab": "TrophyWolf"
+    },
+    {
+      "name": "Wolf Pelt",
+      "cmd": "#wolfpelt",
+      "prefab": "WolfPelt"
+    },
+    {
+      "type": "section",
+      "title": "T4 · Plains"
+    },
+    {
+      "name": "Black Metal",
+      "cmd": "#blackmetal",
+      "prefab": "BlackMetal"
+    },
+    {
+      "name": "Black Metal Scrap",
+      "cmd": "#blackmetalscrap",
+      "prefab": "BlackMetalScrap"
+    },
+    {
+      "name": "Lox Pelt",
+      "cmd": "#loxpelt",
+      "prefab": "LoxPelt"
+    },
+    {
+      "name": "Tar",
+      "cmd": "#tar",
+      "prefab": "Tar"
+    },
+    {
+      "name": "Trophy Deathsquito",
+      "cmd": "#trophydeathsquito",
+      "prefab": "TrophyDeathsquito"
+    },
+    {
+      "name": "Trophy Goblin",
+      "cmd": "#trophygoblin",
+      "prefab": "TrophyGoblin"
+    },
+    {
+      "name": "Trophy Goblin Brute",
+      "cmd": "#trophygoblinbrute",
+      "prefab": "TrophyGoblinBrute"
+    },
+    {
+      "name": "Trophy Goblin Brute Bros Brute",
+      "cmd": "#trophygoblinbrutebrosbrute",
+      "prefab": "TrophyGoblinBruteBrosBrute"
+    },
+    {
+      "name": "Trophy Goblin Brute Bros Shaman",
+      "cmd": "#trophygoblinbrutebrosshaman",
+      "prefab": "TrophyGoblinBruteBrosShaman"
+    },
+    {
+      "name": "Trophy Goblin King",
+      "cmd": "#trophygoblinking",
+      "prefab": "TrophyGoblinKing"
+    },
+    {
+      "name": "Trophy Goblin Shaman",
+      "cmd": "#trophygoblinshaman",
+      "prefab": "TrophyGoblinShaman"
+    },
+    {
+      "name": "Trophy Lox",
+      "cmd": "#trophylox",
+      "prefab": "TrophyLox"
+    },
+    {
+      "type": "section",
+      "title": "T5 · Mistlands"
+    },
+    {
+      "name": "Carapace",
+      "cmd": "#carapace",
+      "prefab": "Carapace"
+    },
+    {
+      "name": "Eitr",
+      "cmd": "#eitr",
+      "prefab": "Eitr"
+    },
+    {
+      "name": "Sap",
+      "cmd": "#sap",
+      "prefab": "Sap"
+    },
+    {
+      "name": "Scale Hide",
+      "cmd": "#scalehide",
+      "prefab": "ScaleHide"
+    },
+    {
+      "name": "Trinket Carapace Eitr",
+      "cmd": "#trinketcarapaceeitr",
+      "prefab": "TrinketCarapaceEitr"
+    },
+    {
+      "name": "Trinket Silver Damage",
+      "cmd": "#trinketsilverdamage",
+      "prefab": "TrinketSilverDamage"
+    },
+    {
+      "name": "Trophy Gjall",
+      "cmd": "#trophygjall",
+      "prefab": "TrophyGjall"
+    },
+    {
+      "name": "Trophy Jotun Warrior",
+      "cmd": "#trophyjotunwarrior",
+      "prefab": "TrophyJotunWarrior"
+    },
+    {
+      "name": "Trophy Jotun Witch",
+      "cmd": "#trophyjotunwitch",
+      "prefab": "TrophyJotunWitch"
+    },
+    {
+      "name": "Trophy Seeker",
+      "cmd": "#trophyseeker",
+      "prefab": "TrophySeeker"
+    },
+    {
+      "name": "Trophy Seeker Brute",
+      "cmd": "#trophyseekerbrute",
+      "prefab": "TrophySeekerBrute"
+    },
+    {
+      "name": "Trophy Seeker Queen",
+      "cmd": "#trophyseekerqueen",
+      "prefab": "TrophySeekerQueen"
+    },
+    {
+      "name": "Trophy Tick",
+      "cmd": "#trophytick",
+      "prefab": "TrophyTick"
+    },
+    {
+      "type": "section",
+      "title": "T6 · Ashlands"
+    },
+    {
+      "name": "Flametal",
+      "cmd": "#flametal",
+      "prefab": "Flametal"
+    },
+    {
+      "name": "Flametal New",
+      "cmd": "#flametalnew",
+      "prefab": "FlametalNew"
+    },
+    {
+      "name": "Flametal Ore",
+      "cmd": "#flametalore",
+      "prefab": "FlametalOre"
+    },
+    {
+      "name": "Flametal Ore New",
+      "cmd": "#flametalorenew",
+      "prefab": "FlametalOreNew"
+    },
+    {
+      "name": "Sulfur Stone",
+      "cmd": "#sulfurstone",
+      "prefab": "SulfurStone"
+    },
+    {
+      "name": "Trinket Flametal Eitr",
+      "cmd": "#trinketflametaleitr",
+      "prefab": "TrinketFlametalEitr"
+    },
+    {
+      "name": "Trinket Flametal Stamina Health",
+      "cmd": "#trinketflametalstaminahealth",
+      "prefab": "TrinketFlametalStaminaHealth"
+    },
+    {
+      "name": "Trophy Asksvin",
+      "cmd": "#trophyasksvin",
+      "prefab": "TrophyAsksvin"
+    },
+    {
+      "name": "Trophy Charred Archer",
+      "cmd": "#trophycharredarcher",
+      "prefab": "TrophyCharredArcher"
+    },
+    {
+      "name": "Trophy Charred Mage",
+      "cmd": "#trophycharredmage",
+      "prefab": "TrophyCharredMage"
+    },
+    {
+      "name": "Trophy Charred Melee",
+      "cmd": "#trophycharredmelee",
+      "prefab": "TrophyCharredMelee"
+    },
+    {
+      "name": "Trophy Morgen",
+      "cmd": "#trophymorgen",
+      "prefab": "TrophyMorgen"
+    },
+    {
+      "type": "section",
+      "title": "Other"
+    },
+    {
+      "name": "Amber",
+      "cmd": "#amber",
+      "prefab": "Amber"
+    },
+    {
+      "name": "Amber Pearl",
+      "cmd": "#amberpearl",
+      "prefab": "AmberPearl"
+    },
+    {
+      "name": "Ancient Coin",
+      "cmd": "#ancientcoin",
+      "prefab": "AncientCoin"
+    },
+    {
+      "name": "Ask Hide",
+      "cmd": "#askhide",
+      "prefab": "AskHide"
+    },
+    {
+      "name": "Bjorn Hide",
+      "cmd": "#bjornhide",
+      "prefab": "BjornHide"
+    },
+    {
+      "name": "Coal",
+      "cmd": "#coal",
+      "prefab": "Coal"
+    },
+    {
+      "name": "Coins",
+      "cmd": "#coins",
+      "prefab": "Coins"
+    },
+    {
+      "name": "Gold",
+      "cmd": "#gold",
+      "prefab": "Gold"
+    },
+    {
+      "name": "Gold Ore",
+      "cmd": "#goldore",
+      "prefab": "GoldOre"
+    },
+    {
+      "name": "Memorial Coal",
+      "cmd": "#memorialcoal",
+      "prefab": "MemorialCoal"
+    },
+    {
+      "name": "Moose Hide",
+      "cmd": "#moosehide",
+      "prefab": "MooseHide"
+    },
+    {
+      "name": "Ruby",
+      "cmd": "#ruby",
+      "prefab": "Ruby"
+    },
+    {
+      "name": "Seal Hide",
+      "cmd": "#sealhide",
+      "prefab": "SealHide"
+    },
+    {
+      "name": "Trophy Barka",
+      "cmd": "#trophybarka",
+      "prefab": "TrophyBarka"
+    },
+    {
+      "name": "Trophy Bjorn",
+      "cmd": "#trophybjorn",
+      "prefab": "TrophyBjorn"
+    },
+    {
+      "name": "Trophy Bjorn Undead",
+      "cmd": "#trophybjornundead",
+      "prefab": "TrophyBjornUndead"
+    },
+    {
+      "name": "Trophy Blob",
+      "cmd": "#trophyblob",
+      "prefab": "TrophyBlob"
+    },
+    {
+      "name": "Trophy Blob Lava",
+      "cmd": "#trophybloblava",
+      "prefab": "TrophyBlob_Lava"
+    },
+    {
+      "name": "Trophy Blob Morkhalla",
+      "cmd": "#trophyblobmorkhalla",
+      "prefab": "TrophyBlob_Morkhalla"
+    },
+    {
+      "name": "Trophy Boar",
+      "cmd": "#trophyboar",
+      "prefab": "TrophyBoar"
+    },
+    {
+      "name": "Trophy Bonemass",
+      "cmd": "#trophybonemass",
+      "prefab": "TrophyBonemass"
+    },
+    {
+      "name": "Trophy Dvergr",
+      "cmd": "#trophydvergr",
+      "prefab": "TrophyDvergr"
+    },
+    {
+      "name": "Trophy Eikthyr",
+      "cmd": "#trophyeikthyr",
+      "prefab": "TrophyEikthyr"
+    },
+    {
+      "name": "Trophy Elaking",
+      "cmd": "#trophyelaking",
+      "prefab": "TrophyElaking"
+    },
+    {
+      "name": "Trophy Fader",
+      "cmd": "#trophyfader",
+      "prefab": "TrophyFader"
+    },
+    {
+      "name": "Trophy Fallen Valkyrie",
+      "cmd": "#trophyfallenvalkyrie",
+      "prefab": "TrophyFallenValkyrie"
+    },
+    {
+      "name": "Trophy Ghost",
+      "cmd": "#trophyghost",
+      "prefab": "TrophyGhost"
+    },
+    {
+      "name": "Trophy Growth",
+      "cmd": "#trophygrowth",
+      "prefab": "TrophyGrowth"
+    },
+    {
+      "name": "Trophy Hare",
+      "cmd": "#trophyhare",
+      "prefab": "TrophyHare"
+    },
+    {
+      "name": "Trophy Mole",
+      "cmd": "#trophymole",
+      "prefab": "TrophyMole"
+    },
+    {
+      "name": "Trophy Moose",
+      "cmd": "#trophymoose",
+      "prefab": "TrophyMoose"
+    },
+    {
+      "name": "Trophy Neck",
+      "cmd": "#trophyneck",
+      "prefab": "TrophyNeck"
+    },
+    {
+      "name": "Trophy Seal",
+      "cmd": "#trophyseal",
+      "prefab": "TrophySeal"
+    },
+    {
+      "name": "Trophy S Golem",
+      "cmd": "#trophysgolem",
+      "prefab": "TrophySGolem"
+    },
+    {
+      "name": "Trophy The Elder",
+      "cmd": "#trophytheelder",
+      "prefab": "TrophyTheElder"
+    },
+    {
+      "name": "Trophy Volture",
+      "cmd": "#trophyvolture",
+      "prefab": "TrophyVolture"
+    },
+    {
+      "name": "Trophy Wraith",
+      "cmd": "#trophywraith",
+      "prefab": "TrophyWraith"
+    },
+    {
+      "name": "Trophy Writhan",
+      "cmd": "#trophywrithan",
+      "prefab": "TrophyWrithan"
     }
   ],
   "misc": [

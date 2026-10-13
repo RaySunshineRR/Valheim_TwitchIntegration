@@ -144,27 +144,217 @@ WEAPON_PREFIX = {
     "Torch": "Utility weapons",
 }
 
+# Unified progression tiers (sets share one bucket per biome step)
+TIER_ORDER = [
+    "T0 · Meadows",
+    "T1 · Black Forest",
+    "T2 · Swamp",
+    "T3 · Mountain",
+    "T4 · Plains",
+    "T5 · Mistlands",
+    "T6 · Ashlands",
+    "Special",
+    "Other",
+]
+
+# Armor → unified tier (first substring match wins; Troll before Leather)
 ARMOR_TIER_HINTS = [
-    ("Rags", "T0 · Rags"),
-    # Troll before Leather — ArmorTrollLeather* must not land in T1 · Leather
-    ("Troll", "T1 · Troll"),
-    ("Leather", "T1 · Leather"),
-    ("Bronze", "T2 · Bronze"),
-    ("Root", "T2 · Root"),
-    ("Iron", "T3 · Iron"),
-    ("Fenring", "T3 · Fenring"),
-    ("Wolf", "T4 · Wolf"),
-    ("Padded", "T4 · Padded"),
-    ("Carapace", "T5 · Carapace"),
-    ("Eitr", "T5 · Eitr-weave"),
-    ("Mage", "T5 · Mage"),
-    ("Asksvin", "T6 · Asksvin"),
-    ("Flametal", "T6 · Flametal"),
+    ("Rags", "T0 · Meadows"),
+    ("Troll", "T1 · Black Forest"),
+    ("Leather", "T0 · Meadows"),
+    ("Bronze", "T1 · Black Forest"),
+    ("Root", "T2 · Swamp"),
+    ("Iron", "T2 · Swamp"),
+    ("Fenring", "T3 · Mountain"),
+    ("Wolf", "T3 · Mountain"),
+    ("Padded", "T4 · Plains"),
+    ("Carapace", "T5 · Mistlands"),
+    ("Eitr", "T5 · Mistlands"),
+    ("Mage", "T5 · Mistlands"),
+    ("Asksvin", "T6 · Ashlands"),
+    ("Flametal", "T6 · Ashlands"),
     ("Ashlands", "T6 · Ashlands"),
-    ("Berserker", "Special · Berserker"),
-    ("Emblem", "Special · Capes & misc"),
-    ("Cape", "Special · Capes & misc"),
-    ("Circlet", "Special · Capes & misc"),
+    ("Berserker", "Special"),
+    ("Emblem", "Special"),
+    ("Cape", "Special"),
+    ("Circlet", "Special"),
+]
+
+# Keyword → tier for weapons / food / potions / materials (checked T6→T0)
+TIER_KEYWORDS = [
+    (
+        "T6 · Ashlands",
+        (
+            "flametal",
+            "asksvin",
+            "ashlands",
+            "grausten",
+            "charred",
+            "morgen",
+            "slayer",
+            "berserkir",
+            "staffredtroll",
+            "flametalore",
+            "sulfur",
+            "proustite",
+            "flametalweapon",
+        ),
+    ),
+    (
+        "T5 · Mistlands",
+        (
+            "carapace",
+            "eitr",
+            "mage",
+            "jotun",
+            "mistlands",
+            "blackcore",
+            "softtissue",
+            "refinedeitr",
+            "seeker",
+            "scalehide",
+            "bukeperries",
+            "misthare",
+            "magecap",
+            "royaljelly",
+            "dverger",
+            "gjall",
+            "tick",
+            "yggdrasil",
+            "wispthroat",
+            "sap",
+        ),
+    ),
+    (
+        "T4 · Plains",
+        (
+            "blackmetal",
+            "padded",
+            "lox",
+            "barley",
+            "flax",
+            "cloudberry",
+            "tar",
+            "deathsquito",
+            "goblin",
+            "fuling",
+            "needle",
+            "bread",
+            "bloodpudding",
+            "fishwraps",
+            "eyescream",
+            "spice",
+            "salad",
+            "meatplatter",
+        ),
+    ),
+    (
+        "T3 · Mountain",
+        (
+            "silver",
+            "wolf",
+            "fenring",
+            "obsidian",
+            "freeze",
+            "frost",
+            "drake",
+            "onion",
+            "crystal",
+            "cultist",
+            "ulv",
+            "hatchling",
+            "wolfjerky",
+            "eyescream",
+        ),
+    ),
+    (
+        "T2 · Swamp",
+        (
+            "iron",
+            "root",
+            "ancientbark",
+            "corewood",
+            "turnip",
+            "guck",
+            "chain",
+            "wither",
+            "entrails",
+            "bloodbag",
+            "ooze",
+            "surtling",
+            "leech",
+            "draugr",
+            "serpent",
+            "poison",
+            "abomination",
+        ),
+    ),
+    (
+        "T1 · Black Forest",
+        (
+            "bronze",
+            "copper",
+            "tin",
+            "troll",
+            "finewood",
+            "carrot",
+            "deer",
+            "greydwarf",
+            "skeleton",
+            "thistle",
+            "raspberr",  # Raspberry
+            "blueberr",
+            "yellowmushroom",
+            "mushroomsyellow",
+            "queensjam",
+            "boarjerky",
+            "deerstew",
+            "sausages",
+            "macebronze",
+            "atgierbronze",
+            "spearbronze",
+            "swordbronze",
+            "axebronze",
+            "pickaxebronze",
+            "shieldbronze",
+            "bowfinewood",
+        ),
+    ),
+    (
+        "T0 · Meadows",
+        (
+            "roundlog",
+            "wood",
+            "stone",
+            "flint",
+            "leather",
+            "rag",
+            "resin",
+            "feather",
+            "honey",
+            "dandelion",
+            "cookedmeat",
+            "grilledneck",
+            "grilled",
+            "torch",
+            "shieldwood",
+            "arrowwood",
+            "arrowflint",
+            "knifeflint",
+            "spearflint",
+            "axestone",
+            "pickaxeantler",
+            "pickaxestone",
+            "club",
+            "tankard",
+            "meadhealthminor",
+            "meadstaminaminor",
+            "meadtastyminor",
+            "meadbasehealthminor",
+            "meadbasestaminaminor",
+            "meadbasetasty",
+        ),
+    ),
 ]
 
 FOOD_COOKED = re.compile(r"^(Cooked|Grilled|Smoke|SerpentMeatCooked|FishCooked)", re.I)
@@ -230,7 +420,29 @@ def armor_section(prefab: str) -> str:
     for key, section in ARMOR_TIER_HINTS:
         if key.lower() in prefab.lower():
             return section
-    return "Other armor"
+    return progression_tier(prefab)
+
+
+def progression_tier(prefab: str) -> str:
+    """Biome-step tier for full sets (weapons / food / potions / materials)."""
+    p = prefab.lower()
+    # Capes / odd armor-adjacent pieces already handled for armor tab
+    for tier, keys in TIER_KEYWORDS:
+        for key in keys:
+            if key in p:
+                return tier
+    if prefab.startswith(("Mead", "MeadBase", "BarleyWine", "BarleyWineBase")):
+        # Mead tiers by suffix when keywords miss
+        if any(x in p for x in ("lingering", "major", "frostresist", "poisonresist", "barley")):
+            if "barley" in p:
+                return "T4 · Plains"
+            if "frost" in p:
+                return "T3 · Mountain"
+            if "poison" in p:
+                return "T2 · Swamp"
+            return "T2 · Swamp"
+        return "T0 · Meadows"
+    return "Other"
 
 
 def is_potion_item(prefab: str) -> bool:
@@ -515,22 +727,23 @@ def build_store(data: dict) -> dict:
         tab, section = classify_item(it)
         buckets[tab][section].append(it)
 
+    weapon_families = [
+        "Swords",
+        "Axes",
+        "Maces & clubs",
+        "Spears",
+        "Knives",
+        "Bows",
+        "Arrows & bolts",
+        "Shields",
+        "Magic",
+        "Throwables",
+        "Utility weapons",
+        "Other weapons",
+    ]
     section_order = {
-        "weapons": [
-            "Swords",
-            "Axes",
-            "Maces & clubs",
-            "Spears",
-            "Knives",
-            "Bows",
-            "Arrows & bolts",
-            "Shields",
-            "Magic",
-            "Throwables",
-            "Utility weapons",
-            "Other weapons",
-        ],
-        "armor": list(dict.fromkeys([s for _, s in ARMOR_TIER_HINTS] + ["Other armor"])),
+        "weapons": weapon_families,
+        "armor": list(TIER_ORDER),
         "food": [
             "Cooked meals",
             "Prepared dishes",
@@ -566,13 +779,16 @@ def build_store(data: dict) -> dict:
         ],
     }
 
+    # Tabs that get a second "By tier" block with full progression sets
+    tier_appendix_tabs = ("weapons", "food", "potions", "materials")
+
     for tab, order in section_order.items():
         help_text = {
-            "weapons": "Jump buttons below jump to a family. Prefer mid-tier for fun without ending the run.",
-            "armor": "Tiered by progression (T0 rags → T6 Ashlands). Use jump buttons to travel tiers.",
-            "food": "Cooked & prepared first, then crops and raw. Meads live under Potions.",
-            "potions": "Meads, brew bases, wines, and flasks — separated from food.",
-            "materials": "Building & crafting staples up top; boss drops and valuables lower.",
+            "weapons": "Jump buttons = weapon family. Scroll further for By tier full sets (T0–T6).",
+            "armor": "Unified tiers — each T# holds the full armor sets for that step (Troll+Bronze under T1, etc.).",
+            "food": "By type first (cooked, crops…). Below: By tier full food sets per biome step.",
+            "potions": "By type first (meads, bases…). Below: By tier full potion sets.",
+            "materials": "By type first (wood, metals…). Below: By tier full material sets.",
             "misc": "Tools, lights, mounts, fireworks, chests — streamer-useful leftovers.",
         }[tab]
         store[tab].append({"type": "help", "text": help_text})
@@ -589,6 +805,33 @@ def build_store(data: dict) -> dict:
             if section in seen or not lst:
                 continue
             store[tab].append({"type": "section", "title": section})
+            for it in sorted(lst, key=lambda x: x["prefab"].lower()):
+                store[tab].append(entry(it["prefab"], it.get("alias"), it.get("command")))
+
+        if tab not in tier_appendix_tabs:
+            continue
+
+        # Flatten unique items already classified into this tab, regroup by progression tier
+        tab_items: dict[str, dict] = {}
+        for section, lst in buckets[tab].items():
+            for it in lst:
+                tab_items[it["prefab"]] = it
+        by_tier: dict[str, list] = defaultdict(list)
+        for it in tab_items.values():
+            by_tier[progression_tier(it["prefab"])].append(it)
+
+        store[tab].append(
+            {
+                "type": "help",
+                "text": "By tier — full sets for that progression step (same items as above, regrouped).",
+            }
+        )
+        store[tab].append({"type": "section", "title": "By tier"})
+        for tier in TIER_ORDER:
+            lst = by_tier.get(tier) or []
+            if not lst:
+                continue
+            store[tab].append({"type": "section", "title": tier})
             for it in sorted(lst, key=lambda x: x["prefab"].lower()):
                 store[tab].append(entry(it["prefab"], it.get("alias"), it.get("command")))
 
