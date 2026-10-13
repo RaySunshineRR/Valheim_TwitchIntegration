@@ -10,6 +10,8 @@
   --accent-dim: #1a7ab8;
   --accent-ink: #041018;
   --gold: #c9a227;
+  --gold-dim: #8a6e1a;
+  --gold-panel: #1a160c;
   --danger: #e85d5d;
   --shadow: 0 18px 50px rgba(0, 0, 0, 0.45);
   --radius: 4px;
@@ -84,13 +86,17 @@ body.is-mobs-tab .hero,
 body.is-mobs-tab .tabs,
 body.is-mobs-tab .subtabs,
 body.is-mobs-tab .store,
-body.is-mobs-tab .foot,
+body.is-mobs-tab .foot {
+  width: min(1100px, calc(100% - 1.25rem));
+}
+
+/* Wide enough for 3-column catalogs on weapons / armor / food / etc. */
 body.is-jump-tab .hero,
 body.is-jump-tab .tabs,
 body.is-jump-tab .subtabs,
 body.is-jump-tab .store,
 body.is-jump-tab .foot {
-  width: min(1100px, calc(100% - 1.25rem));
+  width: min(1280px, calc(100% - 1.25rem));
 }
 
 .hero {
@@ -160,11 +166,20 @@ body.is-jump-tab .foot {
   align-content: flex-start;
   gap: 0.25rem;
   padding: 0.15rem 0 0.35rem;
-  /* Cap ~3 wrapped rows of subcategory jump/filter buttons */
+  /* Cap ~3 wrapped rows for mob biome filters */
   max-height: calc(3 * (0.4rem + 0.7rem + 4px) + 2 * 0.25rem + 0.2rem);
   overflow-x: hidden;
   overflow-y: auto;
   animation: rise 0.45s ease-out both;
+}
+
+/* Jump categories: 3-column submenu so section names fit without tall stacks */
+body.is-jump-tab .subtabs {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  max-height: none;
+  overflow: visible;
+  gap: 0.3rem;
 }
 
 .subtabs.hidden {
@@ -177,8 +192,8 @@ body.is-jump-tab .foot {
 
 @keyframes jumpFlash {
   0% {
-    color: var(--accent);
-    border-color: var(--accent);
+    color: #ffe08a;
+    border-color: var(--gold);
   }
   100% {
     color: var(--gold);
@@ -199,13 +214,7 @@ body.is-jump-tab .foot {
   transition: background 0.15s, color 0.15s, border-color 0.15s, transform 0.15s;
 }
 
-.subtab {
-  font-size: 0.4rem;
-  padding: 0.35rem 0.45rem;
-}
-
-.tab:hover,
-.subtab:hover {
+.tab:hover {
   color: var(--text);
   border-color: #2c4a66;
   transform: translateY(-1px);
@@ -217,10 +226,27 @@ body.is-jump-tab .foot {
   color: var(--accent-ink);
 }
 
+/* Submenu: gold family so it reads apart from blue main tabs */
+.subtab {
+  font-size: 0.4rem;
+  padding: 0.35rem 0.45rem;
+  background: var(--gold-panel);
+  border-color: #5a4a22;
+  color: #d4b85a;
+  text-align: center;
+}
+
+.subtab:hover {
+  color: #ffe9a8;
+  border-color: var(--gold);
+  background: rgba(201, 162, 39, 0.2);
+  transform: translateY(-1px);
+}
+
 .subtab.is-active {
-  background: rgba(61, 184, 255, 0.18);
-  border-color: var(--accent);
-  color: var(--text);
+  background: rgba(201, 162, 39, 0.32);
+  border-color: var(--gold);
+  color: #fff3c4;
 }
 
 .store {
@@ -242,6 +268,36 @@ body.is-jump-tab .foot {
   display: flex;
   flex-direction: column;
   gap: 0.2rem;
+}
+
+/* Item lists in 3 columns; section headers / help span full width */
+body.is-jump-tab .catalog {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.25rem 0.35rem;
+  align-items: start;
+}
+
+body.is-jump-tab .catalog .help-line,
+body.is-jump-tab .catalog .section-title {
+  grid-column: 1 / -1;
+}
+
+body.is-jump-tab .catalog .row {
+  min-width: 0;
+}
+
+body.is-jump-tab .catalog .row-name {
+  font-size: 0.52rem;
+}
+
+body.is-jump-tab .catalog .row-cmd {
+  font-size: 0.45rem;
+}
+
+body.is-jump-tab .catalog .copy-btn {
+  font-size: 0.4rem;
+  padding: 0.25rem 0.3rem;
 }
 
 .help-line {
@@ -440,7 +496,19 @@ body.is-jump-tab .foot {
   }
 }
 
+@media (max-width: 960px) {
+  body.is-jump-tab .subtabs,
+  body.is-jump-tab .catalog {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 @media (max-width: 640px) {
+  body.is-jump-tab .subtabs,
+  body.is-jump-tab .catalog {
+    grid-template-columns: 1fr;
+  }
+
   .row {
     grid-template-columns: 1fr auto;
     align-items: start;
