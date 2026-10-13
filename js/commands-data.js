@@ -2350,7 +2350,7 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "TH Sword Gold Uncooked",
       "cmd": "#thswordgolduncooked",
       "prefab": "THSwordGoldUncooked",
-      "cost": 9
+      "cost": 8
     },
     {
       "name": "TH Sword Krom",
@@ -2574,7 +2574,7 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "TH Sword Gold Uncooked",
       "cmd": "#thswordgolduncooked",
       "prefab": "THSwordGoldUncooked",
-      "cost": 9
+      "cost": 8
     },
     {
       "name": "TH Sword Krom",
@@ -4809,30 +4809,6 @@ window.VALHEIM_TWITCH_STORE = {
       "title": "T0 · Meadows"
     },
     {
-      "name": "Chicken Egg",
-      "cmd": "#chickenegg",
-      "prefab": "ChickenEgg",
-      "cost": 1
-    },
-    {
-      "name": "Chicken Meat",
-      "cmd": "#chickenmeat",
-      "prefab": "ChickenMeat",
-      "cost": 1
-    },
-    {
-      "name": "Cooked Chicken Meat",
-      "cmd": "#cookedchickenmeat",
-      "prefab": "CookedChickenMeat",
-      "cost": 1
-    },
-    {
-      "name": "Cooked Egg",
-      "cmd": "#cookedegg",
-      "prefab": "CookedEgg",
-      "cost": 1
-    },
-    {
       "name": "Cooked Boar Meat",
       "cmd": "#cookedboarmeat",
       "prefab": "CookedMeat",
@@ -4845,27 +4821,9 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 1
     },
     {
-      "name": "Dragon Egg",
-      "cmd": "#dragonegg",
-      "prefab": "DragonEgg",
-      "cost": 4
-    },
-    {
       "name": "Honey",
       "cmd": "#honey",
       "prefab": "Honey",
-      "cost": 1
-    },
-    {
-      "name": "Honey Glazed Chicken",
-      "cmd": "#honeyglazedchicken",
-      "prefab": "HoneyGlazedChicken",
-      "cost": 1
-    },
-    {
-      "name": "Honey Glazed Chicken Uncooked",
-      "cmd": "#honeyglazedchickenuncooked",
-      "prefab": "HoneyGlazedChickenUncooked",
       "cost": 1
     },
     {
@@ -4881,9 +4839,9 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 1
     },
     {
-      "name": "Powdered Dragon Egg",
-      "cmd": "#powdereddragonegg",
-      "prefab": "PowderedDragonEgg",
+      "name": "Raspberry",
+      "cmd": "#raspberry",
+      "prefab": "Raspberry",
       "cost": 1
     },
     {
@@ -4906,19 +4864,19 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Blueberries",
       "cmd": "#blueberries",
       "prefab": "Blueberries",
-      "cost": 11
+      "cost": 3
     },
     {
       "name": "Boar Jerky",
       "cmd": "#boarjerky",
       "prefab": "BoarJerky",
-      "cost": 12
+      "cost": 10
     },
     {
       "name": "Carrot",
       "cmd": "#carrot",
       "prefab": "Carrot",
-      "cost": 11
+      "cost": 3
     },
     {
       "name": "Carrot Seeds",
@@ -4930,25 +4888,25 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Carrot Soup",
       "cmd": "#carrotsoup",
       "prefab": "CarrotSoup",
-      "cost": 12
+      "cost": 10
     },
     {
       "name": "Cooked Deer Meat",
       "cmd": "#cookeddeermeat",
       "prefab": "CookedDeerMeat",
-      "cost": 9
+      "cost": 8
     },
     {
       "name": "Deer Meat",
       "cmd": "#deermeat",
       "prefab": "DeerMeat",
-      "cost": 8
+      "cost": 6
     },
     {
       "name": "Deer Stew",
       "cmd": "#deerstew",
       "prefab": "DeerStew",
-      "cost": 12
+      "cost": 10
     },
     {
       "name": "Mashed Meat",
@@ -4960,7 +4918,7 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Mince Meat Sauce",
       "cmd": "#mincemeatsauce",
       "prefab": "MinceMeatSauce",
-      "cost": 12
+      "cost": 10
     },
     {
       "name": "Queens Jam",
@@ -4969,22 +4927,10 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 11
     },
     {
-      "name": "Raspberry",
-      "cmd": "#raspberry",
-      "prefab": "Raspberry",
-      "cost": 11
-    },
-    {
-      "name": "Sausages",
-      "cmd": "#sausages",
-      "prefab": "Sausages",
-      "cost": 12
-    },
-    {
       "name": "Thistle",
       "cmd": "#thistle",
       "prefab": "Thistle",
-      "cost": 11
+      "cost": 4
     },
     {
       "type": "section",
@@ -5000,31 +4946,43 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Cooked Bone Maw Serpent Meat",
       "cmd": "#cookedbonemawserpentmeat",
       "prefab": "CookedBoneMawSerpentMeat",
-      "cost": 13
+      "cost": 11
+    },
+    {
+      "name": "Entrails",
+      "cmd": "#entrails",
+      "prefab": "Entrails",
+      "cost": 3
+    },
+    {
+      "name": "Sausages",
+      "cmd": "#sausages",
+      "prefab": "Sausages",
+      "cost": 15
     },
     {
       "name": "Serpent Meat",
       "cmd": "#serpentmeat",
       "prefab": "SerpentMeat",
-      "cost": 20
+      "cost": 16
     },
     {
       "name": "Serpent Meat Cooked",
       "cmd": "#serpentmeatcooked",
       "prefab": "SerpentMeatCooked",
-      "cost": 13
+      "cost": 11
     },
     {
       "name": "Serpent Stew",
       "cmd": "#serpentstew",
       "prefab": "SerpentStew",
-      "cost": 18
+      "cost": 15
     },
     {
       "name": "Turnip",
       "cmd": "#turnip",
       "prefab": "Turnip",
-      "cost": 16
+      "cost": 5
     },
     {
       "name": "Turnip Seeds",
@@ -5036,7 +4994,7 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Turnip Stew",
       "cmd": "#turnipstew",
       "prefab": "TurnipStew",
-      "cost": 18
+      "cost": 15
     },
     {
       "type": "section",
@@ -5052,19 +5010,19 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Cooked Bjorn Meat",
       "cmd": "#cookedbjornmeat",
       "prefab": "CookedBjornMeat",
-      "cost": 17
+      "cost": 14
     },
     {
       "name": "Cooked Moose Meat",
       "cmd": "#cookedmoosemeat",
       "prefab": "CookedMooseMeat",
-      "cost": 17
+      "cost": 14
     },
     {
       "name": "Cooked Wolf Meat",
       "cmd": "#cookedwolfmeat",
       "prefab": "CookedWolfMeat",
-      "cost": 17
+      "cost": 14
     },
     {
       "name": "Moose Meat",
@@ -5076,7 +5034,7 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Onion",
       "cmd": "#onion",
       "prefab": "Onion",
-      "cost": 21
+      "cost": 7
     },
     {
       "name": "Onion Seeds",
@@ -5088,31 +5046,31 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Onion Soup",
       "cmd": "#onionsoup",
       "prefab": "OnionSoup",
-      "cost": 24
+      "cost": 19
     },
     {
       "name": "Smoked Moose Meat",
       "cmd": "#smokedmoosemeat",
       "prefab": "SmokedMooseMeat",
-      "cost": 17
+      "cost": 14
     },
     {
       "name": "Wolf Jerky",
       "cmd": "#wolfjerky",
       "prefab": "WolfJerky",
-      "cost": 24
+      "cost": 19
     },
     {
       "name": "Wolf Meat",
       "cmd": "#wolfmeat",
       "prefab": "WolfMeat",
-      "cost": 18
+      "cost": 14
     },
     {
       "name": "Wolf Meat Skewer",
       "cmd": "#wolfmeatskewer",
       "prefab": "WolfMeatSkewer",
-      "cost": 24
+      "cost": 19
     },
     {
       "type": "section",
@@ -5122,7 +5080,7 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Barley",
       "cmd": "#barley",
       "prefab": "Barley",
-      "cost": 27
+      "cost": 12
     },
     {
       "name": "Barley Flour",
@@ -5134,31 +5092,43 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Blood Pudding",
       "cmd": "#bloodpudding",
       "prefab": "BloodPudding",
-      "cost": 31
+      "cost": 26
     },
     {
       "name": "Bread",
       "cmd": "#bread",
       "prefab": "Bread",
-      "cost": 31
+      "cost": 26
     },
     {
       "name": "Bread Dough",
       "cmd": "#breaddough",
       "prefab": "BreadDough",
-      "cost": 31
+      "cost": 26
+    },
+    {
+      "name": "Chicken Egg",
+      "cmd": "#chickenegg",
+      "prefab": "ChickenEgg",
+      "cost": 19
+    },
+    {
+      "name": "Chicken Meat",
+      "cmd": "#chickenmeat",
+      "prefab": "ChickenMeat",
+      "cost": 15
     },
     {
       "name": "Cloudberry",
       "cmd": "#cloudberry",
       "prefab": "Cloudberry",
-      "cost": 27
+      "cost": 9
     },
     {
       "name": "Cooked Lox Meat",
       "cmd": "#cookedloxmeat",
       "prefab": "CookedLoxMeat",
-      "cost": 23
+      "cost": 19
     },
     {
       "name": "Eyescream",
@@ -5170,55 +5140,55 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Fish And Bread",
       "cmd": "#fishandbread",
       "prefab": "FishAndBread",
-      "cost": 31
+      "cost": 26
     },
     {
       "name": "Fish And Bread Uncooked",
       "cmd": "#fishandbreaduncooked",
       "prefab": "FishAndBreadUncooked",
-      "cost": 23
+      "cost": 19
     },
     {
       "name": "Fish Wraps",
       "cmd": "#fishwraps",
       "prefab": "FishWraps",
-      "cost": 31
+      "cost": 26
     },
     {
       "name": "Flax",
       "cmd": "#flax",
       "prefab": "Flax",
-      "cost": 27
+      "cost": 12
     },
     {
       "name": "Lox Meat",
       "cmd": "#loxmeat",
       "prefab": "LoxMeat",
-      "cost": 30
+      "cost": 23
     },
     {
       "name": "Lox Pie",
       "cmd": "#loxpie",
       "prefab": "LoxPie",
-      "cost": 31
+      "cost": 26
     },
     {
       "name": "Lox Pie Uncooked",
       "cmd": "#loxpieuncooked",
       "prefab": "LoxPieUncooked",
-      "cost": 23
+      "cost": 19
     },
     {
       "name": "Meat Platter",
       "cmd": "#meatplatter",
       "prefab": "MeatPlatter",
-      "cost": 31
+      "cost": 26
     },
     {
       "name": "Meat Platter Uncooked",
       "cmd": "#meatplatteruncooked",
       "prefab": "MeatPlatterUncooked",
-      "cost": 23
+      "cost": 19
     },
     {
       "name": "Salad",
@@ -5270,7 +5240,7 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Baked Poteitr Uncooked",
       "cmd": "#bakedpoteitruncooked",
       "prefab": "BakedPoteitrUncooked",
-      "cost": 33
+      "cost": 27
     },
     {
       "name": "Bug Meat",
@@ -5282,13 +5252,25 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Cooked Bug Meat",
       "cmd": "#cookedbugmeat",
       "prefab": "CookedBugMeat",
-      "cost": 33
+      "cost": 27
+    },
+    {
+      "name": "Cooked Chicken Meat",
+      "cmd": "#cookedchickenmeat",
+      "prefab": "CookedChickenMeat",
+      "cost": 29
+    },
+    {
+      "name": "Cooked Egg",
+      "cmd": "#cookedegg",
+      "prefab": "CookedEgg",
+      "cost": 27
     },
     {
       "name": "Cooked Hare Meat",
       "cmd": "#cookedharemeat",
       "prefab": "CookedHareMeat",
-      "cost": 33
+      "cost": 27
     },
     {
       "name": "Feast Mistlands Material",
@@ -5306,7 +5288,19 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Hare Meat",
       "cmd": "#haremeat",
       "prefab": "HareMeat",
-      "cost": 33
+      "cost": 27
+    },
+    {
+      "name": "Honey Glazed Chicken",
+      "cmd": "#honeyglazedchicken",
+      "prefab": "HoneyGlazedChicken",
+      "cost": 41
+    },
+    {
+      "name": "Honey Glazed Chicken Uncooked",
+      "cmd": "#honeyglazedchickenuncooked",
+      "prefab": "HoneyGlazedChickenUncooked",
+      "cost": 35
     },
     {
       "name": "Meatballs Mashed Poteitr",
@@ -5324,7 +5318,7 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Misthare Supreme Uncooked",
       "cmd": "#mistharesupremeuncooked",
       "prefab": "MisthareSupremeUncooked",
-      "cost": 33
+      "cost": 27
     },
     {
       "name": "Mushroom Jotun Puffs",
@@ -5336,6 +5330,18 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Mushroom Magecap",
       "cmd": "#mushroommagecap",
       "prefab": "MushroomMagecap",
+      "cost": 39
+    },
+    {
+      "name": "Mushroom Omelette",
+      "cmd": "#mushroomomelette",
+      "prefab": "MushroomOmelette",
+      "cost": 37
+    },
+    {
+      "name": "Powdered Dragon Egg",
+      "cmd": "#powdereddragonegg",
+      "prefab": "PowderedDragonEgg",
       "cost": 39
     },
     {
@@ -5382,19 +5388,19 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Asksvin Meat",
       "cmd": "#asksvinmeat",
       "prefab": "AsksvinMeat",
-      "cost": 65
+      "cost": 51
     },
     {
       "name": "Cooked Asksvin Meat",
       "cmd": "#cookedasksvinmeat",
       "prefab": "CookedAsksvinMeat",
-      "cost": 46
+      "cost": 38
     },
     {
       "name": "Cooked Volture Meat",
       "cmd": "#cookedvolturemeat",
       "prefab": "CookedVoltureMeat",
-      "cost": 46
+      "cost": 38
     },
     {
       "name": "Feast Ashlands Material",
@@ -5584,7 +5590,7 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Fist Gold Uncooked",
       "cmd": "#fistgolduncooked",
       "prefab": "FistGoldUncooked",
-      "cost": 9
+      "cost": 8
     },
     {
       "name": "Fresh Seaweed",
@@ -5596,13 +5602,13 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Generic Mold Uncooked",
       "cmd": "#genericmolduncooked",
       "prefab": "GenericMoldUncooked",
-      "cost": 9
+      "cost": 8
     },
     {
       "name": "Kale Chips Uncooked",
       "cmd": "#kalechipsuncooked",
       "prefab": "KaleChipsUncooked",
-      "cost": 9
+      "cost": 8
     },
     {
       "name": "Lingonberry",
@@ -5620,7 +5626,7 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Magically Stuffed Shroom Uncooked",
       "cmd": "#magicallystuffedshroomuncooked",
       "prefab": "MagicallyStuffedShroomUncooked",
-      "cost": 9
+      "cost": 8
     },
     {
       "name": "Moose Kebab",
@@ -5644,12 +5650,6 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Mushroom Bzerker",
       "cmd": "#mushroombzerker",
       "prefab": "MushroomBzerker",
-      "cost": 1
-    },
-    {
-      "name": "Mushroom Omelette",
-      "cmd": "#mushroomomelette",
-      "prefab": "MushroomOmelette",
       "cost": 1
     },
     {
@@ -5680,7 +5680,7 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Oven Pancake Uncooked",
       "cmd": "#ovenpancakeuncooked",
       "prefab": "OvenPancakeUncooked",
-      "cost": 9
+      "cost": 8
     },
     {
       "name": "Pancakes",
@@ -5698,7 +5698,7 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Piquant Pie Uncooked",
       "cmd": "#piquantpieuncooked",
       "prefab": "PiquantPieUncooked",
-      "cost": 9
+      "cost": 8
     },
     {
       "name": "Pukeberries",
@@ -5716,7 +5716,7 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Roasted Crust Pie Uncooked",
       "cmd": "#roastedcrustpieuncooked",
       "prefab": "RoastedCrustPieUncooked",
-      "cost": 9
+      "cost": 8
     },
     {
       "name": "Scorching Medley",
@@ -5752,7 +5752,7 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Small Parts Gold Uncooked",
       "cmd": "#smallpartsgolduncooked",
       "prefab": "SmallPartsGoldUncooked",
-      "cost": 9
+      "cost": 8
     },
     {
       "name": "Smoked Fish",
@@ -5782,7 +5782,7 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Viking Cupcake Uncooked",
       "cmd": "#vikingcupcakeuncooked",
       "prefab": "VikingCupcakeUncooked",
-      "cost": 9
+      "cost": 8
     },
     {
       "name": "Vineberry",
@@ -5808,7 +5808,7 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Asksvin Meat",
       "cmd": "#asksvinmeat",
       "prefab": "AsksvinMeat",
-      "cost": 65
+      "cost": 51
     },
     {
       "name": "Bjorn Meat",
@@ -5832,37 +5832,37 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Chicken Egg",
       "cmd": "#chickenegg",
       "prefab": "ChickenEgg",
-      "cost": 1
+      "cost": 19
     },
     {
       "name": "Chicken Meat",
       "cmd": "#chickenmeat",
       "prefab": "ChickenMeat",
-      "cost": 1
+      "cost": 15
     },
     {
       "name": "Deer Meat",
       "cmd": "#deermeat",
       "prefab": "DeerMeat",
-      "cost": 8
+      "cost": 6
     },
     {
-      "name": "Dragon Egg",
-      "cmd": "#dragonegg",
-      "prefab": "DragonEgg",
-      "cost": 4
+      "name": "Entrails",
+      "cmd": "#entrails",
+      "prefab": "Entrails",
+      "cost": 3
     },
     {
       "name": "Hare Meat",
       "cmd": "#haremeat",
       "prefab": "HareMeat",
-      "cost": 33
+      "cost": 27
     },
     {
       "name": "Lox Meat",
       "cmd": "#loxmeat",
       "prefab": "LoxMeat",
-      "cost": 30
+      "cost": 23
     },
     {
       "name": "Meatballs Mashed Poteitr",
@@ -5886,7 +5886,7 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Powdered Dragon Egg",
       "cmd": "#powdereddragonegg",
       "prefab": "PowderedDragonEgg",
-      "cost": 1
+      "cost": 39
     },
     {
       "name": "Boar Meat",
@@ -5916,7 +5916,13 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Serpent Meat",
       "cmd": "#serpentmeat",
       "prefab": "SerpentMeat",
-      "cost": 20
+      "cost": 16
+    },
+    {
+      "name": "Thistle",
+      "cmd": "#thistle",
+      "prefab": "Thistle",
+      "cost": 4
     },
     {
       "name": "Volture Egg",
@@ -5934,7 +5940,7 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Wolf Meat",
       "cmd": "#wolfmeat",
       "prefab": "WolfMeat",
-      "cost": 18
+      "cost": 14
     },
     {
       "type": "section",
@@ -5944,55 +5950,55 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Cooked Asksvin Meat",
       "cmd": "#cookedasksvinmeat",
       "prefab": "CookedAsksvinMeat",
-      "cost": 46
+      "cost": 38
     },
     {
       "name": "Cooked Bjorn Meat",
       "cmd": "#cookedbjornmeat",
       "prefab": "CookedBjornMeat",
-      "cost": 17
+      "cost": 14
     },
     {
       "name": "Cooked Bone Maw Serpent Meat",
       "cmd": "#cookedbonemawserpentmeat",
       "prefab": "CookedBoneMawSerpentMeat",
-      "cost": 13
+      "cost": 11
     },
     {
       "name": "Cooked Bug Meat",
       "cmd": "#cookedbugmeat",
       "prefab": "CookedBugMeat",
-      "cost": 33
+      "cost": 27
     },
     {
       "name": "Cooked Chicken Meat",
       "cmd": "#cookedchickenmeat",
       "prefab": "CookedChickenMeat",
-      "cost": 1
+      "cost": 29
     },
     {
       "name": "Cooked Deer Meat",
       "cmd": "#cookeddeermeat",
       "prefab": "CookedDeerMeat",
-      "cost": 9
+      "cost": 8
     },
     {
       "name": "Cooked Egg",
       "cmd": "#cookedegg",
       "prefab": "CookedEgg",
-      "cost": 1
+      "cost": 27
     },
     {
       "name": "Cooked Hare Meat",
       "cmd": "#cookedharemeat",
       "prefab": "CookedHareMeat",
-      "cost": 33
+      "cost": 27
     },
     {
       "name": "Cooked Lox Meat",
       "cmd": "#cookedloxmeat",
       "prefab": "CookedLoxMeat",
-      "cost": 23
+      "cost": 19
     },
     {
       "name": "Cooked Boar Meat",
@@ -6010,7 +6016,7 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Cooked Moose Meat",
       "cmd": "#cookedmoosemeat",
       "prefab": "CookedMooseMeat",
-      "cost": 17
+      "cost": 14
     },
     {
       "name": "Cooked Seal Blubber",
@@ -6022,13 +6028,13 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Cooked Volture Meat",
       "cmd": "#cookedvolturemeat",
       "prefab": "CookedVoltureMeat",
-      "cost": 46
+      "cost": 38
     },
     {
       "name": "Cooked Wolf Meat",
       "cmd": "#cookedwolfmeat",
       "prefab": "CookedWolfMeat",
-      "cost": 17
+      "cost": 14
     },
     {
       "name": "Fish Cooked",
@@ -6040,7 +6046,7 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Serpent Meat Cooked",
       "cmd": "#serpentmeatcooked",
       "prefab": "SerpentMeatCooked",
-      "cost": 13
+      "cost": 11
     },
     {
       "name": "Smoked Fish",
@@ -6052,7 +6058,7 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Smoked Moose Meat",
       "cmd": "#smokedmoosemeat",
       "prefab": "SmokedMooseMeat",
-      "cost": 17
+      "cost": 14
     },
     {
       "type": "section",
@@ -6068,7 +6074,7 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Baked Poteitr Uncooked",
       "cmd": "#bakedpoteitruncooked",
       "prefab": "BakedPoteitrUncooked",
-      "cost": 33
+      "cost": 27
     },
     {
       "name": "Bilebag",
@@ -6086,31 +6092,31 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Blood Pudding",
       "cmd": "#bloodpudding",
       "prefab": "BloodPudding",
-      "cost": 31
+      "cost": 26
     },
     {
       "name": "Boar Jerky",
       "cmd": "#boarjerky",
       "prefab": "BoarJerky",
-      "cost": 12
+      "cost": 10
     },
     {
       "name": "Bread",
       "cmd": "#bread",
       "prefab": "Bread",
-      "cost": 31
+      "cost": 26
     },
     {
       "name": "Bread Dough",
       "cmd": "#breaddough",
       "prefab": "BreadDough",
-      "cost": 31
+      "cost": 26
     },
     {
       "name": "Carrot Soup",
       "cmd": "#carrotsoup",
       "prefab": "CarrotSoup",
-      "cost": 12
+      "cost": 10
     },
     {
       "name": "Cured Squirrel Hamstring",
@@ -6122,7 +6128,7 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Deer Stew",
       "cmd": "#deerstew",
       "prefab": "DeerStew",
-      "cost": 12
+      "cost": 10
     },
     {
       "name": "Feast Ashlands Material",
@@ -6194,13 +6200,13 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Fish And Bread",
       "cmd": "#fishandbread",
       "prefab": "FishAndBread",
-      "cost": 31
+      "cost": 26
     },
     {
       "name": "Fish And Bread Uncooked",
       "cmd": "#fishandbreaduncooked",
       "prefab": "FishAndBreadUncooked",
-      "cost": 23
+      "cost": 19
     },
     {
       "name": "Fish Angler Raw",
@@ -6278,31 +6284,31 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Fish Wraps",
       "cmd": "#fishwraps",
       "prefab": "FishWraps",
-      "cost": 31
+      "cost": 26
     },
     {
       "name": "Fist Gold Uncooked",
       "cmd": "#fistgolduncooked",
       "prefab": "FistGoldUncooked",
-      "cost": 9
+      "cost": 8
     },
     {
       "name": "Generic Mold Uncooked",
       "cmd": "#genericmolduncooked",
       "prefab": "GenericMoldUncooked",
-      "cost": 9
+      "cost": 8
     },
     {
       "name": "Honey Glazed Chicken Uncooked",
       "cmd": "#honeyglazedchickenuncooked",
       "prefab": "HoneyGlazedChickenUncooked",
-      "cost": 1
+      "cost": 35
     },
     {
       "name": "Kale Chips Uncooked",
       "cmd": "#kalechipsuncooked",
       "prefab": "KaleChipsUncooked",
-      "cost": 9
+      "cost": 8
     },
     {
       "name": "Lingondricka",
@@ -6314,19 +6320,19 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Lox Pie",
       "cmd": "#loxpie",
       "prefab": "LoxPie",
-      "cost": 31
+      "cost": 26
     },
     {
       "name": "Lox Pie Uncooked",
       "cmd": "#loxpieuncooked",
       "prefab": "LoxPieUncooked",
-      "cost": 23
+      "cost": 19
     },
     {
       "name": "Magically Stuffed Shroom Uncooked",
       "cmd": "#magicallystuffedshroomuncooked",
       "prefab": "MagicallyStuffedShroomUncooked",
-      "cost": 9
+      "cost": 8
     },
     {
       "name": "Mashed Meat",
@@ -6338,25 +6344,25 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Meat Platter",
       "cmd": "#meatplatter",
       "prefab": "MeatPlatter",
-      "cost": 31
+      "cost": 26
     },
     {
       "name": "Meat Platter Uncooked",
       "cmd": "#meatplatteruncooked",
       "prefab": "MeatPlatterUncooked",
-      "cost": 23
+      "cost": 19
     },
     {
       "name": "Mince Meat Sauce",
       "cmd": "#mincemeatsauce",
       "prefab": "MinceMeatSauce",
-      "cost": 12
+      "cost": 10
     },
     {
       "name": "Misthare Supreme Uncooked",
       "cmd": "#mistharesupremeuncooked",
       "prefab": "MisthareSupremeUncooked",
-      "cost": 33
+      "cost": 27
     },
     {
       "name": "Moose Kebab",
@@ -6368,7 +6374,7 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Mushroom Omelette",
       "cmd": "#mushroomomelette",
       "prefab": "MushroomOmelette",
-      "cost": 1
+      "cost": 37
     },
     {
       "name": "Grilled Neck Tail",
@@ -6386,7 +6392,7 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Onion Soup",
       "cmd": "#onionsoup",
       "prefab": "OnionSoup",
-      "cost": 24
+      "cost": 19
     },
     {
       "name": "Oven Pancake",
@@ -6398,7 +6404,7 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Oven Pancake Uncooked",
       "cmd": "#ovenpancakeuncooked",
       "prefab": "OvenPancakeUncooked",
-      "cost": 9
+      "cost": 8
     },
     {
       "name": "Pancakes",
@@ -6416,7 +6422,7 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Piquant Pie Uncooked",
       "cmd": "#piquantpieuncooked",
       "prefab": "PiquantPieUncooked",
-      "cost": 9
+      "cost": 8
     },
     {
       "name": "Roasted Crust Pie",
@@ -6428,7 +6434,7 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Roasted Crust Pie Uncooked",
       "cmd": "#roastedcrustpieuncooked",
       "prefab": "RoastedCrustPieUncooked",
-      "cost": 9
+      "cost": 8
     },
     {
       "name": "Royal Jelly",
@@ -6446,7 +6452,7 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Sausages",
       "cmd": "#sausages",
       "prefab": "Sausages",
-      "cost": 12
+      "cost": 15
     },
     {
       "name": "Scorching Medley",
@@ -6470,7 +6476,7 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Serpent Stew",
       "cmd": "#serpentstew",
       "prefab": "SerpentStew",
-      "cost": 18
+      "cost": 15
     },
     {
       "name": "Shocklate Smoothie",
@@ -6488,7 +6494,7 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Small Parts Gold Uncooked",
       "cmd": "#smallpartsgolduncooked",
       "prefab": "SmallPartsGoldUncooked",
-      "cost": 9
+      "cost": 8
     },
     {
       "name": "Sparkling Shroomshake",
@@ -6548,7 +6554,7 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Turnip Stew",
       "cmd": "#turnipstew",
       "prefab": "TurnipStew",
-      "cost": 18
+      "cost": 15
     },
     {
       "name": "Viking Cupcake",
@@ -6560,19 +6566,19 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Viking Cupcake Uncooked",
       "cmd": "#vikingcupcakeuncooked",
       "prefab": "VikingCupcakeUncooked",
-      "cost": 9
+      "cost": 8
     },
     {
       "name": "Wolf Jerky",
       "cmd": "#wolfjerky",
       "prefab": "WolfJerky",
-      "cost": 24
+      "cost": 19
     },
     {
       "name": "Wolf Meat Skewer",
       "cmd": "#wolfmeatskewer",
       "prefab": "WolfMeatSkewer",
-      "cost": 24
+      "cost": 19
     },
     {
       "name": "Yggdrasil Porridge",
@@ -6594,7 +6600,7 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Barley",
       "cmd": "#barley",
       "prefab": "Barley",
-      "cost": 27
+      "cost": 12
     },
     {
       "name": "Barley Flour",
@@ -6606,13 +6612,13 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Blueberries",
       "cmd": "#blueberries",
       "prefab": "Blueberries",
-      "cost": 11
+      "cost": 3
     },
     {
       "name": "Carrot",
       "cmd": "#carrot",
       "prefab": "Carrot",
-      "cost": 11
+      "cost": 3
     },
     {
       "name": "Carrot Seeds",
@@ -6624,7 +6630,7 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Cloudberry",
       "cmd": "#cloudberry",
       "prefab": "Cloudberry",
-      "cost": 27
+      "cost": 9
     },
     {
       "name": "Dandelion",
@@ -6648,7 +6654,7 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Flax",
       "cmd": "#flax",
       "prefab": "Flax",
-      "cost": 27
+      "cost": 12
     },
     {
       "name": "Fresh Seaweed",
@@ -6666,7 +6672,7 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Honey Glazed Chicken",
       "cmd": "#honeyglazedchicken",
       "prefab": "HoneyGlazedChicken",
-      "cost": 1
+      "cost": 41
     },
     {
       "name": "Lingonberry",
@@ -6726,7 +6732,7 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Onion",
       "cmd": "#onion",
       "prefab": "Onion",
-      "cost": 21
+      "cost": 7
     },
     {
       "name": "Onion Seeds",
@@ -6750,19 +6756,13 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Raspberry",
       "cmd": "#raspberry",
       "prefab": "Raspberry",
-      "cost": 11
-    },
-    {
-      "name": "Thistle",
-      "cmd": "#thistle",
-      "prefab": "Thistle",
-      "cost": 11
+      "cost": 1
     },
     {
       "name": "Turnip",
       "cmd": "#turnip",
       "prefab": "Turnip",
-      "cost": 16
+      "cost": 5
     },
     {
       "name": "Turnip Seeds",
@@ -7697,12 +7697,6 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 16
     },
     {
-      "name": "Entrails",
-      "cmd": "#entrails",
-      "prefab": "Entrails",
-      "cost": 16
-    },
-    {
       "name": "Guck",
       "cmd": "#guck",
       "prefab": "Guck",
@@ -7843,6 +7837,12 @@ window.VALHEIM_TWITCH_STORE = {
       "cmd": "#crystal",
       "prefab": "Crystal",
       "cost": 21
+    },
+    {
+      "name": "Dragon Egg",
+      "cmd": "#dragonegg",
+      "prefab": "DragonEgg",
+      "cost": 328
     },
     {
       "name": "Freeze Gland",
@@ -8905,6 +8905,12 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 148
     },
     {
+      "name": "Dragon Egg",
+      "cmd": "#dragonegg",
+      "prefab": "DragonEgg",
+      "cost": 328
+    },
+    {
       "name": "Eitr",
       "cmd": "#eitr",
       "prefab": "Eitr",
@@ -9495,12 +9501,6 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 1
     },
     {
-      "name": "Entrails",
-      "cmd": "#entrails",
-      "prefab": "Entrails",
-      "cost": 16
-    },
-    {
       "name": "Freeze Gland",
       "cmd": "#freezegland",
       "prefab": "FreezeGland",
@@ -9862,13 +9862,13 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Keys Gold Uncooked",
       "cmd": "#keysgolduncooked",
       "prefab": "KeysGoldUncooked",
-      "cost": 9
+      "cost": 8
     },
     {
       "name": "Wishbone",
       "cmd": "#wishbone",
       "prefab": "Wishbone",
-      "cost": 102
+      "cost": 501
     },
     {
       "name": "Wisp",

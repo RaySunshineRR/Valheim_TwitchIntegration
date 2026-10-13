@@ -246,7 +246,6 @@ CORE_MATERIAL_PREFABS = {
     "YggdrasilWood",
     "BarkaBranch",
     "Chain",
-    "Entrails",
     "WitheredBone",
     "AncientSeed",
     "Thunderstone",
@@ -343,6 +342,11 @@ TIER_KEYWORDS = [
             "sap",
             "haremeat",
             "bugmeat",
+            "cookedchicken",
+            "honeyglazedchicken",
+            "cookedegg",
+            "mushroomomelette",
+            "powdereddragonegg",
         ),
     ),
     (
@@ -367,6 +371,8 @@ TIER_KEYWORDS = [
             "salad",
             "meatplatter",
             "loxmeat",
+            "chickenmeat",
+            "chickenegg",
         ),
     ),
     (
@@ -388,6 +394,7 @@ TIER_KEYWORDS = [
             "wolfmeat",
             "bjornmeat",
             "moosemeat",
+            "dragonegg",
         ),
     ),
     (
@@ -411,6 +418,8 @@ TIER_KEYWORDS = [
             "poison",
             "abomination",
             "serpentmeat",
+            "sausages",
+            "sausage",
         ),
     ),
     (
@@ -426,7 +435,6 @@ TIER_KEYWORDS = [
             "greydwarf",
             "skeleton",
             "thistle",
-            "raspberr",  # Raspberry
             "blueberr",
             "yellowmushroom",
             "mushroomsyellow",
@@ -434,7 +442,6 @@ TIER_KEYWORDS = [
             "boarjerky",
             "deerstew",
             "deermeat",
-            "sausages",
             "mincemeat",
             "mashedmeat",
             "macebronze",
@@ -460,16 +467,14 @@ TIER_KEYWORDS = [
             "feather",
             "honey",
             "dandelion",
+            "raspberr",  # Meadows berry
             "cookedmeat",
             "cookedboarmeat",
-            "cookedegg",
             "grilledneck",
             "grilled",
             "necktail",
             "rawmeat",
             "boarmeat",
-            "chickenmeat",
-            "chickenegg",
             "rottenmeat",
             "torch",
             "shieldwood",
@@ -500,6 +505,8 @@ POTION_ITEM = re.compile(
 )
 POTION_NAME = re.compile(r"^(Mead|MeadBase|BarleyWine|BarleyWineBase|Flask|Potion)", re.I)
 FOOD_RAW = re.compile(r"(Meat|Egg|Fish|Tail|Blubber)$", re.I)
+# Moder nest egg looks like *Egg but is a Mountain summon material
+NOT_FOOD_ITEMS = {"DragonEgg"}
 FOOD_CROP = {
     "Carrot",
     "Turnip",
@@ -513,6 +520,7 @@ FOOD_CROP = {
     "Honey",
     "Dandelion",
     "Thistle",
+    "Entrails",  # sausage craft ingredient (food mat, not misc)
     "QueensJam",
     "JotunPuffs",
     "Magecap",
@@ -642,6 +650,9 @@ def food_section(prefab: str) -> str:
         )
     ):
         return "Prepared dishes"
+    # Crafting guts / thistle sit with raw cook ingredients, not crop bushes
+    if prefab in {"Entrails", "Thistle"}:
+        return "Raw ingredients"
     if prefab in FOOD_CROP or any(
         prefab.startswith(x)
         for x in (
@@ -676,6 +687,7 @@ def food_section(prefab: str) -> str:
             "SealBlubber",
             "Larva",
             "NeckTail",
+            "Entrails",
         }
     ):
         return "Raw ingredients"
@@ -684,6 +696,8 @@ def food_section(prefab: str) -> str:
 
 def is_food_item(prefab: str) -> bool:
     """Meats / meals / forage that the catalog often tags as Misc."""
+    if prefab in NOT_FOOD_ITEMS:
+        return False
     if is_potion_item(prefab):
         return False
     if prefab.startswith(("Staff", "Armor", "Helmet", "Cape", "Trophy", "Pickable")):
@@ -691,7 +705,7 @@ def is_food_item(prefab: str) -> bool:
     p = prefab.lower()
     if prefab in FOOD_CROP:
         return True
-    if FOOD_COOKED.search(prefab) or FOOD_RAW.search(prefab):
+    if FOOD_COOKED.search(prefab) or (FOOD_RAW.search(prefab) and prefab not in NOT_FOOD_ITEMS):
         return True
     if prefab.endswith(("Meat", "Uncooked", "Skewer", "Jerky", "Blubber")):
         return True
@@ -878,6 +892,8 @@ def looks_like_material(prefab: str) -> bool:
 
 
 def material_section(prefab: str) -> str:
+    if prefab == "DragonEgg":
+        return "Boss & rare drops"
     p = prefab.lower()
     # Trophies first — never let metal substrings steal them
     if prefab.startswith("Trophy") or "trophy" in p:
@@ -1058,6 +1074,10 @@ def classify_item(it: dict) -> tuple[str, str]:
     # Accessories (CryptKey / skeleton-dungeon keys, wishbone, megingjord…)
     if is_accessory_item(prefab):
         return "misc", "Accessories"
+
+    # Moder nest egg — Mountain rare summon mat (never Food / Misc junk)
+    if prefab == "DragonEgg":
+        return "materials", "Boss & rare drops"
 
     # Food before material rescue — WolfMeat / meals must not sit in Utility
     if cat == "Food" or is_food_item(prefab):
