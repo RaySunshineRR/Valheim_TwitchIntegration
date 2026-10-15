@@ -90,10 +90,10 @@ window.VALHEIM_TWITCH_STORE = {
       "desc": "Quality builds"
     },
     {
-      "name": "Round Log",
+      "name": "Core Wood",
       "cmd": "#roundlog",
       "prefab": "RoundLog",
-      "cost": 1,
+      "cost": 4,
       "desc": "Core wood"
     },
     {
@@ -114,7 +114,7 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Bronze",
       "cmd": "#bronze",
       "prefab": "Bronze",
-      "cost": 30,
+      "cost": 37,
       "desc": "Early metal"
     },
     {
@@ -1163,7 +1163,7 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Fine Wood Bow",
       "cmd": "#bowfinewood",
       "prefab": "BowFineWood",
-      "cost": 13
+      "cost": 28
     },
     {
       "name": "Chitin Knife",
@@ -1269,7 +1269,7 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Draugr Fang Bow",
       "cmd": "#bowdraugrfang",
       "prefab": "BowDraugrFang",
-      "cost": 20
+      "cost": 85
     },
     {
       "name": "Iron Mace",
@@ -1609,25 +1609,25 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Ashlands Bow",
       "cmd": "#bowashlands",
       "prefab": "BowAshlands",
-      "cost": 68
+      "cost": 180
     },
     {
       "name": "Ashlands Blood Bow",
       "cmd": "#bowashlandsblood",
       "prefab": "BowAshlandsBlood",
-      "cost": 68
+      "cost": 195
     },
     {
       "name": "Ashlands Root Bow",
       "cmd": "#bowashlandsroot",
       "prefab": "BowAshlandsRoot",
-      "cost": 68
+      "cost": 195
     },
     {
       "name": "Ashlands Storm Bow",
       "cmd": "#bowashlandsstorm",
       "prefab": "BowAshlandsStorm",
-      "cost": 68
+      "cost": 195
     },
     {
       "name": "Flametal Shield",
@@ -1865,7 +1865,7 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Bow",
       "cmd": "#bow",
       "prefab": "Bow",
-      "cost": 13
+      "cost": 12
     },
     {
       "name": "Gold Bow",
@@ -1889,13 +1889,13 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Huntsman Bow",
       "cmd": "#bowhuntsman",
       "prefab": "BowHuntsman",
-      "cost": 13
+      "cost": 48
     },
     {
       "name": "Spine Snap Bow",
       "cmd": "#bowspinesnap",
       "prefab": "BowSpineSnap",
-      "cost": 13
+      "cost": 130
     },
     {
       "name": "Arbalest Crossbow",
@@ -3165,43 +3165,43 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Bow",
       "cmd": "#bow",
       "prefab": "Bow",
-      "cost": 13
+      "cost": 12
     },
     {
       "name": "Ashlands Bow",
       "cmd": "#bowashlands",
       "prefab": "BowAshlands",
-      "cost": 68
+      "cost": 180
     },
     {
       "name": "Ashlands Blood Bow",
       "cmd": "#bowashlandsblood",
       "prefab": "BowAshlandsBlood",
-      "cost": 68
+      "cost": 195
     },
     {
       "name": "Ashlands Root Bow",
       "cmd": "#bowashlandsroot",
       "prefab": "BowAshlandsRoot",
-      "cost": 68
+      "cost": 195
     },
     {
       "name": "Ashlands Storm Bow",
       "cmd": "#bowashlandsstorm",
       "prefab": "BowAshlandsStorm",
-      "cost": 68
+      "cost": 195
     },
     {
       "name": "Draugr Fang Bow",
       "cmd": "#bowdraugrfang",
       "prefab": "BowDraugrFang",
-      "cost": 20
+      "cost": 85
     },
     {
       "name": "Fine Wood Bow",
       "cmd": "#bowfinewood",
       "prefab": "BowFineWood",
-      "cost": 13
+      "cost": 28
     },
     {
       "name": "Gold Bow",
@@ -3231,13 +3231,13 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Huntsman Bow",
       "cmd": "#bowhuntsman",
       "prefab": "BowHuntsman",
-      "cost": 13
+      "cost": 48
     },
     {
       "name": "Spine Snap Bow",
       "cmd": "#bowspinesnap",
       "prefab": "BowSpineSnap",
-      "cost": 13
+      "cost": 130
     },
     {
       "name": "Arbalest Crossbow",
@@ -7504,12 +7504,6 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 1
     },
     {
-      "name": "Round Log",
-      "cmd": "#roundlog",
-      "prefab": "RoundLog",
-      "cost": 1
-    },
-    {
       "name": "Sharpening Stone",
       "cmd": "#sharpeningstone",
       "prefab": "SharpeningStone",
@@ -7553,13 +7547,13 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Bronze",
       "cmd": "#bronze",
       "prefab": "Bronze",
-      "cost": 30
+      "cost": 37
     },
     {
       "name": "Bronze Nails",
       "cmd": "#bronzenails",
       "prefab": "BronzeNails",
-      "cost": 13
+      "cost": 39
     },
     {
       "name": "Bronze Scrap",
@@ -7608,6 +7602,12 @@ window.VALHEIM_TWITCH_STORE = {
       "cmd": "#greydwarfeye",
       "prefab": "GreydwarfEye",
       "cost": 11
+    },
+    {
+      "name": "Core Wood",
+      "cmd": "#roundlog",
+      "prefab": "RoundLog",
+      "cost": 4
     },
     {
       "name": "Tin",
@@ -7719,7 +7719,7 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Iron Nails",
       "cmd": "#ironnails",
       "prefab": "IronNails",
-      "cost": 16
+      "cost": 26
     },
     {
       "name": "Iron Ore",
@@ -8560,10 +8560,10 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 16
     },
     {
-      "name": "Round Log",
+      "name": "Core Wood",
       "cmd": "#roundlog",
       "prefab": "RoundLog",
-      "cost": 1
+      "cost": 4
     },
     {
       "name": "Wood",
@@ -8673,13 +8673,13 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Bronze",
       "cmd": "#bronze",
       "prefab": "Bronze",
-      "cost": 30
+      "cost": 37
     },
     {
       "name": "Bronze Nails",
       "cmd": "#bronzenails",
       "prefab": "BronzeNails",
-      "cost": 13
+      "cost": 39
     },
     {
       "name": "Bronze Scrap",
@@ -9535,7 +9535,7 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Iron Nails",
       "cmd": "#ironnails",
       "prefab": "IronNails",
-      "cost": 16
+      "cost": 26
     },
     {
       "name": "Ironpit",
