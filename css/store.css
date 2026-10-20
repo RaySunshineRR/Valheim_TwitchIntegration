@@ -545,3 +545,28 @@ body.is-jump-tab .catalog .copy-btn {
     white-space: normal;
   }
 }
+
+/* >Curses< — red bold brackets, normal middle */
+.tab-curses .curses-gt,
+.tab-curses .curses-lt {
+  color: var(--danger);
+  font-weight: 700;
+}
+.subtab.subtab-good {
+  color: #6b9e6b;
+  border-color: #3d6b3d;
+}
+.subtab.subtab-good.is-active,
+.subtab.subtab-good:hover {
+  background: #1a2e1a;
+  color: #8fd98f;
+}
+.subtab.subtab-bad {
+  color: var(--danger);
+  border-color: #8a3030;
+}
+.subtab.subtab-bad.is-active,
+.subtab.subtab-bad:hover {
+  background: #2e1515;
+  color: #ff8a8a;
+}

@@ -23,6 +23,18 @@ window.VALHEIM_TWITCH_STORE = {
       "desc": "Spawn your named Greyling"
     },
     {
+      "name": "Follower ally",
+      "cmd": "#f",
+      "desc": "#f / #follower [creature] [stars] — ally (default Greyling)"
+    },
+    {
+      "name": "Yeet",
+      "cmd": "#yeet",
+      "desc": "Launch the streamer (optional N/S/E/W)",
+      "cost": 10,
+      "prefab": "Yeet"
+    },
+    {
       "name": "Spawn (legacy)",
       "cmd": "#spawn Greyling",
       "desc": "Explicit spawn form"
@@ -90,7 +102,7 @@ window.VALHEIM_TWITCH_STORE = {
       "desc": "Quality builds"
     },
     {
-      "name": "Core Wood",
+      "name": "Round Log",
       "cmd": "#roundlog",
       "prefab": "RoundLog",
       "cost": 4,
@@ -149,14 +161,14 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Mead Health Minor",
       "cmd": "#meadhealthminor",
       "prefab": "MeadHealthMinor",
-      "cost": 1,
+      "cost": 42,
       "desc": "Heal up"
     },
     {
       "name": "Mead Stamina Minor",
       "cmd": "#meadstaminaminor",
       "prefab": "MeadStaminaMinor",
-      "cost": 1,
+      "cost": 36,
       "desc": "Stamina up"
     },
     {
@@ -6801,145 +6813,145 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Mead Base Bug Repellent",
       "cmd": "#meadbasebugrepellent",
       "prefab": "MeadBaseBugRepellent",
-      "cost": 1
+      "cost": 37
     },
     {
       "name": "Mead Base Bzerker",
       "cmd": "#meadbasebzerker",
       "prefab": "MeadBaseBzerker",
-      "cost": 1
+      "cost": 293
     },
     {
       "name": "Mead Base Hasty",
       "cmd": "#meadbasehasty",
       "prefab": "MeadBaseHasty",
-      "cost": 1
+      "cost": 477
     },
     {
       "name": "Mead Base Health Medium",
       "cmd": "#meadbasehealthmedium",
       "prefab": "MeadBaseHealthMedium",
-      "cost": 1
+      "cost": 86
     },
     {
       "name": "Mead Base Health Minor",
       "cmd": "#meadbasehealthminor",
       "prefab": "MeadBaseHealthMinor",
-      "cost": 1
+      "cost": 38
     },
     {
       "name": "Mead Base Light Foot",
       "cmd": "#meadbaselightfoot",
       "prefab": "MeadBaseLightFoot",
-      "cost": 1
+      "cost": 212
     },
     {
       "name": "Mead Base Stamina Medium",
       "cmd": "#meadbasestaminamedium",
       "prefab": "MeadBaseStaminaMedium",
-      "cost": 1
+      "cost": 24
     },
     {
       "name": "Mead Base Stamina Minor",
       "cmd": "#meadbasestaminaminor",
       "prefab": "MeadBaseStaminaMinor",
-      "cost": 1
+      "cost": 32
     },
     {
       "name": "Mead Base Strength",
       "cmd": "#meadbasestrength",
       "prefab": "MeadBaseStrength",
-      "cost": 1
+      "cost": 105
     },
     {
       "name": "Mead Base Swimmer",
       "cmd": "#meadbaseswimmer",
       "prefab": "MeadBaseSwimmer",
-      "cost": 1
+      "cost": 112
     },
     {
       "name": "Mead Base Tamer",
       "cmd": "#meadbasetamer",
       "prefab": "MeadBaseTamer",
-      "cost": 1
+      "cost": 152
     },
     {
       "name": "Mead Base Tasty",
       "cmd": "#meadbasetasty",
       "prefab": "MeadBaseTasty",
-      "cost": 1
+      "cost": 37
     },
     {
       "name": "Mead Bug Repellent",
       "cmd": "#meadbugrepellent",
       "prefab": "MeadBugRepellent",
-      "cost": 1
+      "cost": 41
     },
     {
       "name": "Mead Bzerker",
       "cmd": "#meadbzerker",
       "prefab": "MeadBzerker",
-      "cost": 1
+      "cost": 297
     },
     {
       "name": "Mead Hasty",
       "cmd": "#meadhasty",
       "prefab": "MeadHasty",
-      "cost": 1
+      "cost": 481
     },
     {
       "name": "Mead Health Medium",
       "cmd": "#meadhealthmedium",
       "prefab": "MeadHealthMedium",
-      "cost": 1
+      "cost": 90
     },
     {
       "name": "Mead Health Minor",
       "cmd": "#meadhealthminor",
       "prefab": "MeadHealthMinor",
-      "cost": 1
+      "cost": 42
     },
     {
       "name": "Mead Lightfoot",
       "cmd": "#meadlightfoot",
       "prefab": "MeadLightfoot",
-      "cost": 1
+      "cost": 216
     },
     {
       "name": "Mead Stamina Medium",
       "cmd": "#meadstaminamedium",
       "prefab": "MeadStaminaMedium",
-      "cost": 1
+      "cost": 28
     },
     {
       "name": "Mead Stamina Minor",
       "cmd": "#meadstaminaminor",
       "prefab": "MeadStaminaMinor",
-      "cost": 1
+      "cost": 36
     },
     {
       "name": "Mead Strength",
       "cmd": "#meadstrength",
       "prefab": "MeadStrength",
-      "cost": 1
+      "cost": 109
     },
     {
       "name": "Mead Swimmer",
       "cmd": "#meadswimmer",
       "prefab": "MeadSwimmer",
-      "cost": 1
+      "cost": 116
     },
     {
       "name": "Mead Tamer",
       "cmd": "#meadtamer",
       "prefab": "MeadTamer",
-      "cost": 1
+      "cost": 156
     },
     {
       "name": "Mead Tasty",
       "cmd": "#meadtasty",
       "prefab": "MeadTasty",
-      "cost": 1
+      "cost": 41
     },
     {
       "type": "section",
@@ -6959,49 +6971,49 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Mead Base Health Lingering",
       "cmd": "#meadbasehealthlingering",
       "prefab": "MeadBaseHealthLingering",
-      "cost": 16
+      "cost": 317
     },
     {
       "name": "Mead Base Health Major",
       "cmd": "#meadbasehealthmajor",
       "prefab": "MeadBaseHealthMajor",
-      "cost": 16
+      "cost": 237
     },
     {
       "name": "Mead Base Poison Resist",
       "cmd": "#meadbasepoisonresist",
       "prefab": "MeadBasePoisonResist",
-      "cost": 16
+      "cost": 44
     },
     {
       "name": "Mead Base Stamina Lingering",
       "cmd": "#meadbasestaminalingering",
       "prefab": "MeadBaseStaminaLingering",
-      "cost": 16
+      "cost": 180
     },
     {
       "name": "Mead Health Lingering",
       "cmd": "#meadhealthlingering",
       "prefab": "MeadHealthLingering",
-      "cost": 16
+      "cost": 321
     },
     {
       "name": "Mead Health Major",
       "cmd": "#meadhealthmajor",
       "prefab": "MeadHealthMajor",
-      "cost": 16
+      "cost": 241
     },
     {
       "name": "Mead Poison Resist",
       "cmd": "#meadpoisonresist",
       "prefab": "MeadPoisonResist",
-      "cost": 16
+      "cost": 48
     },
     {
       "name": "Mead Stamina Lingering",
       "cmd": "#meadstaminalingering",
       "prefab": "MeadStaminaLingering",
-      "cost": 16
+      "cost": 184
     },
     {
       "type": "section",
@@ -7011,13 +7023,13 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Mead Base Frost Resist",
       "cmd": "#meadbasefrostresist",
       "prefab": "MeadBaseFrostResist",
-      "cost": 21
+      "cost": 86
     },
     {
       "name": "Mead Frost Resist",
       "cmd": "#meadfrostresist",
       "prefab": "MeadFrostResist",
-      "cost": 21
+      "cost": 90
     },
     {
       "type": "section",
@@ -7027,13 +7039,13 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Barley Wine",
       "cmd": "#barleywine",
       "prefab": "BarleyWine",
-      "cost": 27
+      "cost": 366
     },
     {
       "name": "Barley Wine Base",
       "cmd": "#barleywinebase",
       "prefab": "BarleyWineBase",
-      "cost": 27
+      "cost": 362
     },
     {
       "type": "section",
@@ -7043,25 +7055,25 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Mead Base Eitr Lingering",
       "cmd": "#meadbaseeitrlingering",
       "prefab": "MeadBaseEitrLingering",
-      "cost": 39
+      "cost": 457
     },
     {
       "name": "Mead Base Eitr Minor",
       "cmd": "#meadbaseeitrminor",
       "prefab": "MeadBaseEitrMinor",
-      "cost": 39
+      "cost": 597
     },
     {
       "name": "Mead Eitr Lingering",
       "cmd": "#meadeitrlingering",
       "prefab": "MeadEitrLingering",
-      "cost": 39
+      "cost": 461
     },
     {
       "name": "Mead Eitr Minor",
       "cmd": "#meadeitrminor",
       "prefab": "MeadEitrMinor",
-      "cost": 39
+      "cost": 601
     },
     {
       "type": "section",
@@ -7109,115 +7121,115 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Mead Bug Repellent",
       "cmd": "#meadbugrepellent",
       "prefab": "MeadBugRepellent",
-      "cost": 1
+      "cost": 41
     },
     {
       "name": "Mead Bzerker",
       "cmd": "#meadbzerker",
       "prefab": "MeadBzerker",
-      "cost": 1
+      "cost": 297
     },
     {
       "name": "Mead Eitr Lingering",
       "cmd": "#meadeitrlingering",
       "prefab": "MeadEitrLingering",
-      "cost": 39
+      "cost": 461
     },
     {
       "name": "Mead Eitr Minor",
       "cmd": "#meadeitrminor",
       "prefab": "MeadEitrMinor",
-      "cost": 39
+      "cost": 601
     },
     {
       "name": "Mead Frost Resist",
       "cmd": "#meadfrostresist",
       "prefab": "MeadFrostResist",
-      "cost": 21
+      "cost": 90
     },
     {
       "name": "Mead Hasty",
       "cmd": "#meadhasty",
       "prefab": "MeadHasty",
-      "cost": 1
+      "cost": 481
     },
     {
       "name": "Mead Health Lingering",
       "cmd": "#meadhealthlingering",
       "prefab": "MeadHealthLingering",
-      "cost": 16
+      "cost": 321
     },
     {
       "name": "Mead Health Major",
       "cmd": "#meadhealthmajor",
       "prefab": "MeadHealthMajor",
-      "cost": 16
+      "cost": 241
     },
     {
       "name": "Mead Health Medium",
       "cmd": "#meadhealthmedium",
       "prefab": "MeadHealthMedium",
-      "cost": 1
+      "cost": 90
     },
     {
       "name": "Mead Health Minor",
       "cmd": "#meadhealthminor",
       "prefab": "MeadHealthMinor",
-      "cost": 1
+      "cost": 42
     },
     {
       "name": "Mead Lightfoot",
       "cmd": "#meadlightfoot",
       "prefab": "MeadLightfoot",
-      "cost": 1
+      "cost": 216
     },
     {
       "name": "Mead Poison Resist",
       "cmd": "#meadpoisonresist",
       "prefab": "MeadPoisonResist",
-      "cost": 16
+      "cost": 48
     },
     {
       "name": "Mead Stamina Lingering",
       "cmd": "#meadstaminalingering",
       "prefab": "MeadStaminaLingering",
-      "cost": 16
+      "cost": 184
     },
     {
       "name": "Mead Stamina Medium",
       "cmd": "#meadstaminamedium",
       "prefab": "MeadStaminaMedium",
-      "cost": 1
+      "cost": 28
     },
     {
       "name": "Mead Stamina Minor",
       "cmd": "#meadstaminaminor",
       "prefab": "MeadStaminaMinor",
-      "cost": 1
+      "cost": 36
     },
     {
       "name": "Mead Strength",
       "cmd": "#meadstrength",
       "prefab": "MeadStrength",
-      "cost": 1
+      "cost": 109
     },
     {
       "name": "Mead Swimmer",
       "cmd": "#meadswimmer",
       "prefab": "MeadSwimmer",
-      "cost": 1
+      "cost": 116
     },
     {
       "name": "Mead Tamer",
       "cmd": "#meadtamer",
       "prefab": "MeadTamer",
-      "cost": 1
+      "cost": 156
     },
     {
       "name": "Mead Tasty",
       "cmd": "#meadtasty",
       "prefab": "MeadTasty",
-      "cost": 1
+      "cost": 41
     },
     {
       "name": "Mead Troll Pheromones",
@@ -7233,121 +7245,121 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Barley Wine Base",
       "cmd": "#barleywinebase",
       "prefab": "BarleyWineBase",
-      "cost": 27
+      "cost": 362
     },
     {
       "name": "Mead Base Bug Repellent",
       "cmd": "#meadbasebugrepellent",
       "prefab": "MeadBaseBugRepellent",
-      "cost": 1
+      "cost": 37
     },
     {
       "name": "Mead Base Bzerker",
       "cmd": "#meadbasebzerker",
       "prefab": "MeadBaseBzerker",
-      "cost": 1
+      "cost": 293
     },
     {
       "name": "Mead Base Eitr Lingering",
       "cmd": "#meadbaseeitrlingering",
       "prefab": "MeadBaseEitrLingering",
-      "cost": 39
+      "cost": 457
     },
     {
       "name": "Mead Base Eitr Minor",
       "cmd": "#meadbaseeitrminor",
       "prefab": "MeadBaseEitrMinor",
-      "cost": 39
+      "cost": 597
     },
     {
       "name": "Mead Base Frost Resist",
       "cmd": "#meadbasefrostresist",
       "prefab": "MeadBaseFrostResist",
-      "cost": 21
+      "cost": 86
     },
     {
       "name": "Mead Base Hasty",
       "cmd": "#meadbasehasty",
       "prefab": "MeadBaseHasty",
-      "cost": 1
+      "cost": 477
     },
     {
       "name": "Mead Base Health Lingering",
       "cmd": "#meadbasehealthlingering",
       "prefab": "MeadBaseHealthLingering",
-      "cost": 16
+      "cost": 317
     },
     {
       "name": "Mead Base Health Major",
       "cmd": "#meadbasehealthmajor",
       "prefab": "MeadBaseHealthMajor",
-      "cost": 16
+      "cost": 237
     },
     {
       "name": "Mead Base Health Medium",
       "cmd": "#meadbasehealthmedium",
       "prefab": "MeadBaseHealthMedium",
-      "cost": 1
+      "cost": 86
     },
     {
       "name": "Mead Base Health Minor",
       "cmd": "#meadbasehealthminor",
       "prefab": "MeadBaseHealthMinor",
-      "cost": 1
+      "cost": 38
     },
     {
       "name": "Mead Base Light Foot",
       "cmd": "#meadbaselightfoot",
       "prefab": "MeadBaseLightFoot",
-      "cost": 1
+      "cost": 212
     },
     {
       "name": "Mead Base Poison Resist",
       "cmd": "#meadbasepoisonresist",
       "prefab": "MeadBasePoisonResist",
-      "cost": 16
+      "cost": 44
     },
     {
       "name": "Mead Base Stamina Lingering",
       "cmd": "#meadbasestaminalingering",
       "prefab": "MeadBaseStaminaLingering",
-      "cost": 16
+      "cost": 180
     },
     {
       "name": "Mead Base Stamina Medium",
       "cmd": "#meadbasestaminamedium",
       "prefab": "MeadBaseStaminaMedium",
-      "cost": 1
+      "cost": 24
     },
     {
       "name": "Mead Base Stamina Minor",
       "cmd": "#meadbasestaminaminor",
       "prefab": "MeadBaseStaminaMinor",
-      "cost": 1
+      "cost": 32
     },
     {
       "name": "Mead Base Strength",
       "cmd": "#meadbasestrength",
       "prefab": "MeadBaseStrength",
-      "cost": 1
+      "cost": 105
     },
     {
       "name": "Mead Base Swimmer",
       "cmd": "#meadbaseswimmer",
       "prefab": "MeadBaseSwimmer",
-      "cost": 1
+      "cost": 112
     },
     {
       "name": "Mead Base Tamer",
       "cmd": "#meadbasetamer",
       "prefab": "MeadBaseTamer",
-      "cost": 1
+      "cost": 152
     },
     {
       "name": "Mead Base Tasty",
       "cmd": "#meadbasetasty",
       "prefab": "MeadBaseTasty",
-      "cost": 1
+      "cost": 37
     },
     {
       "type": "section",
@@ -7357,7 +7369,7 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Barley Wine",
       "cmd": "#barleywine",
       "prefab": "BarleyWine",
-      "cost": 27
+      "cost": 366
     },
     {
       "type": "section",
@@ -7392,6 +7404,73 @@ window.VALHEIM_TWITCH_STORE = {
       "cmd": "#treasurechestmeadowscombat",
       "prefab": "TreasureChest_meadows_combat",
       "cost": 1
+    }
+  ],
+  "curses": [
+    {
+      "type": "help",
+      "text": "Bad = mischief on the streamer. Good = helpful buffs. All 10🪙. #yeet accepts N/S/E/W relative to facing."
+    },
+    {
+      "type": "section",
+      "title": "Bad"
+    },
+    {
+      "name": "Yeet",
+      "cmd": "#yeet",
+      "prefab": "Yeet",
+      "desc": "Launch player (optional N/S/E/W)",
+      "cost": 10
+    },
+    {
+      "name": "Mini",
+      "cmd": "#mini",
+      "prefab": "Mini",
+      "desc": "Shrink the player for a while",
+      "cost": 10
+    },
+    {
+      "type": "section",
+      "title": "Good"
+    },
+    {
+      "name": "Health",
+      "cmd": "#health",
+      "prefab": "Health",
+      "desc": "Health regen buff",
+      "cost": 10
+    },
+    {
+      "name": "Stamina",
+      "cmd": "#stamina",
+      "prefab": "Stamina",
+      "desc": "Stamina regen buff",
+      "cost": 10
+    },
+    {
+      "name": "Sonic",
+      "cmd": "#sonic",
+      "prefab": "Sonic",
+      "desc": "Speed buff (longer)",
+      "cost": 10
+    },
+    {
+      "name": "Mule",
+      "cmd": "#mule",
+      "prefab": "Mule",
+      "desc": "Carry weight buff (longer)",
+      "cost": 10
+    },
+    {
+      "type": "section",
+      "title": "Followers"
+    },
+    {
+      "name": "Follower",
+      "cmd": "#f",
+      "prefab": "Greyling",
+      "desc": "#f / #follower [creature] [0|1|2] — ally at creature cost (default Greyling)",
+      "cost": 5
     }
   ],
   "materials": [
@@ -7504,6 +7583,12 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 1
     },
     {
+      "name": "Round Log",
+      "cmd": "#roundlog",
+      "prefab": "RoundLog",
+      "cost": 4
+    },
+    {
       "name": "Sharpening Stone",
       "cmd": "#sharpeningstone",
       "prefab": "SharpeningStone",
@@ -7602,12 +7687,6 @@ window.VALHEIM_TWITCH_STORE = {
       "cmd": "#greydwarfeye",
       "prefab": "GreydwarfEye",
       "cost": 11
-    },
-    {
-      "name": "Core Wood",
-      "cmd": "#roundlog",
-      "prefab": "RoundLog",
-      "cost": 4
     },
     {
       "name": "Tin",
@@ -8560,7 +8639,7 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 16
     },
     {
-      "name": "Core Wood",
+      "name": "Round Log",
       "cmd": "#roundlog",
       "prefab": "RoundLog",
       "cost": 4

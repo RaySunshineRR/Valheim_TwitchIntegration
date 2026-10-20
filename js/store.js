@@ -25,6 +25,7 @@
     "armor",
     "food",
     "potions",
+    "curses",
     "materials",
     "misc",
   ]);
@@ -35,6 +36,7 @@
     "armor",
     "food",
     "potions",
+    "curses",
     "materials",
     "misc",
   ]);
@@ -53,6 +55,7 @@
     "weapons",
     "food",
     "potions",
+    "curses",
     "materials",
     "misc",
   ]);
@@ -359,7 +362,10 @@
     for (const title of titles) {
       const btn = document.createElement("button");
       btn.type = "button";
-      btn.className = "subtab subtab-jump";
+      let extra = "";
+      if (title === "Good") extra = " subtab-good";
+      if (title === "Bad") extra = " subtab-bad";
+      btn.className = "subtab subtab-jump" + extra;
       btn.setAttribute("role", "link");
       btn.dataset.section = title;
       btn.textContent = title;
