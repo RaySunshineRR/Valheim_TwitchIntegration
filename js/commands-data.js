@@ -7366,7 +7366,7 @@ window.VALHEIM_TWITCH_STORE = {
   "curses": [
     {
       "type": "help",
-      "text": "Bad = mischief · Good = buffs. Most 10🪙; spawns priced (bee/gang/guardian). #yeet accepts N/S/E/W. #feast = HP+stam burst (not Food Prep)."
+      "text": "Bad = mischief · Good = buffs. Costs shown on each card. Streamer can disable any curse in Heim-Heim >CURSES< (icon toggle) — no coins spent. #yeet accepts N/S/E/W. #feast = HP+stam burst (not Food Prep)."
     },
     {
       "type": "section",
