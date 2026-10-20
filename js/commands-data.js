@@ -42,7 +42,7 @@ window.VALHEIM_TWITCH_STORE = {
     {
       "name": "Give / item",
       "cmd": "#give Wood 50",
-      "desc": "#give or #item · materials default ×10 · amount override OK · capped to stack"
+      "desc": "#give or #item · materials ×10 · seeds ×5 same 🪙 · amount override OK · capped to stack"
     },
     {
       "type": "section",
@@ -5065,10 +5065,11 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 3
     },
     {
-      "name": "Carrot Seeds",
+      "name": "Carrot Seeds x5",
       "cmd": "#carrotseeds",
       "prefab": "CarrotSeeds",
-      "cost": 11
+      "cost": 11,
+      "amount": 5
     },
     {
       "name": "Carrot Soup",
@@ -5327,10 +5328,11 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 5
     },
     {
-      "name": "Turnip Seeds",
+      "name": "Turnip Seeds x5",
       "cmd": "#turnipseeds",
       "prefab": "TurnipSeeds",
-      "cost": 16
+      "cost": 16,
+      "amount": 5
     },
     {
       "name": "Turnip Stew",
@@ -5379,10 +5381,11 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 7
     },
     {
-      "name": "Onion Seeds",
+      "name": "Onion Seeds x5",
       "cmd": "#onionseeds",
       "prefab": "OnionSeeds",
-      "cost": 21
+      "cost": 21,
+      "amount": 5
     },
     {
       "name": "Onion Soup",
@@ -6597,10 +6600,11 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 3
     },
     {
-      "name": "Carrot Seeds",
+      "name": "Carrot Seeds x5",
       "cmd": "#carrotseeds",
       "prefab": "CarrotSeeds",
-      "cost": 11
+      "cost": 11,
+      "amount": 5
     },
     {
       "name": "Cloudberry",
@@ -6711,10 +6715,11 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 7
     },
     {
-      "name": "Onion Seeds",
+      "name": "Onion Seeds x5",
       "cmd": "#onionseeds",
       "prefab": "OnionSeeds",
-      "cost": 21
+      "cost": 21,
+      "amount": 5
     },
     {
       "name": "Pukeberries",
@@ -6741,10 +6746,11 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 5
     },
     {
-      "name": "Turnip Seeds",
+      "name": "Turnip Seeds x5",
       "cmd": "#turnipseeds",
       "prefab": "TurnipSeeds",
-      "cost": 16
+      "cost": 16,
+      "amount": 5
     },
     {
       "name": "Vineberry",
@@ -7634,6 +7640,27 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "Guardian",
       "desc": "2★ random skeleton ally",
       "cost": 22
+    },
+    {
+      "name": "Go home",
+      "cmd": "#gohome",
+      "prefab": "GoHome",
+      "desc": "Teleport to bed spawn (or world spawn)",
+      "cost": 60
+    },
+    {
+      "name": "Wind",
+      "cmd": "#wind",
+      "prefab": "Wind",
+      "desc": "Change wind direction (sailing / cloth)",
+      "cost": 12
+    },
+    {
+      "name": "Undertaker",
+      "cmd": "#undertaker",
+      "prefab": "Undertaker",
+      "desc": "Teleport to most recent death (fails if none)",
+      "cost": 50
     },
     {
       "type": "section",
@@ -10639,16 +10666,18 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 11
     },
     {
-      "name": "Beech Seeds",
+      "name": "Beech Seeds x5",
       "cmd": "#beechseeds",
       "prefab": "BeechSeeds",
-      "cost": 11
+      "cost": 11,
+      "amount": 5
     },
     {
-      "name": "Birch Seeds",
+      "name": "Birch Seeds x5",
       "cmd": "#birchseeds",
       "prefab": "BirchSeeds",
-      "cost": 11
+      "cost": 11,
+      "amount": 5
     },
     {
       "name": "Bjorn Paw",
@@ -10819,10 +10848,11 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 11
     },
     {
-      "name": "Kale Seeds",
+      "name": "Kale Seeds x5",
       "cmd": "#kaleseeds",
       "prefab": "KaleSeeds",
-      "cost": 11
+      "cost": 11,
+      "amount": 5
     },
     {
       "name": "Large Bone",
@@ -10933,10 +10963,11 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 11
     },
     {
-      "name": "Oat Seeds",
+      "name": "Oat Seeds x5",
       "cmd": "#oatseeds",
       "prefab": "OatSeeds",
-      "cost": 11
+      "cost": 11,
+      "amount": 5
     },
     {
       "name": "Orb Frost Fire",
@@ -10981,10 +11012,11 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 39
     },
     {
-      "name": "Poteitr Seeds",
+      "name": "Poteitr Seeds x5",
       "cmd": "#poteitrseeds",
       "prefab": "PoteitrSeeds",
-      "cost": 39
+      "cost": 39,
+      "amount": 5
     },
     {
       "name": "Pulled Bear",
