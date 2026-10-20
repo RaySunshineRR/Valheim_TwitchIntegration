@@ -73,6 +73,15 @@
     "Other",
   ]);
 
+  /** Preferred order for Food type chips (second gold row). */
+  const FOOD_TYPE_ORDER = [
+    "Feasts",
+    "Raw ingredients",
+    "Cooked meals",
+    "Prepared dishes",
+    "Crops & forage",
+  ];
+
   const tabs = Array.from(document.querySelectorAll(".tab"));
   const tiertabsEl = document.getElementById("tiertabs");
   const subtabsEl = document.getElementById("subtabs");
@@ -423,7 +432,13 @@
       (t) => t !== "By tier",
     );
     const tiers = titles.filter((t) => TIER_TITLES.has(t));
-    const types = titles.filter((t) => !TIER_TITLES.has(t));
+    let types = titles.filter((t) => !TIER_TITLES.has(t));
+    if (activeTab === "food") {
+      types = sectionTitles(
+        types.map((t) => ({ type: "section", title: t })),
+        FOOD_TYPE_ORDER,
+      );
+    }
 
     if (tiertabsEl) {
       tiertabsEl.setAttribute("aria-label", "Progression tiers");
