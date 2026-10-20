@@ -7366,7 +7366,7 @@ window.VALHEIM_TWITCH_STORE = {
   "curses": [
     {
       "type": "help",
-      "text": "Bad = mischief on the streamer. Good = helpful buffs. All 10🪙. #yeet accepts N/S/E/W relative to facing."
+      "text": "Bad = mischief · Good = buffs. Most 10🪙; spawns priced (bee/gang/guardian). #yeet accepts N/S/E/W. #feast = HP+stam burst (not Food Prep)."
     },
     {
       "type": "section",
@@ -7384,6 +7384,118 @@ window.VALHEIM_TWITCH_STORE = {
       "cmd": "#mini",
       "prefab": "Mini",
       "desc": "Shrink the player for a while",
+      "cost": 10
+    },
+    {
+      "name": "Ragdoll",
+      "cmd": "#ragdoll",
+      "prefab": "Ragdoll",
+      "desc": "Hard stagger + short push",
+      "cost": 10
+    },
+    {
+      "name": "Drunk",
+      "cmd": "#drunk",
+      "prefab": "Drunk",
+      "desc": "Woozy turn/move for ~20s",
+      "cost": 10
+    },
+    {
+      "name": "Cold",
+      "cmd": "#cold",
+      "prefab": "Cold",
+      "desc": "Cold + Freezing pressure",
+      "cost": 10
+    },
+    {
+      "name": "Wet",
+      "cmd": "#wet",
+      "prefab": "Wet",
+      "desc": "Instant soak (Wet)",
+      "cost": 10
+    },
+    {
+      "name": "Smoked",
+      "cmd": "#smoked",
+      "prefab": "Smoked",
+      "desc": "Mild poison smoke tick",
+      "cost": 10
+    },
+    {
+      "name": "Hungry",
+      "cmd": "#hungry",
+      "prefab": "Hungry",
+      "desc": "Clear food timers",
+      "cost": 10
+    },
+    {
+      "name": "Tired",
+      "cmd": "#tired",
+      "prefab": "Tired",
+      "desc": "Stamina crash + drain",
+      "cost": 10
+    },
+    {
+      "name": "Encumber",
+      "cmd": "#encumber",
+      "prefab": "Encumber",
+      "desc": "Carry weight tanks",
+      "cost": 10
+    },
+    {
+      "name": "Butterfingers",
+      "cmd": "#butterfingers",
+      "prefab": "Butterfingers",
+      "desc": "Fumble / unequip hands",
+      "cost": 10
+    },
+    {
+      "name": "Spin",
+      "cmd": "#spin",
+      "prefab": "Spin",
+      "desc": "Wild yaw spin",
+      "cost": 10
+    },
+    {
+      "name": "Dark",
+      "cmd": "#dark",
+      "prefab": "Dark",
+      "desc": "Forced dark environment",
+      "cost": 10
+    },
+    {
+      "name": "Bee",
+      "cmd": "#bee",
+      "prefab": "Bee",
+      "desc": "Spawn a Deathsquito nearby",
+      "cost": 17
+    },
+    {
+      "name": "Greyling gang",
+      "cmd": "#greylinggang",
+      "prefab": "GreylingGang",
+      "desc": "Three Greylings on you",
+      "cost": 15
+    },
+    {
+      "name": "Troll toe",
+      "cmd": "#trolltoe",
+      "prefab": "TrollToe",
+      "desc": "Knockback + oof",
+      "cost": 10
+    },
+    {
+      "name": "Silence",
+      "cmd": "#silence",
+      "prefab": "Silence",
+      "desc": "Hands empty / panic",
+      "cost": 10
+    },
+    {
+      "name": "Magnet",
+      "cmd": "#magnet",
+      "prefab": "Magnet",
+      "desc": "Yank hostiles toward player",
       "cost": 10
     },
     {
@@ -7417,6 +7529,111 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "Mule",
       "desc": "Carry weight buff (longer)",
       "cost": 10
+    },
+    {
+      "name": "Shield",
+      "cmd": "#shield",
+      "prefab": "Shield",
+      "desc": "Timed resist / absorb",
+      "cost": 10
+    },
+    {
+      "name": "Warm",
+      "cmd": "#warm",
+      "prefab": "Warm",
+      "desc": "Frost/cold resist",
+      "cost": 10
+    },
+    {
+      "name": "Dry",
+      "cmd": "#dry",
+      "prefab": "Dry",
+      "desc": "Clear Wet + stay dry",
+      "cost": 10
+    },
+    {
+      "name": "Feast",
+      "cmd": "#feast",
+      "prefab": "Feast",
+      "desc": "Small HP + stamina burst (not Food Prep)",
+      "cost": 10
+    },
+    {
+      "name": "Iron skin",
+      "cmd": "#ironskin",
+      "prefab": "IronSkin",
+      "desc": "High resist window",
+      "cost": 10
+    },
+    {
+      "name": "Eagle",
+      "cmd": "#eagle",
+      "prefab": "Eagle",
+      "desc": "Jumpier for a minute",
+      "cost": 10
+    },
+    {
+      "name": "Night vision",
+      "cmd": "#nightvision",
+      "prefab": "NightVision",
+      "desc": "Personal light",
+      "cost": 10
+    },
+    {
+      "name": "Rested",
+      "cmd": "#rested",
+      "prefab": "Rested",
+      "desc": "Apply/extend Rested",
+      "cost": 10
+    },
+    {
+      "name": "XP",
+      "cmd": "#xp",
+      "prefab": "Xp",
+      "desc": "Tiny random skill XP",
+      "cost": 10
+    },
+    {
+      "name": "Repair",
+      "cmd": "#repair",
+      "prefab": "Repair",
+      "desc": "Nudge equipped durability",
+      "cost": 10
+    },
+    {
+      "name": "Cleanse",
+      "cmd": "#cleanse",
+      "prefab": "Cleanse",
+      "desc": "Strip bad curse effects",
+      "cost": 10
+    },
+    {
+      "name": "Breeze",
+      "cmd": "#breeze",
+      "prefab": "Breeze",
+      "desc": "Light speed + stam regen",
+      "cost": 10
+    },
+    {
+      "name": "Anchor",
+      "cmd": "#anchor",
+      "prefab": "Anchor",
+      "desc": "Anti-stagger window",
+      "cost": 10
+    },
+    {
+      "name": "Honey",
+      "cmd": "#honey",
+      "prefab": "HoneyBuff",
+      "desc": "Poison resist + gentle regen",
+      "cost": 10
+    },
+    {
+      "name": "Guardian",
+      "cmd": "#guardian",
+      "prefab": "Guardian",
+      "desc": "2★ random skeleton ally",
+      "cost": 22
     },
     {
       "type": "section",
