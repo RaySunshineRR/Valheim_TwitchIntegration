@@ -4828,7 +4828,7 @@ window.VALHEIM_TWITCH_STORE = {
   "food": [
     {
       "type": "help",
-      "text": "Gold row = tiers. Second row = raw / cooked / prepared / crops. Catalog starts with tiers."
+      "text": "Gold row = tiers. Second row = feasts / raw / cooked / prepared / crops. Feasts are type-only (not under tiers)."
     },
     {
       "type": "help",
@@ -4866,12 +4866,6 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Dandelion",
       "cmd": "#dandelion",
       "prefab": "Dandelion",
-      "cost": 1
-    },
-    {
-      "name": "Feast Meadows Material",
-      "cmd": "#feastmeadowsmaterial",
-      "prefab": "FeastMeadows_Material",
       "cost": 1
     },
     {
@@ -5107,45 +5101,9 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 10
     },
     {
-      "name": "Feast Blackforest Material",
-      "cmd": "#feastblackforestmaterial",
-      "prefab": "FeastBlackforest_Material",
-      "cost": 11
-    },
-    {
-      "name": "Feast Deep North Material",
-      "cmd": "#feastdeepnorthmaterial",
-      "prefab": "FeastDeepNorth_Material",
-      "cost": 11
-    },
-    {
       "name": "Feaster",
       "cmd": "#feaster",
       "prefab": "Feaster",
-      "cost": 11
-    },
-    {
-      "name": "Feast Mountains Material",
-      "cmd": "#feastmountainsmaterial",
-      "prefab": "FeastMountains_Material",
-      "cost": 11
-    },
-    {
-      "name": "Feast Oceans Material",
-      "cmd": "#feastoceansmaterial",
-      "prefab": "FeastOceans_Material",
-      "cost": 11
-    },
-    {
-      "name": "Feast Plains Material",
-      "cmd": "#feastplainsmaterial",
-      "prefab": "FeastPlains_Material",
-      "cost": 11
-    },
-    {
-      "name": "Feast Swamps Material",
-      "cmd": "#feastswampsmaterial",
-      "prefab": "FeastSwamps_Material",
       "cost": 11
     },
     {
@@ -5657,12 +5615,6 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 27
     },
     {
-      "name": "Feast Mistlands Material",
-      "cmd": "#feastmistlandsmaterial",
-      "prefab": "FeastMistlands_Material",
-      "cost": 39
-    },
-    {
       "name": "Fishing Bait Mistlands",
       "cmd": "#fishingbaitmistlands",
       "prefab": "FishingBaitMistlands",
@@ -5787,12 +5739,6 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 38
     },
     {
-      "name": "Feast Ashlands Material",
-      "cmd": "#feastashlandsmaterial",
-      "prefab": "FeastAshlands_Material",
-      "cost": 54
-    },
-    {
       "name": "Fishing Bait Ashlands",
       "cmd": "#fishingbaitashlands",
       "prefab": "FishingBaitAshlands",
@@ -5819,6 +5765,64 @@ window.VALHEIM_TWITCH_STORE = {
     {
       "type": "help",
       "text": "By type — same items grouped by family / category."
+    },
+    {
+      "type": "section",
+      "title": "Feasts"
+    },
+    {
+      "name": "Ashlands Gourmet Bowl",
+      "cmd": "#feastashlandsmaterial",
+      "prefab": "FeastAshlands_Material",
+      "cost": 54
+    },
+    {
+      "name": "Black Forest Buffet Platter",
+      "cmd": "#feastblackforestmaterial",
+      "prefab": "FeastBlackforest_Material",
+      "cost": 11
+    },
+    {
+      "name": "Northern Morning Fare",
+      "cmd": "#feastdeepnorthmaterial",
+      "prefab": "FeastDeepNorth_Material",
+      "cost": 11
+    },
+    {
+      "name": "Whole Roasted Meadow Boar",
+      "cmd": "#feastmeadowsmaterial",
+      "prefab": "FeastMeadows_Material",
+      "cost": 1
+    },
+    {
+      "name": "Mushrooms Galore á la Mistlands",
+      "cmd": "#feastmistlandsmaterial",
+      "prefab": "FeastMistlands_Material",
+      "cost": 39
+    },
+    {
+      "name": "Hearty Mountain Logger's Stew",
+      "cmd": "#feastmountainsmaterial",
+      "prefab": "FeastMountains_Material",
+      "cost": 11
+    },
+    {
+      "name": "Sailor's Bounty",
+      "cmd": "#feastoceansmaterial",
+      "prefab": "FeastOceans_Material",
+      "cost": 11
+    },
+    {
+      "name": "Plains Pie Picnic",
+      "cmd": "#feastplainsmaterial",
+      "prefab": "FeastPlains_Material",
+      "cost": 11
+    },
+    {
+      "name": "Swamp Dweller's Delight",
+      "cmd": "#feastswampsmaterial",
+      "prefab": "FeastSwamps_Material",
+      "cost": 11
     },
     {
       "type": "section",
@@ -6157,63 +6161,9 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 10
     },
     {
-      "name": "Feast Ashlands Material",
-      "cmd": "#feastashlandsmaterial",
-      "prefab": "FeastAshlands_Material",
-      "cost": 54
-    },
-    {
-      "name": "Feast Blackforest Material",
-      "cmd": "#feastblackforestmaterial",
-      "prefab": "FeastBlackforest_Material",
-      "cost": 11
-    },
-    {
-      "name": "Feast Deep North Material",
-      "cmd": "#feastdeepnorthmaterial",
-      "prefab": "FeastDeepNorth_Material",
-      "cost": 11
-    },
-    {
       "name": "Feaster",
       "cmd": "#feaster",
       "prefab": "Feaster",
-      "cost": 11
-    },
-    {
-      "name": "Feast Meadows Material",
-      "cmd": "#feastmeadowsmaterial",
-      "prefab": "FeastMeadows_Material",
-      "cost": 1
-    },
-    {
-      "name": "Feast Mistlands Material",
-      "cmd": "#feastmistlandsmaterial",
-      "prefab": "FeastMistlands_Material",
-      "cost": 39
-    },
-    {
-      "name": "Feast Mountains Material",
-      "cmd": "#feastmountainsmaterial",
-      "prefab": "FeastMountains_Material",
-      "cost": 11
-    },
-    {
-      "name": "Feast Oceans Material",
-      "cmd": "#feastoceansmaterial",
-      "prefab": "FeastOceans_Material",
-      "cost": 11
-    },
-    {
-      "name": "Feast Plains Material",
-      "cmd": "#feastplainsmaterial",
-      "prefab": "FeastPlains_Material",
-      "cost": 11
-    },
-    {
-      "name": "Feast Swamps Material",
-      "cmd": "#feastswampsmaterial",
-      "prefab": "FeastSwamps_Material",
       "cost": 11
     },
     {

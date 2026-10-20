@@ -119,6 +119,16 @@ ICON_OVERRIDES = {
     "MeadBaseStrength": "Mead_Base_-_Troll_Endurance.png",
     "MeadBaseSwimmer": "Mead_Base_-_Vananidir.png",
     "MeadBaseTamer": "Mead_Base_-_Animal_Whispers.png",
+    # Biome feasts (wiki dining names — Material prefabs)
+    "FeastMeadows_Material": "Whole_Roasted_Meadow_Boar.png",
+    "FeastBlackforest_Material": "Black_Forest_Buffet_Platter.png",
+    "FeastSwamps_Material": "Swamp_Dweller's_Delight.png",
+    "FeastOceans_Material": "Sailor's_Bounty.png",
+    "FeastMountains_Material": "Hearty_Mountain_Logger's_Stew.png",
+    "FeastPlains_Material": "Plains_Pie_Picnic.png",
+    "FeastMistlands_Material": "Mushrooms_Galore_á_la_Mistlands.png",
+    "FeastAshlands_Material": "Ashlands_Gourmet_Bowl.png",
+    "FeastDeepNorth_Material": "Northern_Morning_Fare.png",
 }
 
 
@@ -143,6 +153,15 @@ DISPLAY_NAME = {
     "GoblinKing": "Yagluth",
     "Dragon": "Moder",
     "SeekerQueen": "The Queen",
+    "FeastMeadows_Material": "Whole Roasted Meadow Boar",
+    "FeastBlackforest_Material": "Black Forest Buffet Platter",
+    "FeastSwamps_Material": "Swamp Dweller's Delight",
+    "FeastOceans_Material": "Sailor's Bounty",
+    "FeastMountains_Material": "Hearty Mountain Logger's Stew",
+    "FeastPlains_Material": "Plains Pie Picnic",
+    "FeastMistlands_Material": "Mushrooms Galore á la Mistlands",
+    "FeastAshlands_Material": "Ashlands Gourmet Bowl",
+    "FeastDeepNorth_Material": "Northern Morning Fare",
 }
 
 
@@ -693,11 +712,18 @@ def potion_section(prefab: str) -> str:
     return "Other potions"
 
 
+def is_feast_item(prefab: str) -> bool:
+    """Biome feast platters (not the unrelated Feaster prefab)."""
+    return prefab.startswith("Feast") and prefab != "Feaster"
+
+
 def food_section(prefab: str) -> str:
+    if is_feast_item(prefab):
+        return "Feasts"
     if FOOD_COOKED.search(prefab) or prefab.startswith(("Cooked", "Smoked", "Grilled")):
         return "Cooked meals"
     if prefab.endswith("Uncooked") or prefab.startswith(
-        ("Feast", "Spice", "Baked", "Oven", "Mashed", "Mince", "Marinated", "Seeker", "Shocklate", "Sizzling", "Sparkling", "Scorching", "Fiery", "Pulled", "Magically", "GreydwarfSurprise", "Viking", "SealSoup", "Pancakes", "Lingondricka")
+        ("Spice", "Baked", "Oven", "Mashed", "Mince", "Marinated", "Seeker", "Shocklate", "Sizzling", "Sparkling", "Scorching", "Fiery", "Pulled", "Magically", "GreydwarfSurprise", "Viking", "SealSoup", "Pancakes", "Lingondricka")
     ):
         return "Prepared dishes"
     if any(
@@ -1395,6 +1421,7 @@ def build_store(data: dict) -> dict:
         "weapons": weapon_families,
         "armor": list(TIER_ORDER),
         "food": [
+            "Feasts",
             "Raw ingredients",
             "Cooked meals",
             "Prepared dishes",
@@ -1436,7 +1463,7 @@ def build_store(data: dict) -> dict:
         help_text = {
             "weapons": "Gold row = tiers (T0–T6). Second row = weapon family. Catalog starts with tier sets.",
             "armor": "Unified tiers — each T# holds the full armor sets for that step.",
-            "food": "Gold row = tiers. Second row = raw / cooked / prepared / crops. Catalog starts with tiers.",
+            "food": "Gold row = tiers. Second row = feasts / raw / cooked / prepared / crops. Feasts are type-only (not under tiers).",
             "potions": "Gold row = tiers. Second row = meads / bases / wines. Catalog starts with tiers.",
             "materials": "Gold row = tiers. Second row = wood / metals / etc. Catalog starts with tiers.",
             "misc": "Tools, lights, mounts, fireworks, chests — streamer-useful leftovers.",
@@ -1450,6 +1477,9 @@ def build_store(data: dict) -> dict:
                     tab_items[it["prefab"]] = it
             by_tier: dict[str, list] = defaultdict(list)
             for it in tab_items.values():
+                # Feasts live only under the Feasts type section (not duplicated in tiers).
+                if tab == "food" and is_feast_item(it["prefab"]):
+                    continue
                 by_tier[progression_tier(it["prefab"])].append(it)
 
             store[tab].append(
