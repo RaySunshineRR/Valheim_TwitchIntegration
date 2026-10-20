@@ -132,6 +132,28 @@ ICON_OVERRIDES = {
     "FeastMistlands_Material": "Mushrooms_Galore_á_la_Mistlands.png",
     "FeastAshlands_Material": "Ashlands_Gourmet_Bowl.png",
     "FeastDeepNorth_Material": "Northern_Morning_Fare.png",
+    # Trophy prefab → wiki Creature_Trophy.png aliases
+    "TrophyGoblin": "Fuling_Trophy.png",
+    "TrophyGoblinBrute": "Fuling_Berserker_Trophy.png",
+    "TrophyGoblinShaman": "Fuling_Shaman_Trophy.png",
+    "TrophyGoblinKing": "Yagluth_Trophy.png",
+    "TrophyGoblinBruteBrosBrute": "Fuling_Berserker_Trophy.png",
+    "TrophyGoblinBruteBrosShaman": "Fuling_Shaman_Trophy.png",
+    "TrophyDragonQueen": "Moder_Trophy.png",
+    "TrophySeekerQueen": "The_Queen_Trophy.png",
+    "TrophyHatchling": "Drake_Trophy.png",
+    "TrophySGolem": "Stone_Golem_Trophy.png",
+    "TrophySeekerBrute": "Seeker_Soldier_Trophy.png",
+    "TrophyBonemawSerpent": "Bonemaw_Trophy.png",
+    "TrophyBjorn": "Bear_Trophy.png",
+    "TrophyBjornUndead": "Bear_Trophy.png",
+    "TrophyBlob_Frost": "Frost_Blob_Trophy.png",
+    "TrophyBlob_Lava": "Lava_Blob_Trophy.png",
+    "TrophyBlob_Morkhalla": "Blob_Trophy.png",
+    "TrophyCultist_Hildir": "Cultist_Trophy.png",
+    "TrophyDeerWhite": "Deer_Trophy.png",
+    "TrophySkeletonHildir": "Skeleton_Trophy.png",
+    "TrophySkeletonPoison": "Skeleton_Trophy.png",
 }
 
 
@@ -1156,7 +1178,7 @@ def misc_section(prefab: str) -> str:
     ) or prefab in {"Shovel", "GrapplingHook", "Hook"}:
         return "Tools"
     if "trophy" in p:
-        return "Trophies"
+        return "Trophy"
     if any(x in p for x in ("seed", "cone", "acorn")) or prefab.endswith("Seeds"):
         return "Utility & oddities"
     return "Utility & oddities"
@@ -1167,6 +1189,8 @@ def classify_item(it: dict) -> tuple[str, str]:
     prefab = it["prefab"]
     cat = it.get("category") or "Misc"
 
+    if prefab.startswith("Trophy"):
+        return "misc", "Trophy"
     if is_potion_item(prefab):
         return "potions", potion_section(prefab)
     if is_tool_item(prefab):
@@ -1212,8 +1236,6 @@ def classify_item(it: dict) -> tuple[str, str]:
         return "materials", "Valuables"
     if prefab.startswith(("THSword", "Dyrnwyn")):
         return "weapons", "Swords"
-    if prefab.startswith("Trophy"):
-        return "materials", "Boss & rare drops"
     return "misc", misc_section(prefab)
 
 
@@ -1289,16 +1311,12 @@ def build_store(data: dict) -> dict:
             "theme": "blue",
         },
         "quick": [
-            {
-                "type": "help",
-                "text": "Streamer favourites first. Full lists live in the other tabs. Materials default ×10 (e.g. #silver → 10, cost ×10) · override with #silver 50 · arrows default to 10 · stack-capped.",
-            },
             {"type": "section", "title": "Chat basics"},
             {"name": "Visit", "cmd": "#visit", "desc": "Spawn your named Greyling"},
             {"name": "Follower ally", "cmd": "#f", "desc": "#f / #follower [creature] [stars] — ally (default Greyling)"},
             {"name": "Yeet", "cmd": "#yeet", "desc": "Launch the streamer (optional N/S/E/W)", "cost": 10, "prefab": "Yeet"},
             {"name": "Spawn (legacy)", "cmd": "#spawn Greyling", "desc": "Explicit spawn form"},
-            {"name": "Give / item", "cmd": "#give Wood 50", "desc": "#give or #item · materials ×10 · seeds ×5 same 🪙 · amount override OK · capped to stack"},
+            {"name": "Give / item", "cmd": "#give Wood 50", "desc": "#give or #item · materials ×10 · seeds ×5 / arrows ×10 same 🪙 · amount override OK · capped to stack"},
         ],
         "mobs": [],
         "weapons": [],
@@ -1306,10 +1324,6 @@ def build_store(data: dict) -> dict:
         "food": [],
         "potions": [],
         "curses": [
-            {
-                "type": "help",
-                "text": "Bad = mischief · Good = buffs. Costs shown on each card. Streamer can disable any curse in Heim-Heim >CURSES< (icon toggle) — no coins spent. #yeet accepts N/S/E/W. #feast = HP+stam burst (not Food Prep).",
-            },
             {"type": "section", "title": "Bad"},
             {"name": "Yeet", "cmd": "#yeet", "prefab": "Yeet", "desc": "Launch player (optional N/S/E/W)", "cost": 10},
             {"name": "Mini", "cmd": "#mini", "prefab": "Mini", "desc": "Shrink the player for a while", "cost": 10},
@@ -1384,12 +1398,6 @@ def build_store(data: dict) -> dict:
             )
 
     # Mobs by biome (subtabs driven by section titles matching BIOME_ORDER)
-    store["mobs"].append(
-        {
-            "type": "help",
-            "text": "Pick a biome sub-tab. Bosses are separate. Bare #alias · optional ★ level (#boar 2). ★ costs: ★1 = base 🪙 · ★2 = ×1.75 · ★3 = ×2.5. Count is always 1 for now.",
-        }
-    )
     by_biome: dict[str, list] = defaultdict(list)
     for c in creatures:
         by_biome[c.get("category") or "Other"].append(c)
@@ -1454,13 +1462,13 @@ def build_store(data: dict) -> dict:
         ],
         "misc": [
             "Tools",
+            "Trophy",
             "Light sources",
             "Mounts & eggs",
             "Accessories",
             "Fun & fireworks",
             "Chests & treasure",
             "Crafting molds",
-            "Trophies",
             "Utility & oddities",
         ],
     }
@@ -1469,15 +1477,7 @@ def build_store(data: dict) -> dict:
     tier_first_tabs = ("weapons", "food", "potions", "materials")
 
     for tab, order in section_order.items():
-        help_text = {
-            "weapons": "Gold row = tiers (T0–T6). Second row = weapon family. Catalog starts with tier sets.",
-            "armor": "Unified tiers — each T# holds the full armor sets for that step.",
-            "food": "Gold row = tiers. Second row = feasts / raw / cooked / prepared / crops. Feasts are type-only (not under tiers).",
-            "potions": "Gold row = tiers. Second row = meads / bases / wines. Catalog starts with tiers.",
-            "materials": "Gold row = tiers. Second row = wood / metals / etc. Catalog starts with tiers.",
-            "misc": "Tools, lights, mounts, fireworks, chests — streamer-useful leftovers.",
-        }[tab]
-        store[tab].append({"type": "help", "text": help_text})
+        # No help blurbs under menu / section chips — keep store dense.
 
         if tab in tier_first_tabs:
             tab_items: dict[str, dict] = {}
@@ -1491,12 +1491,6 @@ def build_store(data: dict) -> dict:
                     continue
                 by_tier[progression_tier(it["prefab"])].append(it)
 
-            store[tab].append(
-                {
-                    "type": "help",
-                    "text": "By tier — full sets for that progression step.",
-                }
-            )
             for tier in TIER_ORDER:
                 lst = by_tier.get(tier) or []
                 if not lst:
@@ -1506,13 +1500,6 @@ def build_store(data: dict) -> dict:
                     store[tab].append(
                         entry(it["prefab"], it.get("alias"), it.get("command"))
                     )
-
-            store[tab].append(
-                {
-                    "type": "help",
-                    "text": "By type — same items grouped by family / category.",
-                }
-            )
 
         seen = set()
         for section in order:
@@ -1546,6 +1533,16 @@ def candidate_icon_names(prefab: str) -> list[str]:
     names.append(prefab + ".png")
     names.append(human.replace(" ", "_") + ".png")
     names.append("_".join(w.capitalize() for w in words) + ".png")
+    # Trophies: weirdgloop uses Creature_Trophy.png (capital T)
+    if prefab.startswith("Trophy") and len(prefab) > 6:
+        rest = prefab[6:]
+        rest_human = human_name(rest).replace(" ", "_")
+        names.append(f"{rest_human}_Trophy.png")
+        names.append(f"{rest}_Trophy.png")
+        names.append(f"{rest_human}_trophy.png")
+        names.append(f"{rest}_trophy.png")
+        names.append(f"Trophy_{rest}.png")
+        names.append(f"Trophy_{rest_human}.png")
     # Reordered weapon style already in human
     if words and words[0] in WEAPON_PREFIX:
         names.append("_".join(w.capitalize() for w in (words[1:] + words[:1])) + ".png")

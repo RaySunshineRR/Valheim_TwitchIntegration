@@ -10,10 +10,6 @@ window.VALHEIM_TWITCH_STORE = {
   },
   "quick": [
     {
-      "type": "help",
-      "text": "Streamer favourites first. Full lists live in the other tabs. Materials default ×10 (e.g. #silver → 10, cost ×10) · override with #silver 50 · arrows default to 10 · stack-capped."
-    },
-    {
       "type": "section",
       "title": "Chat basics"
     },
@@ -42,7 +38,7 @@ window.VALHEIM_TWITCH_STORE = {
     {
       "name": "Give / item",
       "cmd": "#give Wood 50",
-      "desc": "#give or #item · materials ×10 · seeds ×5 same 🪙 · amount override OK · capped to stack"
+      "desc": "#give or #item · materials ×10 · seeds ×5 / arrows ×10 same 🪙 · amount override OK · capped to stack"
     },
     {
       "type": "section",
@@ -179,10 +175,11 @@ window.VALHEIM_TWITCH_STORE = {
       "desc": "Stamina up"
     },
     {
-      "name": "Fire Arrow",
+      "name": "Fire Arrow x10",
       "cmd": "#arrowfire",
       "prefab": "ArrowFire",
       "cost": 4,
+      "amount": 10,
       "desc": "Ranged spice"
     },
     {
@@ -222,10 +219,6 @@ window.VALHEIM_TWITCH_STORE = {
     }
   ],
   "mobs": [
-    {
-      "type": "help",
-      "text": "Pick a biome sub-tab. Bosses are separate. Bare #alias · optional ★ level (#boar 2). ★ costs: ★1 = base 🪙 · ★2 = ×1.75 · ★3 = ×2.5. Count is always 1 for now."
-    },
     {
       "type": "section",
       "title": "Meadows"
@@ -977,28 +970,22 @@ window.VALHEIM_TWITCH_STORE = {
   ],
   "weapons": [
     {
-      "type": "help",
-      "text": "Gold row = tiers (T0–T6). Second row = weapon family. Catalog starts with tier sets."
-    },
-    {
-      "type": "help",
-      "text": "By tier — full sets for that progression step."
-    },
-    {
       "type": "section",
       "title": "T0 · Meadows"
     },
     {
-      "name": "Flint Arrow",
+      "name": "Flint Arrow x10",
       "cmd": "#arrowflint",
       "prefab": "ArrowFlint",
-      "cost": 1
+      "cost": 1,
+      "amount": 10
     },
     {
-      "name": "Wood Arrow",
+      "name": "Wood Arrow x10",
       "cmd": "#arrowwood",
       "prefab": "ArrowWood",
-      "cost": 1
+      "cost": 1,
+      "amount": 10
     },
     {
       "name": "Wood Atgeir",
@@ -1152,32 +1139,36 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 1
     },
     {
-      "name": "Turret Bolt Wood",
+      "name": "Turret Bolt Wood x10",
       "cmd": "#turretboltwood",
       "prefab": "TurretBoltWood",
-      "cost": 1
+      "cost": 1,
+      "amount": 10
     },
     {
       "type": "section",
       "title": "T1 · Black Forest"
     },
     {
-      "name": "Blood Gold Arrow",
+      "name": "Blood Gold Arrow x10",
       "cmd": "#arrowbloodgold",
       "prefab": "ArrowBloodGold",
-      "cost": 4
+      "cost": 4,
+      "amount": 10
     },
     {
-      "name": "Bronze Arrow",
+      "name": "Bronze Arrow x10",
       "cmd": "#arrowbronze",
       "prefab": "ArrowBronze",
-      "cost": 4
+      "cost": 4,
+      "amount": 10
     },
     {
-      "name": "Fire Arrow",
+      "name": "Fire Arrow x10",
       "cmd": "#arrowfire",
       "prefab": "ArrowFire",
-      "cost": 4
+      "cost": 4,
+      "amount": 10
     },
     {
       "name": "Bronze Atgeir",
@@ -1306,16 +1297,18 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 13
     },
     {
-      "name": "Bolt Blood Gold",
+      "name": "Bolt Blood Gold x10",
       "cmd": "#boltbloodgold",
       "prefab": "BoltBloodGold",
-      "cost": 4
+      "cost": 4,
+      "amount": 10
     },
     {
-      "name": "Bolt Bone",
+      "name": "Bolt Bone x10",
       "cmd": "#boltbone",
       "prefab": "BoltBone",
-      "cost": 4
+      "cost": 4,
+      "amount": 10
     },
     {
       "name": "Bomb Bile",
@@ -1918,22 +1911,25 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 11
     },
     {
-      "name": "Turret Bolt",
+      "name": "Turret Bolt x10",
       "cmd": "#turretbolt",
       "prefab": "TurretBolt",
-      "cost": 4
+      "cost": 4,
+      "amount": 10
     },
     {
-      "name": "Turret Bolt Bloodgold",
+      "name": "Turret Bolt Bloodgold x10",
       "cmd": "#turretboltbloodgold",
       "prefab": "TurretBoltBloodgold",
-      "cost": 4
+      "cost": 4,
+      "amount": 10
     },
     {
-      "name": "Turret Bolt Bone",
+      "name": "Turret Bolt Bone x10",
       "cmd": "#turretboltbone",
       "prefab": "TurretBoltBone",
-      "cost": 4
+      "cost": 4,
+      "amount": 10
     },
     {
       "name": "Upgrader0Weapon",
@@ -1988,16 +1984,18 @@ window.VALHEIM_TWITCH_STORE = {
       "title": "T2 · Swamp"
     },
     {
-      "name": "Iron Arrow",
+      "name": "Iron Arrow x10",
       "cmd": "#arrowiron",
       "prefab": "ArrowIron",
-      "cost": 6
+      "cost": 6,
+      "amount": 10
     },
     {
-      "name": "Poison Arrow",
+      "name": "Poison Arrow x10",
       "cmd": "#arrowpoison",
       "prefab": "ArrowPoison",
-      "cost": 6
+      "cost": 6,
+      "amount": 10
     },
     {
       "name": "Iron Atgeir",
@@ -2012,10 +2010,11 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 20
     },
     {
-      "name": "Bolt Iron",
+      "name": "Bolt Iron x10",
       "cmd": "#boltiron",
       "prefab": "BoltIron",
-      "cost": 6
+      "cost": 6,
+      "amount": 10
     },
     {
       "name": "Bomb Blob Poison",
@@ -2106,22 +2105,25 @@ window.VALHEIM_TWITCH_STORE = {
       "title": "T3 · Mountain"
     },
     {
-      "name": "Frost Arrow",
+      "name": "Frost Arrow x10",
       "cmd": "#arrowfrost",
       "prefab": "ArrowFrost",
-      "cost": 8
+      "cost": 8,
+      "amount": 10
     },
     {
-      "name": "Obsidian Arrow",
+      "name": "Obsidian Arrow x10",
       "cmd": "#arrowobsidian",
       "prefab": "ArrowObsidian",
-      "cost": 8
+      "cost": 8,
+      "amount": 10
     },
     {
-      "name": "Silver Arrow",
+      "name": "Silver Arrow x10",
       "cmd": "#arrowsilver",
       "prefab": "ArrowSilver",
-      "cost": 8
+      "cost": 8,
+      "amount": 10
     },
     {
       "name": "Gold Frost Fire Atgeir",
@@ -2254,10 +2256,11 @@ window.VALHEIM_TWITCH_STORE = {
       "title": "T4 · Plains"
     },
     {
-      "name": "Needle Arrow",
+      "name": "Needle Arrow x10",
       "cmd": "#arrowneedle",
       "prefab": "ArrowNeedle",
-      "cost": 11
+      "cost": 11,
+      "amount": 10
     },
     {
       "name": "Blackmetal Atgeir",
@@ -2278,10 +2281,11 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 34
     },
     {
-      "name": "Bolt Blackmetal",
+      "name": "Bolt Blackmetal x10",
       "cmd": "#boltblackmetal",
       "prefab": "BoltBlackmetal",
-      "cost": 11
+      "cost": 11,
+      "amount": 10
     },
     {
       "name": "Bomb Blob Tar",
@@ -2324,10 +2328,11 @@ window.VALHEIM_TWITCH_STORE = {
       "title": "T5 · Mistlands"
     },
     {
-      "name": "Carapace Arrow",
+      "name": "Carapace Arrow x10",
       "cmd": "#arrowcarapace",
       "prefab": "ArrowCarapace",
-      "cost": 16
+      "cost": 16,
+      "amount": 10
     },
     {
       "name": "Jotun Bane Axe",
@@ -2336,10 +2341,11 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 49
     },
     {
-      "name": "Bolt Carapace",
+      "name": "Bolt Carapace x10",
       "cmd": "#boltcarapace",
       "prefab": "BoltCarapace",
-      "cost": 16
+      "cost": 16,
+      "amount": 10
     },
     {
       "name": "Carapace Shield",
@@ -2364,16 +2370,18 @@ window.VALHEIM_TWITCH_STORE = {
       "title": "T6 · Ashlands"
     },
     {
-      "name": "Charred Arrow",
+      "name": "Charred Arrow x10",
       "cmd": "#arrowcharred",
       "prefab": "ArrowCharred",
-      "cost": 22
+      "cost": 22,
+      "amount": 10
     },
     {
-      "name": "Bolt Charred",
+      "name": "Bolt Charred x10",
       "cmd": "#boltcharred",
       "prefab": "BoltCharred",
-      "cost": 22
+      "cost": 22,
+      "amount": 10
     },
     {
       "name": "Ashlands Bow",
@@ -2442,14 +2450,11 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 54
     },
     {
-      "name": "Turret Bolt Flametal",
+      "name": "Turret Bolt Flametal x10",
       "cmd": "#turretboltflametal",
       "prefab": "TurretBoltFlametal",
-      "cost": 22
-    },
-    {
-      "type": "help",
-      "text": "By type — same items grouped by family / category."
+      "cost": 22,
+      "amount": 10
     },
     {
       "type": "section",
@@ -3315,148 +3320,172 @@ window.VALHEIM_TWITCH_STORE = {
       "title": "Arrows & bolts"
     },
     {
-      "name": "Blood Gold Arrow",
+      "name": "Blood Gold Arrow x10",
       "cmd": "#arrowbloodgold",
       "prefab": "ArrowBloodGold",
-      "cost": 4
+      "cost": 4,
+      "amount": 10
     },
     {
-      "name": "Bronze Arrow",
+      "name": "Bronze Arrow x10",
       "cmd": "#arrowbronze",
       "prefab": "ArrowBronze",
-      "cost": 4
+      "cost": 4,
+      "amount": 10
     },
     {
-      "name": "Carapace Arrow",
+      "name": "Carapace Arrow x10",
       "cmd": "#arrowcarapace",
       "prefab": "ArrowCarapace",
-      "cost": 16
+      "cost": 16,
+      "amount": 10
     },
     {
-      "name": "Charred Arrow",
+      "name": "Charred Arrow x10",
       "cmd": "#arrowcharred",
       "prefab": "ArrowCharred",
-      "cost": 22
+      "cost": 22,
+      "amount": 10
     },
     {
-      "name": "Fire Arrow",
+      "name": "Fire Arrow x10",
       "cmd": "#arrowfire",
       "prefab": "ArrowFire",
-      "cost": 4
+      "cost": 4,
+      "amount": 10
     },
     {
-      "name": "Flint Arrow",
+      "name": "Flint Arrow x10",
       "cmd": "#arrowflint",
       "prefab": "ArrowFlint",
-      "cost": 1
+      "cost": 1,
+      "amount": 10
     },
     {
-      "name": "Frost Arrow",
+      "name": "Frost Arrow x10",
       "cmd": "#arrowfrost",
       "prefab": "ArrowFrost",
-      "cost": 8
+      "cost": 8,
+      "amount": 10
     },
     {
-      "name": "Iron Arrow",
+      "name": "Iron Arrow x10",
       "cmd": "#arrowiron",
       "prefab": "ArrowIron",
-      "cost": 6
+      "cost": 6,
+      "amount": 10
     },
     {
-      "name": "Needle Arrow",
+      "name": "Needle Arrow x10",
       "cmd": "#arrowneedle",
       "prefab": "ArrowNeedle",
-      "cost": 11
+      "cost": 11,
+      "amount": 10
     },
     {
-      "name": "Obsidian Arrow",
+      "name": "Obsidian Arrow x10",
       "cmd": "#arrowobsidian",
       "prefab": "ArrowObsidian",
-      "cost": 8
+      "cost": 8,
+      "amount": 10
     },
     {
-      "name": "Poison Arrow",
+      "name": "Poison Arrow x10",
       "cmd": "#arrowpoison",
       "prefab": "ArrowPoison",
-      "cost": 6
+      "cost": 6,
+      "amount": 10
     },
     {
-      "name": "Silver Arrow",
+      "name": "Silver Arrow x10",
       "cmd": "#arrowsilver",
       "prefab": "ArrowSilver",
-      "cost": 8
+      "cost": 8,
+      "amount": 10
     },
     {
-      "name": "Wood Arrow",
+      "name": "Wood Arrow x10",
       "cmd": "#arrowwood",
       "prefab": "ArrowWood",
-      "cost": 1
+      "cost": 1,
+      "amount": 10
     },
     {
-      "name": "Bolt Blackmetal",
+      "name": "Bolt Blackmetal x10",
       "cmd": "#boltblackmetal",
       "prefab": "BoltBlackmetal",
-      "cost": 11
+      "cost": 11,
+      "amount": 10
     },
     {
-      "name": "Bolt Blood Gold",
+      "name": "Bolt Blood Gold x10",
       "cmd": "#boltbloodgold",
       "prefab": "BoltBloodGold",
-      "cost": 4
+      "cost": 4,
+      "amount": 10
     },
     {
-      "name": "Bolt Bone",
+      "name": "Bolt Bone x10",
       "cmd": "#boltbone",
       "prefab": "BoltBone",
-      "cost": 4
+      "cost": 4,
+      "amount": 10
     },
     {
-      "name": "Bolt Carapace",
+      "name": "Bolt Carapace x10",
       "cmd": "#boltcarapace",
       "prefab": "BoltCarapace",
-      "cost": 16
+      "cost": 16,
+      "amount": 10
     },
     {
-      "name": "Bolt Charred",
+      "name": "Bolt Charred x10",
       "cmd": "#boltcharred",
       "prefab": "BoltCharred",
-      "cost": 22
+      "cost": 22,
+      "amount": 10
     },
     {
-      "name": "Bolt Iron",
+      "name": "Bolt Iron x10",
       "cmd": "#boltiron",
       "prefab": "BoltIron",
-      "cost": 6
+      "cost": 6,
+      "amount": 10
     },
     {
-      "name": "Turret Bolt",
+      "name": "Turret Bolt x10",
       "cmd": "#turretbolt",
       "prefab": "TurretBolt",
-      "cost": 4
+      "cost": 4,
+      "amount": 10
     },
     {
-      "name": "Turret Bolt Bloodgold",
+      "name": "Turret Bolt Bloodgold x10",
       "cmd": "#turretboltbloodgold",
       "prefab": "TurretBoltBloodgold",
-      "cost": 4
+      "cost": 4,
+      "amount": 10
     },
     {
-      "name": "Turret Bolt Bone",
+      "name": "Turret Bolt Bone x10",
       "cmd": "#turretboltbone",
       "prefab": "TurretBoltBone",
-      "cost": 4
+      "cost": 4,
+      "amount": 10
     },
     {
-      "name": "Turret Bolt Flametal",
+      "name": "Turret Bolt Flametal x10",
       "cmd": "#turretboltflametal",
       "prefab": "TurretBoltFlametal",
-      "cost": 22
+      "cost": 22,
+      "amount": 10
     },
     {
-      "name": "Turret Bolt Wood",
+      "name": "Turret Bolt Wood x10",
       "cmd": "#turretboltwood",
       "prefab": "TurretBoltWood",
-      "cost": 1
+      "cost": 1,
+      "amount": 10
     },
     {
       "type": "section",
@@ -3936,10 +3965,6 @@ window.VALHEIM_TWITCH_STORE = {
     }
   ],
   "armor": [
-    {
-      "type": "help",
-      "text": "Unified tiers — each T# holds the full armor sets for that step."
-    },
     {
       "type": "section",
       "title": "T0 · Meadows"
@@ -4826,14 +4851,6 @@ window.VALHEIM_TWITCH_STORE = {
     }
   ],
   "food": [
-    {
-      "type": "help",
-      "text": "Gold row = tiers. Second row = feasts / raw / cooked / prepared / crops. Feasts are type-only (not under tiers)."
-    },
-    {
-      "type": "help",
-      "text": "By tier — full sets for that progression step."
-    },
     {
       "type": "section",
       "title": "T0 · Meadows"
@@ -5764,10 +5781,6 @@ window.VALHEIM_TWITCH_STORE = {
       "cmd": "#volturemeat",
       "prefab": "VoltureMeat",
       "cost": 54
-    },
-    {
-      "type": "help",
-      "text": "By type — same items grouped by family / category."
     },
     {
       "type": "section",
@@ -6761,14 +6774,6 @@ window.VALHEIM_TWITCH_STORE = {
   ],
   "potions": [
     {
-      "type": "help",
-      "text": "Gold row = tiers. Second row = meads / bases / wines. Catalog starts with tiers."
-    },
-    {
-      "type": "help",
-      "text": "By tier — full sets for that progression step."
-    },
-    {
       "type": "section",
       "title": "T0 · Meadows"
     },
@@ -7073,10 +7078,6 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 81
     },
     {
-      "type": "help",
-      "text": "By type — same items grouped by family / category."
-    },
-    {
       "type": "section",
       "title": "Meads"
     },
@@ -7370,10 +7371,6 @@ window.VALHEIM_TWITCH_STORE = {
     }
   ],
   "curses": [
-    {
-      "type": "help",
-      "text": "Bad = mischief · Good = buffs. Costs shown on each card. Streamer can disable any curse in Heim-Heim >CURSES< (icon toggle) — no coins spent. #yeet accepts N/S/E/W. #feast = HP+stam burst (not Food Prep)."
-    },
     {
       "type": "section",
       "title": "Bad"
@@ -7676,14 +7673,6 @@ window.VALHEIM_TWITCH_STORE = {
   ],
   "materials": [
     {
-      "type": "help",
-      "text": "Gold row = tiers. Second row = wood / metals / etc. Catalog starts with tiers."
-    },
-    {
-      "type": "help",
-      "text": "By tier — full sets for that progression step."
-    },
-    {
       "type": "section",
       "title": "T0 · Meadows"
     },
@@ -7868,156 +7857,6 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 3
     },
     {
-      "name": "Trophy Barka",
-      "cmd": "#trophybarka",
-      "prefab": "TrophyBarka",
-      "cost": 3
-    },
-    {
-      "name": "Trophy Bjorn",
-      "cmd": "#trophybjorn",
-      "prefab": "TrophyBjorn",
-      "cost": 3
-    },
-    {
-      "name": "Trophy Bjorn Undead",
-      "cmd": "#trophybjornundead",
-      "prefab": "TrophyBjornUndead",
-      "cost": 3
-    },
-    {
-      "name": "Trophy Blob",
-      "cmd": "#trophyblob",
-      "prefab": "TrophyBlob",
-      "cost": 3
-    },
-    {
-      "name": "Trophy Blob Lava",
-      "cmd": "#trophybloblava",
-      "prefab": "TrophyBlob_Lava",
-      "cost": 3
-    },
-    {
-      "name": "Trophy Blob Morkhalla",
-      "cmd": "#trophyblobmorkhalla",
-      "prefab": "TrophyBlob_Morkhalla",
-      "cost": 3
-    },
-    {
-      "name": "Trophy Boar",
-      "cmd": "#trophyboar",
-      "prefab": "TrophyBoar",
-      "cost": 3
-    },
-    {
-      "name": "Trophy Bonemass",
-      "cmd": "#trophybonemass",
-      "prefab": "TrophyBonemass",
-      "cost": 8
-    },
-    {
-      "name": "Trophy Dragon Queen",
-      "cmd": "#trophydragonqueen",
-      "prefab": "TrophyDragonQueen",
-      "cost": 9
-    },
-    {
-      "name": "Trophy Dvergr",
-      "cmd": "#trophydvergr",
-      "prefab": "TrophyDvergr",
-      "cost": 3
-    },
-    {
-      "name": "Trophy Eikthyr",
-      "cmd": "#trophyeikthyr",
-      "prefab": "TrophyEikthyr",
-      "cost": 5
-    },
-    {
-      "name": "Trophy Elaking",
-      "cmd": "#trophyelaking",
-      "prefab": "TrophyElaking",
-      "cost": 3
-    },
-    {
-      "name": "Trophy Fader",
-      "cmd": "#trophyfader",
-      "prefab": "TrophyFader",
-      "cost": 15
-    },
-    {
-      "name": "Trophy Fallen Valkyrie",
-      "cmd": "#trophyfallenvalkyrie",
-      "prefab": "TrophyFallenValkyrie",
-      "cost": 3
-    },
-    {
-      "name": "Trophy Ghost",
-      "cmd": "#trophyghost",
-      "prefab": "TrophyGhost",
-      "cost": 3
-    },
-    {
-      "name": "Trophy Growth",
-      "cmd": "#trophygrowth",
-      "prefab": "TrophyGrowth",
-      "cost": 3
-    },
-    {
-      "name": "Trophy Hare",
-      "cmd": "#trophyhare",
-      "prefab": "TrophyHare",
-      "cost": 3
-    },
-    {
-      "name": "Trophy Mole",
-      "cmd": "#trophymole",
-      "prefab": "TrophyMole",
-      "cost": 3
-    },
-    {
-      "name": "Trophy Moose",
-      "cmd": "#trophymoose",
-      "prefab": "TrophyMoose",
-      "cost": 3
-    },
-    {
-      "name": "Trophy Neck",
-      "cmd": "#trophyneck",
-      "prefab": "TrophyNeck",
-      "cost": 3
-    },
-    {
-      "name": "Trophy Seal",
-      "cmd": "#trophyseal",
-      "prefab": "TrophySeal",
-      "cost": 3
-    },
-    {
-      "name": "Trophy S Golem",
-      "cmd": "#trophysgolem",
-      "prefab": "TrophySGolem",
-      "cost": 3
-    },
-    {
-      "name": "Trophy The Elder",
-      "cmd": "#trophytheelder",
-      "prefab": "TrophyTheElder",
-      "cost": 7
-    },
-    {
-      "name": "Trophy Wraith",
-      "cmd": "#trophywraith",
-      "prefab": "TrophyWraith",
-      "cost": 3
-    },
-    {
-      "name": "Trophy Writhan",
-      "cmd": "#trophywrithan",
-      "prefab": "TrophyWrithan",
-      "cost": 3
-    },
-    {
       "name": "Wood x10",
       "cmd": "#wood",
       "prefab": "Wood",
@@ -8197,54 +8036,6 @@ window.VALHEIM_TWITCH_STORE = {
       "amount": 10
     },
     {
-      "name": "Trophy Deer",
-      "cmd": "#trophydeer",
-      "prefab": "TrophyDeer",
-      "cost": 26
-    },
-    {
-      "name": "Trophy Deer White",
-      "cmd": "#trophydeerwhite",
-      "prefab": "TrophyDeerWhite",
-      "cost": 26
-    },
-    {
-      "name": "Trophy Forest Troll",
-      "cmd": "#trophyforesttroll",
-      "prefab": "TrophyForestTroll",
-      "cost": 26
-    },
-    {
-      "name": "Trophy Greydwarf",
-      "cmd": "#trophygreydwarf",
-      "prefab": "TrophyGreydwarf",
-      "cost": 26
-    },
-    {
-      "name": "Trophy Greydwarf Brute",
-      "cmd": "#trophygreydwarfbrute",
-      "prefab": "TrophyGreydwarfBrute",
-      "cost": 26
-    },
-    {
-      "name": "Trophy Greydwarf Shaman",
-      "cmd": "#trophygreydwarfshaman",
-      "prefab": "TrophyGreydwarfShaman",
-      "cost": 26
-    },
-    {
-      "name": "Trophy Skeleton",
-      "cmd": "#trophyskeleton",
-      "prefab": "TrophySkeleton",
-      "cost": 26
-    },
-    {
-      "name": "Trophy Skeleton Hildir",
-      "cmd": "#trophyskeletonhildir",
-      "prefab": "TrophySkeletonHildir",
-      "cost": 26
-    },
-    {
       "type": "section",
       "title": "T2 · Swamp"
     },
@@ -8382,60 +8173,6 @@ window.VALHEIM_TWITCH_STORE = {
       "amount": 10
     },
     {
-      "name": "Trophy Abomination",
-      "cmd": "#trophyabomination",
-      "prefab": "TrophyAbomination",
-      "cost": 38
-    },
-    {
-      "name": "Trophy Bonemaw Serpent",
-      "cmd": "#trophybonemawserpent",
-      "prefab": "TrophyBonemawSerpent",
-      "cost": 38
-    },
-    {
-      "name": "Trophy Draugr",
-      "cmd": "#trophydraugr",
-      "prefab": "TrophyDraugr",
-      "cost": 38
-    },
-    {
-      "name": "Trophy Draugr Elite",
-      "cmd": "#trophydraugrelite",
-      "prefab": "TrophyDraugrElite",
-      "cost": 38
-    },
-    {
-      "name": "Trophy Draugr Fem",
-      "cmd": "#trophydraugrfem",
-      "prefab": "TrophyDraugrFem",
-      "cost": 38
-    },
-    {
-      "name": "Trophy Leech",
-      "cmd": "#trophyleech",
-      "prefab": "TrophyLeech",
-      "cost": 38
-    },
-    {
-      "name": "Trophy Serpent",
-      "cmd": "#trophyserpent",
-      "prefab": "TrophySerpent",
-      "cost": 38
-    },
-    {
-      "name": "Trophy Skeleton Poison",
-      "cmd": "#trophyskeletonpoison",
-      "prefab": "TrophySkeletonPoison",
-      "cost": 38
-    },
-    {
-      "name": "Trophy Surtling",
-      "cmd": "#trophysurtling",
-      "prefab": "TrophySurtling",
-      "cost": 38
-    },
-    {
       "name": "Withered Bone",
       "cmd": "#witheredbone",
       "prefab": "WitheredBone",
@@ -8510,54 +8247,6 @@ window.VALHEIM_TWITCH_STORE = {
       "amount": 10
     },
     {
-      "name": "Trophy Blob Frost",
-      "cmd": "#trophyblobfrost",
-      "prefab": "TrophyBlob_Frost",
-      "cost": 49
-    },
-    {
-      "name": "Trophy Cultist",
-      "cmd": "#trophycultist",
-      "prefab": "TrophyCultist",
-      "cost": 49
-    },
-    {
-      "name": "Trophy Cultist Hildir",
-      "cmd": "#trophycultisthildir",
-      "prefab": "TrophyCultist_Hildir",
-      "cost": 49
-    },
-    {
-      "name": "Trophy Fenring",
-      "cmd": "#trophyfenring",
-      "prefab": "TrophyFenring",
-      "cost": 49
-    },
-    {
-      "name": "Trophy Frost Troll",
-      "cmd": "#trophyfrosttroll",
-      "prefab": "TrophyFrostTroll",
-      "cost": 49
-    },
-    {
-      "name": "Trophy Hatchling",
-      "cmd": "#trophyhatchling",
-      "prefab": "TrophyHatchling",
-      "cost": 49
-    },
-    {
-      "name": "Trophy Ulv",
-      "cmd": "#trophyulv",
-      "prefab": "TrophyUlv",
-      "cost": 49
-    },
-    {
-      "name": "Trophy Wolf",
-      "cmd": "#trophywolf",
-      "prefab": "TrophyWolf",
-      "cost": 49
-    },
-    {
       "name": "Wolf Claw",
       "cmd": "#wolfclaw",
       "prefab": "WolfClaw",
@@ -8621,54 +8310,6 @@ window.VALHEIM_TWITCH_STORE = {
       "amount": 10
     },
     {
-      "name": "Trophy Deathsquito",
-      "cmd": "#trophydeathsquito",
-      "prefab": "TrophyDeathsquito",
-      "cost": 65
-    },
-    {
-      "name": "Trophy Goblin",
-      "cmd": "#trophygoblin",
-      "prefab": "TrophyGoblin",
-      "cost": 65
-    },
-    {
-      "name": "Trophy Goblin Brute",
-      "cmd": "#trophygoblinbrute",
-      "prefab": "TrophyGoblinBrute",
-      "cost": 65
-    },
-    {
-      "name": "Trophy Goblin Brute Bros Brute",
-      "cmd": "#trophygoblinbrutebrosbrute",
-      "prefab": "TrophyGoblinBruteBrosBrute",
-      "cost": 65
-    },
-    {
-      "name": "Trophy Goblin Brute Bros Shaman",
-      "cmd": "#trophygoblinbrutebrosshaman",
-      "prefab": "TrophyGoblinBruteBrosShaman",
-      "cost": 65
-    },
-    {
-      "name": "Trophy Goblin King",
-      "cmd": "#trophygoblinking",
-      "prefab": "TrophyGoblinKing",
-      "cost": 216
-    },
-    {
-      "name": "Trophy Goblin Shaman",
-      "cmd": "#trophygoblinshaman",
-      "prefab": "TrophyGoblinShaman",
-      "cost": 65
-    },
-    {
-      "name": "Trophy Lox",
-      "cmd": "#trophylox",
-      "prefab": "TrophyLox",
-      "cost": 65
-    },
-    {
       "type": "section",
       "title": "T5 · Mistlands"
     },
@@ -8711,48 +8352,6 @@ window.VALHEIM_TWITCH_STORE = {
       "cmd": "#softtissue",
       "prefab": "Softtissue",
       "cost": 39
-    },
-    {
-      "name": "Trophy Gjall",
-      "cmd": "#trophygjall",
-      "prefab": "TrophyGjall",
-      "cost": 93
-    },
-    {
-      "name": "Trophy Jotun Warrior",
-      "cmd": "#trophyjotunwarrior",
-      "prefab": "TrophyJotunWarrior",
-      "cost": 93
-    },
-    {
-      "name": "Trophy Jotun Witch",
-      "cmd": "#trophyjotunwitch",
-      "prefab": "TrophyJotunWitch",
-      "cost": 93
-    },
-    {
-      "name": "Trophy Seeker",
-      "cmd": "#trophyseeker",
-      "prefab": "TrophySeeker",
-      "cost": 93
-    },
-    {
-      "name": "Trophy Seeker Brute",
-      "cmd": "#trophyseekerbrute",
-      "prefab": "TrophySeekerBrute",
-      "cost": 93
-    },
-    {
-      "name": "Trophy Seeker Queen",
-      "cmd": "#trophyseekerqueen",
-      "prefab": "TrophySeekerQueen",
-      "cost": 373
-    },
-    {
-      "name": "Trophy Tick",
-      "cmd": "#trophytick",
-      "prefab": "TrophyTick",
-      "cost": 93
     },
     {
       "type": "section",
@@ -8810,46 +8409,6 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "SulfurStone",
       "cost": 540,
       "amount": 10
-    },
-    {
-      "name": "Trophy Asksvin",
-      "cmd": "#trophyasksvin",
-      "prefab": "TrophyAsksvin",
-      "cost": 130
-    },
-    {
-      "name": "Trophy Charred Archer",
-      "cmd": "#trophycharredarcher",
-      "prefab": "TrophyCharredArcher",
-      "cost": 130
-    },
-    {
-      "name": "Trophy Charred Mage",
-      "cmd": "#trophycharredmage",
-      "prefab": "TrophyCharredMage",
-      "cost": 130
-    },
-    {
-      "name": "Trophy Charred Melee",
-      "cmd": "#trophycharredmelee",
-      "prefab": "TrophyCharredMelee",
-      "cost": 130
-    },
-    {
-      "name": "Trophy Morgen",
-      "cmd": "#trophymorgen",
-      "prefab": "TrophyMorgen",
-      "cost": 130
-    },
-    {
-      "name": "Trophy Volture",
-      "cmd": "#trophyvolture",
-      "prefab": "TrophyVolture",
-      "cost": 130
-    },
-    {
-      "type": "help",
-      "text": "By type — same items grouped by family / category."
     },
     {
       "type": "section",
@@ -9320,6 +8879,370 @@ window.VALHEIM_TWITCH_STORE = {
       "amount": 10
     },
     {
+      "type": "section",
+      "title": "Valuables"
+    },
+    {
+      "name": "Amber",
+      "cmd": "#amber",
+      "prefab": "Amber",
+      "cost": 16
+    },
+    {
+      "name": "Amber Pearl",
+      "cmd": "#amberpearl",
+      "prefab": "AmberPearl",
+      "cost": 16
+    },
+    {
+      "name": "Ancient Coin",
+      "cmd": "#ancientcoin",
+      "prefab": "AncientCoin",
+      "cost": 6
+    },
+    {
+      "name": "Ancient Gemstone Black",
+      "cmd": "#ancientgemstoneblack",
+      "prefab": "AncientGemstoneBlack",
+      "cost": 1
+    },
+    {
+      "name": "Ancient Gemstone Green",
+      "cmd": "#ancientgemstonegreen",
+      "prefab": "AncientGemstoneGreen",
+      "cost": 1
+    },
+    {
+      "name": "Ancient Gemstone Orange",
+      "cmd": "#ancientgemstoneorange",
+      "prefab": "AncientGemstoneOrange",
+      "cost": 1
+    },
+    {
+      "name": "Ancient Gemstone Purple",
+      "cmd": "#ancientgemstonepurple",
+      "prefab": "AncientGemstonePurple",
+      "cost": 1
+    },
+    {
+      "name": "Coins",
+      "cmd": "#coins",
+      "prefab": "Coins",
+      "cost": 6
+    },
+    {
+      "name": "Gemstone Blue",
+      "cmd": "#gemstoneblue",
+      "prefab": "GemstoneBlue",
+      "cost": 1
+    },
+    {
+      "name": "Gemstone Green",
+      "cmd": "#gemstonegreen",
+      "prefab": "GemstoneGreen",
+      "cost": 1
+    },
+    {
+      "name": "Gemstone Red",
+      "cmd": "#gemstonered",
+      "prefab": "GemstoneRed",
+      "cost": 1
+    },
+    {
+      "name": "Gold",
+      "cmd": "#gold",
+      "prefab": "Gold",
+      "cost": 16
+    },
+    {
+      "name": "Ruby",
+      "cmd": "#ruby",
+      "prefab": "Ruby",
+      "cost": 16
+    },
+    {
+      "name": "Silver Necklace",
+      "cmd": "#silvernecklace",
+      "prefab": "SilverNecklace",
+      "cost": 21
+    },
+    {
+      "type": "section",
+      "title": "Crafting parts"
+    },
+    {
+      "name": "Ancient Seed",
+      "cmd": "#ancientseed",
+      "prefab": "AncientSeed",
+      "cost": 22
+    },
+    {
+      "name": "Bloodbag",
+      "cmd": "#bloodbag",
+      "prefab": "Bloodbag",
+      "cost": 16
+    },
+    {
+      "name": "Bone Fragments x10",
+      "cmd": "#bonefragments",
+      "prefab": "BoneFragments",
+      "cost": 10,
+      "amount": 10
+    },
+    {
+      "name": "Bonemaw Serpent Tooth",
+      "cmd": "#bonemawserpenttooth",
+      "prefab": "BonemawSerpentTooth",
+      "cost": 16
+    },
+    {
+      "name": "Chain",
+      "cmd": "#chain",
+      "prefab": "Chain",
+      "cost": 16
+    },
+    {
+      "name": "Charcoal Resin x10",
+      "cmd": "#charcoalresin",
+      "prefab": "CharcoalResin",
+      "cost": 10,
+      "amount": 10
+    },
+    {
+      "name": "Charred Bone",
+      "cmd": "#charredbone",
+      "prefab": "CharredBone",
+      "cost": 54
+    },
+    {
+      "name": "Coal x10",
+      "cmd": "#coal",
+      "prefab": "Coal",
+      "cost": 10,
+      "amount": 10
+    },
+    {
+      "name": "Freeze Gland",
+      "cmd": "#freezegland",
+      "prefab": "FreezeGland",
+      "cost": 21
+    },
+    {
+      "name": "Giant Blood Sack",
+      "cmd": "#giantbloodsack",
+      "prefab": "GiantBloodSack",
+      "cost": 11
+    },
+    {
+      "name": "Greydwarf Eye",
+      "cmd": "#greydwarfeye",
+      "prefab": "GreydwarfEye",
+      "cost": 11
+    },
+    {
+      "name": "Guck x10",
+      "cmd": "#guck",
+      "prefab": "Guck",
+      "cost": 160,
+      "amount": 10
+    },
+    {
+      "name": "Iron Nails x10",
+      "cmd": "#ironnails",
+      "prefab": "IronNails",
+      "cost": 260,
+      "amount": 10
+    },
+    {
+      "name": "Ironpit x10",
+      "cmd": "#ironpit",
+      "prefab": "Ironpit",
+      "cost": 160,
+      "amount": 10
+    },
+    {
+      "name": "Mechanical Spring",
+      "cmd": "#mechanicalspring",
+      "prefab": "MechanicalSpring",
+      "cost": 11
+    },
+    {
+      "name": "Memorial Coal x10",
+      "cmd": "#memorialcoal",
+      "prefab": "MemorialCoal",
+      "cost": 10,
+      "amount": 10
+    },
+    {
+      "name": "Needle",
+      "cmd": "#needle",
+      "prefab": "Needle",
+      "cost": 27
+    },
+    {
+      "name": "Ooze",
+      "cmd": "#ooze",
+      "prefab": "Ooze",
+      "cost": 16
+    },
+    {
+      "name": "Ooze Mork",
+      "cmd": "#oozemork",
+      "prefab": "OozeMork",
+      "cost": 16
+    },
+    {
+      "name": "Proustite Powder",
+      "cmd": "#proustitepowder",
+      "prefab": "ProustitePowder",
+      "cost": 54
+    },
+    {
+      "name": "Queen Bee",
+      "cmd": "#queenbee",
+      "prefab": "QueenBee",
+      "cost": 11
+    },
+    {
+      "name": "Resin x10",
+      "cmd": "#resin",
+      "prefab": "Resin",
+      "cost": 10,
+      "amount": 10
+    },
+    {
+      "name": "Sap x10",
+      "cmd": "#sap",
+      "prefab": "Sap",
+      "cost": 390,
+      "amount": 10
+    },
+    {
+      "name": "Softtissue",
+      "cmd": "#softtissue",
+      "prefab": "Softtissue",
+      "cost": 39
+    },
+    {
+      "name": "Tar x10",
+      "cmd": "#tar",
+      "prefab": "Tar",
+      "cost": 270,
+      "amount": 10
+    },
+    {
+      "name": "Withered Bone",
+      "cmd": "#witheredbone",
+      "prefab": "WitheredBone",
+      "cost": 28
+    },
+    {
+      "name": "Wolf Claw",
+      "cmd": "#wolfclaw",
+      "prefab": "WolfClaw",
+      "cost": 21
+    },
+    {
+      "name": "Wolf Fang",
+      "cmd": "#wolffang",
+      "prefab": "WolfFang",
+      "cost": 21
+    }
+  ],
+  "misc": [
+    {
+      "type": "section",
+      "title": "Tools"
+    },
+    {
+      "name": "Cultivator",
+      "cmd": "#cultivator",
+      "prefab": "Cultivator",
+      "cost": 11
+    },
+    {
+      "name": "Fishing Rod",
+      "cmd": "#fishingrod",
+      "prefab": "FishingRod",
+      "cost": 11
+    },
+    {
+      "name": "Fishing Rod Float",
+      "cmd": "#fishingrodfloat",
+      "prefab": "FishingRodFloat",
+      "cost": 11
+    },
+    {
+      "name": "Grappling Hook",
+      "cmd": "#grapplinghook",
+      "prefab": "GrapplingHook",
+      "cost": 11
+    },
+    {
+      "name": "Hammer",
+      "cmd": "#hammer",
+      "prefab": "Hammer",
+      "cost": 11
+    },
+    {
+      "name": "Hoe",
+      "cmd": "#hoe",
+      "prefab": "Hoe",
+      "cost": 11
+    },
+    {
+      "name": "Hook",
+      "cmd": "#hook",
+      "prefab": "Hook",
+      "cost": 11
+    },
+    {
+      "name": "Ice Shoes",
+      "cmd": "#iceshoes",
+      "prefab": "IceShoes",
+      "cost": 11
+    },
+    {
+      "name": "Antler Pickaxe",
+      "cmd": "#pickaxeantler",
+      "prefab": "PickaxeAntler",
+      "cost": 1
+    },
+    {
+      "name": "Black Metal Pickaxe",
+      "cmd": "#pickaxeblackmetal",
+      "prefab": "PickaxeBlackMetal",
+      "cost": 27
+    },
+    {
+      "name": "Bronze Pickaxe",
+      "cmd": "#pickaxebronze",
+      "prefab": "PickaxeBronze",
+      "cost": 11
+    },
+    {
+      "name": "Iron Pickaxe",
+      "cmd": "#pickaxeiron",
+      "prefab": "PickaxeIron",
+      "cost": 16
+    },
+    {
+      "name": "Stone Pickaxe",
+      "cmd": "#pickaxestone",
+      "prefab": "PickaxeStone",
+      "cost": 1
+    },
+    {
+      "name": "Shovel",
+      "cmd": "#shovel",
+      "prefab": "Shovel",
+      "cost": 11
+    },
+    {
+      "type": "section",
+      "title": "Trophy"
+    },
+    {
       "name": "Trophy Abomination",
       "cmd": "#trophyabomination",
       "prefab": "TrophyAbomination",
@@ -9744,370 +9667,6 @@ window.VALHEIM_TWITCH_STORE = {
       "cmd": "#trophywrithan",
       "prefab": "TrophyWrithan",
       "cost": 3
-    },
-    {
-      "type": "section",
-      "title": "Valuables"
-    },
-    {
-      "name": "Amber",
-      "cmd": "#amber",
-      "prefab": "Amber",
-      "cost": 16
-    },
-    {
-      "name": "Amber Pearl",
-      "cmd": "#amberpearl",
-      "prefab": "AmberPearl",
-      "cost": 16
-    },
-    {
-      "name": "Ancient Coin",
-      "cmd": "#ancientcoin",
-      "prefab": "AncientCoin",
-      "cost": 6
-    },
-    {
-      "name": "Ancient Gemstone Black",
-      "cmd": "#ancientgemstoneblack",
-      "prefab": "AncientGemstoneBlack",
-      "cost": 1
-    },
-    {
-      "name": "Ancient Gemstone Green",
-      "cmd": "#ancientgemstonegreen",
-      "prefab": "AncientGemstoneGreen",
-      "cost": 1
-    },
-    {
-      "name": "Ancient Gemstone Orange",
-      "cmd": "#ancientgemstoneorange",
-      "prefab": "AncientGemstoneOrange",
-      "cost": 1
-    },
-    {
-      "name": "Ancient Gemstone Purple",
-      "cmd": "#ancientgemstonepurple",
-      "prefab": "AncientGemstonePurple",
-      "cost": 1
-    },
-    {
-      "name": "Coins",
-      "cmd": "#coins",
-      "prefab": "Coins",
-      "cost": 6
-    },
-    {
-      "name": "Gemstone Blue",
-      "cmd": "#gemstoneblue",
-      "prefab": "GemstoneBlue",
-      "cost": 1
-    },
-    {
-      "name": "Gemstone Green",
-      "cmd": "#gemstonegreen",
-      "prefab": "GemstoneGreen",
-      "cost": 1
-    },
-    {
-      "name": "Gemstone Red",
-      "cmd": "#gemstonered",
-      "prefab": "GemstoneRed",
-      "cost": 1
-    },
-    {
-      "name": "Gold",
-      "cmd": "#gold",
-      "prefab": "Gold",
-      "cost": 16
-    },
-    {
-      "name": "Ruby",
-      "cmd": "#ruby",
-      "prefab": "Ruby",
-      "cost": 16
-    },
-    {
-      "name": "Silver Necklace",
-      "cmd": "#silvernecklace",
-      "prefab": "SilverNecklace",
-      "cost": 21
-    },
-    {
-      "type": "section",
-      "title": "Crafting parts"
-    },
-    {
-      "name": "Ancient Seed",
-      "cmd": "#ancientseed",
-      "prefab": "AncientSeed",
-      "cost": 22
-    },
-    {
-      "name": "Bloodbag",
-      "cmd": "#bloodbag",
-      "prefab": "Bloodbag",
-      "cost": 16
-    },
-    {
-      "name": "Bone Fragments x10",
-      "cmd": "#bonefragments",
-      "prefab": "BoneFragments",
-      "cost": 10,
-      "amount": 10
-    },
-    {
-      "name": "Bonemaw Serpent Tooth",
-      "cmd": "#bonemawserpenttooth",
-      "prefab": "BonemawSerpentTooth",
-      "cost": 16
-    },
-    {
-      "name": "Chain",
-      "cmd": "#chain",
-      "prefab": "Chain",
-      "cost": 16
-    },
-    {
-      "name": "Charcoal Resin x10",
-      "cmd": "#charcoalresin",
-      "prefab": "CharcoalResin",
-      "cost": 10,
-      "amount": 10
-    },
-    {
-      "name": "Charred Bone",
-      "cmd": "#charredbone",
-      "prefab": "CharredBone",
-      "cost": 54
-    },
-    {
-      "name": "Coal x10",
-      "cmd": "#coal",
-      "prefab": "Coal",
-      "cost": 10,
-      "amount": 10
-    },
-    {
-      "name": "Freeze Gland",
-      "cmd": "#freezegland",
-      "prefab": "FreezeGland",
-      "cost": 21
-    },
-    {
-      "name": "Giant Blood Sack",
-      "cmd": "#giantbloodsack",
-      "prefab": "GiantBloodSack",
-      "cost": 11
-    },
-    {
-      "name": "Greydwarf Eye",
-      "cmd": "#greydwarfeye",
-      "prefab": "GreydwarfEye",
-      "cost": 11
-    },
-    {
-      "name": "Guck x10",
-      "cmd": "#guck",
-      "prefab": "Guck",
-      "cost": 160,
-      "amount": 10
-    },
-    {
-      "name": "Iron Nails x10",
-      "cmd": "#ironnails",
-      "prefab": "IronNails",
-      "cost": 260,
-      "amount": 10
-    },
-    {
-      "name": "Ironpit x10",
-      "cmd": "#ironpit",
-      "prefab": "Ironpit",
-      "cost": 160,
-      "amount": 10
-    },
-    {
-      "name": "Mechanical Spring",
-      "cmd": "#mechanicalspring",
-      "prefab": "MechanicalSpring",
-      "cost": 11
-    },
-    {
-      "name": "Memorial Coal x10",
-      "cmd": "#memorialcoal",
-      "prefab": "MemorialCoal",
-      "cost": 10,
-      "amount": 10
-    },
-    {
-      "name": "Needle",
-      "cmd": "#needle",
-      "prefab": "Needle",
-      "cost": 27
-    },
-    {
-      "name": "Ooze",
-      "cmd": "#ooze",
-      "prefab": "Ooze",
-      "cost": 16
-    },
-    {
-      "name": "Ooze Mork",
-      "cmd": "#oozemork",
-      "prefab": "OozeMork",
-      "cost": 16
-    },
-    {
-      "name": "Proustite Powder",
-      "cmd": "#proustitepowder",
-      "prefab": "ProustitePowder",
-      "cost": 54
-    },
-    {
-      "name": "Queen Bee",
-      "cmd": "#queenbee",
-      "prefab": "QueenBee",
-      "cost": 11
-    },
-    {
-      "name": "Resin x10",
-      "cmd": "#resin",
-      "prefab": "Resin",
-      "cost": 10,
-      "amount": 10
-    },
-    {
-      "name": "Sap x10",
-      "cmd": "#sap",
-      "prefab": "Sap",
-      "cost": 390,
-      "amount": 10
-    },
-    {
-      "name": "Softtissue",
-      "cmd": "#softtissue",
-      "prefab": "Softtissue",
-      "cost": 39
-    },
-    {
-      "name": "Tar x10",
-      "cmd": "#tar",
-      "prefab": "Tar",
-      "cost": 270,
-      "amount": 10
-    },
-    {
-      "name": "Withered Bone",
-      "cmd": "#witheredbone",
-      "prefab": "WitheredBone",
-      "cost": 28
-    },
-    {
-      "name": "Wolf Claw",
-      "cmd": "#wolfclaw",
-      "prefab": "WolfClaw",
-      "cost": 21
-    },
-    {
-      "name": "Wolf Fang",
-      "cmd": "#wolffang",
-      "prefab": "WolfFang",
-      "cost": 21
-    }
-  ],
-  "misc": [
-    {
-      "type": "help",
-      "text": "Tools, lights, mounts, fireworks, chests — streamer-useful leftovers."
-    },
-    {
-      "type": "section",
-      "title": "Tools"
-    },
-    {
-      "name": "Cultivator",
-      "cmd": "#cultivator",
-      "prefab": "Cultivator",
-      "cost": 11
-    },
-    {
-      "name": "Fishing Rod",
-      "cmd": "#fishingrod",
-      "prefab": "FishingRod",
-      "cost": 11
-    },
-    {
-      "name": "Fishing Rod Float",
-      "cmd": "#fishingrodfloat",
-      "prefab": "FishingRodFloat",
-      "cost": 11
-    },
-    {
-      "name": "Grappling Hook",
-      "cmd": "#grapplinghook",
-      "prefab": "GrapplingHook",
-      "cost": 11
-    },
-    {
-      "name": "Hammer",
-      "cmd": "#hammer",
-      "prefab": "Hammer",
-      "cost": 11
-    },
-    {
-      "name": "Hoe",
-      "cmd": "#hoe",
-      "prefab": "Hoe",
-      "cost": 11
-    },
-    {
-      "name": "Hook",
-      "cmd": "#hook",
-      "prefab": "Hook",
-      "cost": 11
-    },
-    {
-      "name": "Ice Shoes",
-      "cmd": "#iceshoes",
-      "prefab": "IceShoes",
-      "cost": 11
-    },
-    {
-      "name": "Antler Pickaxe",
-      "cmd": "#pickaxeantler",
-      "prefab": "PickaxeAntler",
-      "cost": 1
-    },
-    {
-      "name": "Black Metal Pickaxe",
-      "cmd": "#pickaxeblackmetal",
-      "prefab": "PickaxeBlackMetal",
-      "cost": 27
-    },
-    {
-      "name": "Bronze Pickaxe",
-      "cmd": "#pickaxebronze",
-      "prefab": "PickaxeBronze",
-      "cost": 11
-    },
-    {
-      "name": "Iron Pickaxe",
-      "cmd": "#pickaxeiron",
-      "prefab": "PickaxeIron",
-      "cost": 16
-    },
-    {
-      "name": "Stone Pickaxe",
-      "cmd": "#pickaxestone",
-      "prefab": "PickaxeStone",
-      "cost": 1
-    },
-    {
-      "name": "Shovel",
-      "cmd": "#shovel",
-      "prefab": "Shovel",
-      "cost": 11
     },
     {
       "type": "section",
