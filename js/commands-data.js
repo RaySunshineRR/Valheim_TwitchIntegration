@@ -5774,55 +5774,55 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Ashlands Gourmet Bowl",
       "cmd": "#feastashlandsmaterial",
       "prefab": "FeastAshlands_Material",
-      "cost": 54
+      "cost": 251
     },
     {
       "name": "Black Forest Buffet Platter",
       "cmd": "#feastblackforestmaterial",
       "prefab": "FeastBlackforest_Material",
-      "cost": 11
+      "cost": 127
     },
     {
       "name": "Northern Morning Fare",
       "cmd": "#feastdeepnorthmaterial",
       "prefab": "FeastDeepNorth_Material",
-      "cost": 11
+      "cost": 292
     },
     {
       "name": "Whole Roasted Meadow Boar",
       "cmd": "#feastmeadowsmaterial",
       "prefab": "FeastMeadows_Material",
-      "cost": 1
+      "cost": 58
     },
     {
       "name": "Mushrooms Galore á la Mistlands",
       "cmd": "#feastmistlandsmaterial",
       "prefab": "FeastMistlands_Material",
-      "cost": 39
+      "cost": 204
     },
     {
       "name": "Hearty Mountain Logger's Stew",
       "cmd": "#feastmountainsmaterial",
       "prefab": "FeastMountains_Material",
-      "cost": 11
+      "cost": 140
     },
     {
       "name": "Sailor's Bounty",
       "cmd": "#feastoceansmaterial",
       "prefab": "FeastOceans_Material",
-      "cost": 11
+      "cost": 76
     },
     {
       "name": "Plains Pie Picnic",
       "cmd": "#feastplainsmaterial",
       "prefab": "FeastPlains_Material",
-      "cost": 11
+      "cost": 208
     },
     {
       "name": "Swamp Dweller's Delight",
       "cmd": "#feastswampsmaterial",
       "prefab": "FeastSwamps_Material",
-      "cost": 11
+      "cost": 247
     },
     {
       "type": "section",
