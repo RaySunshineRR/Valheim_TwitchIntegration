@@ -23,6 +23,19 @@ ICON_DIR = ROOT / "assets" / "icons"
 ICON_MAP = ROOT / "assets" / "icon-map.json"
 # prefab → coinCost from heimheim-catalog.json (filled in main)
 COIN_COSTS: dict[str, int] = {}
+# prefab → defaultAmount (materials → 10); stack display cost = coinCost × amount
+DEFAULT_AMOUNTS: dict[str, int] = {}
+# prefab → tier int from economy catalog (mead biome overrides)
+ECONOMY_TIERS: dict[str, int] = {}
+TIER_LABEL = {
+    0: "T0 · Meadows",
+    1: "T1 · Black Forest",
+    2: "T2 · Swamp",
+    3: "T3 · Mountain",
+    4: "T4 · Plains",
+    5: "T5 · Mistlands",
+    6: "T6 · Ashlands",
+}
 WIKI_IMG = "https://valheim.weirdgloop.org/images/"
 WIKI_API = "https://valheim.weirdgloop.org/api.php"
 UA = {"User-Agent": "ValheimTwitchStore/0.6 (+https://github.com/raysunshinerr/Valheim_TwitchIntegration)"}
@@ -166,36 +179,63 @@ def pretty_cmd_name(prefab: str, alias: str | None) -> str:
 
 
 def entry(prefab: str, alias: str | None, command: str | None = None, desc: str | None = None):
+    amt = max(1, int(DEFAULT_AMOUNTS.get(prefab, 1)))
+    name = pretty_cmd_name(prefab, alias)
+    if amt > 1:
+        name = f"{name} x{amt}"
     e = {
-        "name": pretty_cmd_name(prefab, alias),
+        "name": name,
         "cmd": command or f"#{(alias or prefab).lower()}",
         "prefab": prefab,
     }
     cost = COIN_COSTS.get(prefab)
     if cost is not None:
-        e["cost"] = int(cost)
+        # Stack-aware: charge unit × defaultAmount (matches bridge costFor)
+        e["cost"] = int(cost) * amt
+    if amt > 1:
+        e["amount"] = amt
     if desc:
         e["desc"] = desc
     return e
 
 
-def load_coin_costs(path: Path = ECONOMY_CATALOG) -> dict[str, int]:
-    """Map prefab id → coinCost from Heim-Heim economy catalog."""
+def load_economy_meta(path: Path = ECONOMY_CATALOG) -> tuple[dict[str, int], dict[str, int], dict[str, int]]:
+    """Map prefab → coinCost, defaultAmount, tier from Heim-Heim economy catalog."""
     if not path.is_file():
         print(f"WARNING: economy catalog missing at {path} — cards will omit 🪙")
-        return {}
+        return {}, {}, {}
     raw = json.loads(path.read_text())
-    out: dict[str, int] = {}
+    costs: dict[str, int] = {}
+    amounts: dict[str, int] = {}
+    tiers: dict[str, int] = {}
     rows = raw.get("entries") or list((raw.get("byId") or {}).values())
     for row in rows:
         pid = row.get("id") or row.get("prefab")
         if not pid:
             continue
+        pid = str(pid)
         try:
-            out[str(pid)] = max(1, int(round(float(row.get("coinCost") or 1))))
+            costs[pid] = max(1, int(round(float(row.get("coinCost") or 1))))
         except (TypeError, ValueError):
-            continue
-    return out
+            pass
+        try:
+            amt = int(row.get("defaultAmount") or 1)
+            if amt > 1:
+                amounts[pid] = amt
+        except (TypeError, ValueError):
+            pass
+        try:
+            if row.get("tier") is not None:
+                tiers[pid] = max(0, min(6, int(row["tier"])))
+        except (TypeError, ValueError):
+            pass
+    return costs, amounts, tiers
+
+
+def load_coin_costs(path: Path = ECONOMY_CATALOG) -> dict[str, int]:
+    """Map prefab id → coinCost from Heim-Heim economy catalog."""
+    costs, _, _ = load_economy_meta(path)
+    return costs
 
 
 # ---- Item classification ----
@@ -615,6 +655,8 @@ def armor_section(prefab: str) -> str:
 
 def progression_tier(prefab: str) -> str:
     """Biome-step tier for full sets (weapons / food / potions / materials)."""
+    if prefab in ECONOMY_TIERS:
+        return TIER_LABEL.get(ECONOMY_TIERS[prefab], "Other")
     p = prefab.lower()
     # Capes / odd armor-adjacent pieces already handled for armor tab
     for tier, keys in TIER_KEYWORDS:
@@ -1212,14 +1254,14 @@ def build_store(data: dict) -> dict:
         "quick": [
             {
                 "type": "help",
-                "text": "Streamer favourites first. Full lists live in the other tabs. Amounts: #wood 50 · arrows default to 10 · stack-capped.",
+                "text": "Streamer favourites first. Full lists live in the other tabs. Materials default ×10 (e.g. #silver → 10, cost ×10) · override with #silver 50 · arrows default to 10 · stack-capped.",
             },
             {"type": "section", "title": "Chat basics"},
             {"name": "Visit", "cmd": "#visit", "desc": "Spawn your named Greyling"},
             {"name": "Follower ally", "cmd": "#f", "desc": "#f / #follower [creature] [stars] — ally (default Greyling)"},
             {"name": "Yeet", "cmd": "#yeet", "desc": "Launch the streamer (optional N/S/E/W)", "cost": 10, "prefab": "Yeet"},
             {"name": "Spawn (legacy)", "cmd": "#spawn Greyling", "desc": "Explicit spawn form"},
-            {"name": "Give / item", "cmd": "#give Wood 50", "desc": "#give or #item · amount optional · capped to stack"},
+            {"name": "Give / item", "cmd": "#give Wood 50", "desc": "#give or #item · materials default ×10 · amount override OK · capped to stack"},
         ],
         "mobs": [],
         "weapons": [],
@@ -1592,9 +1634,12 @@ def main() -> None:
     )
     args = ap.parse_args()
 
-    global COIN_COSTS
-    COIN_COSTS = load_coin_costs()
-    print(f"Loaded {len(COIN_COSTS)} coin costs from {ECONOMY_CATALOG}")
+    global COIN_COSTS, DEFAULT_AMOUNTS, ECONOMY_TIERS
+    COIN_COSTS, DEFAULT_AMOUNTS, ECONOMY_TIERS = load_economy_meta()
+    print(
+        f"Loaded {len(COIN_COSTS)} coin costs, {len(DEFAULT_AMOUNTS)} defaultAmounts, "
+        f"{len(ECONOMY_TIERS)} tiers from {ECONOMY_CATALOG}"
+    )
 
     data = json.loads(CATALOG.read_text())
     print("Building store from", CATALOG)
