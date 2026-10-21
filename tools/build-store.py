@@ -662,6 +662,71 @@ FOOD_CROP = {
     "WolfJerky",
     "BlackSoup",
     "SerpentStew",
+    # Deep North / mis-tagged Misc foods
+    "Oat",
+    "OatFlour",
+    "OatMilk",
+    "Kale",
+    "KaleChips",
+    "Poteitr",
+    "GreydwarfSurprise",
+    "MagicallyStuffedShroom",
+    "MarinatedGreens",
+    "PulledBear",
+    "Lingondricka",
+    "ShocklateSmoothie",
+    "MinceMeatSauce",
+    "VikingCupcake",
+    "Larva",
+}
+
+# Misc-catalog drops that are Mountain/crafting materials (not Utility & oddities)
+FORCE_MATERIAL_PREFABS = {
+    "WolfClaw",
+    "WolfFang",
+    "WolfHairBundle",
+    "AskBladder",
+    "AsksvinCarrionNeck",
+    "AsksvinCarrionPelvic",
+    "AsksvinCarrionRibcage",
+    "AsksvinCarrionSkull",
+    "BjornPaw",
+    "MoleClaws",
+    "MooseSinew",
+    "MorgenHeart",
+    "MorgenSinew",
+    "Mandible",
+    "Ectoplasm",
+    "YmirRemains",
+    "CharredBone",
+    "Charredskull",
+    "Leatherstraps",
+    "NornThread",
+    "Voidplasm",
+    "FrozenFuel",
+    "BarrelRings",
+    "ElakingHairBundle",
+    "FragrantBundle",
+    "GhostSkull",
+    "LargeBone",
+    "GlowWorm",
+    "HatefulBlood",
+    "CeramicPlate",
+    "Pot_Shard_Green",
+    "Pot_Shard_Red",
+    "YagluthDrop",
+    "QueenDrop",
+    "FaderDrop",
+    "FaderEmber",
+    "FrozenKingDrop",
+    "Chain",
+    "LinenThread",
+    "ElderBark",
+    "RoundLog",
+    "Needle",
+    "FreezeGland",
+    "Root",
+    "HardAntler",
 }
 
 
@@ -740,9 +805,12 @@ def is_feast_item(prefab: str) -> bool:
 def food_section(prefab: str) -> str:
     if is_feast_item(prefab):
         return "Feasts"
+    # Uncooked doughs / pies before "pie" / prepared heuristics
+    if prefab.endswith("Uncooked"):
+        return "Uncooked"
     if FOOD_COOKED.search(prefab) or prefab.startswith(("Cooked", "Smoked", "Grilled")):
         return "Cooked meals"
-    if prefab.endswith("Uncooked") or prefab.startswith(
+    if prefab.startswith(
         ("Spice", "Baked", "Oven", "Mashed", "Mince", "Marinated", "Seeker", "Shocklate", "Sizzling", "Sparkling", "Scorching", "Fiery", "Pulled", "Magically", "GreydwarfSurprise", "Viking", "SealSoup", "Pancakes", "Lingondricka")
     ):
         return "Prepared dishes"
@@ -792,6 +860,8 @@ def food_section(prefab: str) -> str:
             "Pukeberr",
             "FreshSeaweed",
             "Poteitr",
+            "Oat",
+            "Kale",
         )
     ):
         return "Crops & forage"
@@ -871,6 +941,8 @@ def is_food_item(prefab: str) -> bool:
     ):
         return True
     if prefab.startswith(("Cooked", "Smoked", "Grilled", "Feast", "Spice", "Baked", "Oven")):
+        return True
+    if prefab.endswith("Uncooked"):
         return True
     return False
 
@@ -1019,6 +1091,9 @@ def material_section(prefab: str) -> str:
     if prefab == "DragonEgg":
         return "Boss & rare drops"
     p = prefab.lower()
+    # Mountain wolf parts — crafting mats, not mounts
+    if prefab in {"WolfClaw", "WolfFang", "WolfHairBundle"}:
+        return "Crafting parts"
     # Trophies first — never let metal substrings steal them
     if prefab.startswith("Trophy") or "trophy" in p:
         return "Boss & rare drops"
@@ -1202,6 +1277,10 @@ def classify_item(it: dict) -> tuple[str, str]:
     # Moder nest egg — Mountain rare summon mat (never Food / Misc junk)
     if prefab == "DragonEgg":
         return "materials", "Boss & rare drops"
+
+    # Wolf parts / sinews / boss scraps — Materials (not Utility & oddities)
+    if prefab in FORCE_MATERIAL_PREFABS:
+        return "materials", material_section(prefab)
 
     # Food before material rescue — WolfMeat / meals must not sit in Utility
     if cat == "Food" or is_food_item(prefab):
@@ -1438,6 +1517,7 @@ def build_store(data: dict) -> dict:
         "food": [
             "Feasts",
             "Raw ingredients",
+            "Uncooked",
             "Cooked meals",
             "Prepared dishes",
             "Crops & forage",
