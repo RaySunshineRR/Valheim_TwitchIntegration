@@ -5774,58 +5774,67 @@ window.VALHEIM_TWITCH_STORE = {
       "title": "Feasts"
     },
     {
-      "name": "Ashlands Gourmet Bowl",
+      "name": "Ashlands Gourmet Bowl x10",
       "cmd": "#feastashlandsmaterial",
       "prefab": "FeastAshlands_Material",
-      "cost": 126
+      "cost": 126,
+      "amount": 10
     },
     {
-      "name": "Black Forest Buffet Platter",
+      "name": "Black Forest Buffet Platter x10",
       "cmd": "#feastblackforestmaterial",
       "prefab": "FeastBlackforest_Material",
-      "cost": 64
+      "cost": 64,
+      "amount": 10
     },
     {
-      "name": "Northern Morning Fare",
+      "name": "Northern Morning Fare x10",
       "cmd": "#feastdeepnorthmaterial",
       "prefab": "FeastDeepNorth_Material",
-      "cost": 146
+      "cost": 146,
+      "amount": 10
     },
     {
-      "name": "Whole Roasted Meadow Boar",
+      "name": "Whole Roasted Meadow Boar x10",
       "cmd": "#feastmeadowsmaterial",
       "prefab": "FeastMeadows_Material",
-      "cost": 29
+      "cost": 29,
+      "amount": 10
     },
     {
-      "name": "Mushrooms Galore á la Mistlands",
+      "name": "Mushrooms Galore á la Mistlands x10",
       "cmd": "#feastmistlandsmaterial",
       "prefab": "FeastMistlands_Material",
-      "cost": 102
+      "cost": 102,
+      "amount": 10
     },
     {
-      "name": "Hearty Mountain Logger's Stew",
+      "name": "Hearty Mountain Logger's Stew x10",
       "cmd": "#feastmountainsmaterial",
       "prefab": "FeastMountains_Material",
-      "cost": 70
+      "cost": 70,
+      "amount": 10
     },
     {
-      "name": "Sailor's Bounty",
+      "name": "Sailor's Bounty x10",
       "cmd": "#feastoceansmaterial",
       "prefab": "FeastOceans_Material",
-      "cost": 38
+      "cost": 38,
+      "amount": 10
     },
     {
-      "name": "Plains Pie Picnic",
+      "name": "Plains Pie Picnic x10",
       "cmd": "#feastplainsmaterial",
       "prefab": "FeastPlains_Material",
-      "cost": 104
+      "cost": 104,
+      "amount": 10
     },
     {
-      "name": "Swamp Dweller's Delight",
+      "name": "Swamp Dweller's Delight x10",
       "cmd": "#feastswampsmaterial",
       "prefab": "FeastSwamps_Material",
-      "cost": 124
+      "cost": 124,
+      "amount": 10
     },
     {
       "type": "section",
