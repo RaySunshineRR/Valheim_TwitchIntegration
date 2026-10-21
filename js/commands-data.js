@@ -93,11 +93,10 @@ window.VALHEIM_TWITCH_STORE = {
       "desc": "Building basics"
     },
     {
-      "name": "Fine Wood x10",
+      "name": "Fine Wood",
       "cmd": "#finewood",
       "prefab": "FineWood",
-      "cost": 60,
-      "amount": 10,
+      "cost": 6,
       "desc": "Quality builds"
     },
     {
@@ -115,19 +114,17 @@ window.VALHEIM_TWITCH_STORE = {
       "desc": "Ancient bark"
     },
     {
-      "name": "Iron x10",
+      "name": "Iron",
       "cmd": "#iron",
       "prefab": "Iron",
-      "cost": 240,
-      "amount": 10,
+      "cost": 24,
       "desc": "Mid-game metal"
     },
     {
-      "name": "Bronze x10",
+      "name": "Bronze",
       "cmd": "#bronze",
       "prefab": "Bronze",
-      "cost": 370,
-      "amount": 10,
+      "cost": 37,
       "desc": "Early metal"
     },
     {
@@ -4382,25 +4379,22 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 11
     },
     {
-      "name": "Trinket Bronze Health x10",
+      "name": "Trinket Bronze Health",
       "cmd": "#trinketbronzehealth",
       "prefab": "TrinketBronzeHealth",
-      "cost": 110,
-      "amount": 10
+      "cost": 11
     },
     {
-      "name": "Trinket Bronze Stamina x10",
+      "name": "Trinket Bronze Stamina",
       "cmd": "#trinketbronzestamina",
       "prefab": "TrinketBronzeStamina",
-      "cost": 110,
-      "amount": 10
+      "cost": 11
     },
     {
-      "name": "Trinket Chitin Swim x10",
+      "name": "Trinket Chitin Swim",
       "cmd": "#trinketchitinswim",
       "prefab": "TrinketChitinSwim",
-      "cost": 110,
-      "amount": 10
+      "cost": 11
     },
     {
       "type": "section",
@@ -4449,18 +4443,16 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 21
     },
     {
-      "name": "Trinket Iron Health x10",
+      "name": "Trinket Iron Health",
       "cmd": "#trinketironhealth",
       "prefab": "TrinketIronHealth",
-      "cost": 160,
-      "amount": 10
+      "cost": 16
     },
     {
-      "name": "Trinket Iron Stamina x10",
+      "name": "Trinket Iron Stamina",
       "cmd": "#trinketironstamina",
       "prefab": "TrinketIronStamina",
-      "cost": 160,
-      "amount": 10
+      "cost": 16
     },
     {
       "type": "section",
@@ -4569,11 +4561,10 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 28
     },
     {
-      "name": "Trinket Silver Resist x10",
+      "name": "Trinket Silver Resist",
       "cmd": "#trinketsilverresist",
       "prefab": "TrinketSilverResist",
-      "cost": 210,
-      "amount": 10
+      "cost": 21
     },
     {
       "type": "section",
@@ -4728,11 +4719,10 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 39
     },
     {
-      "name": "Trinket Carapace Eitr x10",
+      "name": "Trinket Carapace Eitr",
       "cmd": "#trinketcarapaceeitr",
       "prefab": "TrinketCarapaceEitr",
-      "cost": 390,
-      "amount": 10
+      "cost": 39
     },
     {
       "name": "Trinket Scale Stamina Damage",
@@ -4741,11 +4731,10 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 39
     },
     {
-      "name": "Trinket Silver Damage x10",
+      "name": "Trinket Silver Damage",
       "cmd": "#trinketsilverdamage",
       "prefab": "TrinketSilverDamage",
-      "cost": 390,
-      "amount": 10
+      "cost": 39
     },
     {
       "type": "section",
@@ -4836,18 +4825,16 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 73
     },
     {
-      "name": "Trinket Flametal Eitr x10",
+      "name": "Trinket Flametal Eitr",
       "cmd": "#trinketflametaleitr",
       "prefab": "TrinketFlametalEitr",
-      "cost": 540,
-      "amount": 10
+      "cost": 54
     },
     {
-      "name": "Trinket Flametal Stamina Health x10",
+      "name": "Trinket Flametal Stamina Health",
       "cmd": "#trinketflametalstaminahealth",
       "prefab": "TrinketFlametalStaminaHealth",
-      "cost": 540,
-      "amount": 10
+      "cost": 54
     }
   ],
   "food": [
@@ -7886,60 +7873,52 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 11
     },
     {
-      "name": "Bronze x10",
+      "name": "Bronze",
       "cmd": "#bronze",
       "prefab": "Bronze",
-      "cost": 370,
-      "amount": 10
+      "cost": 37
     },
     {
-      "name": "Bronze Nails x10",
+      "name": "Bronze Nails",
       "cmd": "#bronzenails",
       "prefab": "BronzeNails",
-      "cost": 390,
-      "amount": 10
+      "cost": 39
     },
     {
-      "name": "Bronze Scrap x10",
+      "name": "Bronze Scrap",
       "cmd": "#bronzescrap",
       "prefab": "BronzeScrap",
-      "cost": 150,
-      "amount": 10
+      "cost": 15
     },
     {
-      "name": "Chitin x10",
+      "name": "Chitin",
       "cmd": "#chitin",
       "prefab": "Chitin",
-      "cost": 110,
-      "amount": 10
+      "cost": 11
     },
     {
-      "name": "Copper x10",
+      "name": "Copper",
       "cmd": "#copper",
       "prefab": "Copper",
-      "cost": 110,
-      "amount": 10
+      "cost": 11
     },
     {
-      "name": "Copper Ore x10",
+      "name": "Copper Ore",
       "cmd": "#copperore",
       "prefab": "CopperOre",
-      "cost": 80,
-      "amount": 10
+      "cost": 8
     },
     {
-      "name": "Copper Scrap x10",
+      "name": "Copper Scrap",
       "cmd": "#copperscrap",
       "prefab": "CopperScrap",
-      "cost": 90,
-      "amount": 10
+      "cost": 9
     },
     {
-      "name": "Deer Hide x10",
+      "name": "Deer Hide",
       "cmd": "#deerhide",
       "prefab": "DeerHide",
-      "cost": 110,
-      "amount": 10
+      "cost": 11
     },
     {
       "name": "Elder Bark",
@@ -7948,11 +7927,10 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 11
     },
     {
-      "name": "Fine Wood x10",
+      "name": "Fine Wood",
       "cmd": "#finewood",
       "prefab": "FineWood",
-      "cost": 60,
-      "amount": 10
+      "cost": 6
     },
     {
       "name": "Giant Blood Sack",
@@ -8015,25 +7993,22 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 4
     },
     {
-      "name": "Tin x10",
+      "name": "Tin",
       "cmd": "#tin",
       "prefab": "Tin",
-      "cost": 130,
-      "amount": 10
+      "cost": 13
     },
     {
-      "name": "Tin Ore x10",
+      "name": "Tin Ore",
       "cmd": "#tinore",
       "prefab": "TinOre",
-      "cost": 100,
-      "amount": 10
+      "cost": 10
     },
     {
-      "name": "Troll Hide x10",
+      "name": "Troll Hide",
       "cmd": "#trollhide",
       "prefab": "TrollHide",
-      "cost": 110,
-      "amount": 10
+      "cost": 11
     },
     {
       "type": "section",
@@ -8094,46 +8069,40 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 16
     },
     {
-      "name": "Guck x10",
+      "name": "Guck",
       "cmd": "#guck",
       "prefab": "Guck",
-      "cost": 160,
-      "amount": 10
+      "cost": 16
     },
     {
-      "name": "Iron x10",
+      "name": "Iron",
       "cmd": "#iron",
       "prefab": "Iron",
-      "cost": 240,
-      "amount": 10
+      "cost": 24
     },
     {
-      "name": "Iron Nails x10",
+      "name": "Iron Nails",
       "cmd": "#ironnails",
       "prefab": "IronNails",
-      "cost": 260,
-      "amount": 10
+      "cost": 26
     },
     {
-      "name": "Iron Ore x10",
+      "name": "Iron Ore",
       "cmd": "#ironore",
       "prefab": "IronOre",
-      "cost": 180,
-      "amount": 10
+      "cost": 18
     },
     {
-      "name": "Ironpit x10",
+      "name": "Ironpit",
       "cmd": "#ironpit",
       "prefab": "Ironpit",
-      "cost": 160,
-      "amount": 10
+      "cost": 16
     },
     {
-      "name": "Iron Scrap x10",
+      "name": "Iron Scrap",
       "cmd": "#ironscrap",
       "prefab": "IronScrap",
-      "cost": 170,
-      "amount": 10
+      "cost": 17
     },
     {
       "name": "Ooze",
@@ -8166,11 +8135,10 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 16
     },
     {
-      "name": "Surtling Core x10",
+      "name": "Surtling Core",
       "cmd": "#surtlingcore",
       "prefab": "SurtlingCore",
-      "cost": 660,
-      "amount": 10
+      "cost": 66
     },
     {
       "name": "Withered Bone",
@@ -8189,11 +8157,10 @@ window.VALHEIM_TWITCH_STORE = {
       "title": "T3 · Mountain"
     },
     {
-      "name": "Crystal x10",
+      "name": "Crystal",
       "cmd": "#crystal",
       "prefab": "Crystal",
-      "cost": 210,
-      "amount": 10
+      "cost": 21
     },
     {
       "name": "Dragon Egg",
@@ -8220,18 +8187,16 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 21
     },
     {
-      "name": "Obsidian x10",
+      "name": "Obsidian",
       "cmd": "#obsidian",
       "prefab": "Obsidian",
-      "cost": 210,
-      "amount": 10
+      "cost": 21
     },
     {
-      "name": "Silver x10",
+      "name": "Silver",
       "cmd": "#silver",
       "prefab": "Silver",
-      "cost": 370,
-      "amount": 10
+      "cost": 37
     },
     {
       "name": "Silver Necklace",
@@ -8240,11 +8205,10 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 21
     },
     {
-      "name": "Silver Ore x10",
+      "name": "Silver Ore",
       "cmd": "#silverore",
       "prefab": "SilverOre",
-      "cost": 280,
-      "amount": 10
+      "cost": 28
     },
     {
       "name": "Wolf Claw",
@@ -8265,36 +8229,32 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 21
     },
     {
-      "name": "Wolf Pelt x10",
+      "name": "Wolf Pelt",
       "cmd": "#wolfpelt",
       "prefab": "WolfPelt",
-      "cost": 210,
-      "amount": 10
+      "cost": 21
     },
     {
       "type": "section",
       "title": "T4 · Plains"
     },
     {
-      "name": "Black Metal x10",
+      "name": "Black Metal",
       "cmd": "#blackmetal",
       "prefab": "BlackMetal",
-      "cost": 570,
-      "amount": 10
+      "cost": 57
     },
     {
-      "name": "Black Metal Scrap x10",
+      "name": "Black Metal Scrap",
       "cmd": "#blackmetalscrap",
       "prefab": "BlackMetalScrap",
-      "cost": 400,
-      "amount": 10
+      "cost": 40
     },
     {
-      "name": "Lox Pelt x10",
+      "name": "Lox Pelt",
       "cmd": "#loxpelt",
       "prefab": "LoxPelt",
-      "cost": 270,
-      "amount": 10
+      "cost": 27
     },
     {
       "name": "Needle",
@@ -8303,11 +8263,10 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 27
     },
     {
-      "name": "Tar x10",
+      "name": "Tar",
       "cmd": "#tar",
       "prefab": "Tar",
-      "cost": 270,
-      "amount": 10
+      "cost": 27
     },
     {
       "type": "section",
@@ -8320,32 +8279,28 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 148
     },
     {
-      "name": "Carapace x10",
+      "name": "Carapace",
       "cmd": "#carapace",
       "prefab": "Carapace",
-      "cost": 390,
-      "amount": 10
+      "cost": 39
     },
     {
-      "name": "Eitr x10",
+      "name": "Eitr",
       "cmd": "#eitr",
       "prefab": "Eitr",
-      "cost": 390,
-      "amount": 10
+      "cost": 39
     },
     {
-      "name": "Sap x10",
+      "name": "Sap",
       "cmd": "#sap",
       "prefab": "Sap",
-      "cost": 390,
-      "amount": 10
+      "cost": 39
     },
     {
-      "name": "Scale Hide x10",
+      "name": "Scale Hide",
       "cmd": "#scalehide",
       "prefab": "ScaleHide",
-      "cost": 390,
-      "amount": 10
+      "cost": 39
     },
     {
       "name": "Softtissue",
@@ -8364,32 +8319,28 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 54
     },
     {
-      "name": "Flametal x10",
+      "name": "Flametal",
       "cmd": "#flametal",
       "prefab": "Flametal",
-      "cost": 1300,
-      "amount": 10
+      "cost": 130
     },
     {
-      "name": "Flametal New x10",
+      "name": "Flametal New",
       "cmd": "#flametalnew",
       "prefab": "FlametalNew",
-      "cost": 1300,
-      "amount": 10
+      "cost": 130
     },
     {
-      "name": "Flametal Ore x10",
+      "name": "Flametal Ore",
       "cmd": "#flametalore",
       "prefab": "FlametalOre",
-      "cost": 920,
-      "amount": 10
+      "cost": 92
     },
     {
-      "name": "Flametal Ore New x10",
+      "name": "Flametal Ore New",
       "cmd": "#flametalorenew",
       "prefab": "FlametalOreNew",
-      "cost": 920,
-      "amount": 10
+      "cost": 92
     },
     {
       "name": "Grausten",
@@ -8404,11 +8355,10 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 54
     },
     {
-      "name": "Sulfur Stone x10",
+      "name": "Sulfur Stone",
       "cmd": "#sulfurstone",
       "prefab": "SulfurStone",
-      "cost": 540,
-      "amount": 10
+      "cost": 54
     },
     {
       "type": "section",
@@ -8433,11 +8383,10 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 11
     },
     {
-      "name": "Fine Wood x10",
+      "name": "Fine Wood",
       "cmd": "#finewood",
       "prefab": "FineWood",
-      "cost": 60,
-      "amount": 10
+      "cost": 6
     },
     {
       "name": "Frostwood",
@@ -8481,11 +8430,10 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 11
     },
     {
-      "name": "Crystal x10",
+      "name": "Crystal",
       "cmd": "#crystal",
       "prefab": "Crystal",
-      "cost": 210,
-      "amount": 10
+      "cost": 21
     },
     {
       "name": "Flint x10",
@@ -8507,11 +8455,10 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 11
     },
     {
-      "name": "Obsidian x10",
+      "name": "Obsidian",
       "cmd": "#obsidian",
       "prefab": "Obsidian",
-      "cost": 210,
-      "amount": 10
+      "cost": 21
     },
     {
       "name": "Placeable Stone x10",
@@ -8542,11 +8489,10 @@ window.VALHEIM_TWITCH_STORE = {
       "amount": 10
     },
     {
-      "name": "Sulfur Stone x10",
+      "name": "Sulfur Stone",
       "cmd": "#sulfurstone",
       "prefab": "SulfurStone",
-      "cost": 540,
-      "amount": 10
+      "cost": 54
     },
     {
       "name": "Thunderstone",
@@ -8559,88 +8505,76 @@ window.VALHEIM_TWITCH_STORE = {
       "title": "Metals"
     },
     {
-      "name": "Black Metal x10",
+      "name": "Black Metal",
       "cmd": "#blackmetal",
       "prefab": "BlackMetal",
-      "cost": 570,
-      "amount": 10
+      "cost": 57
     },
     {
-      "name": "Black Metal Scrap x10",
+      "name": "Black Metal Scrap",
       "cmd": "#blackmetalscrap",
       "prefab": "BlackMetalScrap",
-      "cost": 400,
-      "amount": 10
+      "cost": 40
     },
     {
-      "name": "Bronze x10",
+      "name": "Bronze",
       "cmd": "#bronze",
       "prefab": "Bronze",
-      "cost": 370,
-      "amount": 10
+      "cost": 37
     },
     {
-      "name": "Bronze Nails x10",
+      "name": "Bronze Nails",
       "cmd": "#bronzenails",
       "prefab": "BronzeNails",
-      "cost": 390,
-      "amount": 10
+      "cost": 39
     },
     {
-      "name": "Bronze Scrap x10",
+      "name": "Bronze Scrap",
       "cmd": "#bronzescrap",
       "prefab": "BronzeScrap",
-      "cost": 150,
-      "amount": 10
+      "cost": 15
     },
     {
-      "name": "Copper x10",
+      "name": "Copper",
       "cmd": "#copper",
       "prefab": "Copper",
-      "cost": 110,
-      "amount": 10
+      "cost": 11
     },
     {
-      "name": "Copper Ore x10",
+      "name": "Copper Ore",
       "cmd": "#copperore",
       "prefab": "CopperOre",
-      "cost": 80,
-      "amount": 10
+      "cost": 8
     },
     {
-      "name": "Copper Scrap x10",
+      "name": "Copper Scrap",
       "cmd": "#copperscrap",
       "prefab": "CopperScrap",
-      "cost": 90,
-      "amount": 10
+      "cost": 9
     },
     {
-      "name": "Flametal x10",
+      "name": "Flametal",
       "cmd": "#flametal",
       "prefab": "Flametal",
-      "cost": 1300,
-      "amount": 10
+      "cost": 130
     },
     {
-      "name": "Flametal New x10",
+      "name": "Flametal New",
       "cmd": "#flametalnew",
       "prefab": "FlametalNew",
-      "cost": 1300,
-      "amount": 10
+      "cost": 130
     },
     {
-      "name": "Flametal Ore x10",
+      "name": "Flametal Ore",
       "cmd": "#flametalore",
       "prefab": "FlametalOre",
-      "cost": 920,
-      "amount": 10
+      "cost": 92
     },
     {
-      "name": "Flametal Ore New x10",
+      "name": "Flametal Ore New",
       "cmd": "#flametalorenew",
       "prefab": "FlametalOreNew",
-      "cost": 920,
-      "amount": 10
+      "cost": 92
     },
     {
       "name": "Gold Ore x10",
@@ -8650,53 +8584,46 @@ window.VALHEIM_TWITCH_STORE = {
       "amount": 10
     },
     {
-      "name": "Iron x10",
+      "name": "Iron",
       "cmd": "#iron",
       "prefab": "Iron",
-      "cost": 240,
-      "amount": 10
+      "cost": 24
     },
     {
-      "name": "Iron Ore x10",
+      "name": "Iron Ore",
       "cmd": "#ironore",
       "prefab": "IronOre",
-      "cost": 180,
-      "amount": 10
+      "cost": 18
     },
     {
-      "name": "Iron Scrap x10",
+      "name": "Iron Scrap",
       "cmd": "#ironscrap",
       "prefab": "IronScrap",
-      "cost": 170,
-      "amount": 10
+      "cost": 17
     },
     {
-      "name": "Silver x10",
+      "name": "Silver",
       "cmd": "#silver",
       "prefab": "Silver",
-      "cost": 370,
-      "amount": 10
+      "cost": 37
     },
     {
-      "name": "Silver Ore x10",
+      "name": "Silver Ore",
       "cmd": "#silverore",
       "prefab": "SilverOre",
-      "cost": 280,
-      "amount": 10
+      "cost": 28
     },
     {
-      "name": "Tin x10",
+      "name": "Tin",
       "cmd": "#tin",
       "prefab": "Tin",
-      "cost": 130,
-      "amount": 10
+      "cost": 13
     },
     {
-      "name": "Tin Ore x10",
+      "name": "Tin Ore",
       "cmd": "#tinore",
       "prefab": "TinOre",
-      "cost": 100,
-      "amount": 10
+      "cost": 10
     },
     {
       "type": "section",
@@ -8723,11 +8650,10 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 16
     },
     {
-      "name": "Carapace x10",
+      "name": "Carapace",
       "cmd": "#carapace",
       "prefab": "Carapace",
-      "cost": 390,
-      "amount": 10
+      "cost": 39
     },
     {
       "name": "Celestial Feather x10",
@@ -8737,18 +8663,16 @@ window.VALHEIM_TWITCH_STORE = {
       "amount": 10
     },
     {
-      "name": "Chitin x10",
+      "name": "Chitin",
       "cmd": "#chitin",
       "prefab": "Chitin",
-      "cost": 110,
-      "amount": 10
+      "cost": 11
     },
     {
-      "name": "Deer Hide x10",
+      "name": "Deer Hide",
       "cmd": "#deerhide",
       "prefab": "DeerHide",
-      "cost": 110,
-      "amount": 10
+      "cost": 11
     },
     {
       "name": "Feathers x10",
@@ -8783,11 +8707,10 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 11
     },
     {
-      "name": "Lox Pelt x10",
+      "name": "Lox Pelt",
       "cmd": "#loxpelt",
       "prefab": "LoxPelt",
-      "cost": 270,
-      "amount": 10
+      "cost": 27
     },
     {
       "name": "Moose Hide x10",
@@ -8797,11 +8720,10 @@ window.VALHEIM_TWITCH_STORE = {
       "amount": 10
     },
     {
-      "name": "Scale Hide x10",
+      "name": "Scale Hide",
       "cmd": "#scalehide",
       "prefab": "ScaleHide",
-      "cost": 390,
-      "amount": 10
+      "cost": 39
     },
     {
       "name": "Seal Hide x10",
@@ -8817,11 +8739,10 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 16
     },
     {
-      "name": "Troll Hide x10",
+      "name": "Troll Hide",
       "cmd": "#trollhide",
       "prefab": "TrollHide",
-      "cost": 110,
-      "amount": 10
+      "cost": 11
     },
     {
       "name": "Wolf Hair Bundle",
@@ -8830,11 +8751,10 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 21
     },
     {
-      "name": "Wolf Pelt x10",
+      "name": "Wolf Pelt",
       "cmd": "#wolfpelt",
       "prefab": "WolfPelt",
-      "cost": 210,
-      "amount": 10
+      "cost": 21
     },
     {
       "type": "section",
@@ -8853,11 +8773,10 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 328
     },
     {
-      "name": "Eitr x10",
+      "name": "Eitr",
       "cmd": "#eitr",
       "prefab": "Eitr",
-      "cost": 390,
-      "amount": 10
+      "cost": 39
     },
     {
       "name": "Frost Core",
@@ -8872,11 +8791,10 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 38
     },
     {
-      "name": "Surtling Core x10",
+      "name": "Surtling Core",
       "cmd": "#surtlingcore",
       "prefab": "SurtlingCore",
-      "cost": 660,
-      "amount": 10
+      "cost": 66
     },
     {
       "type": "section",
@@ -9040,25 +8958,22 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 11
     },
     {
-      "name": "Guck x10",
+      "name": "Guck",
       "cmd": "#guck",
       "prefab": "Guck",
-      "cost": 160,
-      "amount": 10
+      "cost": 16
     },
     {
-      "name": "Iron Nails x10",
+      "name": "Iron Nails",
       "cmd": "#ironnails",
       "prefab": "IronNails",
-      "cost": 260,
-      "amount": 10
+      "cost": 26
     },
     {
-      "name": "Ironpit x10",
+      "name": "Ironpit",
       "cmd": "#ironpit",
       "prefab": "Ironpit",
-      "cost": 160,
-      "amount": 10
+      "cost": 16
     },
     {
       "name": "Mechanical Spring",
@@ -9111,11 +9026,10 @@ window.VALHEIM_TWITCH_STORE = {
       "amount": 10
     },
     {
-      "name": "Sap x10",
+      "name": "Sap",
       "cmd": "#sap",
       "prefab": "Sap",
-      "cost": 390,
-      "amount": 10
+      "cost": 39
     },
     {
       "name": "Softtissue",
@@ -9124,11 +9038,10 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 39
     },
     {
-      "name": "Tar x10",
+      "name": "Tar",
       "cmd": "#tar",
       "prefab": "Tar",
-      "cost": 270,
-      "amount": 10
+      "cost": 27
     },
     {
       "name": "Withered Bone",
