@@ -21,7 +21,9 @@ ECONOMY_CATALOG = Path(
 OUT_JS = ROOT / "js" / "commands-data.js"
 ICON_DIR = ROOT / "assets" / "icons"
 ICON_MAP = ROOT / "assets" / "icon-map.json"
-# prefab → coinCost from heimheim-catalog.json (filled in main)
+# prefab → coinCost / command / alias from heimheim-catalog.json (filled in main)
+ECONOMY_COMMANDS: dict[str, str] = {}
+ECONOMY_ALIASES: dict[str, str] = {}
 COIN_COSTS: dict[str, int] = {}
 # prefab → defaultAmount (materials → 10); stack display cost = coinCost × amount
 DEFAULT_AMOUNTS: dict[str, int] = {}
@@ -55,6 +57,7 @@ BIOME_ORDER = [
 
 # Prefab → wiki image overrides (when heuristics miss)
 ICON_OVERRIDES = {
+    "Unbjorn": "Vile.png",  # Plains Vile
     "ArmorBronzeChest": "Bronze_Plate_Tunic.png",
     "ArmorBronzeLegs": "Bronze_Plate_Leggings.png",
     "ArmorBronzeHelmet": "Bronze_Helmet.png",
@@ -149,6 +152,7 @@ DISPLAY_NAME = {
     "CookedMeat": "Cooked Boar Meat",
     "NeckTail": "Neck Tail",
     "NeckTailGrilled": "Grilled Neck Tail",
+    "Unbjorn": "Vile",  # Plains night undead bear
     "gd_king": "The Elder",
     "GoblinKing": "Yagluth",
     "Dragon": "Moder",
@@ -202,9 +206,15 @@ def entry(prefab: str, alias: str | None, command: str | None = None, desc: str 
     name = pretty_cmd_name(prefab, alias)
     if amt > 1:
         name = f"{name} x{amt}"
+    # Prefer economy-catalog command/alias (e.g. Unbjorn → #vile).
+    cmd = (
+        command
+        or ECONOMY_COMMANDS.get(prefab)
+        or f"#{(alias or ECONOMY_ALIASES.get(prefab) or prefab).lower()}"
+    )
     e = {
         "name": name,
-        "cmd": command or f"#{(alias or prefab).lower()}",
+        "cmd": cmd,
         "prefab": prefab,
     }
     cost = COIN_COSTS.get(prefab)
@@ -218,15 +228,19 @@ def entry(prefab: str, alias: str | None, command: str | None = None, desc: str 
     return e
 
 
-def load_economy_meta(path: Path = ECONOMY_CATALOG) -> tuple[dict[str, int], dict[str, int], dict[str, int]]:
-    """Map prefab → coinCost, defaultAmount, tier from Heim-Heim economy catalog."""
+def load_economy_meta(
+    path: Path = ECONOMY_CATALOG,
+) -> tuple[dict[str, int], dict[str, int], dict[str, int], dict[str, str], dict[str, str]]:
+    """Map prefab → coinCost, defaultAmount, tier, command, alias from Heim-Heim economy catalog."""
     if not path.is_file():
         print(f"WARNING: economy catalog missing at {path} — cards will omit 🪙")
-        return {}, {}, {}
+        return {}, {}, {}, {}, {}
     raw = json.loads(path.read_text())
     costs: dict[str, int] = {}
     amounts: dict[str, int] = {}
     tiers: dict[str, int] = {}
+    commands: dict[str, str] = {}
+    aliases: dict[str, str] = {}
     rows = raw.get("entries") or list((raw.get("byId") or {}).values())
     for row in rows:
         pid = row.get("id") or row.get("prefab")
@@ -248,12 +262,18 @@ def load_economy_meta(path: Path = ECONOMY_CATALOG) -> tuple[dict[str, int], dic
                 tiers[pid] = max(0, min(6, int(row["tier"])))
         except (TypeError, ValueError):
             pass
-    return costs, amounts, tiers
+        cmd = row.get("command")
+        if isinstance(cmd, str) and cmd.strip():
+            commands[pid] = cmd.strip() if cmd.strip().startswith("#") else f"#{cmd.strip()}"
+        al = row.get("alias")
+        if isinstance(al, str) and al.strip():
+            aliases[pid] = al.strip().lstrip("#").lower()
+    return costs, amounts, tiers, commands, aliases
 
 
 def load_coin_costs(path: Path = ECONOMY_CATALOG) -> dict[str, int]:
     """Map prefab id → coinCost from Heim-Heim economy catalog."""
-    costs, _, _ = load_economy_meta(path)
+    costs, _, _, _, _ = load_economy_meta(path)
     return costs
 
 
@@ -1659,11 +1679,13 @@ def main() -> None:
     )
     args = ap.parse_args()
 
-    global COIN_COSTS, DEFAULT_AMOUNTS, ECONOMY_TIERS
-    COIN_COSTS, DEFAULT_AMOUNTS, ECONOMY_TIERS = load_economy_meta()
+    global COIN_COSTS, DEFAULT_AMOUNTS, ECONOMY_TIERS, ECONOMY_COMMANDS, ECONOMY_ALIASES
+    COIN_COSTS, DEFAULT_AMOUNTS, ECONOMY_TIERS, ECONOMY_COMMANDS, ECONOMY_ALIASES = (
+        load_economy_meta()
+    )
     print(
         f"Loaded {len(COIN_COSTS)} coin costs, {len(DEFAULT_AMOUNTS)} defaultAmounts, "
-        f"{len(ECONOMY_TIERS)} tiers from {ECONOMY_CATALOG}"
+        f"{len(ECONOMY_TIERS)} tiers, {len(ECONOMY_COMMANDS)} commands from {ECONOMY_CATALOG}"
     )
 
     data = json.loads(CATALOG.read_text())
