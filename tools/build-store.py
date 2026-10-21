@@ -29,6 +29,10 @@ COIN_COSTS: dict[str, int] = {}
 DEFAULT_AMOUNTS: dict[str, int] = {}
 # prefab → tier int from economy catalog (mead biome overrides)
 ECONOMY_TIERS: dict[str, int] = {}
+# prefab → catalog category / subcategory (builder SoT — stop re-slop on rebuild)
+ECONOMY_CATEGORIES: dict[str, str] = {}
+ECONOMY_SUBCATEGORIES: dict[str, str] = {}
+PACK_PRICE: set[str] = set()
 TIER_LABEL = {
     0: "T0 · Meadows",
     1: "T1 · Black Forest",
@@ -219,8 +223,11 @@ def entry(prefab: str, alias: str | None, command: str | None = None, desc: str 
     }
     cost = COIN_COSTS.get(prefab)
     if cost is not None:
-        # Stack-aware: charge unit × defaultAmount (matches bridge costFor)
-        e["cost"] = int(cost) * amt
+        # Materials: unit × amount. PackPrice (seeds/crops/arrows/feasts): coinCost is pack.
+        if prefab in PACK_PRICE and amt > 1:
+            e["cost"] = int(cost)
+        else:
+            e["cost"] = int(cost) * amt
     if amt > 1:
         e["amount"] = amt
     if desc:
@@ -230,17 +237,29 @@ def entry(prefab: str, alias: str | None, command: str | None = None, desc: str 
 
 def load_economy_meta(
     path: Path = ECONOMY_CATALOG,
-) -> tuple[dict[str, int], dict[str, int], dict[str, int], dict[str, str], dict[str, str]]:
-    """Map prefab → coinCost, defaultAmount, tier, command, alias from Heim-Heim economy catalog."""
+) -> tuple[
+    dict[str, int],
+    dict[str, int],
+    dict[str, int],
+    dict[str, str],
+    dict[str, str],
+    dict[str, str],
+    dict[str, str],
+    set[str],
+]:
+    """Map prefab → coinCost, defaultAmount, tier, command, alias, category, subcategory, packPrice."""
     if not path.is_file():
         print(f"WARNING: economy catalog missing at {path} — cards will omit 🪙")
-        return {}, {}, {}, {}, {}
+        return {}, {}, {}, {}, {}, {}, {}, set()
     raw = json.loads(path.read_text())
     costs: dict[str, int] = {}
     amounts: dict[str, int] = {}
     tiers: dict[str, int] = {}
     commands: dict[str, str] = {}
     aliases: dict[str, str] = {}
+    categories: dict[str, str] = {}
+    subcategories: dict[str, str] = {}
+    pack_price: set[str] = set()
     rows = raw.get("entries") or list((raw.get("byId") or {}).values())
     for row in rows:
         pid = row.get("id") or row.get("prefab")
@@ -268,13 +287,54 @@ def load_economy_meta(
         al = row.get("alias")
         if isinstance(al, str) and al.strip():
             aliases[pid] = al.strip().lstrip("#").lower()
-    return costs, amounts, tiers, commands, aliases
+        cat = row.get("category")
+        if isinstance(cat, str) and cat.strip():
+            categories[pid] = cat.strip().lower()
+        sub = row.get("subcategory")
+        if isinstance(sub, str) and sub.strip():
+            subcategories[pid] = sub.strip()
+        if row.get("packPrice") is True:
+            pack_price.add(pid)
+    return costs, amounts, tiers, commands, aliases, categories, subcategories, pack_price
 
 
 def load_coin_costs(path: Path = ECONOMY_CATALOG) -> dict[str, int]:
     """Map prefab id → coinCost from Heim-Heim economy catalog."""
-    costs, _, _, _, _ = load_economy_meta(path)
+    costs, _, _, _, _, _, _, _ = load_economy_meta(path)
     return costs
+
+GEAR_UNCOOKED_PREFIXES = (
+    "Armor",
+    "Helmet",
+    "Cape",
+    "Staff",
+    "Shield",
+    "Sword",
+    "THSword",
+    "Axe",
+    "Battleaxe",
+    "Mace",
+    "Sledge",
+    "Spear",
+    "Atgeir",
+    "Knife",
+    "Bow",
+    "Crossbow",
+    "Fist",
+)
+GEAR_UNCOOKED_MISC = {
+    "GenericMoldUncooked",
+    "KeysGoldUncooked",
+    "SmallPartsGoldUncooked",
+}
+
+
+def is_gear_uncooked(prefab: str) -> bool:
+    if prefab in GEAR_UNCOOKED_MISC:
+        return True
+    if not prefab.endswith("Uncooked"):
+        return False
+    return prefab.startswith(GEAR_UNCOOKED_PREFIXES)
 
 
 # ---- Item classification ----
@@ -635,49 +695,17 @@ FOOD_CROP = {
     "Honey",
     "Dandelion",
     "Thistle",
-    "Entrails",  # sausage craft ingredient (food mat, not misc)
-    "QueensJam",
     "JotunPuffs",
     "Magecap",
     "Fiddleheadfern",
-    "OnionSoup",
-    "CarrotSoup",
-    "DeerStew",
-    "Sausages",
-    "BloodPudding",
-    "Bread",
-    "LoxPie",
-    "FishWraps",
-    "Eyescream",
-    "Salad",
-    "MeatPlatter",
-    "MisthareSupreme",
-    "HoneyGlazedChicken",
-    "MushroomOmelette",
-    "PiquantPie",
-    "RoastedCrustPie",
-    "SpicyMarmalade",
-    "CookedEgg",
-    "BoarJerky",
-    "WolfJerky",
-    "BlackSoup",
-    "SerpentStew",
-    # Deep North / mis-tagged Misc foods
     "Oat",
     "OatFlour",
     "OatMilk",
     "Kale",
-    "KaleChips",
     "Poteitr",
-    "GreydwarfSurprise",
-    "MagicallyStuffedShroom",
-    "MarinatedGreens",
-    "PulledBear",
-    "Lingondricka",
-    "ShocklateSmoothie",
-    "MinceMeatSauce",
-    "VikingCupcake",
-    "Larva",
+    "Vineberry",
+    "Lingonberry",
+    "RoyalJelly",
 }
 
 # Misc-catalog drops that are Mountain/crafting materials (not Utility & oddities)
@@ -803,10 +831,21 @@ def is_feast_item(prefab: str) -> bool:
 
 
 def food_section(prefab: str) -> str:
+    # Prefer Heim-Heim catalog subcategory (builder SoT)
+    eco = ECONOMY_SUBCATEGORIES.get(prefab)
+    if eco in {
+        "Feasts",
+        "Raw ingredients",
+        "Uncooked",
+        "Cooked meals",
+        "Prepared dishes",
+        "Crops & forage",
+    }:
+        return eco
     if is_feast_item(prefab):
         return "Feasts"
-    # Uncooked doughs / pies before "pie" / prepared heuristics
-    if prefab.endswith("Uncooked"):
+    # Uncooked doughs / pies before "pie" / prepared heuristics — never gear molds
+    if prefab.endswith("Uncooked") and not is_gear_uncooked(prefab):
         return "Uncooked"
     if FOOD_COOKED.search(prefab) or prefab.startswith(("Cooked", "Smoked", "Grilled")):
         return "Cooked meals"
@@ -839,11 +878,15 @@ def food_section(prefab: str) -> str:
             "Pudding",
             "Bread",
             "Sausages",
+            "Jam",
+            "Pulled",
+            "Sauce",
+            "Porridge",
         )
     ):
         return "Prepared dishes"
     # Crafting guts / thistle sit with raw cook ingredients, not crop bushes
-    if prefab in {"Entrails", "Thistle"}:
+    if prefab in {"Entrails", "Thistle", "Bloodbag", "Ooze", "Larva"}:
         return "Raw ingredients"
     if prefab in FOOD_CROP or any(
         prefab.startswith(x)
@@ -894,14 +937,24 @@ def is_food_item(prefab: str) -> bool:
         return False
     if is_potion_item(prefab):
         return False
+    if is_gear_uncooked(prefab):
+        return False
     if prefab.startswith(("Staff", "Armor", "Helmet", "Cape", "Trophy", "Pickable")):
+        return False
+    # Economy catalog already classified
+    eco_cat = ECONOMY_CATEGORIES.get(prefab)
+    if eco_cat == "food":
+        return True
+    if eco_cat in ("weapons", "armor", "materials", "potions", "misc", "curses"):
         return False
     p = prefab.lower()
     if prefab in FOOD_CROP:
         return True
     if FOOD_COOKED.search(prefab) or (FOOD_RAW.search(prefab) and prefab not in NOT_FOOD_ITEMS):
         return True
-    if prefab.endswith(("Meat", "Uncooked", "Skewer", "Jerky", "Blubber")):
+    if prefab.endswith(("Meat", "Skewer", "Jerky", "Blubber")):
+        return True
+    if prefab.endswith("Uncooked") and not is_gear_uncooked(prefab):
         return True
     if "meat" in p and not prefab.startswith("Trophy"):
         return True
@@ -1250,6 +1303,29 @@ def classify_item(it: dict) -> tuple[str, str]:
     """Return (tab, section)."""
     prefab = it["prefab"]
     cat = it.get("category") or "Misc"
+
+    # Heim-Heim catalog category is SoT when present (stops Uncooked-gear → Food re-slop)
+    eco = ECONOMY_CATEGORIES.get(prefab)
+    if eco == "potions":
+        return "potions", potion_section(prefab)
+    if eco == "food":
+        return "food", food_section(prefab)
+    if eco == "weapons":
+        return "weapons", weapon_section(prefab)
+    if eco == "armor":
+        return "armor", armor_section(prefab)
+    if eco == "materials":
+        return "materials", material_section(prefab)
+    if eco == "curses":
+        sub = ECONOMY_SUBCATEGORIES.get(prefab) or "Good"
+        return "curses", sub if sub in ("Good", "Bad") else "Good"
+
+    if is_gear_uncooked(prefab):
+        if prefab.startswith(("Armor", "Helmet", "Cape")):
+            return "armor", armor_section(prefab)
+        if prefab.startswith(GEAR_UNCOOKED_PREFIXES):
+            return "weapons", weapon_section(prefab)
+        return "misc", "Utility & oddities"
 
     if is_potion_item(prefab):
         return "potions", potion_section(prefab)
@@ -1760,12 +1836,21 @@ def main() -> None:
     args = ap.parse_args()
 
     global COIN_COSTS, DEFAULT_AMOUNTS, ECONOMY_TIERS, ECONOMY_COMMANDS, ECONOMY_ALIASES
-    COIN_COSTS, DEFAULT_AMOUNTS, ECONOMY_TIERS, ECONOMY_COMMANDS, ECONOMY_ALIASES = (
-        load_economy_meta()
-    )
+    global ECONOMY_CATEGORIES, ECONOMY_SUBCATEGORIES, PACK_PRICE
+    (
+        COIN_COSTS,
+        DEFAULT_AMOUNTS,
+        ECONOMY_TIERS,
+        ECONOMY_COMMANDS,
+        ECONOMY_ALIASES,
+        ECONOMY_CATEGORIES,
+        ECONOMY_SUBCATEGORIES,
+        PACK_PRICE,
+    ) = load_economy_meta()
     print(
         f"Loaded {len(COIN_COSTS)} coin costs, {len(DEFAULT_AMOUNTS)} defaultAmounts, "
-        f"{len(ECONOMY_TIERS)} tiers, {len(ECONOMY_COMMANDS)} commands from {ECONOMY_CATALOG}"
+        f"{len(ECONOMY_TIERS)} tiers, {len(ECONOMY_COMMANDS)} commands, "
+        f"{len(ECONOMY_CATEGORIES)} cats from {ECONOMY_CATALOG}"
     )
 
     data = json.loads(CATALOG.read_text())

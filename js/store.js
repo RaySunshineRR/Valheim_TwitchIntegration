@@ -77,6 +77,7 @@
   const FOOD_TYPE_ORDER = [
     "Feasts",
     "Raw ingredients",
+    "Uncooked",
     "Cooked meals",
     "Prepared dishes",
     "Crops & forage",
