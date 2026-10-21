@@ -149,7 +149,7 @@ window.VALHEIM_TWITCH_STORE = {
     },
     {
       "name": "Cooked Boar Meat",
-      "cmd": "#cookedboarmeat",
+      "cmd": "#cookedmeat",
       "prefab": "CookedMeat",
       "cost": 1,
       "desc": "Quick food"
@@ -594,7 +594,7 @@ window.VALHEIM_TWITCH_STORE = {
     },
     {
       "name": "Vile",
-      "cmd": "#unbjorn",
+      "cmd": "#vile",
       "prefab": "Unbjorn",
       "cost": 126
     },
@@ -4894,7 +4894,7 @@ window.VALHEIM_TWITCH_STORE = {
     },
     {
       "name": "Cooked Boar Meat",
-      "cmd": "#cookedboarmeat",
+      "cmd": "#cookedmeat",
       "prefab": "CookedMeat",
       "cost": 1
     },
@@ -5050,7 +5050,7 @@ window.VALHEIM_TWITCH_STORE = {
     },
     {
       "name": "Boar Meat",
-      "cmd": "#boarmeat",
+      "cmd": "#rawmeat",
       "prefab": "RawMeat",
       "cost": 1
     },
@@ -5980,7 +5980,7 @@ window.VALHEIM_TWITCH_STORE = {
     },
     {
       "name": "Boar Meat",
-      "cmd": "#boarmeat",
+      "cmd": "#rawmeat",
       "prefab": "RawMeat",
       "cost": 1
     },
@@ -6092,7 +6092,7 @@ window.VALHEIM_TWITCH_STORE = {
     },
     {
       "name": "Cooked Boar Meat",
-      "cmd": "#cookedboarmeat",
+      "cmd": "#cookedmeat",
       "prefab": "CookedMeat",
       "cost": 1
     },

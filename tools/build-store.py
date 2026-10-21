@@ -206,10 +206,10 @@ def entry(prefab: str, alias: str | None, command: str | None = None, desc: str 
     name = pretty_cmd_name(prefab, alias)
     if amt > 1:
         name = f"{name} x{amt}"
-    # Prefer economy-catalog command/alias (e.g. Unbjorn → #vile).
+    # Prefer economy-catalog command/alias (e.g. Unbjorn → #vile) over prefab-catalog.
     cmd = (
-        command
-        or ECONOMY_COMMANDS.get(prefab)
+        ECONOMY_COMMANDS.get(prefab)
+        or command
         or f"#{(alias or ECONOMY_ALIASES.get(prefab) or prefab).lower()}"
     )
     e = {
