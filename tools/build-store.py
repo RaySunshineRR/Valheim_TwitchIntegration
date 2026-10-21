@@ -75,6 +75,24 @@ ICON_OVERRIDES = {
     "CookedBoarMeat": "Cooked_Boar_Meat.png",
     "CookedDeerMeat": "Cooked_Deer_Meat.png",
     "CookedLoxMeat": "Cooked_Lox_Meat.png",
+    # Lox fur set (was wrong/duplicate teal placeholders)
+    "ArmorLoxChest": "Lox_Fur_Jacket.png",
+    "ArmorLoxLegs": "Lox_Fur_Trousers.png",
+    "HelmetLox": "Lox_Fur_Hood.png",
+    "CapeLox": "Lox_Cape.png",
+    "CrossbowArbalest": "Arbalest.png",
+    "CrossbowRipper": "Ripper.png",
+    "CrossbowRipperBlood": "Ripper.png",
+    "CrossbowRipperLightning": "Ripper.png",
+    "CrossbowRipperNature": "Ripper.png",
+    "BoltBlackmetal": "Black_Metal_Bolt.png",
+    "BoltIron": "Iron_Bolt.png",
+    "BoltBone": "Bone_Bolt.png",
+    "BoltCarapace": "Carapace_Bolt.png",
+    "BoltCharred": "Charred_Bolt.png",
+    "BoltBloodGold": "Bloodgold_Bolt.png",
+    "BeltStrength": "Megingjord.png",
+    "CryptKey": "Swamp_key.png",
     "QueensJam": "Queen's_Jam.png",
     "SwordIron": "Iron_Sword.png",
     "SwordBronze": "Bronze_Sword.png",
@@ -758,7 +776,24 @@ FORCE_MATERIAL_PREFABS = {
 }
 
 
+def is_cosmetic_gear(prefab: str) -> bool:
+    if ECONOMY_SUBCATEGORIES.get(prefab) == "cosmetic":
+        return True
+    return bool(
+        re.search(
+            r"(?i)(Dress|Tunic|Harvester|HelmetHat|HelmetCelebration|HelmetYule|"
+            r"HelmetOdin|HelmetPointy|HelmetStraw|HelmetSweat|HelmetMidsummer|"
+            r"HelmetFishing|CapeOdin|ArmorGold|SwordGold|AxeGold|MaceGold|BowGold|"
+            r"SpearGold|KnifeGold|AtgeirGold|SledgeGold|BattleaxeGold|CrossbowGold|"
+            r"THSwordGold|FistGold|Shield.*Gold|TankardOdin)",
+            prefab,
+        )
+    )
+
+
 def weapon_section(prefab: str) -> str:
+    if is_cosmetic_gear(prefab):
+        return "Cosmetic"
     for prefix, section in WEAPON_PREFIX.items():
         if prefab.startswith(prefix):
             return section
@@ -770,6 +805,8 @@ def weapon_section(prefab: str) -> str:
 
 
 def armor_section(prefab: str) -> str:
+    if is_cosmetic_gear(prefab):
+        return "Cosmetic"
     if prefab in CAPE_TIER:
         return CAPE_TIER[prefab]
     if prefab.startswith("Cape"):
@@ -1141,9 +1178,26 @@ def looks_like_material(prefab: str) -> bool:
 
 
 def material_section(prefab: str) -> str:
+    eco_sub = ECONOMY_SUBCATEGORIES.get(prefab)
+    if eco_sub == "Seeds":
+        return "Seeds"
     if prefab == "DragonEgg":
         return "Boss & rare drops"
     p = prefab.lower()
+    if prefab in {
+        "PineCone",
+        "FirCone",
+        "FirConeFrost",
+        "Acorn",
+        "BeechSeeds",
+        "BirchSeeds",
+        "KaleSeeds",
+        "OatSeeds",
+        "PoteitrSeeds",
+    } or (prefab.endswith("Seeds") and prefab not in {"AncientSeed", "CarrotSeeds", "TurnipSeeds", "OnionSeeds"}):
+        return "Seeds"
+    if prefab == "Pukeberries":
+        return "Crafting parts"
     # Mountain wolf parts — crafting mats, not mounts
     if prefab in {"WolfClaw", "WolfFang", "WolfHairBundle"}:
         return "Crafting parts"
@@ -1294,8 +1348,6 @@ def misc_section(prefab: str) -> str:
         return "Tools"
     if "trophy" in p:
         return "Trophies"
-    if any(x in p for x in ("seed", "cone", "acorn")) or prefab.endswith("Seeds"):
-        return "Utility & oddities"
     return "Utility & oddities"
 
 
@@ -1573,23 +1625,23 @@ def build_store(data: dict) -> dict:
         tab, section = classify_item(it)
         buckets[tab][section].append(it)
 
-    weapon_families = [
-        "Swords",
-        "Axes",
-        "Maces & clubs",
-        "Spears",
-        "Knives",
-        "Bows",
-        "Arrows & bolts",
-        "Shields",
-        "Magic",
-        "Throwables",
-        "Utility weapons",
-        "Other weapons",
-    ]
     section_order = {
-        "weapons": weapon_families,
-        "armor": list(TIER_ORDER),
+        "weapons": [
+            "Swords",
+            "Axes",
+            "Maces & clubs",
+            "Spears",
+            "Knives",
+            "Bows",
+            "Arrows & bolts",
+            "Shields",
+            "Magic",
+            "Cosmetic",
+            "Throwables",
+            "Utility weapons",
+            "Other weapons",
+        ],
+        "armor": list(TIER_ORDER) + ["Cosmetic"],
         "food": [
             "Feasts",
             "Raw ingredients",
@@ -1610,6 +1662,7 @@ def build_store(data: dict) -> dict:
             "Stone & crystal",
             "Metals",
             "Hides & scales",
+            "Seeds",
             "Boss & rare drops",
             "Valuables",
             "Crafting parts",
