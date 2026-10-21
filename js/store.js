@@ -93,6 +93,8 @@
 
   let activeTab = "quick";
   let activeBiome = null;
+  /** Active tier/type chip — catalog shows only that section's items. */
+  let activeSection = null;
   let toastTimer = 0;
   let iconMap = {};
 
@@ -138,6 +140,38 @@
       if (keep) out.push(e);
     }
     return out;
+  }
+
+  function filterBySection(list, section) {
+    if (!section) return list;
+    const out = [];
+    let keep = false;
+    for (const e of list) {
+      if (e.type === "help") continue;
+      if (e.type === "section") {
+        keep = e.title === section;
+        if (keep) out.push(e);
+        continue;
+      }
+      if (keep) out.push(e);
+    }
+    return out;
+  }
+
+  function ensureActiveSection(tiers, types) {
+    const all = [...(tiers || []), ...(types || [])];
+    if (!all.length) {
+      activeSection = null;
+      return;
+    }
+    if (!activeSection || !all.includes(activeSection)) {
+      activeSection = all[0];
+    }
+  }
+
+  function shortTierLabel(title) {
+    const m = String(title || "").match(/^(T\d+)/i);
+    return m ? m[1].toUpperCase() : title;
   }
 
   function sectionSlug(title) {
@@ -330,6 +364,24 @@
     if (tab === "mobs" && !q) {
       all = filterByBiome(all, activeBiome);
     }
+    if (!q && JUMP_TABS.has(tab)) {
+      const titles = sectionTitles(all).filter((t) => t !== "By tier");
+      const tiers = titles.filter((t) => TIER_TITLES.has(t));
+      let types = titles.filter((t) => !TIER_TITLES.has(t));
+      if (tab === "food") {
+        types = sectionTitles(
+          types.map((t) => ({ type: "section", title: t })),
+          FOOD_TYPE_ORDER,
+        );
+      }
+      ensureActiveSection(
+        TIER_TABS.has(tab) ? tiers : [],
+        TYPE_TABS.has(tab) ? types : [],
+      );
+      if (activeSection) {
+        all = filterBySection(all, activeSection);
+      }
+    }
     if (!q) return all;
     return all.filter((e) => {
       if (e.type === "help") return false;
@@ -347,38 +399,37 @@
     }).filter((e) => e.type === "section" || matches(e, q));
   }
 
-  function jumpToSection(title) {
-    const el = document.getElementById(sectionId(title));
-    if (!el) return;
-    el.scrollIntoView({ behavior: "smooth", block: "start" });
-    el.classList.add("is-jump-flash");
-    window.setTimeout(() => el.classList.remove("is-jump-flash"), 900);
-  }
-
   function clearNav(el) {
     if (!el) return;
     el.innerHTML = "";
     el.classList.add("hidden");
   }
 
-  function appendJumpButtons(container, titles) {
+  function appendJumpButtons(container, titles, labelFn) {
     container.innerHTML = "";
     if (!titles.length) {
       container.classList.add("hidden");
       return;
     }
     container.classList.remove("hidden");
+    const labelOf = typeof labelFn === "function" ? labelFn : (t) => t;
     for (const title of titles) {
       const btn = document.createElement("button");
       btn.type = "button";
       let extra = "";
       if (title === "Good") extra = " subtab-good";
       if (title === "Bad") extra = " subtab-bad";
+      if (title === activeSection) extra += " is-active";
       btn.className = "subtab subtab-jump" + extra;
-      btn.setAttribute("role", "link");
+      btn.setAttribute("role", "tab");
+      btn.setAttribute("aria-selected", title === activeSection ? "true" : "false");
       btn.dataset.section = title;
-      btn.textContent = title;
-      btn.addEventListener("click", () => jumpToSection(title));
+      btn.textContent = labelOf(title);
+      btn.title = title;
+      btn.addEventListener("click", () => {
+        activeSection = title;
+        render();
+      });
       container.append(btn);
     }
   }
@@ -439,17 +490,21 @@
         FOOD_TYPE_ORDER,
       );
     }
+    ensureActiveSection(
+      TIER_TABS.has(activeTab) ? tiers : [],
+      TYPE_TABS.has(activeTab) ? types : [],
+    );
 
     if (tiertabsEl) {
       tiertabsEl.setAttribute("aria-label", "Progression tiers");
       if (TIER_TABS.has(activeTab) && tiers.length) {
-        appendJumpButtons(tiertabsEl, tiers);
+        appendJumpButtons(tiertabsEl, tiers, shortTierLabel);
       } else {
         clearNav(tiertabsEl);
       }
     }
 
-    subtabsEl.setAttribute("aria-label", "Jump to subcategory");
+    subtabsEl.setAttribute("aria-label", "Filter by type");
     if (TYPE_TABS.has(activeTab) && types.length) {
       appendJumpButtons(subtabsEl, types);
     } else {
@@ -488,6 +543,9 @@
   }
 
   function setTab(tab) {
+    if (tab !== activeTab) {
+      activeSection = null;
+    }
     activeTab = tab;
     for (const el of tabs) {
       const on = el.dataset.tab === tab;
