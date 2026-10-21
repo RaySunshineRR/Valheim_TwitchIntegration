@@ -1018,28 +1018,22 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 2
     },
     {
+      "name": "Bow",
+      "cmd": "#bow",
+      "prefab": "Bow",
+      "cost": 12
+    },
+    {
       "name": "Club",
       "cmd": "#club",
       "prefab": "Club",
       "cost": 1
     },
     {
-      "name": "Dyrnwyn Blade Fragment",
-      "cmd": "#dyrnwynbladefragment",
-      "prefab": "DyrnwynBladeFragment",
-      "cost": 1
-    },
-    {
-      "name": "Dyrnwyn Hilt Fragment",
-      "cmd": "#dyrnwynhiltfragment",
-      "prefab": "DyrnwynHiltFragment",
-      "cost": 1
-    },
-    {
-      "name": "Dyrnwyn Tip Fragment",
-      "cmd": "#dyrnwyntipfragment",
-      "prefab": "DyrnwynTipFragment",
-      "cost": 1
+      "name": "Butcher Knife",
+      "cmd": "#knifebutcher",
+      "prefab": "KnifeButcher",
+      "cost": 2
     },
     {
       "name": "Flint Knife",
@@ -1069,6 +1063,12 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Wood Tower Shield",
       "cmd": "#shieldwoodtower",
       "prefab": "ShieldWoodTower",
+      "cost": 2
+    },
+    {
+      "name": "Stagbreaker Sledge",
+      "cmd": "#sledgestagbreaker",
+      "prefab": "SledgeStagbreaker",
       "cost": 2
     },
     {
@@ -1146,6 +1146,12 @@ window.VALHEIM_TWITCH_STORE = {
       "amount": 10
     },
     {
+      "name": "Upgrader0Weapon",
+      "cmd": "#upgrader0weapon",
+      "prefab": "Upgrader0Weapon",
+      "cost": 1
+    },
+    {
       "type": "section",
       "title": "T1 · Black Forest"
     },
@@ -1195,36 +1201,6 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 13
     },
     {
-      "name": "Himmin Afl Atgeir",
-      "cmd": "#atgeirhimminafl",
-      "prefab": "AtgeirHimminAfl",
-      "cost": 13
-    },
-    {
-      "name": "Berzerkr Axe",
-      "cmd": "#axeberzerkr",
-      "prefab": "AxeBerzerkr",
-      "cost": 13
-    },
-    {
-      "name": "Berzerkr Blood Axe",
-      "cmd": "#axeberzerkrblood",
-      "prefab": "AxeBerzerkrBlood",
-      "cost": 13
-    },
-    {
-      "name": "Berzerkr Lightning Axe",
-      "cmd": "#axeberzerkrlightning",
-      "prefab": "AxeBerzerkrLightning",
-      "cost": 13
-    },
-    {
-      "name": "Berzerkr Nature Axe",
-      "cmd": "#axeberzerkrnature",
-      "prefab": "AxeBerzerkrNature",
-      "cost": 13
-    },
-    {
       "name": "Bronze Axe",
       "cmd": "#axebronze",
       "prefab": "AxeBronze",
@@ -1267,12 +1243,6 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 13
     },
     {
-      "name": "Battleaxe",
-      "cmd": "#battleaxe",
-      "prefab": "Battleaxe",
-      "cost": 13
-    },
-    {
       "name": "Gold Battleaxe",
       "cmd": "#battleaxegold",
       "prefab": "BattleaxeGold",
@@ -1311,54 +1281,6 @@ window.VALHEIM_TWITCH_STORE = {
       "amount": 10
     },
     {
-      "name": "Bomb Bile",
-      "cmd": "#bombbile",
-      "prefab": "BombBile",
-      "cost": 11
-    },
-    {
-      "name": "Bomb Blob Lava",
-      "cmd": "#bombbloblava",
-      "prefab": "BombBlob_Lava",
-      "cost": 11
-    },
-    {
-      "name": "Bomb Blob Morkhalla",
-      "cmd": "#bombblobmorkhalla",
-      "prefab": "BombBlob_Morkhalla",
-      "cost": 11
-    },
-    {
-      "name": "Bomb Dynamite",
-      "cmd": "#bombdynamite",
-      "prefab": "BombDynamite",
-      "cost": 11
-    },
-    {
-      "name": "Bomb Lava",
-      "cmd": "#bomblava",
-      "prefab": "BombLava",
-      "cost": 11
-    },
-    {
-      "name": "Bomb Siege",
-      "cmd": "#bombsiege",
-      "prefab": "BombSiege",
-      "cost": 11
-    },
-    {
-      "name": "Bomb Smoke",
-      "cmd": "#bombsmoke",
-      "prefab": "BombSmoke",
-      "cost": 11
-    },
-    {
-      "name": "Bow",
-      "cmd": "#bow",
-      "prefab": "Bow",
-      "cost": 12
-    },
-    {
       "name": "Fine Wood Bow",
       "cmd": "#bowfinewood",
       "prefab": "BowFineWood",
@@ -1389,18 +1311,6 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 48
     },
     {
-      "name": "Spine Snap Bow",
-      "cmd": "#bowspinesnap",
-      "prefab": "BowSpineSnap",
-      "cost": 130
-    },
-    {
-      "name": "Arbalest Crossbow",
-      "cmd": "#crossbowarbalest",
-      "prefab": "CrossbowArbalest",
-      "cost": 13
-    },
-    {
       "name": "Gold Crossbow",
       "cmd": "#crossbowgold",
       "prefab": "CrossbowGold",
@@ -1419,48 +1329,6 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 13
     },
     {
-      "name": "Ripper Crossbow",
-      "cmd": "#crossbowripper",
-      "prefab": "CrossbowRipper",
-      "cost": 13
-    },
-    {
-      "name": "Ripper Blood Crossbow",
-      "cmd": "#crossbowripperblood",
-      "prefab": "CrossbowRipperBlood",
-      "cost": 13
-    },
-    {
-      "name": "Ripper Lightning Crossbow",
-      "cmd": "#crossbowripperlightning",
-      "prefab": "CrossbowRipperLightning",
-      "cost": 13
-    },
-    {
-      "name": "Ripper Nature Crossbow",
-      "cmd": "#crossbowrippernature",
-      "prefab": "CrossbowRipperNature",
-      "cost": 13
-    },
-    {
-      "name": "Fist Bjorn Claw",
-      "cmd": "#fistbjornclaw",
-      "prefab": "FistBjornClaw",
-      "cost": 11
-    },
-    {
-      "name": "Fist Bjorn Undead Claw",
-      "cmd": "#fistbjornundeadclaw",
-      "prefab": "FistBjornUndeadClaw",
-      "cost": 11
-    },
-    {
-      "name": "Fist Fenrir Claw",
-      "cmd": "#fistfenrirclaw",
-      "prefab": "FistFenrirClaw",
-      "cost": 11
-    },
-    {
       "name": "Fist Gold",
       "cmd": "#fistgold",
       "prefab": "FistGold",
@@ -1471,18 +1339,6 @@ window.VALHEIM_TWITCH_STORE = {
       "cmd": "#fistgoldbloodlightning",
       "prefab": "FistGold_BloodLightning",
       "cost": 11
-    },
-    {
-      "name": "Butcher Knife",
-      "cmd": "#knifebutcher",
-      "prefab": "KnifeButcher",
-      "cost": 13
-    },
-    {
-      "name": "Chitin Knife",
-      "cmd": "#knifechitin",
-      "prefab": "KnifeChitin",
-      "cost": 13
     },
     {
       "name": "Copper Knife",
@@ -1509,12 +1365,6 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 13
     },
     {
-      "name": "Skoll And Hati Knife",
-      "cmd": "#knifeskollandhati",
-      "prefab": "KnifeSkollAndHati",
-      "cost": 13
-    },
-    {
       "name": "Void Knife",
       "cmd": "#knifevoid",
       "prefab": "KnifeVoid",
@@ -1524,30 +1374,6 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Bronze Mace",
       "cmd": "#macebronze",
       "prefab": "MaceBronze",
-      "cost": 13
-    },
-    {
-      "name": "Eldner Mace",
-      "cmd": "#maceeldner",
-      "prefab": "MaceEldner",
-      "cost": 13
-    },
-    {
-      "name": "Eldner Blood Mace",
-      "cmd": "#maceeldnerblood",
-      "prefab": "MaceEldnerBlood",
-      "cost": 13
-    },
-    {
-      "name": "Eldner Lightning Mace",
-      "cmd": "#maceeldnerlightning",
-      "prefab": "MaceEldnerLightning",
-      "cost": 13
-    },
-    {
-      "name": "Eldner Nature Mace",
-      "cmd": "#maceeldnernature",
-      "prefab": "MaceEldnerNature",
       "cost": 13
     },
     {
@@ -1572,18 +1398,6 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Mold Fistweapon",
       "cmd": "#moldfistweapon",
       "prefab": "MoldFistweapon",
-      "cost": 11
-    },
-    {
-      "name": "Scythe",
-      "cmd": "#scythe",
-      "prefab": "Scythe",
-      "cost": 11
-    },
-    {
-      "name": "Scythe Handle",
-      "cmd": "#scythehandle",
-      "prefab": "ScytheHandle",
       "cost": 11
     },
     {
@@ -1659,12 +1473,6 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 13
     },
     {
-      "name": "Demolisher Sledge",
-      "cmd": "#sledgedemolisher",
-      "prefab": "SledgeDemolisher",
-      "cost": 13
-    },
-    {
       "name": "Gold Sledge",
       "cmd": "#sledgegold",
       "prefab": "SledgeGold",
@@ -1683,21 +1491,9 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 13
     },
     {
-      "name": "Stagbreaker Sledge",
-      "cmd": "#sledgestagbreaker",
-      "prefab": "SledgeStagbreaker",
-      "cost": 13
-    },
-    {
       "name": "Bronze Spear",
       "cmd": "#spearbronze",
       "prefab": "SpearBronze",
-      "cost": 13
-    },
-    {
-      "name": "Chitin Spear",
-      "cmd": "#spearchitin",
-      "prefab": "SpearChitin",
       "cost": 13
     },
     {
@@ -1725,102 +1521,6 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 13
     },
     {
-      "name": "Splitner Spear",
-      "cmd": "#spearsplitner",
-      "prefab": "SpearSplitner",
-      "cost": 13
-    },
-    {
-      "name": "Splitner Blood Spear",
-      "cmd": "#spearsplitnerblood",
-      "prefab": "SpearSplitner_Blood",
-      "cost": 13
-    },
-    {
-      "name": "Splitner Lightning Spear",
-      "cmd": "#spearsplitnerlightning",
-      "prefab": "SpearSplitner_Lightning",
-      "cost": 13
-    },
-    {
-      "name": "Splitner Nature Spear",
-      "cmd": "#spearsplitnernature",
-      "prefab": "SpearSplitner_Nature",
-      "cost": 13
-    },
-    {
-      "name": "Clusterbomb Staff",
-      "cmd": "#staffclusterbomb",
-      "prefab": "StaffClusterbomb",
-      "cost": 13
-    },
-    {
-      "name": "Fireball Staff",
-      "cmd": "#stafffireball",
-      "prefab": "StaffFireball",
-      "cost": 13
-    },
-    {
-      "name": "Ice Shards Staff",
-      "cmd": "#stafficeshards",
-      "prefab": "StaffIceShards",
-      "cost": 13
-    },
-    {
-      "name": "Lightning Staff",
-      "cmd": "#stafflightning",
-      "prefab": "StaffLightning",
-      "cost": 13
-    },
-    {
-      "name": "Orbof Ahri Staff",
-      "cmd": "#stafforbofahri",
-      "prefab": "StaffOrbofAhri",
-      "cost": 13
-    },
-    {
-      "name": "Orbof Ahri Uncooked Staff",
-      "cmd": "#stafforbofahriuncooked",
-      "prefab": "StaffOrbofAhriUncooked",
-      "cost": 13
-    },
-    {
-      "name": "Shield Staff",
-      "cmd": "#staffshield",
-      "prefab": "StaffShield",
-      "cost": 13
-    },
-    {
-      "name": "Skeleton Staff",
-      "cmd": "#staffskeleton",
-      "prefab": "StaffSkeleton",
-      "cost": 13
-    },
-    {
-      "name": "Spirit Caller Staff",
-      "cmd": "#staffspiritcaller",
-      "prefab": "StaffSpiritCaller",
-      "cost": 13
-    },
-    {
-      "name": "Spirit Caller Uncooked Staff",
-      "cmd": "#staffspiritcalleruncooked",
-      "prefab": "StaffSpiritCallerUncooked",
-      "cost": 13
-    },
-    {
-      "name": "Thunder Blood Staff",
-      "cmd": "#staffthunderblood",
-      "prefab": "StaffThunderBlood",
-      "cost": 13
-    },
-    {
-      "name": "Thunderblood Uncooked Staff",
-      "cmd": "#staffthunderblooduncooked",
-      "prefab": "StaffThunderbloodUncooked",
-      "cost": 13
-    },
-    {
       "name": "Bronze Sword",
       "cmd": "#swordbronze",
       "prefab": "SwordBronze",
@@ -1830,12 +1530,6 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Cheat Sword",
       "cmd": "#swordcheat",
       "prefab": "SwordCheat",
-      "cost": 13
-    },
-    {
-      "name": "Dyrnwyn Sword",
-      "cmd": "#sworddyrnwyn",
-      "prefab": "SwordDyrnwyn",
       "cost": 13
     },
     {
@@ -1854,36 +1548,6 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Gold Uncooked Sword",
       "cmd": "#swordgolduncooked",
       "prefab": "SwordGoldUncooked",
-      "cost": 13
-    },
-    {
-      "name": "Mistwalker Sword",
-      "cmd": "#swordmistwalker",
-      "prefab": "SwordMistwalker",
-      "cost": 13
-    },
-    {
-      "name": "Niedhogg Sword",
-      "cmd": "#swordniedhogg",
-      "prefab": "SwordNiedhogg",
-      "cost": 13
-    },
-    {
-      "name": "Niedhogg Blood Sword",
-      "cmd": "#swordniedhoggblood",
-      "prefab": "SwordNiedhoggBlood",
-      "cost": 13
-    },
-    {
-      "name": "Niedhogg Lightning Sword",
-      "cmd": "#swordniedhogglightning",
-      "prefab": "SwordNiedhoggLightning",
-      "cost": 13
-    },
-    {
-      "name": "Niedhogg Nature Sword",
-      "cmd": "#swordniedhoggnature",
-      "prefab": "SwordNiedhoggNature",
       "cost": 13
     },
     {
@@ -1932,51 +1596,9 @@ window.VALHEIM_TWITCH_STORE = {
       "amount": 10
     },
     {
-      "name": "Upgrader0Weapon",
-      "cmd": "#upgrader0weapon",
-      "prefab": "Upgrader0Weapon",
-      "cost": 11
-    },
-    {
       "name": "Upgrader1Weapon",
       "cmd": "#upgrader1weapon",
       "prefab": "Upgrader1Weapon",
-      "cost": 11
-    },
-    {
-      "name": "Upgrader2Weapon",
-      "cmd": "#upgrader2weapon",
-      "prefab": "Upgrader2Weapon",
-      "cost": 11
-    },
-    {
-      "name": "Upgrader3Weapon",
-      "cmd": "#upgrader3weapon",
-      "prefab": "Upgrader3Weapon",
-      "cost": 11
-    },
-    {
-      "name": "Upgrader4Weapon",
-      "cmd": "#upgrader4weapon",
-      "prefab": "Upgrader4Weapon",
-      "cost": 11
-    },
-    {
-      "name": "Upgrader5Weapon",
-      "cmd": "#upgrader5weapon",
-      "prefab": "Upgrader5Weapon",
-      "cost": 11
-    },
-    {
-      "name": "Upgrader6Weapon",
-      "cmd": "#upgrader6weapon",
-      "prefab": "Upgrader6Weapon",
-      "cost": 11
-    },
-    {
-      "name": "Upgrader7Weapon",
-      "cmd": "#upgrader7weapon",
-      "prefab": "Upgrader7Weapon",
       "cost": 11
     },
     {
@@ -2010,6 +1632,12 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 20
     },
     {
+      "name": "Battleaxe",
+      "cmd": "#battleaxe",
+      "prefab": "Battleaxe",
+      "cost": 20
+    },
+    {
       "name": "Bolt Iron x10",
       "cmd": "#boltiron",
       "prefab": "BoltIron",
@@ -2039,6 +1667,12 @@ window.VALHEIM_TWITCH_STORE = {
       "cmd": "#bowdraugrfang",
       "prefab": "BowDraugrFang",
       "cost": 85
+    },
+    {
+      "name": "Chitin Knife",
+      "cmd": "#knifechitin",
+      "prefab": "KnifeChitin",
+      "cost": 20
     },
     {
       "name": "Iron Mace",
@@ -2083,9 +1717,9 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 20
     },
     {
-      "name": "Green Roots Staff",
-      "cmd": "#staffgreenroots",
-      "prefab": "StaffGreenRoots",
+      "name": "Chitin Spear",
+      "cmd": "#spearchitin",
+      "prefab": "SpearChitin",
       "cost": 20
     },
     {
@@ -2099,6 +1733,12 @@ window.VALHEIM_TWITCH_STORE = {
       "cmd": "#swordironfire",
       "prefab": "SwordIronFire",
       "cost": 20
+    },
+    {
+      "name": "Upgrader2Weapon",
+      "cmd": "#upgrader2weapon",
+      "prefab": "Upgrader2Weapon",
+      "cost": 16
     },
     {
       "type": "section",
@@ -2168,6 +1808,12 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 26
     },
     {
+      "name": "Fist Fenrir Claw",
+      "cmd": "#fistfenrirclaw",
+      "prefab": "FistFenrirClaw",
+      "cost": 21
+    },
+    {
       "name": "Fist Gold Frost Fire",
       "cmd": "#fistgoldfrostfire",
       "prefab": "FistGold_FrostFire",
@@ -2222,18 +1868,6 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 26
     },
     {
-      "name": "Frost Orbs Staff",
-      "cmd": "#stafffrostorbs",
-      "prefab": "StaffFrostOrbs",
-      "cost": 26
-    },
-    {
-      "name": "Frost Orbs Uncooked Staff",
-      "cmd": "#stafffrostorbsuncooked",
-      "prefab": "StaffFrostOrbsUncooked",
-      "cost": 26
-    },
-    {
       "name": "Gold Frost Fire Sword",
       "cmd": "#swordgoldfrostfire",
       "prefab": "SwordGold_FrostFire",
@@ -2249,6 +1883,12 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "TH Sword Gold Frost Fire",
       "cmd": "#thswordgoldfrostfire",
       "prefab": "THSwordGold_FrostFire",
+      "cost": 21
+    },
+    {
+      "name": "Upgrader3Weapon",
+      "cmd": "#upgrader3weapon",
+      "prefab": "Upgrader3Weapon",
       "cost": 21
     },
     {
@@ -2324,6 +1964,12 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 34
     },
     {
+      "name": "Upgrader4Weapon",
+      "cmd": "#upgrader4weapon",
+      "prefab": "Upgrader4Weapon",
+      "cost": 27
+    },
+    {
       "type": "section",
       "title": "T5 · Mistlands"
     },
@@ -2333,6 +1979,12 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "ArrowCarapace",
       "cost": 16,
       "amount": 10
+    },
+    {
+      "name": "Himmin Afl Atgeir",
+      "cmd": "#atgeirhimminafl",
+      "prefab": "AtgeirHimminAfl",
+      "cost": 49
     },
     {
       "name": "Jotun Bane Axe",
@@ -2348,6 +2000,96 @@ window.VALHEIM_TWITCH_STORE = {
       "amount": 10
     },
     {
+      "name": "Bomb Bile",
+      "cmd": "#bombbile",
+      "prefab": "BombBile",
+      "cost": 39
+    },
+    {
+      "name": "Bomb Smoke",
+      "cmd": "#bombsmoke",
+      "prefab": "BombSmoke",
+      "cost": 39
+    },
+    {
+      "name": "Spine Snap Bow",
+      "cmd": "#bowspinesnap",
+      "prefab": "BowSpineSnap",
+      "cost": 130
+    },
+    {
+      "name": "Arbalest Crossbow",
+      "cmd": "#crossbowarbalest",
+      "prefab": "CrossbowArbalest",
+      "cost": 49
+    },
+    {
+      "name": "Ripper Crossbow",
+      "cmd": "#crossbowripper",
+      "prefab": "CrossbowRipper",
+      "cost": 49
+    },
+    {
+      "name": "Ripper Blood Crossbow",
+      "cmd": "#crossbowripperblood",
+      "prefab": "CrossbowRipperBlood",
+      "cost": 49
+    },
+    {
+      "name": "Ripper Lightning Crossbow",
+      "cmd": "#crossbowripperlightning",
+      "prefab": "CrossbowRipperLightning",
+      "cost": 49
+    },
+    {
+      "name": "Ripper Nature Crossbow",
+      "cmd": "#crossbowrippernature",
+      "prefab": "CrossbowRipperNature",
+      "cost": 49
+    },
+    {
+      "name": "Skoll And Hati Knife",
+      "cmd": "#knifeskollandhati",
+      "prefab": "KnifeSkollAndHati",
+      "cost": 49
+    },
+    {
+      "name": "Eldner Mace",
+      "cmd": "#maceeldner",
+      "prefab": "MaceEldner",
+      "cost": 49
+    },
+    {
+      "name": "Eldner Blood Mace",
+      "cmd": "#maceeldnerblood",
+      "prefab": "MaceEldnerBlood",
+      "cost": 49
+    },
+    {
+      "name": "Eldner Lightning Mace",
+      "cmd": "#maceeldnerlightning",
+      "prefab": "MaceEldnerLightning",
+      "cost": 49
+    },
+    {
+      "name": "Eldner Nature Mace",
+      "cmd": "#maceeldnernature",
+      "prefab": "MaceEldnerNature",
+      "cost": 49
+    },
+    {
+      "name": "Scythe",
+      "cmd": "#scythe",
+      "prefab": "Scythe",
+      "cost": 39
+    },
+    {
+      "name": "Scythe Handle",
+      "cmd": "#scythehandle",
+      "prefab": "ScytheHandle",
+      "cost": 39
+    },
+    {
       "name": "Carapace Shield",
       "cmd": "#shieldcarapace",
       "prefab": "ShieldCarapace",
@@ -2360,10 +2102,166 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 49
     },
     {
+      "name": "Demolisher Sledge",
+      "cmd": "#sledgedemolisher",
+      "prefab": "SledgeDemolisher",
+      "cost": 49
+    },
+    {
       "name": "Carapace Spear",
       "cmd": "#spearcarapace",
       "prefab": "SpearCarapace",
       "cost": 49
+    },
+    {
+      "name": "Splitner Spear",
+      "cmd": "#spearsplitner",
+      "prefab": "SpearSplitner",
+      "cost": 49
+    },
+    {
+      "name": "Splitner Blood Spear",
+      "cmd": "#spearsplitnerblood",
+      "prefab": "SpearSplitner_Blood",
+      "cost": 49
+    },
+    {
+      "name": "Splitner Lightning Spear",
+      "cmd": "#spearsplitnerlightning",
+      "prefab": "SpearSplitner_Lightning",
+      "cost": 49
+    },
+    {
+      "name": "Splitner Nature Spear",
+      "cmd": "#spearsplitnernature",
+      "prefab": "SpearSplitner_Nature",
+      "cost": 49
+    },
+    {
+      "name": "Clusterbomb Staff",
+      "cmd": "#staffclusterbomb",
+      "prefab": "StaffClusterbomb",
+      "cost": 49
+    },
+    {
+      "name": "Fireball Staff",
+      "cmd": "#stafffireball",
+      "prefab": "StaffFireball",
+      "cost": 49
+    },
+    {
+      "name": "Frost Orbs Staff",
+      "cmd": "#stafffrostorbs",
+      "prefab": "StaffFrostOrbs",
+      "cost": 49
+    },
+    {
+      "name": "Frost Orbs Uncooked Staff",
+      "cmd": "#stafffrostorbsuncooked",
+      "prefab": "StaffFrostOrbsUncooked",
+      "cost": 49
+    },
+    {
+      "name": "Green Roots Staff",
+      "cmd": "#staffgreenroots",
+      "prefab": "StaffGreenRoots",
+      "cost": 49
+    },
+    {
+      "name": "Ice Shards Staff",
+      "cmd": "#stafficeshards",
+      "prefab": "StaffIceShards",
+      "cost": 49
+    },
+    {
+      "name": "Lightning Staff",
+      "cmd": "#stafflightning",
+      "prefab": "StaffLightning",
+      "cost": 49
+    },
+    {
+      "name": "Orbof Ahri Staff",
+      "cmd": "#stafforbofahri",
+      "prefab": "StaffOrbofAhri",
+      "cost": 49
+    },
+    {
+      "name": "Orbof Ahri Uncooked Staff",
+      "cmd": "#stafforbofahriuncooked",
+      "prefab": "StaffOrbofAhriUncooked",
+      "cost": 49
+    },
+    {
+      "name": "Shield Staff",
+      "cmd": "#staffshield",
+      "prefab": "StaffShield",
+      "cost": 49
+    },
+    {
+      "name": "Skeleton Staff",
+      "cmd": "#staffskeleton",
+      "prefab": "StaffSkeleton",
+      "cost": 49
+    },
+    {
+      "name": "Spirit Caller Staff",
+      "cmd": "#staffspiritcaller",
+      "prefab": "StaffSpiritCaller",
+      "cost": 49
+    },
+    {
+      "name": "Spirit Caller Uncooked Staff",
+      "cmd": "#staffspiritcalleruncooked",
+      "prefab": "StaffSpiritCallerUncooked",
+      "cost": 49
+    },
+    {
+      "name": "Thunder Blood Staff",
+      "cmd": "#staffthunderblood",
+      "prefab": "StaffThunderBlood",
+      "cost": 49
+    },
+    {
+      "name": "Thunderblood Uncooked Staff",
+      "cmd": "#staffthunderblooduncooked",
+      "prefab": "StaffThunderbloodUncooked",
+      "cost": 49
+    },
+    {
+      "name": "Mistwalker Sword",
+      "cmd": "#swordmistwalker",
+      "prefab": "SwordMistwalker",
+      "cost": 49
+    },
+    {
+      "name": "Niedhogg Sword",
+      "cmd": "#swordniedhogg",
+      "prefab": "SwordNiedhogg",
+      "cost": 49
+    },
+    {
+      "name": "Niedhogg Blood Sword",
+      "cmd": "#swordniedhoggblood",
+      "prefab": "SwordNiedhoggBlood",
+      "cost": 49
+    },
+    {
+      "name": "Niedhogg Lightning Sword",
+      "cmd": "#swordniedhogglightning",
+      "prefab": "SwordNiedhoggLightning",
+      "cost": 49
+    },
+    {
+      "name": "Niedhogg Nature Sword",
+      "cmd": "#swordniedhoggnature",
+      "prefab": "SwordNiedhoggNature",
+      "cost": 49
+    },
+    {
+      "name": "Upgrader5Weapon",
+      "cmd": "#upgrader5weapon",
+      "prefab": "Upgrader5Weapon",
+      "cost": 39
     },
     {
       "type": "section",
@@ -2377,11 +2275,65 @@ window.VALHEIM_TWITCH_STORE = {
       "amount": 10
     },
     {
+      "name": "Berzerkr Axe",
+      "cmd": "#axeberzerkr",
+      "prefab": "AxeBerzerkr",
+      "cost": 68
+    },
+    {
+      "name": "Berzerkr Blood Axe",
+      "cmd": "#axeberzerkrblood",
+      "prefab": "AxeBerzerkrBlood",
+      "cost": 68
+    },
+    {
+      "name": "Berzerkr Lightning Axe",
+      "cmd": "#axeberzerkrlightning",
+      "prefab": "AxeBerzerkrLightning",
+      "cost": 68
+    },
+    {
+      "name": "Berzerkr Nature Axe",
+      "cmd": "#axeberzerkrnature",
+      "prefab": "AxeBerzerkrNature",
+      "cost": 68
+    },
+    {
       "name": "Bolt Charred x10",
       "cmd": "#boltcharred",
       "prefab": "BoltCharred",
       "cost": 22,
       "amount": 10
+    },
+    {
+      "name": "Bomb Blob Lava",
+      "cmd": "#bombbloblava",
+      "prefab": "BombBlob_Lava",
+      "cost": 54
+    },
+    {
+      "name": "Bomb Blob Morkhalla",
+      "cmd": "#bombblobmorkhalla",
+      "prefab": "BombBlob_Morkhalla",
+      "cost": 54
+    },
+    {
+      "name": "Bomb Dynamite",
+      "cmd": "#bombdynamite",
+      "prefab": "BombDynamite",
+      "cost": 54
+    },
+    {
+      "name": "Bomb Lava",
+      "cmd": "#bomblava",
+      "prefab": "BombLava",
+      "cost": 54
+    },
+    {
+      "name": "Bomb Siege",
+      "cmd": "#bombsiege",
+      "prefab": "BombSiege",
+      "cost": 54
     },
     {
       "name": "Ashlands Bow",
@@ -2408,6 +2360,36 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 195
     },
     {
+      "name": "Dyrnwyn Blade Fragment",
+      "cmd": "#dyrnwynbladefragment",
+      "prefab": "DyrnwynBladeFragment",
+      "cost": 54
+    },
+    {
+      "name": "Dyrnwyn Hilt Fragment",
+      "cmd": "#dyrnwynhiltfragment",
+      "prefab": "DyrnwynHiltFragment",
+      "cost": 54
+    },
+    {
+      "name": "Dyrnwyn Tip Fragment",
+      "cmd": "#dyrnwyntipfragment",
+      "prefab": "DyrnwynTipFragment",
+      "cost": 54
+    },
+    {
+      "name": "Fist Bjorn Claw",
+      "cmd": "#fistbjornclaw",
+      "prefab": "FistBjornClaw",
+      "cost": 54
+    },
+    {
+      "name": "Fist Bjorn Undead Claw",
+      "cmd": "#fistbjornundeadclaw",
+      "prefab": "FistBjornUndeadClaw",
+      "cost": 54
+    },
+    {
       "name": "Flametal Shield",
       "cmd": "#shieldflametal",
       "prefab": "ShieldFlametal",
@@ -2423,6 +2405,12 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Red Troll Staff",
       "cmd": "#staffredtroll",
       "prefab": "StaffRedTroll",
+      "cost": 68
+    },
+    {
+      "name": "Dyrnwyn Sword",
+      "cmd": "#sworddyrnwyn",
+      "prefab": "SwordDyrnwyn",
       "cost": 68
     },
     {
@@ -2457,6 +2445,18 @@ window.VALHEIM_TWITCH_STORE = {
       "amount": 10
     },
     {
+      "name": "Upgrader6Weapon",
+      "cmd": "#upgrader6weapon",
+      "prefab": "Upgrader6Weapon",
+      "cost": 54
+    },
+    {
+      "name": "Upgrader7Weapon",
+      "cmd": "#upgrader7weapon",
+      "prefab": "Upgrader7Weapon",
+      "cost": 54
+    },
+    {
       "type": "section",
       "title": "Swords"
     },
@@ -2464,19 +2464,19 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Dyrnwyn Blade Fragment",
       "cmd": "#dyrnwynbladefragment",
       "prefab": "DyrnwynBladeFragment",
-      "cost": 1
+      "cost": 54
     },
     {
       "name": "Dyrnwyn Hilt Fragment",
       "cmd": "#dyrnwynhiltfragment",
       "prefab": "DyrnwynHiltFragment",
-      "cost": 1
+      "cost": 54
     },
     {
       "name": "Dyrnwyn Tip Fragment",
       "cmd": "#dyrnwyntipfragment",
       "prefab": "DyrnwynTipFragment",
-      "cost": 1
+      "cost": 54
     },
     {
       "name": "Blackmetal Sword",
@@ -2500,7 +2500,7 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Dyrnwyn Sword",
       "cmd": "#sworddyrnwyn",
       "prefab": "SwordDyrnwyn",
-      "cost": 13
+      "cost": 68
     },
     {
       "name": "Gold Sword",
@@ -2542,31 +2542,31 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Mistwalker Sword",
       "cmd": "#swordmistwalker",
       "prefab": "SwordMistwalker",
-      "cost": 13
+      "cost": 49
     },
     {
       "name": "Niedhogg Sword",
       "cmd": "#swordniedhogg",
       "prefab": "SwordNiedhogg",
-      "cost": 13
+      "cost": 49
     },
     {
       "name": "Niedhogg Blood Sword",
       "cmd": "#swordniedhoggblood",
       "prefab": "SwordNiedhoggBlood",
-      "cost": 13
+      "cost": 49
     },
     {
       "name": "Niedhogg Lightning Sword",
       "cmd": "#swordniedhogglightning",
       "prefab": "SwordNiedhoggLightning",
-      "cost": 13
+      "cost": 49
     },
     {
       "name": "Niedhogg Nature Sword",
       "cmd": "#swordniedhoggnature",
       "prefab": "SwordNiedhoggNature",
-      "cost": 13
+      "cost": 49
     },
     {
       "name": "Silver Sword",
@@ -2649,25 +2649,25 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Berzerkr Axe",
       "cmd": "#axeberzerkr",
       "prefab": "AxeBerzerkr",
-      "cost": 13
+      "cost": 68
     },
     {
       "name": "Berzerkr Blood Axe",
       "cmd": "#axeberzerkrblood",
       "prefab": "AxeBerzerkrBlood",
-      "cost": 13
+      "cost": 68
     },
     {
       "name": "Berzerkr Lightning Axe",
       "cmd": "#axeberzerkrlightning",
       "prefab": "AxeBerzerkrLightning",
-      "cost": 13
+      "cost": 68
     },
     {
       "name": "Berzerkr Nature Axe",
       "cmd": "#axeberzerkrnature",
       "prefab": "AxeBerzerkrNature",
-      "cost": 13
+      "cost": 68
     },
     {
       "name": "Black Metal Axe",
@@ -2757,7 +2757,7 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Battleaxe",
       "cmd": "#battleaxe",
       "prefab": "Battleaxe",
-      "cost": 13
+      "cost": 20
     },
     {
       "name": "Blackmetal Battleaxe",
@@ -2827,25 +2827,25 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Eldner Mace",
       "cmd": "#maceeldner",
       "prefab": "MaceEldner",
-      "cost": 13
+      "cost": 49
     },
     {
       "name": "Eldner Blood Mace",
       "cmd": "#maceeldnerblood",
       "prefab": "MaceEldnerBlood",
-      "cost": 13
+      "cost": 49
     },
     {
       "name": "Eldner Lightning Mace",
       "cmd": "#maceeldnerlightning",
       "prefab": "MaceEldnerLightning",
-      "cost": 13
+      "cost": 49
     },
     {
       "name": "Eldner Nature Mace",
       "cmd": "#maceeldnernature",
       "prefab": "MaceEldnerNature",
-      "cost": 13
+      "cost": 49
     },
     {
       "name": "Gold Mace",
@@ -2905,7 +2905,7 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Demolisher Sledge",
       "cmd": "#sledgedemolisher",
       "prefab": "SledgeDemolisher",
-      "cost": 13
+      "cost": 49
     },
     {
       "name": "Gold Sledge",
@@ -2941,7 +2941,7 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Stagbreaker Sledge",
       "cmd": "#sledgestagbreaker",
       "prefab": "SledgeStagbreaker",
-      "cost": 13
+      "cost": 2
     },
     {
       "name": "Wood Sledge",
@@ -2993,7 +2993,7 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Himmin Afl Atgeir",
       "cmd": "#atgeirhimminafl",
       "prefab": "AtgeirHimminAfl",
-      "cost": 13
+      "cost": 49
     },
     {
       "name": "Iron Atgeir",
@@ -3023,7 +3023,7 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Chitin Spear",
       "cmd": "#spearchitin",
       "prefab": "SpearChitin",
-      "cost": 13
+      "cost": 20
     },
     {
       "name": "Elderbark Spear",
@@ -3065,25 +3065,25 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Splitner Spear",
       "cmd": "#spearsplitner",
       "prefab": "SpearSplitner",
-      "cost": 13
+      "cost": 49
     },
     {
       "name": "Splitner Blood Spear",
       "cmd": "#spearsplitnerblood",
       "prefab": "SpearSplitner_Blood",
-      "cost": 13
+      "cost": 49
     },
     {
       "name": "Splitner Lightning Spear",
       "cmd": "#spearsplitnerlightning",
       "prefab": "SpearSplitner_Lightning",
-      "cost": 13
+      "cost": 49
     },
     {
       "name": "Splitner Nature Spear",
       "cmd": "#spearsplitnernature",
       "prefab": "SpearSplitner_Nature",
-      "cost": 13
+      "cost": 49
     },
     {
       "name": "Wolf Fang Spear",
@@ -3111,13 +3111,13 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Butcher Knife",
       "cmd": "#knifebutcher",
       "prefab": "KnifeButcher",
-      "cost": 13
+      "cost": 2
     },
     {
       "name": "Chitin Knife",
       "cmd": "#knifechitin",
       "prefab": "KnifeChitin",
-      "cost": 13
+      "cost": 20
     },
     {
       "name": "Copper Knife",
@@ -3165,7 +3165,7 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Skoll And Hati Knife",
       "cmd": "#knifeskollandhati",
       "prefab": "KnifeSkollAndHati",
-      "cost": 13
+      "cost": 49
     },
     {
       "name": "Void Knife",
@@ -3265,7 +3265,7 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Arbalest Crossbow",
       "cmd": "#crossbowarbalest",
       "prefab": "CrossbowArbalest",
-      "cost": 13
+      "cost": 49
     },
     {
       "name": "Gold Crossbow",
@@ -3295,25 +3295,25 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Ripper Crossbow",
       "cmd": "#crossbowripper",
       "prefab": "CrossbowRipper",
-      "cost": 13
+      "cost": 49
     },
     {
       "name": "Ripper Blood Crossbow",
       "cmd": "#crossbowripperblood",
       "prefab": "CrossbowRipperBlood",
-      "cost": 13
+      "cost": 49
     },
     {
       "name": "Ripper Lightning Crossbow",
       "cmd": "#crossbowripperlightning",
       "prefab": "CrossbowRipperLightning",
-      "cost": 13
+      "cost": 49
     },
     {
       "name": "Ripper Nature Crossbow",
       "cmd": "#crossbowrippernature",
       "prefab": "CrossbowRipperNature",
-      "cost": 13
+      "cost": 49
     },
     {
       "type": "section",
@@ -3649,55 +3649,55 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Clusterbomb Staff",
       "cmd": "#staffclusterbomb",
       "prefab": "StaffClusterbomb",
-      "cost": 13
+      "cost": 49
     },
     {
       "name": "Fireball Staff",
       "cmd": "#stafffireball",
       "prefab": "StaffFireball",
-      "cost": 13
+      "cost": 49
     },
     {
       "name": "Frost Orbs Staff",
       "cmd": "#stafffrostorbs",
       "prefab": "StaffFrostOrbs",
-      "cost": 26
+      "cost": 49
     },
     {
       "name": "Frost Orbs Uncooked Staff",
       "cmd": "#stafffrostorbsuncooked",
       "prefab": "StaffFrostOrbsUncooked",
-      "cost": 26
+      "cost": 49
     },
     {
       "name": "Green Roots Staff",
       "cmd": "#staffgreenroots",
       "prefab": "StaffGreenRoots",
-      "cost": 20
+      "cost": 49
     },
     {
       "name": "Ice Shards Staff",
       "cmd": "#stafficeshards",
       "prefab": "StaffIceShards",
-      "cost": 13
+      "cost": 49
     },
     {
       "name": "Lightning Staff",
       "cmd": "#stafflightning",
       "prefab": "StaffLightning",
-      "cost": 13
+      "cost": 49
     },
     {
       "name": "Orbof Ahri Staff",
       "cmd": "#stafforbofahri",
       "prefab": "StaffOrbofAhri",
-      "cost": 13
+      "cost": 49
     },
     {
       "name": "Orbof Ahri Uncooked Staff",
       "cmd": "#stafforbofahriuncooked",
       "prefab": "StaffOrbofAhriUncooked",
-      "cost": 13
+      "cost": 49
     },
     {
       "name": "Red Troll Staff",
@@ -3709,37 +3709,37 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Shield Staff",
       "cmd": "#staffshield",
       "prefab": "StaffShield",
-      "cost": 13
+      "cost": 49
     },
     {
       "name": "Skeleton Staff",
       "cmd": "#staffskeleton",
       "prefab": "StaffSkeleton",
-      "cost": 13
+      "cost": 49
     },
     {
       "name": "Spirit Caller Staff",
       "cmd": "#staffspiritcaller",
       "prefab": "StaffSpiritCaller",
-      "cost": 13
+      "cost": 49
     },
     {
       "name": "Spirit Caller Uncooked Staff",
       "cmd": "#staffspiritcalleruncooked",
       "prefab": "StaffSpiritCallerUncooked",
-      "cost": 13
+      "cost": 49
     },
     {
       "name": "Thunder Blood Staff",
       "cmd": "#staffthunderblood",
       "prefab": "StaffThunderBlood",
-      "cost": 13
+      "cost": 49
     },
     {
       "name": "Thunderblood Uncooked Staff",
       "cmd": "#staffthunderblooduncooked",
       "prefab": "StaffThunderbloodUncooked",
-      "cost": 13
+      "cost": 49
     },
     {
       "type": "section",
@@ -3749,7 +3749,7 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Bomb Bile",
       "cmd": "#bombbile",
       "prefab": "BombBile",
-      "cost": 11
+      "cost": 39
     },
     {
       "name": "Bomb Blob Frost",
@@ -3761,13 +3761,13 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Bomb Blob Lava",
       "cmd": "#bombbloblava",
       "prefab": "BombBlob_Lava",
-      "cost": 11
+      "cost": 54
     },
     {
       "name": "Bomb Blob Morkhalla",
       "cmd": "#bombblobmorkhalla",
       "prefab": "BombBlob_Morkhalla",
-      "cost": 11
+      "cost": 54
     },
     {
       "name": "Bomb Blob Poison",
@@ -3791,13 +3791,13 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Bomb Dynamite",
       "cmd": "#bombdynamite",
       "prefab": "BombDynamite",
-      "cost": 11
+      "cost": 54
     },
     {
       "name": "Bomb Lava",
       "cmd": "#bomblava",
       "prefab": "BombLava",
-      "cost": 11
+      "cost": 54
     },
     {
       "name": "Bomb Ooze",
@@ -3809,13 +3809,13 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Bomb Siege",
       "cmd": "#bombsiege",
       "prefab": "BombSiege",
-      "cost": 11
+      "cost": 54
     },
     {
       "name": "Bomb Smoke",
       "cmd": "#bombsmoke",
       "prefab": "BombSmoke",
-      "cost": 11
+      "cost": 39
     },
     {
       "type": "section",
@@ -3865,19 +3865,19 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Fist Bjorn Claw",
       "cmd": "#fistbjornclaw",
       "prefab": "FistBjornClaw",
-      "cost": 11
+      "cost": 54
     },
     {
       "name": "Fist Bjorn Undead Claw",
       "cmd": "#fistbjornundeadclaw",
       "prefab": "FistBjornUndeadClaw",
-      "cost": 11
+      "cost": 54
     },
     {
       "name": "Fist Fenrir Claw",
       "cmd": "#fistfenrirclaw",
       "prefab": "FistFenrirClaw",
-      "cost": 11
+      "cost": 21
     },
     {
       "name": "Fist Gold",
@@ -3907,19 +3907,19 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Scythe",
       "cmd": "#scythe",
       "prefab": "Scythe",
-      "cost": 11
+      "cost": 39
     },
     {
       "name": "Scythe Handle",
       "cmd": "#scythehandle",
       "prefab": "ScytheHandle",
-      "cost": 11
+      "cost": 39
     },
     {
       "name": "Upgrader0Weapon",
       "cmd": "#upgrader0weapon",
       "prefab": "Upgrader0Weapon",
-      "cost": 11
+      "cost": 1
     },
     {
       "name": "Upgrader1Weapon",
@@ -3931,37 +3931,37 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Upgrader2Weapon",
       "cmd": "#upgrader2weapon",
       "prefab": "Upgrader2Weapon",
-      "cost": 11
+      "cost": 16
     },
     {
       "name": "Upgrader3Weapon",
       "cmd": "#upgrader3weapon",
       "prefab": "Upgrader3Weapon",
-      "cost": 11
+      "cost": 21
     },
     {
       "name": "Upgrader4Weapon",
       "cmd": "#upgrader4weapon",
       "prefab": "Upgrader4Weapon",
-      "cost": 11
+      "cost": 27
     },
     {
       "name": "Upgrader5Weapon",
       "cmd": "#upgrader5weapon",
       "prefab": "Upgrader5Weapon",
-      "cost": 11
+      "cost": 39
     },
     {
       "name": "Upgrader6Weapon",
       "cmd": "#upgrader6weapon",
       "prefab": "Upgrader6Weapon",
-      "cost": 11
+      "cost": 54
     },
     {
       "name": "Upgrader7Weapon",
       "cmd": "#upgrader7weapon",
       "prefab": "Upgrader7Weapon",
-      "cost": 11
+      "cost": 54
     }
   ],
   "armor": [
@@ -9182,13 +9182,13 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Hammer",
       "cmd": "#hammer",
       "prefab": "Hammer",
-      "cost": 11
+      "cost": 1
     },
     {
       "name": "Hoe",
       "cmd": "#hoe",
       "prefab": "Hoe",
-      "cost": 11
+      "cost": 1
     },
     {
       "name": "Hook",
@@ -10683,7 +10683,7 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Upgrader0Armor",
       "cmd": "#upgrader0armor",
       "prefab": "Upgrader0Armor",
-      "cost": 15
+      "cost": 2
     },
     {
       "name": "Upgrader1Armor",
@@ -10695,37 +10695,37 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Upgrader2Armor",
       "cmd": "#upgrader2armor",
       "prefab": "Upgrader2Armor",
-      "cost": 15
+      "cost": 21
     },
     {
       "name": "Upgrader3Armor",
       "cmd": "#upgrader3armor",
       "prefab": "Upgrader3Armor",
-      "cost": 15
+      "cost": 28
     },
     {
       "name": "Upgrader4Armor",
       "cmd": "#upgrader4armor",
       "prefab": "Upgrader4Armor",
-      "cost": 15
+      "cost": 36
     },
     {
       "name": "Upgrader5Armor",
       "cmd": "#upgrader5armor",
       "prefab": "Upgrader5Armor",
-      "cost": 15
+      "cost": 52
     },
     {
       "name": "Upgrader6Armor",
       "cmd": "#upgrader6armor",
       "prefab": "Upgrader6Armor",
-      "cost": 15
+      "cost": 73
     },
     {
       "name": "Upgrader7Armor",
       "cmd": "#upgrader7armor",
       "prefab": "Upgrader7Armor",
-      "cost": 15
+      "cost": 73
     },
     {
       "name": "Upgrader Glow",
