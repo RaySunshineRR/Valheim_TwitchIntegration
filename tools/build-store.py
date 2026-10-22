@@ -976,19 +976,15 @@ def is_nord_weapon(prefab: str) -> bool:
     }
 
 
-def is_cosmetic_gear(prefab: str) -> bool:
-    # Catalog SoT when present
+def is_crafting_mold_or_cast(prefab: str) -> bool:
+    """Wiki Moulds SoftRefs Mold* + Cast SoftRefs *GoldUncooked — Misc Crafting molds."""
     eco = ECONOMY_CATEGORIES.get(prefab)
-    if eco == "weapons" and is_nord_weapon(prefab):
-        return False
-    if eco == "cosmetics":
+    if eco == "misc" and ECONOMY_SUBCATEGORIES.get(prefab) == "Crafting molds":
         return True
-    if ECONOMY_SUBCATEGORIES.get(prefab) == "cosmetic":
+    if prefab.startswith("Mold"):
         return True
-    # Finished Nord SoftRefs are weapons (wiki Deep North)
-    if is_nord_weapon(prefab):
-        return False
-    # Casts / moulds / Hildir vanity only
+    if prefab in ("GenericMoldUncooked", "KeysGoldUncooked", "SmallPartsGoldUncooked"):
+        return True
     if prefab.endswith("Uncooked") and prefab.startswith(
         (
             "Sword",
@@ -1011,6 +1007,28 @@ def is_cosmetic_gear(prefab: str) -> bool:
         )
     ):
         return True
+    return False
+
+
+def is_cosmetic_gear(prefab: str) -> bool:
+    # Catalog SoT when present
+    eco = ECONOMY_CATEGORIES.get(prefab)
+    if eco == "weapons" and is_nord_weapon(prefab):
+        return False
+    if eco == "misc" and ECONOMY_SUBCATEGORIES.get(prefab) == "Crafting molds":
+        return False
+    if eco == "cosmetics":
+        return True
+    if ECONOMY_SUBCATEGORIES.get(prefab) == "cosmetic":
+        return True
+    # Finished Nord SoftRefs are weapons (wiki Deep North)
+    if is_nord_weapon(prefab):
+        return False
+    # Moulds / casts are forge materials — not Cosmetics
+    if is_crafting_mold_or_cast(prefab):
+        return False
+    if prefab.endswith("Uncooked"):
+        return False
     return bool(
         re.search(
             r"(?i)(Dress|Tunic|Harvester|HelmetHat|HelmetCelebration|HelmetYule|"
@@ -1022,9 +1040,7 @@ def is_cosmetic_gear(prefab: str) -> bool:
 
 
 def cosmetics_section(prefab: str) -> str:
-    if prefab.startswith(("MoldArmor", "MoldHelmet", "Mold")):
-        return "Crafting molds"
-    """Top-level Cosmetics tab subsections."""
+    """Top-level Cosmetics tab subsections (vanity only)."""
     if prefab.startswith(("Armor", "Helmet", "Cape", "SP_Armor")) or any(
         x in prefab for x in ("Dress", "Tunic", "Harvester")
     ):
@@ -1573,13 +1589,12 @@ def should_skip_item(prefab: str) -> bool:
         return True
     if "ragdoll" in prefab.lower() or prefab.endswith("Corpse"):
         return True
-    # MoldArmor* stay — wiki casting moulds (cosmetics), not wearable armor
     return False
 
 
 def misc_section(prefab: str) -> str:
     p = prefab.lower()
-    if prefab.startswith("Mold") or "mold" in p:
+    if is_crafting_mold_or_cast(prefab) or prefab.startswith("Mold") or "mold" in p:
         return "Crafting molds"
     if "treasure" in p or "chest" in p or "coffer" in p or prefab.startswith("loot_"):
         return "Chests & treasure"
@@ -1630,20 +1645,11 @@ def classify_item(it: dict) -> tuple[str, str]:
         sub = ECONOMY_SUBCATEGORIES.get(prefab) or misc_section(prefab)
         return "misc", sub
 
-    if prefab.startswith(("MoldArmor", "MoldHelmet")) or (
-        prefab.startswith("Mold") and "Armor" in prefab
-    ):
-        return "cosmetics", "Crafting molds"
+    if is_crafting_mold_or_cast(prefab):
+        return "misc", "Crafting molds"
 
     if is_cosmetic_gear(prefab):
         return "cosmetics", cosmetics_section(prefab)
-
-    if is_gear_uncooked(prefab):
-        if prefab.startswith(("Armor", "Helmet", "Cape")):
-            return "armor", armor_section(prefab)
-        if prefab.startswith(GEAR_UNCOOKED_PREFIXES):
-            return "weapons", weapon_section(prefab)
-        return "misc", "Utility & oddities"
 
     if is_potion_item(prefab):
         return "potions", potion_section(prefab)
@@ -1960,7 +1966,7 @@ def build_store(data: dict) -> dict:
         help_text = {
             "weapons": "Gold row = tiers (T0–T7). Second row = weapon family. Catalog starts with tier sets.",
             "armor": "Unified tiers (T0–T7) — each T# holds the full armor sets for that step.",
-            "cosmetics": "Hildir dresses/tunics/hats, Odin gear, Bloodgold cast/mould weapons & armor — vanity and Ashlands gold molds.",
+            "cosmetics": "Hildir dresses/tunics/hats, Odin gear — vanity only. Wiki moulds/casts live under Misc → Crafting molds.",
             "food": "Gold row = tiers. Second row = feasts / raw / cooked / prepared / crops. Feasts are type-only (not under tiers).",
             "potions": "Gold row = tiers. Second row = meads / bases / wines. Catalog starts with tiers.",
             "materials": "Gold row = tiers. Second row = wood / metals / etc. Catalog starts with tiers.",

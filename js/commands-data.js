@@ -4426,7 +4426,7 @@ window.VALHEIM_TWITCH_STORE = {
   "cosmetics": [
     {
       "type": "help",
-      "text": "Hildir dresses/tunics/hats, Odin gear, Bloodgold cast/mould weapons & armor — vanity and Ashlands gold molds."
+      "text": "Hildir dresses/tunics/hats, Odin gear — vanity only. Wiki moulds/casts live under Misc → Crafting molds."
     },
     {
       "type": "section",
@@ -4490,60 +4490,6 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Armor Dress9",
       "cmd": "#armordress9",
       "prefab": "ArmorDress9",
-      "cost": 15
-    },
-    {
-      "name": "Gold Heavy Chest Uncooked",
-      "cmd": "#armorgoldheavychestuncooked",
-      "prefab": "ArmorGoldHeavyChestUncooked",
-      "cost": 15
-    },
-    {
-      "name": "Gold Heavy Helmet Uncooked",
-      "cmd": "#armorgoldheavyhelmetuncooked",
-      "prefab": "ArmorGoldHeavyHelmetUncooked",
-      "cost": 15
-    },
-    {
-      "name": "Gold Heavy Legs Uncooked",
-      "cmd": "#armorgoldheavylegsuncooked",
-      "prefab": "ArmorGoldHeavyLegsUncooked",
-      "cost": 15
-    },
-    {
-      "name": "Gold Mage Chest Uncooked",
-      "cmd": "#armorgoldmagechestuncooked",
-      "prefab": "ArmorGoldMageChestUncooked",
-      "cost": 52
-    },
-    {
-      "name": "Gold Mage Helmet Uncooked",
-      "cmd": "#armorgoldmagehelmetuncooked",
-      "prefab": "ArmorGoldMageHelmetUncooked",
-      "cost": 52
-    },
-    {
-      "name": "Gold Mage Legs Uncooked",
-      "cmd": "#armorgoldmagelegsuncooked",
-      "prefab": "ArmorGoldMageLegsUncooked",
-      "cost": 52
-    },
-    {
-      "name": "Gold Medium Chest Uncooked",
-      "cmd": "#armorgoldmediumchestuncooked",
-      "prefab": "ArmorGoldMediumChestUncooked",
-      "cost": 15
-    },
-    {
-      "name": "Gold Medium Helmet Uncooked",
-      "cmd": "#armorgoldmediumhelmetuncooked",
-      "prefab": "ArmorGoldMediumHelmetUncooked",
-      "cost": 15
-    },
-    {
-      "name": "Gold Medium Legs Uncooked",
-      "cmd": "#armorgoldmediumlegsuncooked",
-      "prefab": "ArmorGoldMediumLegsUncooked",
       "cost": 15
     },
     {
@@ -4619,12 +4565,6 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 15
     },
     {
-      "name": "Baked Poteitr Uncooked",
-      "cmd": "#bakedpoteitruncooked",
-      "prefab": "BakedPoteitrUncooked",
-      "cost": 64
-    },
-    {
       "name": "Cape Odin",
       "cmd": "#capeodin",
       "prefab": "CapeOdin",
@@ -4635,12 +4575,6 @@ window.VALHEIM_TWITCH_STORE = {
       "cmd": "#capetest",
       "prefab": "CapeTest",
       "cost": 15
-    },
-    {
-      "name": "Fish And Bread Uncooked",
-      "cmd": "#fishandbreaduncooked",
-      "prefab": "FishAndBreadUncooked",
-      "cost": 19
     },
     {
       "name": "Helmet Celebration",
@@ -4757,60 +4691,6 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 15
     },
     {
-      "name": "Honey Glazed Chicken Uncooked",
-      "cmd": "#honeyglazedchickenuncooked",
-      "prefab": "HoneyGlazedChickenUncooked",
-      "cost": 35
-    },
-    {
-      "name": "Kale Chips Uncooked",
-      "cmd": "#kalechipsuncooked",
-      "prefab": "KaleChipsUncooked",
-      "cost": 64
-    },
-    {
-      "name": "Lox Pie Uncooked",
-      "cmd": "#loxpieuncooked",
-      "prefab": "LoxPieUncooked",
-      "cost": 19
-    },
-    {
-      "name": "Magically Stuffed Shroom Uncooked",
-      "cmd": "#magicallystuffedshroomuncooked",
-      "prefab": "MagicallyStuffedShroomUncooked",
-      "cost": 8
-    },
-    {
-      "name": "Meat Platter Uncooked",
-      "cmd": "#meatplatteruncooked",
-      "prefab": "MeatPlatterUncooked",
-      "cost": 19
-    },
-    {
-      "name": "Misthare Supreme Uncooked",
-      "cmd": "#mistharesupremeuncooked",
-      "prefab": "MisthareSupremeUncooked",
-      "cost": 27
-    },
-    {
-      "name": "Oven Pancake Uncooked",
-      "cmd": "#ovenpancakeuncooked",
-      "prefab": "OvenPancakeUncooked",
-      "cost": 8
-    },
-    {
-      "name": "Piquant Pie Uncooked",
-      "cmd": "#piquantpieuncooked",
-      "prefab": "PiquantPieUncooked",
-      "cost": 8
-    },
-    {
-      "name": "Roasted Crust Pie Uncooked",
-      "cmd": "#roastedcrustpieuncooked",
-      "prefab": "RoastedCrustPieUncooked",
-      "cost": 8
-    },
-    {
       "name": "SP Armor Dress1",
       "cmd": "#sparmordress1",
       "prefab": "SP_ArmorDress1",
@@ -4829,306 +4709,14 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 15
     },
     {
-      "name": "Viking Cupcake Uncooked",
-      "cmd": "#vikingcupcakeuncooked",
-      "prefab": "VikingCupcakeUncooked",
-      "cost": 8
-    },
-    {
       "type": "section",
       "title": "Cosmetic weapons"
-    },
-    {
-      "name": "Gold Uncooked Atgeir",
-      "cmd": "#atgeirgolduncooked",
-      "prefab": "AtgeirGoldUncooked",
-      "cost": 13
-    },
-    {
-      "name": "Gold Uncooked Axe",
-      "cmd": "#axegolduncooked",
-      "prefab": "AxeGoldUncooked",
-      "cost": 13
-    },
-    {
-      "name": "Gold Uncooked Battleaxe",
-      "cmd": "#battleaxegolduncooked",
-      "prefab": "BattleaxeGoldUncooked",
-      "cost": 13
-    },
-    {
-      "name": "Gold Uncooked Bow",
-      "cmd": "#bowgolduncooked",
-      "prefab": "BowGoldUncooked",
-      "cost": 13
-    },
-    {
-      "name": "Gold Uncooked Crossbow",
-      "cmd": "#crossbowgolduncooked",
-      "prefab": "CrossbowGoldUncooked",
-      "cost": 13
-    },
-    {
-      "name": "Fist Gold Uncooked",
-      "cmd": "#fistgolduncooked",
-      "prefab": "FistGoldUncooked",
-      "cost": 8
-    },
-    {
-      "name": "Gold Uncooked Knife",
-      "cmd": "#knifegolduncooked",
-      "prefab": "KnifeGoldUncooked",
-      "cost": 13
-    },
-    {
-      "name": "Gold Uncooked Mace",
-      "cmd": "#macegolduncooked",
-      "prefab": "MaceGoldUncooked",
-      "cost": 13
-    },
-    {
-      "name": "Buckler Gold Uncooked Shield",
-      "cmd": "#shieldbucklergolduncooked",
-      "prefab": "ShieldBucklerGoldUncooked",
-      "cost": 13
-    },
-    {
-      "name": "Round Gold Uncooked Shield",
-      "cmd": "#shieldroundgolduncooked",
-      "prefab": "ShieldRoundGoldUncooked",
-      "cost": 13
-    },
-    {
-      "name": "Tower Gold Uncooked Shield",
-      "cmd": "#shieldtowergolduncooked",
-      "prefab": "ShieldTowerGoldUncooked",
-      "cost": 13
-    },
-    {
-      "name": "Gold Uncooked Sledge",
-      "cmd": "#sledgegolduncooked",
-      "prefab": "SledgeGoldUncooked",
-      "cost": 13
-    },
-    {
-      "name": "Gold Uncooked Spear",
-      "cmd": "#speargolduncooked",
-      "prefab": "SpearGoldUncooked",
-      "cost": 13
-    },
-    {
-      "name": "Frost Orbs Uncooked Staff",
-      "cmd": "#stafffrostorbsuncooked",
-      "prefab": "StaffFrostOrbsUncooked",
-      "cost": 49
-    },
-    {
-      "name": "Orbof Ahri Uncooked Staff",
-      "cmd": "#stafforbofahriuncooked",
-      "prefab": "StaffOrbofAhriUncooked",
-      "cost": 49
-    },
-    {
-      "name": "Spirit Caller Uncooked Staff",
-      "cmd": "#staffspiritcalleruncooked",
-      "prefab": "StaffSpiritCallerUncooked",
-      "cost": 49
-    },
-    {
-      "name": "Thunderblood Uncooked Staff",
-      "cmd": "#staffthunderblooduncooked",
-      "prefab": "StaffThunderbloodUncooked",
-      "cost": 49
-    },
-    {
-      "name": "Gold Uncooked Sword",
-      "cmd": "#swordgolduncooked",
-      "prefab": "SwordGoldUncooked",
-      "cost": 13
     },
     {
       "name": "Tankard Odin",
       "cmd": "#tankardodin",
       "prefab": "TankardOdin",
       "cost": 1
-    },
-    {
-      "name": "TH Sword Gold Uncooked",
-      "cmd": "#thswordgolduncooked",
-      "prefab": "THSwordGoldUncooked",
-      "cost": 8
-    },
-    {
-      "type": "section",
-      "title": "Crafting molds"
-    },
-    {
-      "name": "Mold Armor Gold Chest",
-      "cmd": "#moldarmorgoldchest",
-      "prefab": "MoldArmorGoldChest",
-      "cost": 15
-    },
-    {
-      "name": "Mold Armor Gold Helmet",
-      "cmd": "#moldarmorgoldhelmet",
-      "prefab": "MoldArmorGoldHelmet",
-      "cost": 15
-    },
-    {
-      "name": "Mold Armor Gold Legs",
-      "cmd": "#moldarmorgoldlegs",
-      "prefab": "MoldArmorGoldLegs",
-      "cost": 15
-    },
-    {
-      "name": "Mold Armor Mage Chest",
-      "cmd": "#moldarmormagechest",
-      "prefab": "MoldArmorMageChest",
-      "cost": 52
-    },
-    {
-      "name": "Mold Armor Mage Helmet",
-      "cmd": "#moldarmormagehelmet",
-      "prefab": "MoldArmorMageHelmet",
-      "cost": 52
-    },
-    {
-      "name": "Mold Armor Mage Legs",
-      "cmd": "#moldarmormagelegs",
-      "prefab": "MoldArmorMageLegs",
-      "cost": 52
-    },
-    {
-      "name": "Mold Armormedium Chest",
-      "cmd": "#moldarmormediumchest",
-      "prefab": "MoldArmormediumChest",
-      "cost": 15
-    },
-    {
-      "name": "Mold Armor Medium Helmet",
-      "cmd": "#moldarmormediumhelmet",
-      "prefab": "MoldArmorMediumHelmet",
-      "cost": 15
-    },
-    {
-      "name": "Mold Armor Medium Legs",
-      "cmd": "#moldarmormediumlegs",
-      "prefab": "MoldArmorMediumLegs",
-      "cost": 15
-    },
-    {
-      "name": "Mold Atgeir",
-      "cmd": "#moldatgeir",
-      "prefab": "MoldAtgeir",
-      "cost": 11
-    },
-    {
-      "name": "Mold Axe",
-      "cmd": "#moldaxe",
-      "prefab": "MoldAxe",
-      "cost": 11
-    },
-    {
-      "name": "Mold Axe2H",
-      "cmd": "#moldaxe2h",
-      "prefab": "MoldAxe2H",
-      "cost": 11
-    },
-    {
-      "name": "Mold Bow",
-      "cmd": "#moldbow",
-      "prefab": "MoldBow",
-      "cost": 11
-    },
-    {
-      "name": "Mold Crossbow",
-      "cmd": "#moldcrossbow",
-      "prefab": "MoldCrossbow",
-      "cost": 11
-    },
-    {
-      "name": "Mold Fistweapon",
-      "cmd": "#moldfistweapon",
-      "prefab": "MoldFistweapon",
-      "cost": 11
-    },
-    {
-      "name": "Mold Knife",
-      "cmd": "#moldknife",
-      "prefab": "MoldKnife",
-      "cost": 11
-    },
-    {
-      "name": "Mold Mace",
-      "cmd": "#moldmace",
-      "prefab": "MoldMace",
-      "cost": 11
-    },
-    {
-      "name": "Mold Mace2H",
-      "cmd": "#moldmace2h",
-      "prefab": "MoldMace2H",
-      "cost": 11
-    },
-    {
-      "name": "Mold Shield Buckler",
-      "cmd": "#moldshieldbuckler",
-      "prefab": "MoldShieldBuckler",
-      "cost": 11
-    },
-    {
-      "name": "Mold Shield Round",
-      "cmd": "#moldshieldround",
-      "prefab": "MoldShieldRound",
-      "cost": 11
-    },
-    {
-      "name": "Mold Shield Tower",
-      "cmd": "#moldshieldtower",
-      "prefab": "MoldShieldTower",
-      "cost": 11
-    },
-    {
-      "name": "Mold Spear",
-      "cmd": "#moldspear",
-      "prefab": "MoldSpear",
-      "cost": 11
-    },
-    {
-      "name": "Mold Stafffrostorbs",
-      "cmd": "#moldstafffrostorbs",
-      "prefab": "MoldStafffrostorbs",
-      "cost": 21
-    },
-    {
-      "name": "Mold Staff Orbof Ahri",
-      "cmd": "#moldstafforbofahri",
-      "prefab": "MoldStaffOrbofAhri",
-      "cost": 11
-    },
-    {
-      "name": "Mold Staffspiritcaller",
-      "cmd": "#moldstaffspiritcaller",
-      "prefab": "MoldStaffspiritcaller",
-      "cost": 11
-    },
-    {
-      "name": "Mold Staffthunderblood",
-      "cmd": "#moldstaffthunderblood",
-      "prefab": "MoldStaffthunderblood",
-      "cost": 11
-    },
-    {
-      "name": "Mold Sword",
-      "cmd": "#moldsword",
-      "prefab": "MoldSword",
-      "cost": 11
-    },
-    {
-      "name": "Mold Sword2H",
-      "cmd": "#moldsword2h",
-      "prefab": "MoldSword2H",
-      "cost": 11
     }
   ],
   "food": [
@@ -5201,6 +4789,12 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 1
     },
     {
+      "name": "Magically Stuffed Shroom Uncooked",
+      "cmd": "#magicallystuffedshroomuncooked",
+      "prefab": "MagicallyStuffedShroomUncooked",
+      "cost": 1
+    },
+    {
       "name": "Mushroom x5",
       "cmd": "#mushroom",
       "prefab": "Mushroom",
@@ -5234,6 +4828,18 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 3
     },
     {
+      "name": "Oven Pancake Uncooked",
+      "cmd": "#ovenpancakeuncooked",
+      "prefab": "OvenPancakeUncooked",
+      "cost": 1
+    },
+    {
+      "name": "Piquant Pie Uncooked",
+      "cmd": "#piquantpieuncooked",
+      "prefab": "PiquantPieUncooked",
+      "cost": 1
+    },
+    {
       "name": "Raspberry x5",
       "cmd": "#raspberry",
       "prefab": "Raspberry",
@@ -5247,9 +4853,21 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 1
     },
     {
+      "name": "Roasted Crust Pie Uncooked",
+      "cmd": "#roastedcrustpieuncooked",
+      "prefab": "RoastedCrustPieUncooked",
+      "cost": 1
+    },
+    {
       "name": "Rotten Meat",
       "cmd": "#rottenmeat",
       "prefab": "RottenMeat",
+      "cost": 1
+    },
+    {
+      "name": "Viking Cupcake Uncooked",
+      "cmd": "#vikingcupcakeuncooked",
+      "prefab": "VikingCupcakeUncooked",
       "cost": 1
     },
     {
@@ -5536,6 +5154,12 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 25
     },
     {
+      "name": "Fish And Bread Uncooked",
+      "cmd": "#fishandbreaduncooked",
+      "prefab": "FishAndBreadUncooked",
+      "cost": 19
+    },
+    {
       "name": "Fish Wraps",
       "cmd": "#fishwraps",
       "prefab": "FishWraps",
@@ -5559,6 +5183,18 @@ window.VALHEIM_TWITCH_STORE = {
       "cmd": "#loxpie",
       "prefab": "LoxPie",
       "cost": 26
+    },
+    {
+      "name": "Lox Pie Uncooked",
+      "cmd": "#loxpieuncooked",
+      "prefab": "LoxPieUncooked",
+      "cost": 19
+    },
+    {
+      "name": "Meat Platter Uncooked",
+      "cmd": "#meatplatteruncooked",
+      "prefab": "MeatPlatterUncooked",
+      "cost": 19
     },
     {
       "name": "Viking Cupcake",
@@ -5619,6 +5255,12 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 41
     },
     {
+      "name": "Honey Glazed Chicken Uncooked",
+      "cmd": "#honeyglazedchickenuncooked",
+      "prefab": "HoneyGlazedChickenUncooked",
+      "cost": 35
+    },
+    {
       "name": "Magically Stuffed Shroom",
       "cmd": "#magicallystuffedshroom",
       "prefab": "MagicallyStuffedShroom",
@@ -5635,6 +5277,12 @@ window.VALHEIM_TWITCH_STORE = {
       "cmd": "#mistharesupreme",
       "prefab": "MisthareSupreme",
       "cost": 39
+    },
+    {
+      "name": "Misthare Supreme Uncooked",
+      "cmd": "#mistharesupremeuncooked",
+      "prefab": "MisthareSupremeUncooked",
+      "cost": 27
     },
     {
       "name": "Mushroom Jotun Puffs x5",
@@ -5698,6 +5346,12 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 67
     },
     {
+      "name": "Baked Poteitr Uncooked",
+      "cmd": "#bakedpoteitruncooked",
+      "prefab": "BakedPoteitrUncooked",
+      "cost": 64
+    },
+    {
       "name": "Bone Maw Serpent Meat",
       "cmd": "#bonemawserpentmeat",
       "prefab": "BoneMawSerpentMeat",
@@ -5752,6 +5406,12 @@ window.VALHEIM_TWITCH_STORE = {
       "cmd": "#kalechips",
       "prefab": "KaleChips",
       "cost": 92
+    },
+    {
+      "name": "Kale Chips Uncooked",
+      "cmd": "#kalechipsuncooked",
+      "prefab": "KaleChipsUncooked",
+      "cost": 64
     },
     {
       "name": "Lingonberry x5",
@@ -6116,6 +5776,82 @@ window.VALHEIM_TWITCH_STORE = {
       "cmd": "#wolfmeat",
       "prefab": "WolfMeat",
       "cost": 14
+    },
+    {
+      "type": "section",
+      "title": "Uncooked"
+    },
+    {
+      "name": "Baked Poteitr Uncooked",
+      "cmd": "#bakedpoteitruncooked",
+      "prefab": "BakedPoteitrUncooked",
+      "cost": 64
+    },
+    {
+      "name": "Fish And Bread Uncooked",
+      "cmd": "#fishandbreaduncooked",
+      "prefab": "FishAndBreadUncooked",
+      "cost": 19
+    },
+    {
+      "name": "Honey Glazed Chicken Uncooked",
+      "cmd": "#honeyglazedchickenuncooked",
+      "prefab": "HoneyGlazedChickenUncooked",
+      "cost": 35
+    },
+    {
+      "name": "Kale Chips Uncooked",
+      "cmd": "#kalechipsuncooked",
+      "prefab": "KaleChipsUncooked",
+      "cost": 64
+    },
+    {
+      "name": "Lox Pie Uncooked",
+      "cmd": "#loxpieuncooked",
+      "prefab": "LoxPieUncooked",
+      "cost": 19
+    },
+    {
+      "name": "Magically Stuffed Shroom Uncooked",
+      "cmd": "#magicallystuffedshroomuncooked",
+      "prefab": "MagicallyStuffedShroomUncooked",
+      "cost": 1
+    },
+    {
+      "name": "Meat Platter Uncooked",
+      "cmd": "#meatplatteruncooked",
+      "prefab": "MeatPlatterUncooked",
+      "cost": 19
+    },
+    {
+      "name": "Misthare Supreme Uncooked",
+      "cmd": "#mistharesupremeuncooked",
+      "prefab": "MisthareSupremeUncooked",
+      "cost": 27
+    },
+    {
+      "name": "Oven Pancake Uncooked",
+      "cmd": "#ovenpancakeuncooked",
+      "prefab": "OvenPancakeUncooked",
+      "cost": 1
+    },
+    {
+      "name": "Piquant Pie Uncooked",
+      "cmd": "#piquantpieuncooked",
+      "prefab": "PiquantPieUncooked",
+      "cost": 1
+    },
+    {
+      "name": "Roasted Crust Pie Uncooked",
+      "cmd": "#roastedcrustpieuncooked",
+      "prefab": "RoastedCrustPieUncooked",
+      "cost": 1
+    },
+    {
+      "name": "Viking Cupcake Uncooked",
+      "cmd": "#vikingcupcakeuncooked",
+      "prefab": "VikingCupcakeUncooked",
+      "cost": 1
     },
     {
       "type": "section",
@@ -7729,13 +7465,6 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 1
     },
     {
-      "name": "Generic Mold Uncooked x10",
-      "cmd": "#genericmolduncooked",
-      "prefab": "GenericMoldUncooked",
-      "cost": 10,
-      "amount": 10
-    },
-    {
       "name": "Ghost Skull x10",
       "cmd": "#ghostskull",
       "prefab": "GhostSkull",
@@ -7759,13 +7488,6 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Hateful Blood x10",
       "cmd": "#hatefulblood",
       "prefab": "HatefulBlood",
-      "cost": 10,
-      "amount": 10
-    },
-    {
-      "name": "Keys Gold Uncooked x10",
-      "cmd": "#keysgolduncooked",
-      "prefab": "KeysGoldUncooked",
       "cost": 10,
       "amount": 10
     },
@@ -7876,13 +7598,6 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Sharpening Stone x10",
       "cmd": "#sharpeningstone",
       "prefab": "SharpeningStone",
-      "cost": 10,
-      "amount": 10
-    },
-    {
-      "name": "Small Parts Gold Uncooked x10",
-      "cmd": "#smallpartsgolduncooked",
-      "prefab": "SmallPartsGoldUncooked",
       "cost": 10,
       "amount": 10
     },
@@ -9194,13 +8909,6 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 92
     },
     {
-      "name": "Generic Mold Uncooked x10",
-      "cmd": "#genericmolduncooked",
-      "prefab": "GenericMoldUncooked",
-      "cost": 10,
-      "amount": 10
-    },
-    {
       "name": "Ghost Skull x10",
       "cmd": "#ghostskull",
       "prefab": "GhostSkull",
@@ -9243,13 +8951,6 @@ window.VALHEIM_TWITCH_STORE = {
       "cmd": "#ironpit",
       "prefab": "Ironpit",
       "cost": 15
-    },
-    {
-      "name": "Keys Gold Uncooked x10",
-      "cmd": "#keysgolduncooked",
-      "prefab": "KeysGoldUncooked",
-      "cost": 10,
-      "amount": 10
     },
     {
       "name": "Large Bone x10",
@@ -9348,13 +9049,6 @@ window.VALHEIM_TWITCH_STORE = {
       "cmd": "#sap",
       "prefab": "Sap",
       "cost": 8
-    },
-    {
-      "name": "Small Parts Gold Uncooked x10",
-      "cmd": "#smallpartsgolduncooked",
-      "prefab": "SmallPartsGoldUncooked",
-      "cost": 10,
-      "amount": 10
     },
     {
       "name": "Tar",
@@ -9747,6 +9441,376 @@ window.VALHEIM_TWITCH_STORE = {
     },
     {
       "type": "section",
+      "title": "Crafting molds"
+    },
+    {
+      "name": "Gold Heavy Chest Uncooked",
+      "cmd": "#armorgoldheavychestuncooked",
+      "prefab": "ArmorGoldHeavyChestUncooked",
+      "cost": 15
+    },
+    {
+      "name": "Gold Heavy Helmet Uncooked",
+      "cmd": "#armorgoldheavyhelmetuncooked",
+      "prefab": "ArmorGoldHeavyHelmetUncooked",
+      "cost": 15
+    },
+    {
+      "name": "Gold Heavy Legs Uncooked",
+      "cmd": "#armorgoldheavylegsuncooked",
+      "prefab": "ArmorGoldHeavyLegsUncooked",
+      "cost": 15
+    },
+    {
+      "name": "Gold Mage Chest Uncooked",
+      "cmd": "#armorgoldmagechestuncooked",
+      "prefab": "ArmorGoldMageChestUncooked",
+      "cost": 52
+    },
+    {
+      "name": "Gold Mage Helmet Uncooked",
+      "cmd": "#armorgoldmagehelmetuncooked",
+      "prefab": "ArmorGoldMageHelmetUncooked",
+      "cost": 52
+    },
+    {
+      "name": "Gold Mage Legs Uncooked",
+      "cmd": "#armorgoldmagelegsuncooked",
+      "prefab": "ArmorGoldMageLegsUncooked",
+      "cost": 52
+    },
+    {
+      "name": "Gold Medium Chest Uncooked",
+      "cmd": "#armorgoldmediumchestuncooked",
+      "prefab": "ArmorGoldMediumChestUncooked",
+      "cost": 15
+    },
+    {
+      "name": "Gold Medium Helmet Uncooked",
+      "cmd": "#armorgoldmediumhelmetuncooked",
+      "prefab": "ArmorGoldMediumHelmetUncooked",
+      "cost": 15
+    },
+    {
+      "name": "Gold Medium Legs Uncooked",
+      "cmd": "#armorgoldmediumlegsuncooked",
+      "prefab": "ArmorGoldMediumLegsUncooked",
+      "cost": 15
+    },
+    {
+      "name": "Gold Uncooked Atgeir",
+      "cmd": "#atgeirgolduncooked",
+      "prefab": "AtgeirGoldUncooked",
+      "cost": 13
+    },
+    {
+      "name": "Gold Uncooked Axe",
+      "cmd": "#axegolduncooked",
+      "prefab": "AxeGoldUncooked",
+      "cost": 13
+    },
+    {
+      "name": "Gold Uncooked Battleaxe",
+      "cmd": "#battleaxegolduncooked",
+      "prefab": "BattleaxeGoldUncooked",
+      "cost": 13
+    },
+    {
+      "name": "Gold Uncooked Bow",
+      "cmd": "#bowgolduncooked",
+      "prefab": "BowGoldUncooked",
+      "cost": 13
+    },
+    {
+      "name": "Gold Uncooked Crossbow",
+      "cmd": "#crossbowgolduncooked",
+      "prefab": "CrossbowGoldUncooked",
+      "cost": 13
+    },
+    {
+      "name": "Fist Gold Uncooked",
+      "cmd": "#fistgolduncooked",
+      "prefab": "FistGoldUncooked",
+      "cost": 8
+    },
+    {
+      "name": "Generic Mold Uncooked",
+      "cmd": "#genericmolduncooked",
+      "prefab": "GenericMoldUncooked",
+      "cost": 1
+    },
+    {
+      "name": "Keys Gold Uncooked",
+      "cmd": "#keysgolduncooked",
+      "prefab": "KeysGoldUncooked",
+      "cost": 1
+    },
+    {
+      "name": "Gold Uncooked Knife",
+      "cmd": "#knifegolduncooked",
+      "prefab": "KnifeGoldUncooked",
+      "cost": 13
+    },
+    {
+      "name": "Gold Uncooked Mace",
+      "cmd": "#macegolduncooked",
+      "prefab": "MaceGoldUncooked",
+      "cost": 13
+    },
+    {
+      "name": "Mold Armor Gold Chest",
+      "cmd": "#moldarmorgoldchest",
+      "prefab": "MoldArmorGoldChest",
+      "cost": 15
+    },
+    {
+      "name": "Mold Armor Gold Helmet",
+      "cmd": "#moldarmorgoldhelmet",
+      "prefab": "MoldArmorGoldHelmet",
+      "cost": 15
+    },
+    {
+      "name": "Mold Armor Gold Legs",
+      "cmd": "#moldarmorgoldlegs",
+      "prefab": "MoldArmorGoldLegs",
+      "cost": 15
+    },
+    {
+      "name": "Mold Armor Mage Chest",
+      "cmd": "#moldarmormagechest",
+      "prefab": "MoldArmorMageChest",
+      "cost": 52
+    },
+    {
+      "name": "Mold Armor Mage Helmet",
+      "cmd": "#moldarmormagehelmet",
+      "prefab": "MoldArmorMageHelmet",
+      "cost": 52
+    },
+    {
+      "name": "Mold Armor Mage Legs",
+      "cmd": "#moldarmormagelegs",
+      "prefab": "MoldArmorMageLegs",
+      "cost": 52
+    },
+    {
+      "name": "Mold Armormedium Chest",
+      "cmd": "#moldarmormediumchest",
+      "prefab": "MoldArmormediumChest",
+      "cost": 15
+    },
+    {
+      "name": "Mold Armor Medium Helmet",
+      "cmd": "#moldarmormediumhelmet",
+      "prefab": "MoldArmorMediumHelmet",
+      "cost": 15
+    },
+    {
+      "name": "Mold Armor Medium Legs",
+      "cmd": "#moldarmormediumlegs",
+      "prefab": "MoldArmorMediumLegs",
+      "cost": 15
+    },
+    {
+      "name": "Mold Atgeir",
+      "cmd": "#moldatgeir",
+      "prefab": "MoldAtgeir",
+      "cost": 11
+    },
+    {
+      "name": "Mold Axe",
+      "cmd": "#moldaxe",
+      "prefab": "MoldAxe",
+      "cost": 11
+    },
+    {
+      "name": "Mold Axe2H",
+      "cmd": "#moldaxe2h",
+      "prefab": "MoldAxe2H",
+      "cost": 11
+    },
+    {
+      "name": "Mold Bow",
+      "cmd": "#moldbow",
+      "prefab": "MoldBow",
+      "cost": 11
+    },
+    {
+      "name": "Mold Crossbow",
+      "cmd": "#moldcrossbow",
+      "prefab": "MoldCrossbow",
+      "cost": 11
+    },
+    {
+      "name": "Mold Fistweapon",
+      "cmd": "#moldfistweapon",
+      "prefab": "MoldFistweapon",
+      "cost": 11
+    },
+    {
+      "name": "Mold Keys",
+      "cmd": "#moldkeys",
+      "prefab": "MoldKeys",
+      "cost": 11
+    },
+    {
+      "name": "Mold Knife",
+      "cmd": "#moldknife",
+      "prefab": "MoldKnife",
+      "cost": 11
+    },
+    {
+      "name": "Mold Mace",
+      "cmd": "#moldmace",
+      "prefab": "MoldMace",
+      "cost": 11
+    },
+    {
+      "name": "Mold Mace2H",
+      "cmd": "#moldmace2h",
+      "prefab": "MoldMace2H",
+      "cost": 11
+    },
+    {
+      "name": "Mold Shield Buckler",
+      "cmd": "#moldshieldbuckler",
+      "prefab": "MoldShieldBuckler",
+      "cost": 11
+    },
+    {
+      "name": "Mold Shield Round",
+      "cmd": "#moldshieldround",
+      "prefab": "MoldShieldRound",
+      "cost": 11
+    },
+    {
+      "name": "Mold Shield Tower",
+      "cmd": "#moldshieldtower",
+      "prefab": "MoldShieldTower",
+      "cost": 11
+    },
+    {
+      "name": "Mold Small Parts",
+      "cmd": "#moldsmallparts",
+      "prefab": "MoldSmallParts",
+      "cost": 11
+    },
+    {
+      "name": "Mold Spear",
+      "cmd": "#moldspear",
+      "prefab": "MoldSpear",
+      "cost": 11
+    },
+    {
+      "name": "Mold Stafffrostorbs",
+      "cmd": "#moldstafffrostorbs",
+      "prefab": "MoldStafffrostorbs",
+      "cost": 21
+    },
+    {
+      "name": "Mold Staff Orbof Ahri",
+      "cmd": "#moldstafforbofahri",
+      "prefab": "MoldStaffOrbofAhri",
+      "cost": 11
+    },
+    {
+      "name": "Mold Staffspiritcaller",
+      "cmd": "#moldstaffspiritcaller",
+      "prefab": "MoldStaffspiritcaller",
+      "cost": 11
+    },
+    {
+      "name": "Mold Staffthunderblood",
+      "cmd": "#moldstaffthunderblood",
+      "prefab": "MoldStaffthunderblood",
+      "cost": 11
+    },
+    {
+      "name": "Mold Sword",
+      "cmd": "#moldsword",
+      "prefab": "MoldSword",
+      "cost": 11
+    },
+    {
+      "name": "Mold Sword2H",
+      "cmd": "#moldsword2h",
+      "prefab": "MoldSword2H",
+      "cost": 11
+    },
+    {
+      "name": "Buckler Gold Uncooked Shield",
+      "cmd": "#shieldbucklergolduncooked",
+      "prefab": "ShieldBucklerGoldUncooked",
+      "cost": 13
+    },
+    {
+      "name": "Round Gold Uncooked Shield",
+      "cmd": "#shieldroundgolduncooked",
+      "prefab": "ShieldRoundGoldUncooked",
+      "cost": 13
+    },
+    {
+      "name": "Tower Gold Uncooked Shield",
+      "cmd": "#shieldtowergolduncooked",
+      "prefab": "ShieldTowerGoldUncooked",
+      "cost": 13
+    },
+    {
+      "name": "Gold Uncooked Sledge",
+      "cmd": "#sledgegolduncooked",
+      "prefab": "SledgeGoldUncooked",
+      "cost": 13
+    },
+    {
+      "name": "Small Parts Gold Uncooked",
+      "cmd": "#smallpartsgolduncooked",
+      "prefab": "SmallPartsGoldUncooked",
+      "cost": 1
+    },
+    {
+      "name": "Gold Uncooked Spear",
+      "cmd": "#speargolduncooked",
+      "prefab": "SpearGoldUncooked",
+      "cost": 13
+    },
+    {
+      "name": "Frost Orbs Uncooked Staff",
+      "cmd": "#stafffrostorbsuncooked",
+      "prefab": "StaffFrostOrbsUncooked",
+      "cost": 49
+    },
+    {
+      "name": "Orbof Ahri Uncooked Staff",
+      "cmd": "#stafforbofahriuncooked",
+      "prefab": "StaffOrbofAhriUncooked",
+      "cost": 49
+    },
+    {
+      "name": "Spirit Caller Uncooked Staff",
+      "cmd": "#staffspiritcalleruncooked",
+      "prefab": "StaffSpiritCallerUncooked",
+      "cost": 49
+    },
+    {
+      "name": "Thunderblood Uncooked Staff",
+      "cmd": "#staffthunderblooduncooked",
+      "prefab": "StaffThunderbloodUncooked",
+      "cost": 49
+    },
+    {
+      "name": "Gold Uncooked Sword",
+      "cmd": "#swordgolduncooked",
+      "prefab": "SwordGoldUncooked",
+      "cost": 13
+    },
+    {
+      "name": "TH Sword Gold Uncooked",
+      "cmd": "#thswordgolduncooked",
+      "prefab": "THSwordGoldUncooked",
+      "cost": 8
+    },
+    {
+      "type": "section",
       "title": "misc"
     },
     {
@@ -10107,18 +10171,6 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Mechanical Spring",
       "cmd": "#mechanicalspring",
       "prefab": "MechanicalSpring",
-      "cost": 11
-    },
-    {
-      "name": "Mold Keys",
-      "cmd": "#moldkeys",
-      "prefab": "MoldKeys",
-      "cost": 11
-    },
-    {
-      "name": "Mold Small Parts",
-      "cmd": "#moldsmallparts",
-      "prefab": "MoldSmallParts",
       "cost": 11
     },
     {
