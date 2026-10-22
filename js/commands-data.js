@@ -4687,6 +4687,64 @@ window.VALHEIM_TWITCH_STORE = {
       "cmd": "#thswordgolduncooked",
       "prefab": "THSwordGoldUncooked",
       "cost": 8
+    },
+    {
+      "type": "section",
+      "title": "Crafting molds"
+    },
+    {
+      "name": "Mold Armor Gold Chest",
+      "cmd": "#moldarmorgoldchest",
+      "prefab": "MoldArmorGoldChest",
+      "cost": 15
+    },
+    {
+      "name": "Mold Armor Gold Helmet",
+      "cmd": "#moldarmorgoldhelmet",
+      "prefab": "MoldArmorGoldHelmet",
+      "cost": 15
+    },
+    {
+      "name": "Mold Armor Gold Legs",
+      "cmd": "#moldarmorgoldlegs",
+      "prefab": "MoldArmorGoldLegs",
+      "cost": 15
+    },
+    {
+      "name": "Mold Armor Mage Chest",
+      "cmd": "#moldarmormagechest",
+      "prefab": "MoldArmorMageChest",
+      "cost": 52
+    },
+    {
+      "name": "Mold Armor Mage Helmet",
+      "cmd": "#moldarmormagehelmet",
+      "prefab": "MoldArmorMageHelmet",
+      "cost": 52
+    },
+    {
+      "name": "Mold Armor Mage Legs",
+      "cmd": "#moldarmormagelegs",
+      "prefab": "MoldArmorMageLegs",
+      "cost": 52
+    },
+    {
+      "name": "Mold Armormedium Chest",
+      "cmd": "#moldarmormediumchest",
+      "prefab": "MoldArmormediumChest",
+      "cost": 15
+    },
+    {
+      "name": "Mold Armor Medium Helmet",
+      "cmd": "#moldarmormediumhelmet",
+      "prefab": "MoldArmorMediumHelmet",
+      "cost": 15
+    },
+    {
+      "name": "Mold Armor Medium Legs",
+      "cmd": "#moldarmormediumlegs",
+      "prefab": "MoldArmorMediumLegs",
+      "cost": 15
     }
   ],
   "food": [
@@ -4738,42 +4796,6 @@ window.VALHEIM_TWITCH_STORE = {
       "cmd": "#fishcooked",
       "prefab": "FishCooked",
       "cost": 3
-    },
-    {
-      "name": "Fishing Bait",
-      "cmd": "#fishingbait",
-      "prefab": "FishingBait",
-      "cost": 1
-    },
-    {
-      "name": "Fishing Bait Cave",
-      "cmd": "#fishingbaitcave",
-      "prefab": "FishingBaitCave",
-      "cost": 1
-    },
-    {
-      "name": "Fishing Bait Forest",
-      "cmd": "#fishingbaitforest",
-      "prefab": "FishingBaitForest",
-      "cost": 1
-    },
-    {
-      "name": "Fishing Bait Ocean",
-      "cmd": "#fishingbaitocean",
-      "prefab": "FishingBaitOcean",
-      "cost": 1
-    },
-    {
-      "name": "Fishing Bait Plains",
-      "cmd": "#fishingbaitplains",
-      "prefab": "FishingBaitPlains",
-      "cost": 1
-    },
-    {
-      "name": "Fishing Bait Swamp",
-      "cmd": "#fishingbaitswamp",
-      "prefab": "FishingBaitSwamp",
-      "cost": 1
     },
     {
       "name": "Fish Raw",
@@ -5249,12 +5271,6 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 37
     },
     {
-      "name": "Fishing Bait Mistlands",
-      "cmd": "#fishingbaitmistlands",
-      "prefab": "FishingBaitMistlands",
-      "cost": 39
-    },
-    {
       "name": "Hare Meat",
       "cmd": "#haremeat",
       "prefab": "HareMeat",
@@ -5399,18 +5415,6 @@ window.VALHEIM_TWITCH_STORE = {
       "cmd": "#fierysvinstew",
       "prefab": "FierySvinstew",
       "cost": 67
-    },
-    {
-      "name": "Fishing Bait Ashlands",
-      "cmd": "#fishingbaitashlands",
-      "prefab": "FishingBaitAshlands",
-      "cost": 70
-    },
-    {
-      "name": "Fishing Bait Deep North",
-      "cmd": "#fishingbaitdeepnorth",
-      "prefab": "FishingBaitDeepNorth",
-      "cost": 92
     },
     {
       "name": "Fish Soup",
@@ -6081,60 +6085,6 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Fish Angler Raw",
       "cmd": "#fishanglerraw",
       "prefab": "FishAnglerRaw",
-      "cost": 1
-    },
-    {
-      "name": "Fishing Bait",
-      "cmd": "#fishingbait",
-      "prefab": "FishingBait",
-      "cost": 1
-    },
-    {
-      "name": "Fishing Bait Ashlands",
-      "cmd": "#fishingbaitashlands",
-      "prefab": "FishingBaitAshlands",
-      "cost": 70
-    },
-    {
-      "name": "Fishing Bait Cave",
-      "cmd": "#fishingbaitcave",
-      "prefab": "FishingBaitCave",
-      "cost": 1
-    },
-    {
-      "name": "Fishing Bait Deep North",
-      "cmd": "#fishingbaitdeepnorth",
-      "prefab": "FishingBaitDeepNorth",
-      "cost": 92
-    },
-    {
-      "name": "Fishing Bait Forest",
-      "cmd": "#fishingbaitforest",
-      "prefab": "FishingBaitForest",
-      "cost": 1
-    },
-    {
-      "name": "Fishing Bait Mistlands",
-      "cmd": "#fishingbaitmistlands",
-      "prefab": "FishingBaitMistlands",
-      "cost": 39
-    },
-    {
-      "name": "Fishing Bait Ocean",
-      "cmd": "#fishingbaitocean",
-      "prefab": "FishingBaitOcean",
-      "cost": 1
-    },
-    {
-      "name": "Fishing Bait Plains",
-      "cmd": "#fishingbaitplains",
-      "prefab": "FishingBaitPlains",
-      "cost": 1
-    },
-    {
-      "name": "Fishing Bait Swamp",
-      "cmd": "#fishingbaitswamp",
-      "prefab": "FishingBaitSwamp",
       "cost": 1
     },
     {
@@ -9322,6 +9272,64 @@ window.VALHEIM_TWITCH_STORE = {
       "cmd": "#trinketsilverresist",
       "prefab": "TrinketSilverResist",
       "cost": 21
+    },
+    {
+      "type": "section",
+      "title": "Fishing bait"
+    },
+    {
+      "name": "Fishing Bait",
+      "cmd": "#fishingbait",
+      "prefab": "FishingBait",
+      "cost": 1
+    },
+    {
+      "name": "Fishing Bait Ashlands",
+      "cmd": "#fishingbaitashlands",
+      "prefab": "FishingBaitAshlands",
+      "cost": 70
+    },
+    {
+      "name": "Fishing Bait Cave",
+      "cmd": "#fishingbaitcave",
+      "prefab": "FishingBaitCave",
+      "cost": 1
+    },
+    {
+      "name": "Fishing Bait Deep North",
+      "cmd": "#fishingbaitdeepnorth",
+      "prefab": "FishingBaitDeepNorth",
+      "cost": 92
+    },
+    {
+      "name": "Fishing Bait Forest",
+      "cmd": "#fishingbaitforest",
+      "prefab": "FishingBaitForest",
+      "cost": 1
+    },
+    {
+      "name": "Fishing Bait Mistlands",
+      "cmd": "#fishingbaitmistlands",
+      "prefab": "FishingBaitMistlands",
+      "cost": 39
+    },
+    {
+      "name": "Fishing Bait Ocean",
+      "cmd": "#fishingbaitocean",
+      "prefab": "FishingBaitOcean",
+      "cost": 1
+    },
+    {
+      "name": "Fishing Bait Plains",
+      "cmd": "#fishingbaitplains",
+      "prefab": "FishingBaitPlains",
+      "cost": 1
+    },
+    {
+      "name": "Fishing Bait Swamp",
+      "cmd": "#fishingbaitswamp",
+      "prefab": "FishingBaitSwamp",
+      "cost": 1
     },
     {
       "type": "section",
