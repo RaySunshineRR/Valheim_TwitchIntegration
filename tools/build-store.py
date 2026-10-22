@@ -1140,37 +1140,13 @@ def is_food_item(prefab: str) -> bool:
 
 
 def is_accessory_item(prefab: str) -> bool:
-    """Wiki equipable accessories / utility (SoftRef prefabs only)."""
-    if prefab.startswith("Mold"):
-        return False
-    if prefab in {
-        "Wishbone",
-        "BarberKit",
-        "BeltStrength",  # Megingjord
-        "Demister",  # Wisplight
-        "IceSkates",
-        "CryptKey",  # Swamp Key
-        "DvergrKey",
-        "DvergrKeyFragment",
-        "BloodGoldKey",
-        "KeysGoldUncooked",
-        "GoblinTotem",
-        "CrownJewel",
-        "Wisp",
-        "DragonTear",
-        "HardAntler",
-        "SilverNecklace",
-        "HelmetDverger",  # Dverger circlet
-        "Thunderstone",
-    }:
-        return True
-    if prefab.startswith("HildirKey"):
-        return True
-    if prefab.endswith("Key") or "Key_" in prefab:
-        return True
-    if prefab.startswith("Trinket"):
-        return True
-    return False
+    """Wiki Accessories page only: Megingjord, Wishbone, Wisplight."""
+    return prefab in {"BeltStrength", "Wishbone", "Demister"}
+
+
+def is_trinket_item(prefab: str) -> bool:
+    """Wiki Trinkets page SoftRefs — separate from Accessories."""
+    return prefab.startswith("Trinket")
 
 
 def is_weapon_like(prefab: str) -> bool:
@@ -1448,6 +1424,8 @@ def misc_section(prefab: str) -> str:
         return "Fun & fireworks"
     if is_accessory_item(prefab):
         return "Accessories"
+    if is_trinket_item(prefab):
+        return "Trinkets"
     if "saddle" in p or ("asksvin" in p and "egg" in p) or prefab.endswith("Egg"):
         return "Mounts & eggs"
     if any(x in p for x in ("torch", "lantern", "candle", "firepit", "campfire")):
@@ -1483,6 +1461,9 @@ def classify_item(it: dict) -> tuple[str, str]:
     if eco == "curses":
         sub = ECONOMY_SUBCATEGORIES.get(prefab) or "Good"
         return "curses", sub if sub in ("Good", "Bad") else "Good"
+    if eco == "misc":
+        sub = ECONOMY_SUBCATEGORIES.get(prefab) or misc_section(prefab)
+        return "misc", sub
 
     if is_cosmetic_gear(prefab):
         return "cosmetics", cosmetics_section(prefab)
@@ -1503,19 +1484,20 @@ def classify_item(it: dict) -> tuple[str, str]:
             return "weapons", "Utility weapons"
         return "weapons", weapon_section(prefab)
 
-    # Trinkets / armor wearables before material keyword rescue (TrinketBronze ≠ metal bar)
+    # Wiki Accessories / Trinkets (never materials, never armor wearables)
+    if is_accessory_item(prefab):
+        return "misc", "Accessories"
+    if is_trinket_item(prefab):
+        return "misc", "Trinkets"
+
+    # Armor wearables before material keyword rescue
     if (
-        prefab.startswith("Trinket")
-        or prefab.startswith("SP_Armor")
+        prefab.startswith("SP_Armor")
         or prefab.startswith("Armor")
         or prefab.startswith("Helmet")
         or prefab.startswith("Cape")
     ):
         return "armor", armor_section(prefab)
-
-    # Accessories (CryptKey / skeleton-dungeon keys, wishbone, megingjord…)
-    if is_accessory_item(prefab):
-        return "misc", "Accessories"
 
     # Moder nest egg — Mountain rare summon mat (never Food / Misc junk)
     if prefab == "DragonEgg":
@@ -1788,6 +1770,7 @@ def build_store(data: dict) -> dict:
             "Light sources",
             "Mounts & eggs",
             "Accessories",
+            "Trinkets",
             "Fun & fireworks",
             "Chests & treasure",
             "Crafting molds",
