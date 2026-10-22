@@ -1860,6 +1860,12 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 1256
     },
     {
+      "name": "Grappling Hook",
+      "cmd": "#grapplinghook",
+      "prefab": "GrapplingHook",
+      "cost": 1256
+    },
+    {
       "name": "Skoll And Hati Knife",
       "cmd": "#knifeskollandhati",
       "prefab": "KnifeSkollAndHati",
@@ -4192,6 +4198,12 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 11
     },
     {
+      "name": "Grappling Hook",
+      "cmd": "#grapplinghook",
+      "prefab": "GrapplingHook",
+      "cost": 1256
+    },
+    {
       "name": "Hammer",
       "cmd": "#hammer",
       "prefab": "Hammer",
@@ -5260,12 +5272,6 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 3
     },
     {
-      "name": "Oven Pancake Uncooked",
-      "cmd": "#ovenpancakeuncooked",
-      "prefab": "OvenPancakeUncooked",
-      "cost": 1
-    },
-    {
       "name": "Piquant Pie Uncooked",
       "cmd": "#piquantpieuncooked",
       "prefab": "PiquantPieUncooked",
@@ -5491,7 +5497,7 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Eyescream",
       "cmd": "#eyescream",
       "prefab": "Eyescream",
-      "cost": 56
+      "cost": 38
     },
     {
       "name": "Onion x5",
@@ -5756,6 +5762,12 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 39
     },
     {
+      "name": "Seeker Aspic",
+      "cmd": "#seekeraspic",
+      "prefab": "SeekerAspic",
+      "cost": 112
+    },
+    {
       "name": "Yggdrasil Porridge",
       "cmd": "#yggdrasilporridge",
       "prefab": "YggdrasilPorridge",
@@ -5834,9 +5846,27 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 67
     },
     {
+      "name": "Scorching Medley",
+      "cmd": "#scorchingmedley",
+      "prefab": "ScorchingMedley",
+      "cost": 89
+    },
+    {
       "name": "Sizzling Berry Broth",
       "cmd": "#sizzlingberrybroth",
       "prefab": "SizzlingBerryBroth",
+      "cost": 70
+    },
+    {
+      "name": "Sparkling Shroomshake",
+      "cmd": "#sparklingshroomshake",
+      "prefab": "SparklingShroomshake",
+      "cost": 106
+    },
+    {
+      "name": "Spicy Marmalade",
+      "cmd": "#spicymarmalade",
+      "prefab": "SpicyMarmalade",
       "cost": 70
     },
     {
@@ -5861,6 +5891,12 @@ window.VALHEIM_TWITCH_STORE = {
     {
       "type": "section",
       "title": "T7 · Deep North"
+    },
+    {
+      "name": "Baked Poteitr",
+      "cmd": "#bakedpoteitr",
+      "prefab": "BakedPoteitr",
+      "cost": 189
     },
     {
       "name": "Baked Poteitr Uncooked",
@@ -5919,6 +5955,12 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 92
     },
     {
+      "name": "Meat In Bread",
+      "cmd": "#moosekebab",
+      "prefab": "MooseKebab",
+      "cost": 96
+    },
+    {
       "name": "Moose Meat",
       "cmd": "#moosemeat",
       "prefab": "MooseMeat",
@@ -5939,11 +5981,35 @@ window.VALHEIM_TWITCH_STORE = {
       "amount": 5
     },
     {
+      "name": "Oatmeal",
+      "cmd": "#oatmeallingonberryjam",
+      "prefab": "OatmealLingonberryJam",
+      "cost": 97
+    },
+    {
       "name": "Oat Milk x5",
       "cmd": "#oatmilk",
       "prefab": "OatMilk",
       "cost": 92,
       "amount": 5
+    },
+    {
+      "name": "Oven Pancake",
+      "cmd": "#ovenpancake",
+      "prefab": "OvenPancake",
+      "cost": 210
+    },
+    {
+      "name": "Oven Pancake Batter",
+      "cmd": "#ovenpancakeuncooked",
+      "prefab": "OvenPancakeUncooked",
+      "cost": 208
+    },
+    {
+      "name": "Pancakes",
+      "cmd": "#pancakes",
+      "prefab": "Pancakes",
+      "cost": 92
     },
     {
       "name": "Poteitr x5",
@@ -5988,14 +6054,14 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Ashlands Gourmet Bowl x10",
       "cmd": "#feastashlandsmaterial",
       "prefab": "FeastAshlands_Material",
-      "cost": 247,
+      "cost": 266,
       "amount": 10
     },
     {
       "name": "Black Forest Buffet Platter x10",
       "cmd": "#feastblackforestmaterial",
       "prefab": "FeastBlackforest_Material",
-      "cost": 73,
+      "cost": 65,
       "amount": 10
     },
     {
@@ -6009,7 +6075,7 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Whole Roasted Meadow Boar x10",
       "cmd": "#feastmeadowsmaterial",
       "prefab": "FeastMeadows_Material",
-      "cost": 34,
+      "cost": 26,
       "amount": 10
     },
     {
@@ -6023,14 +6089,14 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Hearty Mountain Logger's Stew x10",
       "cmd": "#feastmountainsmaterial",
       "prefab": "FeastMountains_Material",
-      "cost": 82,
+      "cost": 79,
       "amount": 10
     },
     {
       "name": "Sailor's Bounty x10",
       "cmd": "#feastoceansmaterial",
       "prefab": "FeastOceans_Material",
-      "cost": 50,
+      "cost": 45,
       "amount": 10
     },
     {
@@ -6044,7 +6110,7 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Swamp Dweller's Delight x10",
       "cmd": "#feastswampsmaterial",
       "prefab": "FeastSwamps_Material",
-      "cost": 127,
+      "cost": 119,
       "amount": 10
     },
     {
@@ -6254,10 +6320,10 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 27
     },
     {
-      "name": "Oven Pancake Uncooked",
+      "name": "Oven Pancake Batter",
       "cmd": "#ovenpancakeuncooked",
       "prefab": "OvenPancakeUncooked",
-      "cost": 1
+      "cost": 208
     },
     {
       "name": "Piquant Pie Uncooked",
@@ -6412,6 +6478,12 @@ window.VALHEIM_TWITCH_STORE = {
       "title": "Prepared dishes"
     },
     {
+      "name": "Baked Poteitr",
+      "cmd": "#bakedpoteitr",
+      "prefab": "BakedPoteitr",
+      "cost": 189
+    },
+    {
       "name": "Bilebag",
       "cmd": "#bilebag",
       "prefab": "Bilebag",
@@ -6463,7 +6535,7 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Eyescream",
       "cmd": "#eyescream",
       "prefab": "Eyescream",
-      "cost": 56
+      "cost": 38
     },
     {
       "name": "Fiery Svinstew",
@@ -6562,16 +6634,40 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 39
     },
     {
+      "name": "Meat In Bread",
+      "cmd": "#moosekebab",
+      "prefab": "MooseKebab",
+      "cost": 96
+    },
+    {
       "name": "Mushroom Omelette",
       "cmd": "#mushroomomelette",
       "prefab": "MushroomOmelette",
       "cost": 37
     },
     {
+      "name": "Oatmeal",
+      "cmd": "#oatmeallingonberryjam",
+      "prefab": "OatmealLingonberryJam",
+      "cost": 97
+    },
+    {
       "name": "Onion Soup",
       "cmd": "#onionsoup",
       "prefab": "OnionSoup",
       "cost": 23
+    },
+    {
+      "name": "Oven Pancake",
+      "cmd": "#ovenpancake",
+      "prefab": "OvenPancake",
+      "cost": 210
+    },
+    {
+      "name": "Pancakes",
+      "cmd": "#pancakes",
+      "prefab": "Pancakes",
+      "cost": 92
     },
     {
       "name": "Piquant Pie",
@@ -6610,10 +6706,22 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 15
     },
     {
+      "name": "Scorching Medley",
+      "cmd": "#scorchingmedley",
+      "prefab": "ScorchingMedley",
+      "cost": 89
+    },
+    {
       "name": "Seal Soup",
       "cmd": "#sealsoup",
       "prefab": "SealSoup",
       "cost": 87
+    },
+    {
+      "name": "Seeker Aspic",
+      "cmd": "#seekeraspic",
+      "prefab": "SeekerAspic",
+      "cost": 112
     },
     {
       "name": "Serpent Stew",
@@ -6631,6 +6739,18 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Sizzling Berry Broth",
       "cmd": "#sizzlingberrybroth",
       "prefab": "SizzlingBerryBroth",
+      "cost": 70
+    },
+    {
+      "name": "Sparkling Shroomshake",
+      "cmd": "#sparklingshroomshake",
+      "prefab": "SparklingShroomshake",
+      "cost": 106
+    },
+    {
+      "name": "Spicy Marmalade",
+      "cmd": "#spicymarmalade",
+      "prefab": "SpicyMarmalade",
       "cost": 70
     },
     {
@@ -6995,13 +7115,13 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Mead Base Frost Resist",
       "cmd": "#meadbasefrostresist",
       "prefab": "MeadBaseFrostResist",
-      "cost": 86
+      "cost": 74
     },
     {
       "name": "Mead Frost Resist",
       "cmd": "#meadfrostresist",
       "prefab": "MeadFrostResist",
-      "cost": 16
+      "cost": 14
     },
     {
       "type": "section",
@@ -7183,7 +7303,7 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Mead Frost Resist",
       "cmd": "#meadfrostresist",
       "prefab": "MeadFrostResist",
-      "cost": 16
+      "cost": 14
     },
     {
       "name": "Mead Hasty",
@@ -7313,7 +7433,7 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Mead Base Frost Resist",
       "cmd": "#meadbasefrostresist",
       "prefab": "MeadBaseFrostResist",
-      "cost": 86
+      "cost": 74
     },
     {
       "name": "Mead Base Hasty",
@@ -7715,6 +7835,12 @@ window.VALHEIM_TWITCH_STORE = {
       "amount": 5
     },
     {
+      "name": "Barber Kit",
+      "cmd": "#barberkit",
+      "prefab": "BarberKit",
+      "cost": 1
+    },
+    {
       "name": "Barrel Rings x10",
       "cmd": "#barrelrings",
       "prefab": "BarrelRings",
@@ -7727,6 +7853,13 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "BeechSeeds",
       "cost": 5,
       "amount": 5
+    },
+    {
+      "name": "Blob Vial x10",
+      "cmd": "#blobvial",
+      "prefab": "BlobVial",
+      "cost": 10,
+      "amount": 10
     },
     {
       "name": "Bone Fragments x10",
@@ -7746,6 +7879,13 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Coal x10",
       "cmd": "#coal",
       "prefab": "Coal",
+      "cost": 10,
+      "amount": 10
+    },
+    {
+      "name": "Crown Jewel x10",
+      "cmd": "#crownjewel",
+      "prefab": "CrownJewel",
       "cost": 10,
       "amount": 10
     },
@@ -7839,13 +7979,6 @@ window.VALHEIM_TWITCH_STORE = {
       "amount": 10
     },
     {
-      "name": "Mandible x10",
-      "cmd": "#mandible",
-      "prefab": "Mandible",
-      "cost": 10,
-      "amount": 10
-    },
-    {
       "name": "Memorial Coal x10",
       "cmd": "#memorialcoal",
       "prefab": "MemorialCoal",
@@ -7892,6 +8025,13 @@ window.VALHEIM_TWITCH_STORE = {
       "cmd": "#pukeberries",
       "prefab": "Pukeberries",
       "cost": 1
+    },
+    {
+      "name": "Queen Bee x10",
+      "cmd": "#queenbee",
+      "prefab": "QueenBee",
+      "cost": 10,
+      "amount": 10
     },
     {
       "name": "Resin x10",
@@ -8041,6 +8181,12 @@ window.VALHEIM_TWITCH_STORE = {
       "amount": 10
     },
     {
+      "name": "Greydwarf Eye",
+      "cmd": "#greydwarfeye",
+      "prefab": "GreydwarfEye",
+      "cost": 5
+    },
+    {
       "name": "Hildir Key Forestcrypt",
       "cmd": "#hildirkeyforestcrypt",
       "prefab": "HildirKey_forestcrypt",
@@ -8059,6 +8205,12 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "RoundLog",
       "cost": 20,
       "amount": 10
+    },
+    {
+      "name": "Spice Forests",
+      "cmd": "#spiceforests",
+      "prefab": "SpiceForests",
+      "cost": 11
     },
     {
       "name": "Tin",
@@ -8095,6 +8247,18 @@ window.VALHEIM_TWITCH_STORE = {
       "title": "T2 · Swamp"
     },
     {
+      "name": "Bonemaw Serpent Scale",
+      "cmd": "#bonemawserpentscale",
+      "prefab": "BonemawSerpentScale",
+      "cost": 16
+    },
+    {
+      "name": "Bonemaw Serpent Tooth",
+      "cmd": "#bonemawserpenttooth",
+      "prefab": "BonemawSerpentTooth",
+      "cost": 16
+    },
+    {
       "name": "Chain",
       "cmd": "#chain",
       "prefab": "Chain",
@@ -8106,6 +8270,12 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "ElderBark",
       "cost": 25,
       "amount": 10
+    },
+    {
+      "name": "Fresh Seaweed",
+      "cmd": "#freshseaweed",
+      "prefab": "FreshSeaweed",
+      "cost": 16
     },
     {
       "name": "Guck",
@@ -8144,10 +8314,28 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 12
     },
     {
+      "name": "Ooze Mork",
+      "cmd": "#oozemork",
+      "prefab": "OozeMork",
+      "cost": 16
+    },
+    {
       "name": "Root",
       "cmd": "#root",
       "prefab": "Root",
       "cost": 10
+    },
+    {
+      "name": "Serpent Scale",
+      "cmd": "#serpentscale",
+      "prefab": "SerpentScale",
+      "cost": 16
+    },
+    {
+      "name": "Spice Oceans",
+      "cmd": "#spiceoceans",
+      "prefab": "SpiceOceans",
+      "cost": 16
     },
     {
       "name": "Surtling Core",
@@ -8185,6 +8373,12 @@ window.VALHEIM_TWITCH_STORE = {
       "cmd": "#witheredbone",
       "prefab": "WitheredBone",
       "cost": 28
+    },
+    {
+      "name": "Writhan Roots",
+      "cmd": "#writhanroots",
+      "prefab": "WrithanRoots",
+      "cost": 16
     },
     {
       "type": "section",
@@ -8261,6 +8455,12 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 28
     },
     {
+      "name": "Spice Mountains",
+      "cmd": "#spicemountains",
+      "prefab": "SpiceMountains",
+      "cost": 21
+    },
+    {
       "name": "Silver Protection Idol",
       "cmd": "#upgrader3armor",
       "prefab": "Upgrader3Armor",
@@ -8313,6 +8513,12 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 34
     },
     {
+      "name": "Cured Squirrel Hamstring",
+      "cmd": "#curedsquirrelhamstring",
+      "prefab": "CuredSquirrelHamstring",
+      "cost": 27
+    },
+    {
       "name": "Goblin Totem",
       "cmd": "#goblintotem",
       "prefab": "GoblinTotem",
@@ -8343,6 +8549,12 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 27
     },
     {
+      "name": "Spice Plains",
+      "cmd": "#spiceplains",
+      "prefab": "SpicePlains",
+      "cost": 27
+    },
+    {
       "name": "Tar",
       "cmd": "#tar",
       "prefab": "Tar",
@@ -8354,6 +8566,12 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "Thunderstone",
       "cost": 30,
       "amount": 10
+    },
+    {
+      "name": "Vile Ribcage",
+      "cmd": "#undeadbjornribcage",
+      "prefab": "UndeadBjornRibcage",
+      "cost": 27
     },
     {
       "name": "Black Metal Protection Idol",
@@ -8403,16 +8621,46 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 27
     },
     {
+      "name": "Dvergr Needle",
+      "cmd": "#dvergrneedle",
+      "prefab": "DvergrNeedle",
+      "cost": 39
+    },
+    {
       "name": "Eitr",
       "cmd": "#eitr",
       "prefab": "Eitr",
       "cost": 39
     },
     {
+      "name": "Blood Clot",
+      "cmd": "#giantbloodsack",
+      "prefab": "GiantBloodSack",
+      "cost": 39
+    },
+    {
+      "name": "Hook",
+      "cmd": "#hook",
+      "prefab": "Hook",
+      "cost": 60
+    },
+    {
       "name": "Jute Blue",
       "cmd": "#juteblue",
       "prefab": "JuteBlue",
       "cost": 11
+    },
+    {
+      "name": "Mandible",
+      "cmd": "#mandible",
+      "prefab": "Mandible",
+      "cost": 15
+    },
+    {
+      "name": "Mechanical Spring",
+      "cmd": "#mechanicalspring",
+      "prefab": "MechanicalSpring",
+      "cost": 39
     },
     {
       "name": "Queen Drop",
@@ -8445,6 +8693,12 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 39
     },
     {
+      "name": "Spice Mistlands",
+      "cmd": "#spicemistlands",
+      "prefab": "SpiceMistlands",
+      "cost": 39
+    },
+    {
       "name": "Black Marble Protection Idol",
       "cmd": "#upgrader5armor",
       "prefab": "Upgrader5Armor",
@@ -8461,6 +8715,12 @@ window.VALHEIM_TWITCH_STORE = {
       "cmd": "#upgraderglow",
       "prefab": "UpgraderGlow",
       "cost": 11
+    },
+    {
+      "name": "Wisp",
+      "cmd": "#wisp",
+      "prefab": "Wisp",
+      "cost": 39
     },
     {
       "name": "Yggdrasil Wood x10",
@@ -8526,6 +8786,12 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Charred Bone",
       "cmd": "#charredbone",
       "prefab": "CharredBone",
+      "cost": 70
+    },
+    {
+      "name": "Charred Cogwheel",
+      "cmd": "#charredcogwheel",
+      "prefab": "CharredCogwheel",
       "cost": 70
     },
     {
@@ -8602,6 +8868,12 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 25
     },
     {
+      "name": "Spice Ashlands",
+      "cmd": "#spiceashlands",
+      "prefab": "SpiceAshlands",
+      "cost": 70
+    },
+    {
       "name": "Sulfur Stone",
       "cmd": "#sulfurstone",
       "prefab": "SulfurStone",
@@ -8622,6 +8894,12 @@ window.VALHEIM_TWITCH_STORE = {
     {
       "type": "section",
       "title": "T7 · Deep North"
+    },
+    {
+      "name": "Frozen Branch",
+      "cmd": "#barkabranch",
+      "prefab": "BarkaBranch",
+      "cost": 92
     },
     {
       "name": "Bjorn Hide",
@@ -8749,6 +9027,12 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 1
     },
     {
+      "name": "Spice Deep North",
+      "cmd": "#spicedeepnorth",
+      "prefab": "SpiceDeepNorth",
+      "cost": 92
+    },
+    {
       "name": "Bloodgold Protection Idol",
       "cmd": "#upgrader7armor",
       "prefab": "Upgrader7Armor",
@@ -8767,6 +9051,12 @@ window.VALHEIM_TWITCH_STORE = {
     {
       "type": "section",
       "title": "Wood & plant"
+    },
+    {
+      "name": "Frozen Branch",
+      "cmd": "#barkabranch",
+      "prefab": "BarkaBranch",
+      "cost": 92
     },
     {
       "name": "Blackwood x10",
@@ -8815,6 +9105,12 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "Wood",
       "cost": 5,
       "amount": 10
+    },
+    {
+      "name": "Writhan Roots",
+      "cmd": "#writhanroots",
+      "prefab": "WrithanRoots",
+      "cost": 16
     },
     {
       "name": "Yggdrasil Wood x10",
@@ -9038,6 +9334,12 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 92
     },
     {
+      "name": "Bonemaw Serpent Scale",
+      "cmd": "#bonemawserpentscale",
+      "prefab": "BonemawSerpentScale",
+      "cost": 16
+    },
+    {
       "name": "Carapace",
       "cmd": "#carapace",
       "prefab": "Carapace",
@@ -9130,6 +9432,12 @@ window.VALHEIM_TWITCH_STORE = {
       "cmd": "#sealhide",
       "prefab": "SealHide",
       "cost": 92
+    },
+    {
+      "name": "Serpent Scale",
+      "cmd": "#serpentscale",
+      "prefab": "SerpentScale",
+      "cost": 16
     },
     {
       "name": "Troll Hide",
@@ -9410,6 +9718,12 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 70
     },
     {
+      "name": "Barber Kit",
+      "cmd": "#barberkit",
+      "prefab": "BarberKit",
+      "cost": 1
+    },
+    {
       "name": "Barrel Rings x10",
       "cmd": "#barrelrings",
       "prefab": "BarrelRings",
@@ -9423,11 +9737,24 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 11
     },
     {
+      "name": "Blob Vial x10",
+      "cmd": "#blobvial",
+      "prefab": "BlobVial",
+      "cost": 10,
+      "amount": 10
+    },
+    {
       "name": "Bone Fragments x10",
       "cmd": "#bonefragments",
       "prefab": "BoneFragments",
       "cost": 10,
       "amount": 10
+    },
+    {
+      "name": "Bonemaw Serpent Tooth",
+      "cmd": "#bonemawserpenttooth",
+      "prefab": "BonemawSerpentTooth",
+      "cost": 16
     },
     {
       "name": "Ceramic Plate x10",
@@ -9455,6 +9782,12 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 70
     },
     {
+      "name": "Charred Cogwheel",
+      "cmd": "#charredcogwheel",
+      "prefab": "CharredCogwheel",
+      "cost": 70
+    },
+    {
       "name": "Charredskull",
       "cmd": "#charredskull",
       "prefab": "Charredskull",
@@ -9466,6 +9799,25 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "Coal",
       "cost": 10,
       "amount": 10
+    },
+    {
+      "name": "Crown Jewel x10",
+      "cmd": "#crownjewel",
+      "prefab": "CrownJewel",
+      "cost": 10,
+      "amount": 10
+    },
+    {
+      "name": "Cured Squirrel Hamstring",
+      "cmd": "#curedsquirrelhamstring",
+      "prefab": "CuredSquirrelHamstring",
+      "cost": 27
+    },
+    {
+      "name": "Dvergr Needle",
+      "cmd": "#dvergrneedle",
+      "prefab": "DvergrNeedle",
+      "cost": 39
     },
     {
       "name": "Ectoplasm x10",
@@ -9486,6 +9838,12 @@ window.VALHEIM_TWITCH_STORE = {
       "cmd": "#freezegland",
       "prefab": "FreezeGland",
       "cost": 21
+    },
+    {
+      "name": "Fresh Seaweed",
+      "cmd": "#freshseaweed",
+      "prefab": "FreshSeaweed",
+      "cost": 16
     },
     {
       "name": "Frozen Fuel x10",
@@ -9514,10 +9872,22 @@ window.VALHEIM_TWITCH_STORE = {
       "amount": 10
     },
     {
+      "name": "Blood Clot",
+      "cmd": "#giantbloodsack",
+      "prefab": "GiantBloodSack",
+      "cost": 39
+    },
+    {
       "name": "Glow Worm",
       "cmd": "#glowworm",
       "prefab": "GlowWorm",
       "cost": 92
+    },
+    {
+      "name": "Greydwarf Eye",
+      "cmd": "#greydwarfeye",
+      "prefab": "GreydwarfEye",
+      "cost": 5
     },
     {
       "name": "Guck",
@@ -9537,6 +9907,12 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "HatefulBlood",
       "cost": 10,
       "amount": 10
+    },
+    {
+      "name": "Hook",
+      "cmd": "#hook",
+      "prefab": "Hook",
+      "cost": 60
     },
     {
       "name": "Iron Nails",
@@ -9564,11 +9940,16 @@ window.VALHEIM_TWITCH_STORE = {
       "amount": 10
     },
     {
-      "name": "Mandible x10",
+      "name": "Mandible",
       "cmd": "#mandible",
       "prefab": "Mandible",
-      "cost": 10,
-      "amount": 10
+      "cost": 15
+    },
+    {
+      "name": "Mechanical Spring",
+      "cmd": "#mechanicalspring",
+      "prefab": "MechanicalSpring",
+      "cost": 39
     },
     {
       "name": "Memorial Coal x10",
@@ -9628,6 +10009,12 @@ window.VALHEIM_TWITCH_STORE = {
       "amount": 10
     },
     {
+      "name": "Ooze Mork",
+      "cmd": "#oozemork",
+      "prefab": "OozeMork",
+      "cost": 16
+    },
+    {
       "name": "Pot Shard Green x10",
       "cmd": "#potshardgreen",
       "prefab": "Pot_Shard_Green",
@@ -9652,6 +10039,13 @@ window.VALHEIM_TWITCH_STORE = {
       "cmd": "#pukeberries",
       "prefab": "Pukeberries",
       "cost": 1
+    },
+    {
+      "name": "Queen Bee x10",
+      "cmd": "#queenbee",
+      "prefab": "QueenBee",
+      "cost": 10,
+      "amount": 10
     },
     {
       "name": "Resin x10",
@@ -9685,10 +10079,58 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 39
     },
     {
+      "name": "Spice Ashlands",
+      "cmd": "#spiceashlands",
+      "prefab": "SpiceAshlands",
+      "cost": 70
+    },
+    {
+      "name": "Spice Deep North",
+      "cmd": "#spicedeepnorth",
+      "prefab": "SpiceDeepNorth",
+      "cost": 92
+    },
+    {
+      "name": "Spice Forests",
+      "cmd": "#spiceforests",
+      "prefab": "SpiceForests",
+      "cost": 11
+    },
+    {
+      "name": "Spice Mistlands",
+      "cmd": "#spicemistlands",
+      "prefab": "SpiceMistlands",
+      "cost": 39
+    },
+    {
+      "name": "Spice Mountains",
+      "cmd": "#spicemountains",
+      "prefab": "SpiceMountains",
+      "cost": 21
+    },
+    {
+      "name": "Spice Oceans",
+      "cmd": "#spiceoceans",
+      "prefab": "SpiceOceans",
+      "cost": 16
+    },
+    {
+      "name": "Spice Plains",
+      "cmd": "#spiceplains",
+      "prefab": "SpicePlains",
+      "cost": 27
+    },
+    {
       "name": "Tar",
       "cmd": "#tar",
       "prefab": "Tar",
       "cost": 15
+    },
+    {
+      "name": "Vile Ribcage",
+      "cmd": "#undeadbjornribcage",
+      "prefab": "UndeadBjornRibcage",
+      "cost": 27
     },
     {
       "name": "Wooden Protection Idol",
@@ -9798,6 +10240,12 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "Voidplasm",
       "cost": 10,
       "amount": 10
+    },
+    {
+      "name": "Wisp",
+      "cmd": "#wisp",
+      "prefab": "Wisp",
+      "cost": 39
     },
     {
       "name": "Wolf Claw",
@@ -10366,18 +10814,6 @@ window.VALHEIM_TWITCH_STORE = {
       "title": "Utility & oddities"
     },
     {
-      "name": "Grappling Hook",
-      "cmd": "#grapplinghook",
-      "prefab": "GrapplingHook",
-      "cost": 11
-    },
-    {
-      "name": "Hook",
-      "cmd": "#hook",
-      "prefab": "Hook",
-      "cost": 11
-    },
-    {
       "name": "Ice Shoes",
       "cmd": "#iceshoes",
       "prefab": "IceShoes",
@@ -10400,24 +10836,6 @@ window.VALHEIM_TWITCH_STORE = {
       "title": "misc"
     },
     {
-      "name": "Baked Poteitr",
-      "cmd": "#bakedpoteitr",
-      "prefab": "BakedPoteitr",
-      "cost": 92
-    },
-    {
-      "name": "Barber Kit",
-      "cmd": "#barberkit",
-      "prefab": "BarberKit",
-      "cost": 11
-    },
-    {
-      "name": "Barka Branch",
-      "cmd": "#barkabranch",
-      "prefab": "BarkaBranch",
-      "cost": 92
-    },
-    {
       "name": "Bell",
       "cmd": "#bell",
       "prefab": "Bell",
@@ -10428,24 +10846,6 @@ window.VALHEIM_TWITCH_STORE = {
       "cmd": "#bellfragment",
       "prefab": "BellFragment",
       "cost": 1
-    },
-    {
-      "name": "Blob Vial",
-      "cmd": "#blobvial",
-      "prefab": "BlobVial",
-      "cost": 11
-    },
-    {
-      "name": "Bonemaw Serpent Scale",
-      "cmd": "#bonemawserpentscale",
-      "prefab": "BonemawSerpentScale",
-      "cost": 16
-    },
-    {
-      "name": "Bonemaw Serpent Tooth",
-      "cmd": "#bonemawserpenttooth",
-      "prefab": "BonemawSerpentTooth",
-      "cost": 16
     },
     {
       "name": "Chain Lightning",
@@ -10460,24 +10860,6 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 16
     },
     {
-      "name": "Charred Cogwheel",
-      "cmd": "#charredcogwheel",
-      "prefab": "CharredCogwheel",
-      "cost": 70
-    },
-    {
-      "name": "Crown Jewel",
-      "cmd": "#crownjewel",
-      "prefab": "CrownJewel",
-      "cost": 11
-    },
-    {
-      "name": "Cured Squirrel Hamstring",
-      "cmd": "#curedsquirrelhamstring",
-      "prefab": "CuredSquirrelHamstring",
-      "cost": 11
-    },
-    {
       "name": "Dead Speak Base",
       "cmd": "#deadspeakbase",
       "prefab": "DeadSpeak_Base",
@@ -10490,27 +10872,9 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 2
     },
     {
-      "name": "Dvergr Needle",
-      "cmd": "#dvergrneedle",
-      "prefab": "DvergrNeedle",
-      "cost": 27
-    },
-    {
       "name": "Feaster",
       "cmd": "#feaster",
       "prefab": "Feaster",
-      "cost": 11
-    },
-    {
-      "name": "Fresh Seaweed",
-      "cmd": "#freshseaweed",
-      "prefab": "FreshSeaweed",
-      "cost": 11
-    },
-    {
-      "name": "Giant Blood Sack",
-      "cmd": "#giantbloodsack",
-      "prefab": "GiantBloodSack",
       "cost": 11
     },
     {
@@ -10523,12 +10887,6 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Grappling Point Secondary",
       "cmd": "#grapplingpointsecondary",
       "prefab": "GrapplingPointSecondary",
-      "cost": 11
-    },
-    {
-      "name": "Greydwarf Eye",
-      "cmd": "#greydwarfeye",
-      "prefab": "GreydwarfEye",
       "cost": 11
     },
     {
@@ -10586,30 +10944,6 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 11
     },
     {
-      "name": "Mechanical Spring",
-      "cmd": "#mechanicalspring",
-      "prefab": "MechanicalSpring",
-      "cost": 11
-    },
-    {
-      "name": "Moose Kebab",
-      "cmd": "#moosekebab",
-      "prefab": "MooseKebab",
-      "cost": 92
-    },
-    {
-      "name": "Oatmeal Lingonberry Jam",
-      "cmd": "#oatmeallingonberryjam",
-      "prefab": "OatmealLingonberryJam",
-      "cost": 92
-    },
-    {
-      "name": "Ooze Mork",
-      "cmd": "#oozemork",
-      "prefab": "OozeMork",
-      "cost": 16
-    },
-    {
       "name": "Orb Frost Fire",
       "cmd": "#orbfrostfire",
       "prefab": "OrbFrostFire",
@@ -10620,18 +10954,6 @@ window.VALHEIM_TWITCH_STORE = {
       "cmd": "#orbthunderblood",
       "prefab": "OrbThunderBlood",
       "cost": 11
-    },
-    {
-      "name": "Oven Pancake",
-      "cmd": "#ovenpancake",
-      "prefab": "OvenPancake",
-      "cost": 92
-    },
-    {
-      "name": "Pancakes",
-      "cmd": "#pancakes",
-      "prefab": "Pancakes",
-      "cost": 92
     },
     {
       "name": "Placeable Hard Rock",
@@ -10646,34 +10968,10 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 11
     },
     {
-      "name": "Queen Bee",
-      "cmd": "#queenbee",
-      "prefab": "QueenBee",
-      "cost": 11
-    },
-    {
       "name": "Radiation",
       "cmd": "#radiation",
       "prefab": "radiation",
       "cost": 11
-    },
-    {
-      "name": "Scorching Medley",
-      "cmd": "#scorchingmedley",
-      "prefab": "ScorchingMedley",
-      "cost": 70
-    },
-    {
-      "name": "Seeker Aspic",
-      "cmd": "#seekeraspic",
-      "prefab": "SeekerAspic",
-      "cost": 39
-    },
-    {
-      "name": "Serpent Scale",
-      "cmd": "#serpentscale",
-      "prefab": "SerpentScale",
-      "cost": 16
     },
     {
       "name": "Snowball",
@@ -10692,60 +10990,6 @@ window.VALHEIM_TWITCH_STORE = {
       "cmd": "#snowroller",
       "prefab": "SnowRoller",
       "cost": 11
-    },
-    {
-      "name": "Sparkling Shroomshake",
-      "cmd": "#sparklingshroomshake",
-      "prefab": "SparklingShroomshake",
-      "cost": 70
-    },
-    {
-      "name": "Spice Ashlands",
-      "cmd": "#spiceashlands",
-      "prefab": "SpiceAshlands",
-      "cost": 70
-    },
-    {
-      "name": "Spice Deep North",
-      "cmd": "#spicedeepnorth",
-      "prefab": "SpiceDeepNorth",
-      "cost": 92
-    },
-    {
-      "name": "Spice Forests",
-      "cmd": "#spiceforests",
-      "prefab": "SpiceForests",
-      "cost": 27
-    },
-    {
-      "name": "Spice Mistlands",
-      "cmd": "#spicemistlands",
-      "prefab": "SpiceMistlands",
-      "cost": 39
-    },
-    {
-      "name": "Spice Mountains",
-      "cmd": "#spicemountains",
-      "prefab": "SpiceMountains",
-      "cost": 27
-    },
-    {
-      "name": "Spice Oceans",
-      "cmd": "#spiceoceans",
-      "prefab": "SpiceOceans",
-      "cost": 27
-    },
-    {
-      "name": "Spice Plains",
-      "cmd": "#spiceplains",
-      "prefab": "SpicePlains",
-      "cost": 27
-    },
-    {
-      "name": "Spicy Marmalade",
-      "cmd": "#spicymarmalade",
-      "prefab": "SpicyMarmalade",
-      "cost": 70
     },
     {
       "name": "Staff Greenroots Spawn",
@@ -10802,28 +11046,10 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 11
     },
     {
-      "name": "Undead Bjorn Ribcage",
-      "cmd": "#undeadbjornribcage",
-      "prefab": "UndeadBjornRibcage",
-      "cost": 92
-    },
-    {
       "name": "Vegvisir Shard Bonemass",
       "cmd": "#vegvisirshardbonemass",
       "prefab": "VegvisirShard_Bonemass",
       "cost": 11
-    },
-    {
-      "name": "Wisp",
-      "cmd": "#wisp",
-      "prefab": "Wisp",
-      "cost": 11
-    },
-    {
-      "name": "Writhan Roots",
-      "cmd": "#writhanroots",
-      "prefab": "WrithanRoots",
-      "cost": 16
     },
     {
       "type": "section",
