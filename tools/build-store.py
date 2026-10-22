@@ -976,46 +976,14 @@ def is_nord_weapon(prefab: str) -> bool:
     }
 
 
-def is_crafting_mold_or_cast(prefab: str) -> bool:
-    """Wiki Moulds SoftRefs Mold* + Cast SoftRefs *GoldUncooked — Misc Crafting molds."""
-    eco = ECONOMY_CATEGORIES.get(prefab)
-    if eco == "misc" and ECONOMY_SUBCATEGORIES.get(prefab) == "Crafting molds":
-        return True
-    if prefab.startswith("Mold"):
-        return True
-    if prefab in ("GenericMoldUncooked", "KeysGoldUncooked", "SmallPartsGoldUncooked"):
-        return True
-    if prefab.endswith("Uncooked") and prefab.startswith(
-        (
-            "Sword",
-            "THSword",
-            "Axe",
-            "Battleaxe",
-            "Mace",
-            "Sledge",
-            "Spear",
-            "Atgeir",
-            "Knife",
-            "Bow",
-            "Crossbow",
-            "Shield",
-            "Fist",
-            "Staff",
-            "Armor",
-            "Helmet",
-            "Cape",
-        )
-    ):
-        return True
-    return False
-
-
 def is_cosmetic_gear(prefab: str) -> bool:
     # Catalog SoT when present
     eco = ECONOMY_CATEGORIES.get(prefab)
-    if eco == "weapons" and is_nord_weapon(prefab):
+    if eco in ("weapons", "armor", "materials") and (
+        prefab.startswith("Mold") or prefab.endswith("Uncooked")
+    ):
         return False
-    if eco == "misc" and ECONOMY_SUBCATEGORIES.get(prefab) == "Crafting molds":
+    if eco == "weapons" and is_nord_weapon(prefab):
         return False
     if eco == "cosmetics":
         return True
@@ -1024,8 +992,31 @@ def is_cosmetic_gear(prefab: str) -> bool:
     # Finished Nord SoftRefs are weapons (wiki Deep North)
     if is_nord_weapon(prefab):
         return False
-    # Moulds / casts are forge materials — not Cosmetics
-    if is_crafting_mold_or_cast(prefab):
+    # SoftRef Mold* / gear Uncooked are armor|weapons — not Cosmetics
+    if prefab.startswith("Mold") or (
+        prefab.endswith("Uncooked")
+        and prefab.startswith(
+            (
+                "Sword",
+                "THSword",
+                "Axe",
+                "Battleaxe",
+                "Mace",
+                "Sledge",
+                "Spear",
+                "Atgeir",
+                "Knife",
+                "Bow",
+                "Crossbow",
+                "Shield",
+                "Fist",
+                "Staff",
+                "Armor",
+                "Helmet",
+                "Cape",
+            )
+        )
+    ):
         return False
     if prefab.endswith("Uncooked"):
         return False
@@ -1594,8 +1585,6 @@ def should_skip_item(prefab: str) -> bool:
 
 def misc_section(prefab: str) -> str:
     p = prefab.lower()
-    if is_crafting_mold_or_cast(prefab) or prefab.startswith("Mold") or "mold" in p:
-        return "Crafting molds"
     if "treasure" in p or "chest" in p or "coffer" in p or prefab.startswith("loot_"):
         return "Chests & treasure"
     if "firework" in p or "bell" in p or "sparkler" in p:
@@ -1645,8 +1634,18 @@ def classify_item(it: dict) -> tuple[str, str]:
         sub = ECONOMY_SUBCATEGORIES.get(prefab) or misc_section(prefab)
         return "misc", sub
 
-    if is_crafting_mold_or_cast(prefab):
-        return "misc", "Crafting molds"
+    # SoftRef Mold* / *GoldUncooked: trust economy catalog (armor|weapons|materials)
+    if prefab.startswith("Mold") or (
+        prefab.endswith("Uncooked")
+        and not ECONOMY_CATEGORIES.get(prefab) == "food"
+    ):
+        eco = ECONOMY_CATEGORIES.get(prefab)
+        if eco == "armor":
+            return "armor", armor_section(prefab)
+        if eco == "weapons":
+            return "weapons", weapon_section(prefab)
+        if eco == "materials":
+            return "materials", material_section(prefab)
 
     if is_cosmetic_gear(prefab):
         return "cosmetics", cosmetics_section(prefab)
@@ -1945,7 +1944,6 @@ def build_store(data: dict) -> dict:
             "Crafting parts",
         ],
         "misc": [
-            "Tools",
             "Light sources",
             "Mounts & eggs",
             "Accessories",
@@ -1953,7 +1951,6 @@ def build_store(data: dict) -> dict:
             "Fishing bait",
             "Fun & fireworks",
             "Chests & treasure",
-            "Crafting molds",
             "Trophies",
             "Utility & oddities",
         ],
