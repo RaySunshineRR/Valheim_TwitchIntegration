@@ -5052,13 +5052,6 @@ window.VALHEIM_TWITCH_STORE = {
       "amount": 5
     },
     {
-      "name": "Carrot Seeds x5",
-      "cmd": "#carrotseeds",
-      "prefab": "CarrotSeeds",
-      "cost": 11,
-      "amount": 5
-    },
-    {
       "name": "Carrot Soup",
       "cmd": "#carrotsoup",
       "prefab": "CarrotSoup",
@@ -5179,13 +5172,6 @@ window.VALHEIM_TWITCH_STORE = {
       "amount": 5
     },
     {
-      "name": "Turnip Seeds x5",
-      "cmd": "#turnipseeds",
-      "prefab": "TurnipSeeds",
-      "cost": 16,
-      "amount": 5
-    },
-    {
       "name": "Turnip Stew",
       "cmd": "#turnipstew",
       "prefab": "TurnipStew",
@@ -5230,13 +5216,6 @@ window.VALHEIM_TWITCH_STORE = {
       "cmd": "#onion",
       "prefab": "Onion",
       "cost": 35,
-      "amount": 5
-    },
-    {
-      "name": "Onion Seeds x5",
-      "cmd": "#onionseeds",
-      "prefab": "OnionSeeds",
-      "cost": 21,
       "amount": 5
     },
     {
@@ -6095,13 +6074,6 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 26
     },
     {
-      "name": "Carrot Seeds x5",
-      "cmd": "#carrotseeds",
-      "prefab": "CarrotSeeds",
-      "cost": 11,
-      "amount": 5
-    },
-    {
       "name": "Carrot Soup",
       "cmd": "#carrotsoup",
       "prefab": "CarrotSoup",
@@ -6276,13 +6248,6 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 37
     },
     {
-      "name": "Onion Seeds x5",
-      "cmd": "#onionseeds",
-      "prefab": "OnionSeeds",
-      "cost": 21,
-      "amount": 5
-    },
-    {
       "name": "Onion Soup",
       "cmd": "#onionsoup",
       "prefab": "OnionSoup",
@@ -6347,13 +6312,6 @@ window.VALHEIM_TWITCH_STORE = {
       "cmd": "#sizzlingberrybroth",
       "prefab": "SizzlingBerryBroth",
       "cost": 1
-    },
-    {
-      "name": "Turnip Seeds x5",
-      "cmd": "#turnipseeds",
-      "prefab": "TurnipSeeds",
-      "cost": 16,
-      "amount": 5
     },
     {
       "name": "Turnip Stew",
@@ -7497,7 +7455,7 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Acorn x5",
       "cmd": "#acorn",
       "prefab": "Acorn",
-      "cost": 1,
+      "cost": 5,
       "amount": 5
     },
     {
@@ -7549,14 +7507,7 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Beech Seeds x5",
       "cmd": "#beechseeds",
       "prefab": "BeechSeeds",
-      "cost": 1,
-      "amount": 5
-    },
-    {
-      "name": "Birch Seeds x5",
-      "cmd": "#birchseeds",
-      "prefab": "BirchSeeds",
-      "cost": 1,
+      "cost": 5,
       "amount": 5
     },
     {
@@ -7655,13 +7606,6 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "Feathers",
       "cost": 10,
       "amount": 10
-    },
-    {
-      "name": "Fir Cone x5",
-      "cmd": "#fircone",
-      "prefab": "FirCone",
-      "cost": 1,
-      "amount": 5
     },
     {
       "name": "Flint x10",
@@ -7826,13 +7770,6 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "NornThread",
       "cost": 10,
       "amount": 10
-    },
-    {
-      "name": "Pine Cone x5",
-      "cmd": "#pinecone",
-      "prefab": "PineCone",
-      "cost": 1,
-      "amount": 5
     },
     {
       "name": "Placeable Stone x10",
@@ -8103,6 +8040,13 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 11
     },
     {
+      "name": "Birch Seeds x5",
+      "cmd": "#birchseeds",
+      "prefab": "BirchSeeds",
+      "cost": 8,
+      "amount": 5
+    },
+    {
       "name": "Bronze",
       "cmd": "#bronze",
       "prefab": "Bronze",
@@ -8119,6 +8063,13 @@ window.VALHEIM_TWITCH_STORE = {
       "cmd": "#bronzescrap",
       "prefab": "BronzeScrap",
       "cost": 5
+    },
+    {
+      "name": "Carrot Seeds x5",
+      "cmd": "#carrotseeds",
+      "prefab": "CarrotSeeds",
+      "cost": 15,
+      "amount": 5
     },
     {
       "name": "Chitin x10",
@@ -8199,6 +8150,13 @@ window.VALHEIM_TWITCH_STORE = {
       "cmd": "#moltencore",
       "prefab": "MoltenCore",
       "cost": 38
+    },
+    {
+      "name": "Pine Cone x5",
+      "cmd": "#pinecone",
+      "prefab": "PineCone",
+      "cost": 10,
+      "amount": 5
     },
     {
       "name": "Queen Bee",
@@ -8482,6 +8440,13 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 38
     },
     {
+      "name": "Turnip Seeds x5",
+      "cmd": "#turnipseeds",
+      "prefab": "TurnipSeeds",
+      "cost": 20,
+      "amount": 5
+    },
+    {
       "name": "Withered Bone",
       "cmd": "#witheredbone",
       "prefab": "WitheredBone",
@@ -8511,10 +8476,17 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 100
     },
     {
+      "name": "Fir Cone x5",
+      "cmd": "#fircone",
+      "prefab": "FirCone",
+      "cost": 20,
+      "amount": 5
+    },
+    {
       "name": "Fir Cone Frost x5",
       "cmd": "#firconefrost",
       "prefab": "FirConeFrost",
-      "cost": 21,
+      "cost": 30,
       "amount": 5
     },
     {
@@ -8542,6 +8514,13 @@ window.VALHEIM_TWITCH_STORE = {
       "prefab": "Obsidian",
       "cost": 25,
       "amount": 10
+    },
+    {
+      "name": "Onion Seeds x5",
+      "cmd": "#onionseeds",
+      "prefab": "OnionSeeds",
+      "cost": 25,
+      "amount": 5
     },
     {
       "name": "Silver",
@@ -8903,7 +8882,7 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Kale Seeds x5",
       "cmd": "#kaleseeds",
       "prefab": "KaleSeeds",
-      "cost": 70,
+      "cost": 40,
       "amount": 5
     },
     {
@@ -8922,14 +8901,14 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Oat Seeds x5",
       "cmd": "#oatseeds",
       "prefab": "OatSeeds",
-      "cost": 70,
+      "cost": 40,
       "amount": 5
     },
     {
       "name": "Poteitr Seeds x5",
       "cmd": "#poteitrseeds",
       "prefab": "PoteitrSeeds",
-      "cost": 70,
+      "cost": 45,
       "amount": 5
     },
     {
@@ -9443,63 +9422,84 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Acorn x5",
       "cmd": "#acorn",
       "prefab": "Acorn",
-      "cost": 1,
+      "cost": 5,
       "amount": 5
     },
     {
       "name": "Beech Seeds x5",
       "cmd": "#beechseeds",
       "prefab": "BeechSeeds",
-      "cost": 1,
+      "cost": 5,
       "amount": 5
     },
     {
       "name": "Birch Seeds x5",
       "cmd": "#birchseeds",
       "prefab": "BirchSeeds",
-      "cost": 1,
+      "cost": 8,
+      "amount": 5
+    },
+    {
+      "name": "Carrot Seeds x5",
+      "cmd": "#carrotseeds",
+      "prefab": "CarrotSeeds",
+      "cost": 15,
       "amount": 5
     },
     {
       "name": "Fir Cone x5",
       "cmd": "#fircone",
       "prefab": "FirCone",
-      "cost": 1,
+      "cost": 20,
       "amount": 5
     },
     {
       "name": "Fir Cone Frost x5",
       "cmd": "#firconefrost",
       "prefab": "FirConeFrost",
-      "cost": 21,
+      "cost": 30,
       "amount": 5
     },
     {
       "name": "Kale Seeds x5",
       "cmd": "#kaleseeds",
       "prefab": "KaleSeeds",
-      "cost": 70,
+      "cost": 40,
       "amount": 5
     },
     {
       "name": "Oat Seeds x5",
       "cmd": "#oatseeds",
       "prefab": "OatSeeds",
-      "cost": 70,
+      "cost": 40,
+      "amount": 5
+    },
+    {
+      "name": "Onion Seeds x5",
+      "cmd": "#onionseeds",
+      "prefab": "OnionSeeds",
+      "cost": 25,
       "amount": 5
     },
     {
       "name": "Pine Cone x5",
       "cmd": "#pinecone",
       "prefab": "PineCone",
-      "cost": 1,
+      "cost": 10,
       "amount": 5
     },
     {
       "name": "Poteitr Seeds x5",
       "cmd": "#poteitrseeds",
       "prefab": "PoteitrSeeds",
-      "cost": 70,
+      "cost": 45,
+      "amount": 5
+    },
+    {
+      "name": "Turnip Seeds x5",
+      "cmd": "#turnipseeds",
+      "prefab": "TurnipSeeds",
+      "cost": 20,
       "amount": 5
     },
     {

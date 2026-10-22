@@ -1209,17 +1209,22 @@ def material_section(prefab: str) -> str:
     if prefab == "DragonEgg":
         return "Boss & rare drops"
     p = prefab.lower()
-    if prefab in {
+    if prefab == "AncientSeed":
+        pass  # Elder key — not plantable Seeds
+    elif prefab in {
         "PineCone",
         "FirCone",
         "FirConeFrost",
         "Acorn",
         "BeechSeeds",
         "BirchSeeds",
+        "CarrotSeeds",
+        "TurnipSeeds",
+        "OnionSeeds",
         "KaleSeeds",
         "OatSeeds",
         "PoteitrSeeds",
-    } or (prefab.endswith("Seeds") and prefab not in {"AncientSeed", "CarrotSeeds", "TurnipSeeds", "OnionSeeds"}):
+    } or (prefab.endswith("Seeds") or prefab.endswith("Cone")):
         return "Seeds"
     if prefab == "Pukeberries":
         return "Crafting parts"
