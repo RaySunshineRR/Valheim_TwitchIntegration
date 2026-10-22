@@ -43,7 +43,7 @@
     "misc",
   ]);
 
-  /** Gold top row: progression tiers (T0–T6). */
+  /** Gold top row: progression tiers (T0–T7). */
   const TIER_TABS = new Set([
     "weapons",
     "armor",
@@ -72,6 +72,7 @@
     "T4 · Plains",
     "T5 · Mistlands",
     "T6 · Ashlands",
+    "T7 · Deep North",
     "Special",
     "Other",
   ]);

@@ -41,6 +41,7 @@ TIER_LABEL = {
     4: "T4 · Plains",
     5: "T5 · Mistlands",
     6: "T6 · Ashlands",
+    7: "T7 · Deep North",
 }
 WIKI_IMG = "https://valheim.weirdgloop.org/images/"
 WIKI_API = "https://valheim.weirdgloop.org/api.php"
@@ -92,7 +93,45 @@ ICON_OVERRIDES = {
     "BoltCharred": "Charred_Bolt.png",
     "BoltBloodGold": "Bloodgold_Bolt.png",
     "BeltStrength": "Megingjord.png",
+    "Wishbone": "Wishbone.png",
+    "Demister": "Wisplight.png",
+    "Wisp": "Wisp.png",
     "CryptKey": "Swamp_key.png",
+    "SilverNecklace": "Silver_Necklace.png",
+    "HelmetDverger": "Dverger_Circlet.png",
+    "Thunderstone": "Thunderstone.png",
+    "BarberKit": "Barber_Kit.png",
+    "DvergrKey": "Dvergr_Extractor.png",
+    "DvergrKeyFragment": "Dvergr_Extractor.png",
+    "GoblinTotem": "Yagluth's_Thing.png",
+    "DragonTear": "Dragon_Tear.png",
+    "CrownJewel": "Scintillating_Shell.png",
+    "BloodGoldKey": "Bloodstone.png",
+    "HardAntler": "Hard_Antler.png",
+    # Deep North armor (wiki Protector / Vanguard / Caller set names)
+    "ArmorDeepNorthHeavyChest": "Breastplate_of_the_Protector.png",
+    "ArmorDeepNorthHeavylegs": "Trousers_of_the_Protector.png",
+    "ArmorDeepNorthMediumChest": "Chestpiece_of_the_Vanguard.png",
+    "ArmorDeepNorthMediumlegs": "Trousers_of_the_Vanguard.png",
+    "ArmorDeepNorthMageChest": "Robes_of_the_Caller.png",
+    "ArmorDeepNorthMagelegs": "Trousers_of_the_Caller.png",
+    "HelmetDNHeavy": "Helmet_of_the_Protector.png",
+    "HelmetDNMediumHood": "Hood_of_the_Vanguard.png",
+    "HelmetDNMage": "Headdress_of_the_Caller.png",
+    "CapeDeepNorth": "Moose_Hide_Cape.png",
+    "CapeDeepNorthMage": "Cape_of_the_Caller.png",
+    "Frostwood": "Timberwood.png",
+    "FrostCore": "Frostcore.png",
+    "FistBjornClaw": "Paws_of_the_Bear.png",
+    "FistBjornUndeadClaw": "Vilebone_Maulclaws.png",
+    "BjornHide": "Bear_Hide.png",
+    "BjornMeat": "Bear_Meat.png",
+    "CookedBjornMeat": "Cooked_Bear_Meat.png",
+    "BjornPaw": "Bear_Paw.png",
+    "TrophyBjorn": "Bear_Trophy.png",
+    "Bjorn": "Bear.png",
+    "MooseHide": "Moose_Hide.png",
+    "Moose": "Moose.png",
     "QueensJam": "Queen's_Jam.png",
     "SwordIron": "Iron_Sword.png",
     "SwordBronze": "Bronze_Sword.png",
@@ -388,12 +427,18 @@ TIER_ORDER = [
     "T4 · Plains",
     "T5 · Mistlands",
     "T6 · Ashlands",
+    "T7 · Deep North",
     "Special",
     "Other",
 ]
 
 # Armor → unified tier (first substring match wins; Troll before Leather)
 ARMOR_TIER_HINTS = [
+    ("DeepNorth", "T7 · Deep North"),
+    ("DNHeavy", "T7 · Deep North"),
+    ("DNMedium", "T7 · Deep North"),
+    ("DNMage", "T7 · Deep North"),
+    ("HelmetDN", "T7 · Deep North"),
     ("Berserker", "T6 · Ashlands"),
     ("Rags", "T0 · Meadows"),
     ("Troll", "T1 · Black Forest"),
@@ -402,7 +447,6 @@ ARMOR_TIER_HINTS = [
     ("Root", "T2 · Swamp"),
     ("Iron", "T2 · Swamp"),
     ("Fenring", "T3 · Mountain"),
-    ("DeepNorth", "T3 · Mountain"),
     ("Wolf", "T3 · Mountain"),
     # Full Lox set (chest/legs/helmet/cape) stays with Padded on Plains
     ("Lox", "T4 · Plains"),
@@ -424,7 +468,8 @@ CAPE_TIER = {
     "CapeLinen": "T4 · Plains",
     "CapeFeather": "T5 · Mistlands",
     "CapeAsh": "T6 · Ashlands",
-    "CapeDeepNorth": "T3 · Mountain",
+    "CapeDeepNorth": "T7 · Deep North",
+    "CapeDeepNorthMage": "T7 · Deep North",
     "CapeOdin": "T0 · Meadows",
 }
 
@@ -489,8 +534,33 @@ CORE_MATERIAL_PREFABS = {
     "SulfurStone",
 }
 
-# Keyword → tier for weapons / food / potions / materials (checked T6→T0)
+# Keyword → tier for weapons / food / potions / materials (checked T7→T0)
 TIER_KEYWORDS = [
+    (
+        "T7 · Deep North",
+        (
+            "deepnorth",
+            "frostwood",
+            "frostcore",
+            "firconefrost",
+            "frysling",
+            "frostwisp",
+            "frozenking",
+            "elaking",
+            "barka",
+            "helmetdn",
+            "dnheavy",
+            "dnmedium",
+            "dnmage",
+            "bjorn",
+            "moose",
+            "oatflour",
+            "oatmilk",
+            "oatseeds",
+            "poteitr",
+            "kale",
+        ),
+    ),
     (
         "T6 · Ashlands",
         (
@@ -585,8 +655,6 @@ TIER_KEYWORDS = [
             "hatchling",
             "wolfjerky",
             "wolfmeat",
-            "bjornmeat",
-            "moosemeat",
             "dragonegg",
         ),
     ),
@@ -839,8 +907,14 @@ def armor_section(prefab: str) -> str:
         return progression_tier(prefab)
     if prefab.startswith("Trinket"):
         return progression_tier(prefab)
-    if "DNHeavy" in prefab or "DNMedium" in prefab:
-        return "T3 · Mountain"
+    if (
+        "DNHeavy" in prefab
+        or "DNMedium" in prefab
+        or "DNMage" in prefab
+        or "HelmetDN" in prefab
+        or "DeepNorth" in prefab
+    ):
+        return "T7 · Deep North"
     for key, section in ARMOR_TIER_HINTS:
         if key.lower() in prefab.lower():
             return section
@@ -855,6 +929,9 @@ def progression_tier(prefab: str) -> str:
     # Capes / odd armor-adjacent pieces already handled for armor tab
     for tier, keys in TIER_KEYWORDS:
         for key in keys:
+            # Unbjorn (Plains Vile) must not match Deep North "bjorn"
+            if key == "bjorn" and "unbjorn" in p:
+                continue
             if key in p:
                 return tier
     if prefab.startswith(("Mead", "MeadBase", "BarleyWine", "BarleyWineBase")):
@@ -1063,16 +1140,16 @@ def is_food_item(prefab: str) -> bool:
 
 
 def is_accessory_item(prefab: str) -> bool:
-    """Keys, belts, wishbone, demister, etc."""
+    """Wiki equipable accessories / utility (SoftRef prefabs only)."""
     if prefab.startswith("Mold"):
         return False
     if prefab in {
         "Wishbone",
         "BarberKit",
-        "BeltStrength",
-        "Demister",
+        "BeltStrength",  # Megingjord
+        "Demister",  # Wisplight
         "IceSkates",
-        "CryptKey",
+        "CryptKey",  # Swamp Key
         "DvergrKey",
         "DvergrKeyFragment",
         "BloodGoldKey",
@@ -1082,6 +1159,9 @@ def is_accessory_item(prefab: str) -> bool:
         "Wisp",
         "DragonTear",
         "HardAntler",
+        "SilverNecklace",
+        "HelmetDverger",  # Dverger circlet
+        "Thunderstone",
     }:
         return True
     if prefab.startswith("HildirKey"):
@@ -1721,8 +1801,8 @@ def build_store(data: dict) -> dict:
 
     for tab, order in section_order.items():
         help_text = {
-            "weapons": "Gold row = tiers (T0–T6). Second row = weapon family. Catalog starts with tier sets.",
-            "armor": "Unified tiers — each T# holds the full armor sets for that step.",
+            "weapons": "Gold row = tiers (T0–T7). Second row = weapon family. Catalog starts with tier sets.",
+            "armor": "Unified tiers (T0–T7) — each T# holds the full armor sets for that step.",
             "cosmetics": "Hildir dresses/tunics/hats, Odin gear, Bloodgold cast/mould weapons & armor — vanity and Ashlands gold molds.",
             "food": "Gold row = tiers. Second row = feasts / raw / cooked / prepared / crops. Feasts are type-only (not under tiers).",
             "potions": "Gold row = tiers. Second row = meads / bases / wines. Catalog starts with tiers.",
