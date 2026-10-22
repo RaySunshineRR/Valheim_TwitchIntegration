@@ -103,9 +103,18 @@ ICON_OVERRIDES = {
     "ArrowFire": "Fire_Arrow.png",
     "ArrowFrost": "Frost_Arrow.png",
     "ArrowPoison": "Poison_Arrow.png",
+    "AtgeirGold": "Nord_Atgeir.png",
+    "AtgeirGold_BloodLightning": "Thunderblood_Atgeir.png",
+    "AtgeirGold_FrostFire": "Frostfire_Atgeir.png",
+    "AxeGold": "Nord_Axe.png",
+    "AxeGold_BloodLightning": "Thunderblood_Axe.png",
+    "AxeGold_FrostFire": "Frostfire_Axe.png",
     "BarberKit": "Barber_Kit.png",
     "BarleyWine": "Fire_Resistance_Barley_Wine.png",
     "BarleyWineBase": "Barley_Wine_Base_-_Fire_Resistance.png",
+    "BattleaxeGold": "Nord_Greataxe.png",
+    "BattleaxeGold_BloodLightning": "Thunderblood_Greataxe.png",
+    "BattleaxeGold_FrostFire": "Frostfire_Greataxe.png",
     "BeltStrength": "Megingjord.png",
     "Bjorn": "Bear.png",
     "BjornHide": "Bear_Hide.png",
@@ -118,6 +127,9 @@ ICON_OVERRIDES = {
     "BoltCarapace": "Carapace_Bolt.png",
     "BoltCharred": "Charred_Bolt.png",
     "BoltIron": "Iron_Bolt.png",
+    "BowGold": "Nord_Bow.png",
+    "BowGold_BloodLightning": "Thunderblood_Bow.png",
+    "BowGold_FrostFire": "Frostfire_Bow.png",
     "CapeAsh": "Ashen_cape.png",
     "CapeAsksvin": "Asksvin_cloak.png",
     "CapeDeepNorth": "Moose_Hide_Cape.png",
@@ -131,6 +143,9 @@ ICON_OVERRIDES = {
     "CookedLoxMeat": "Cooked_Lox_Meat.png",
     "CookedMeat": "Cooked_Boar_Meat.png",
     "CrossbowArbalest": "Arbalest.png",
+    "CrossbowGold": "Nord_Crossbow.png",
+    "CrossbowGold_BloodLightning": "Thunderblood_Crossbow.png",
+    "CrossbowGold_FrostFire": "Frostfire_Crossbow.png",
     "CrossbowRipper": "Ripper.png",
     "CrossbowRipperBlood": "Ripper.png",
     "CrossbowRipperLightning": "Ripper.png",
@@ -162,6 +177,9 @@ ICON_OVERRIDES = {
     "FishingBaitSwamp": "Sticky_Fishing_Bait.png",
     "FistBjornClaw": "Paws_of_the_Bear.png",
     "FistBjornUndeadClaw": "Vilebone_Maulclaws.png",
+    "FistGold": "Nord_Knucklechains.png",
+    "FistGold_BloodLightning": "Thunderblood_Knucklechains.png",
+    "FistGold_FrostFire": "Frostfire_Knucklechains.png",
     "FrostCore": "Frostcore.png",
     "Frostwood": "Timberwood.png",
     "GoblinDeepNorth": "Captive_Fuling.png",
@@ -179,6 +197,12 @@ ICON_OVERRIDES = {
     "HelmetLox": "Lox_Fur_Hood.png",
     "HelmetMage": "Eitr-weave_Hood.png",
     "HelmetMage_Ashlands": "Hood_of_Embla.png",
+    "KnifeGold": "Nord_Dagger.png",
+    "KnifeGold_BloodLightning": "Thunderblood_Dagger.png",
+    "KnifeGold_FrostFire": "Frostfire_Dagger.png",
+    "MaceGold": "Nord_Mace.png",
+    "MaceGold_BloodLightning": "Thunderblood_Mace.png",
+    "MaceGold_FrostFire": "Frostfire_Mace.png",
     "MeadBaseBugRepellent": "Mead_Base_-_Anti-Sting.png",
     "MeadBaseBzerker": "Mead_Base_-_Berserkir.png",
     "MeadBaseEitrLingering": "Mead_Base_-_Lingering_Eitr.png",
@@ -232,13 +256,30 @@ ICON_OVERRIDES = {
     "QueensJam": "Queen's_Jam.png",
     "RawMeat": "Boar_Meat.png",
     "ShieldBanded": "Banded_Shield.png",
+    "ShieldGold": "Nord_Shield.png",
+    "ShieldGoldBuckler": "Nord_Buckler.png",
+    "ShieldGoldTower": "Nord_Greatshield.png",
     "ShieldWood": "Wood_Shield.png",
     "SilverNecklace": "Silver_Necklace.png",
     "Skeleton_DeepNorth": "Skeleton_(Deep_North).png",
+    "SledgeGold": "Nord_Sledge.png",
+    "SledgeGold_BloodLightning": "Thunderblood_Sledge.png",
+    "SledgeGold_FrostFire": "Frostfire_Sledge.png",
+    "SpearGold": "Nord_Spear.png",
+    "SpearGold_BloodLightning": "Thunderblood_Spear.png",
+    "SpearGold_FrostFire": "Frostfire_Spear.png",
+    "StaffFrostOrbs": "Northern_Vengeance.png",
+    "StaffOrbofAhri": "Echo_Spike.png",
     "SwordBlackmetal": "Black_Metal_Sword.png",
     "SwordBronze": "Bronze_Sword.png",
+    "SwordGold": "Nord_Sword.png",
+    "SwordGold_BloodLightning": "Thunderblood_Sword.png",
+    "SwordGold_FrostFire": "Frostfire_Sword.png",
     "SwordIron": "Iron_Sword.png",
     "SwordSilver": "Silver_Sword.png",
+    "THSwordGold": "Nord_Greatsword.png",
+    "THSwordGold_BloodLightning": "Thunderblood_Greatsword.png",
+    "THSwordGold_FrostFire": "Frostfire_Greatsword.png",
     "Thunderstone": "Thunderstone.png",
     "TrinketBlackDamageHealth": "Bracelets_of_the_Brave.png",
     "TrinketBlackStamina": "Evasion_Mantle.png",
@@ -910,16 +951,71 @@ FORCE_MATERIAL_PREFABS = {
 }
 
 
+def is_nord_weapon(prefab: str) -> bool:
+    """Wiki Nord SoftRefs (*Gold finished) — Deep North weapons, not cosmetics."""
+    if prefab.endswith("Uncooked") or prefab.startswith("Mold"):
+        return False
+    if prefab.endswith(("_FrostFire", "_BloodLightning")) and "Gold" in prefab:
+        return True
+    return prefab in {
+        "SwordGold",
+        "THSwordGold",
+        "AxeGold",
+        "BattleaxeGold",
+        "MaceGold",
+        "SledgeGold",
+        "SpearGold",
+        "AtgeirGold",
+        "KnifeGold",
+        "BowGold",
+        "CrossbowGold",
+        "FistGold",
+        "ShieldGold",
+        "ShieldGoldBuckler",
+        "ShieldGoldTower",
+    }
+
+
 def is_cosmetic_gear(prefab: str) -> bool:
+    # Catalog SoT when present
+    eco = ECONOMY_CATEGORIES.get(prefab)
+    if eco == "weapons" and is_nord_weapon(prefab):
+        return False
+    if eco == "cosmetics":
+        return True
     if ECONOMY_SUBCATEGORIES.get(prefab) == "cosmetic":
+        return True
+    # Finished Nord SoftRefs are weapons (wiki Deep North)
+    if is_nord_weapon(prefab):
+        return False
+    # Casts / moulds / Hildir vanity only
+    if prefab.endswith("Uncooked") and prefab.startswith(
+        (
+            "Sword",
+            "THSword",
+            "Axe",
+            "Battleaxe",
+            "Mace",
+            "Sledge",
+            "Spear",
+            "Atgeir",
+            "Knife",
+            "Bow",
+            "Crossbow",
+            "Shield",
+            "Fist",
+            "Staff",
+            "Armor",
+            "Helmet",
+            "Cape",
+        )
+    ):
         return True
     return bool(
         re.search(
             r"(?i)(Dress|Tunic|Harvester|HelmetHat|HelmetCelebration|HelmetYule|"
             r"HelmetOdin|HelmetPointy|HelmetStraw|HelmetSweat|HelmetMidsummer|"
-            r"HelmetFishing|CapeOdin|ArmorGold|SwordGold|AxeGold|MaceGold|BowGold|"
-            r"SpearGold|KnifeGold|AtgeirGold|SledgeGold|BattleaxeGold|CrossbowGold|"
-            r"THSwordGold|FistGold|Shield.*Gold|TankardOdin)",
+            r"HelmetFishing|CapeOdin|ArmorGold|TankardOdin)",
             prefab,
         )
     )
