@@ -180,11 +180,54 @@ ICON_OVERRIDES = {
     "FistGold": "Nord_Knucklechains.png",
     "FistGold_BloodLightning": "Thunderblood_Knucklechains.png",
     "FistGold_FrostFire": "Frostfire_Knucklechains.png",
+    "FireworksRocket_Blue": "Blue_firework.png",
+    "FireworksRocket_Cyan": "Cyan_firework.png",
+    "FireworksRocket_Green": "Green_firework.png",
+    "FireworksRocket_Purple": "Purple_firework.png",
+    "FireworksRocket_Red": "Red_Fireworks.png",
+    "FireworksRocket_White": "Basic_fireworks.png",
+    "FireworksRocket_Yellow": "Yellow_firework.png",
+    "Sparkler": "Sparkler.png",
     "FrostCore": "Frostcore.png",
     "Frostwood": "Timberwood.png",
     "GoblinDeepNorth": "Captive_Fuling.png",
-    "GoblinTotem": "Yagluth's_Thing.png",
+    "GoblinTotem": "Fuling_Totem.png",
     "Greydwarf_Frozen": "Greydwarf_(Deep_North).png",
+    "JuteBlue": "Blue_Jute.png",
+    "JuteRed": "Red_Jute.png",
+    "AncientSeed": "Ancient_Seed.png",
+    "WitheredBone": "Withered_Bone.png",
+    "BlackCore": "Black_Core.png",
+    "MoltenCore": "Molten_Core.png",
+    "TreasureChest_meadows": "Treasure_Chest.png",
+    "TreasureChest_meadows_01": "Treasure_Chest.png",
+    "TreasureChest_meadows_02": "Treasure_Chest.png",
+    "TreasureChest_meadows_buried": "Treasure_Chest.png",
+    "TreasureChest_meadows_combat": "Treasure_Chest.png",
+    "TreasureChest_blackforest": "Treasure_Chest.png",
+    "TreasureChest_forestcrypt": "Treasure_Chest.png",
+    "TreasureChest_forestcrypt_hildir": "Treasure_Chest.png",
+    "TreasureChest_fCrypt": "Treasure_Chest.png",
+    "TreasureChest_swamp": "Treasure_Chest.png",
+    "TreasureChest_sunkencrypt": "Treasure_Chest.png",
+    "TreasureChest_mountains": "Treasure_Chest.png",
+    "TreasureChest_mountaincave": "Treasure_Chest.png",
+    "TreasureChest_mountaincave_hildir": "Treasure_Chest.png",
+    "TreasureChest_heath": "Treasure_Chest.png",
+    "TreasureChest_heath_hildir": "Treasure_Chest.png",
+    "TreasureChest_plains_stone": "Treasure_Chest.png",
+    "TreasureChest_plainsfortress_hildir": "Treasure_Chest.png",
+    "TreasureChest_trollcave": "Treasure_Chest.png",
+    "TreasureChest_dvergrtower": "Treasure_Chest.png",
+    "TreasureChest_dvergrtown": "Treasure_Chest.png",
+    "TreasureChest_dvergr_loose_stone": "Treasure_Chest.png",
+    "TreasureChest_ashland_stone": "Treasure_Chest.png",
+    "TreasureChest_charredfortress": "Treasure_Chest.png",
+    "TreasureChest_deepnorth_village": "Treasure_Chest.png",
+    "TreasureChest_memorial_buried": "Treasure_Chest.png",
+    "TreasureChest_morkhalla": "Treasure_Chest.png",
+    "loot_chest_wood": "Chest.png",
+    "loot_chest_stone": "Reinforced_Chest.png",
     "HardAntler": "Hard_Antler.png",
     "HelmetAshlandsMediumHood": "Hood_of_Ask.png",
     "HelmetCarapace": "Carapace_Helmet.png",
@@ -280,7 +323,7 @@ ICON_OVERRIDES = {
     "THSwordGold": "Nord_Greatsword.png",
     "THSwordGold_BloodLightning": "Thunderblood_Greatsword.png",
     "THSwordGold_FrostFire": "Frostfire_Greatsword.png",
-    "Thunderstone": "Thunderstone.png",
+    "Thunderstone": "Thunder_Stone.png",
     "TrinketBlackDamageHealth": "Bracelets_of_the_Brave.png",
     "TrinketBlackStamina": "Evasion_Mantle.png",
     "TrinketBloodGoldHealth": "Neckstabber.png",
@@ -1311,8 +1354,8 @@ def is_food_item(prefab: str) -> bool:
 
 
 def is_accessory_item(prefab: str) -> bool:
-    """Wiki Accessories page only: Megingjord, Wishbone, Wisplight."""
-    return prefab in {"BeltStrength", "Wishbone", "Demister"}
+    """Megingjord / Wisplight only (Wishbone → Materials Boss & rare drops)."""
+    return prefab in {"BeltStrength", "Demister"}
 
 
 def is_trinket_item(prefab: str) -> bool:
@@ -1433,6 +1476,25 @@ def material_section(prefab: str) -> str:
     eco_sub = ECONOMY_SUBCATEGORIES.get(prefab)
     if eco_sub == "Seeds":
         return "Seeds"
+    if eco_sub == "Boss & rare drops":
+        return "Boss & rare drops"
+    if prefab in {
+        "DragonEgg",
+        "Wishbone",
+        "CryptKey",
+        "AncientSeed",
+        "WitheredBone",
+        "GoblinTotem",
+        "DragonTear",
+        "YagluthDrop",
+        "QueenDrop",
+        "FaderDrop",
+        "Thunderstone",
+        "BloodGoldKey",
+        "DvergrKey",
+        "Sealbreaker",
+    } or prefab.startswith("HildirKey"):
+        return "Boss & rare drops"
     if prefab == "DragonEgg":
         return "Boss & rare drops"
     p = prefab.lower()
@@ -1599,10 +1661,8 @@ def misc_section(prefab: str) -> str:
         return "Mounts & eggs"
     if any(x in p for x in ("torch", "lantern", "candle", "firepit", "campfire")):
         return "Light sources"
-    if any(
-        x in p for x in ("hammer", "hoe", "cultivator", "pickaxe", "fishing", "harpoon", "shovel")
-    ) or prefab in {"Shovel", "GrapplingHook", "Hook"}:
-        return "Tools"
+    if prefab in {"Shovel", "GrapplingHook", "Hook", "IceShoes", "IceSkates"}:
+        return "Utility & oddities"
     if "trophy" in p:
         return "Trophies"
     return "Utility & oddities"
@@ -1656,7 +1716,8 @@ def classify_item(it: dict) -> tuple[str, str]:
         return "misc", "Fishing bait"
 
     if is_tool_item(prefab):
-        return "misc", "Tools"
+        # Hammer/Hoe/Pickaxe/… live under Weapons — no Misc Tools chip
+        return "weapons", "Utility weapons"
     if is_weapon_like(prefab) or prefab.startswith(("Tankard", "Torch")):
         if prefab.startswith("Torch") or prefab.startswith("Tankard"):
             return "weapons", "Utility weapons"
@@ -1967,7 +2028,7 @@ def build_store(data: dict) -> dict:
             "food": "Gold row = tiers. Second row = feasts / raw / cooked / prepared / crops. Feasts are type-only (not under tiers).",
             "potions": "Gold row = tiers. Second row = meads / bases / wines. Catalog starts with tiers.",
             "materials": "Gold row = tiers. Second row = wood / metals / etc. Catalog starts with tiers.",
-            "misc": "Tools, lights, mounts, fireworks, chests — streamer-useful leftovers.",
+            "misc": "Lights, mounts, fireworks, chests, accessories, bait — no Tools / Crafting molds chips.",
         }[tab]
         store[tab].append({"type": "help", "text": help_text})
 
