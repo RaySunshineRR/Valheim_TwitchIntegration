@@ -791,9 +791,36 @@ def is_cosmetic_gear(prefab: str) -> bool:
     )
 
 
+def cosmetics_section(prefab: str) -> str:
+    """Top-level Cosmetics tab subsections."""
+    if prefab.startswith(("Armor", "Helmet", "Cape", "SP_Armor")) or any(
+        x in prefab for x in ("Dress", "Tunic", "Harvester")
+    ):
+        return "Cosmetic armor"
+    if prefab.startswith("Tankard") or "Shield" in prefab:
+        return "Cosmetic weapons"
+    if prefab.startswith(
+        (
+            "Sword",
+            "THSword",
+            "Axe",
+            "Battleaxe",
+            "Mace",
+            "Sledge",
+            "Spear",
+            "Atgeir",
+            "Knife",
+            "Bow",
+            "Crossbow",
+            "Fist",
+            "Staff",
+        )
+    ):
+        return "Cosmetic weapons"
+    return "Cosmetic armor"
+
+
 def weapon_section(prefab: str) -> str:
-    if is_cosmetic_gear(prefab):
-        return "Cosmetic"
     for prefix, section in WEAPON_PREFIX.items():
         if prefab.startswith(prefix):
             return section
@@ -805,8 +832,6 @@ def weapon_section(prefab: str) -> str:
 
 
 def armor_section(prefab: str) -> str:
-    if is_cosmetic_gear(prefab):
-        return "Cosmetic"
     if prefab in CAPE_TIER:
         return CAPE_TIER[prefab]
     if prefab.startswith("Cape"):
@@ -982,7 +1007,7 @@ def is_food_item(prefab: str) -> bool:
     eco_cat = ECONOMY_CATEGORIES.get(prefab)
     if eco_cat == "food":
         return True
-    if eco_cat in ("weapons", "armor", "materials", "potions", "misc", "curses"):
+    if eco_cat in ("weapons", "armor", "cosmetics", "materials", "potions", "misc", "curses"):
         return False
     p = prefab.lower()
     if prefab in FOOD_CROP:
@@ -1362,6 +1387,8 @@ def classify_item(it: dict) -> tuple[str, str]:
         return "potions", potion_section(prefab)
     if eco == "food":
         return "food", food_section(prefab)
+    if eco == "cosmetics":
+        return "cosmetics", cosmetics_section(prefab)
     if eco == "weapons":
         return "weapons", weapon_section(prefab)
     if eco == "armor":
@@ -1371,6 +1398,9 @@ def classify_item(it: dict) -> tuple[str, str]:
     if eco == "curses":
         sub = ECONOMY_SUBCATEGORIES.get(prefab) or "Good"
         return "curses", sub if sub in ("Good", "Bad") else "Good"
+
+    if is_cosmetic_gear(prefab):
+        return "cosmetics", cosmetics_section(prefab)
 
     if is_gear_uncooked(prefab):
         if prefab.startswith(("Armor", "Helmet", "Cape")):
@@ -1519,6 +1549,7 @@ def build_store(data: dict) -> dict:
         "mobs": [],
         "weapons": [],
         "armor": [],
+        "cosmetics": [],
         "food": [],
         "potions": [],
         "curses": [
@@ -1636,12 +1667,12 @@ def build_store(data: dict) -> dict:
             "Arrows & bolts",
             "Shields",
             "Magic",
-            "Cosmetic",
             "Throwables",
             "Utility weapons",
             "Other weapons",
         ],
-        "armor": list(TIER_ORDER) + ["Cosmetic"],
+        "armor": list(TIER_ORDER),
+        "cosmetics": ["Cosmetic armor", "Cosmetic weapons"],
         "food": [
             "Feasts",
             "Raw ingredients",
@@ -1687,6 +1718,7 @@ def build_store(data: dict) -> dict:
         help_text = {
             "weapons": "Gold row = tiers (T0–T6). Second row = weapon family. Catalog starts with tier sets.",
             "armor": "Unified tiers — each T# holds the full armor sets for that step.",
+            "cosmetics": "Hildir dresses/tunics/hats, Odin gear, Bloodgold cast/mould weapons & armor — vanity and Ashlands gold molds.",
             "food": "Gold row = tiers. Second row = feasts / raw / cooked / prepared / crops. Feasts are type-only (not under tiers).",
             "potions": "Gold row = tiers. Second row = meads / bases / wines. Catalog starts with tiers.",
             "materials": "Gold row = tiers. Second row = wood / metals / etc. Catalog starts with tiers.",

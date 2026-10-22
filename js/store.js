@@ -23,6 +23,7 @@
     "mobs",
     "weapons",
     "armor",
+    "cosmetics",
     "food",
     "potions",
     "curses",
@@ -34,6 +35,7 @@
   const JUMP_TABS = new Set([
     "weapons",
     "armor",
+    "cosmetics",
     "food",
     "potions",
     "curses",
@@ -53,6 +55,7 @@
   /** Second row: type / family jumps under the tier row. */
   const TYPE_TABS = new Set([
     "weapons",
+    "cosmetics",
     "food",
     "potions",
     "curses",

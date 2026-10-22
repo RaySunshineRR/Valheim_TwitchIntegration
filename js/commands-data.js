@@ -251,6 +251,12 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 2
     },
     {
+      "name": "Crow",
+      "cmd": "#crow",
+      "prefab": "Crow",
+      "cost": 1
+    },
+    {
       "name": "Deer",
       "cmd": "#deer",
       "prefab": "Deer",
@@ -279,6 +285,12 @@ window.VALHEIM_TWITCH_STORE = {
       "cmd": "#neck",
       "prefab": "Neck",
       "cost": 3
+    },
+    {
+      "name": "Seagal",
+      "cmd": "#seagal",
+      "prefab": "Seagal",
+      "cost": 1
     },
     {
       "name": "Skeleton",
@@ -701,6 +713,12 @@ window.VALHEIM_TWITCH_STORE = {
       "title": "Ashlands"
     },
     {
+      "name": "Ash Crow",
+      "cmd": "#ashcrow",
+      "prefab": "AshCrow",
+      "cost": 2
+    },
+    {
       "name": "Asksvin",
       "cmd": "#asksvin",
       "prefab": "Asksvin",
@@ -799,6 +817,78 @@ window.VALHEIM_TWITCH_STORE = {
     {
       "type": "section",
       "title": "Ocean"
+    },
+    {
+      "name": "Fish1",
+      "cmd": "#fish1",
+      "prefab": "Fish1",
+      "cost": 1
+    },
+    {
+      "name": "Fish10",
+      "cmd": "#fish10",
+      "prefab": "Fish10",
+      "cost": 1
+    },
+    {
+      "name": "Fish11",
+      "cmd": "#fish11",
+      "prefab": "Fish11",
+      "cost": 1
+    },
+    {
+      "name": "Fish12",
+      "cmd": "#fish12",
+      "prefab": "Fish12",
+      "cost": 1
+    },
+    {
+      "name": "Fish2",
+      "cmd": "#fish2",
+      "prefab": "Fish2",
+      "cost": 1
+    },
+    {
+      "name": "Fish3",
+      "cmd": "#fish3",
+      "prefab": "Fish3",
+      "cost": 1
+    },
+    {
+      "name": "Fish4 Cave",
+      "cmd": "#fish4cave",
+      "prefab": "Fish4_cave",
+      "cost": 2
+    },
+    {
+      "name": "Fish5",
+      "cmd": "#fish5",
+      "prefab": "Fish5",
+      "cost": 1
+    },
+    {
+      "name": "Fish6",
+      "cmd": "#fish6",
+      "prefab": "Fish6",
+      "cost": 1
+    },
+    {
+      "name": "Fish7",
+      "cmd": "#fish7",
+      "prefab": "Fish7",
+      "cost": 1
+    },
+    {
+      "name": "Fish8",
+      "cmd": "#fish8",
+      "prefab": "Fish8",
+      "cost": 1
+    },
+    {
+      "name": "Fish9",
+      "cmd": "#fish9",
+      "prefab": "Fish9",
+      "cost": 1
     },
     {
       "name": "Leviathan",
@@ -1161,12 +1251,6 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 1
     },
     {
-      "name": "Tankard Odin",
-      "cmd": "#tankardodin",
-      "prefab": "TankardOdin",
-      "cost": 1
-    },
-    {
       "name": "TH Sword Wood",
       "cmd": "#thswordwood",
       "prefab": "THSwordWood",
@@ -1229,24 +1313,6 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 126
     },
     {
-      "name": "Gold Atgeir",
-      "cmd": "#atgeirgold",
-      "prefab": "AtgeirGold",
-      "cost": 13
-    },
-    {
-      "name": "Gold Blood Lightning Atgeir",
-      "cmd": "#atgeirgoldbloodlightning",
-      "prefab": "AtgeirGold_BloodLightning",
-      "cost": 13
-    },
-    {
-      "name": "Gold Uncooked Atgeir",
-      "cmd": "#atgeirgolduncooked",
-      "prefab": "AtgeirGoldUncooked",
-      "cost": 13
-    },
-    {
       "name": "Bronze Axe",
       "cmd": "#axebronze",
       "prefab": "AxeBronze",
@@ -1259,24 +1325,6 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 13
     },
     {
-      "name": "Gold Axe",
-      "cmd": "#axegold",
-      "prefab": "AxeGold",
-      "cost": 13
-    },
-    {
-      "name": "Gold Blood Lightning Axe",
-      "cmd": "#axegoldbloodlightning",
-      "prefab": "AxeGold_BloodLightning",
-      "cost": 13
-    },
-    {
-      "name": "Gold Uncooked Axe",
-      "cmd": "#axegolduncooked",
-      "prefab": "AxeGoldUncooked",
-      "cost": 13
-    },
-    {
       "name": "Head1 Axe",
       "cmd": "#axehead1",
       "prefab": "AxeHead1",
@@ -1286,24 +1334,6 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Head2 Axe",
       "cmd": "#axehead2",
       "prefab": "AxeHead2",
-      "cost": 13
-    },
-    {
-      "name": "Gold Battleaxe",
-      "cmd": "#battleaxegold",
-      "prefab": "BattleaxeGold",
-      "cost": 13
-    },
-    {
-      "name": "Gold Blood Lightning Battleaxe",
-      "cmd": "#battleaxegoldbloodlightning",
-      "prefab": "BattleaxeGold_BloodLightning",
-      "cost": 13
-    },
-    {
-      "name": "Gold Uncooked Battleaxe",
-      "cmd": "#battleaxegolduncooked",
-      "prefab": "BattleaxeGoldUncooked",
       "cost": 13
     },
     {
@@ -1333,42 +1363,6 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 28
     },
     {
-      "name": "Gold Bow",
-      "cmd": "#bowgold",
-      "prefab": "BowGold",
-      "cost": 13
-    },
-    {
-      "name": "Gold Blood Lightning Bow",
-      "cmd": "#bowgoldbloodlightning",
-      "prefab": "BowGold_BloodLightning",
-      "cost": 13
-    },
-    {
-      "name": "Gold Uncooked Bow",
-      "cmd": "#bowgolduncooked",
-      "prefab": "BowGoldUncooked",
-      "cost": 13
-    },
-    {
-      "name": "Gold Crossbow",
-      "cmd": "#crossbowgold",
-      "prefab": "CrossbowGold",
-      "cost": 13
-    },
-    {
-      "name": "Gold Blood Lightning Crossbow",
-      "cmd": "#crossbowgoldbloodlightning",
-      "prefab": "CrossbowGold_BloodLightning",
-      "cost": 13
-    },
-    {
-      "name": "Gold Uncooked Crossbow",
-      "cmd": "#crossbowgolduncooked",
-      "prefab": "CrossbowGoldUncooked",
-      "cost": 13
-    },
-    {
       "name": "Cultivator",
       "cmd": "#cultivator",
       "prefab": "Cultivator",
@@ -1387,46 +1381,10 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 11
     },
     {
-      "name": "Fist Gold",
-      "cmd": "#fistgold",
-      "prefab": "FistGold",
-      "cost": 11
-    },
-    {
-      "name": "Fist Gold Blood Lightning",
-      "cmd": "#fistgoldbloodlightning",
-      "prefab": "FistGold_BloodLightning",
-      "cost": 11
-    },
-    {
-      "name": "Fist Gold Uncooked",
-      "cmd": "#fistgolduncooked",
-      "prefab": "FistGoldUncooked",
-      "cost": 8
-    },
-    {
       "name": "Copper Knife",
       "cmd": "#knifecopper",
       "prefab": "KnifeCopper",
       "cost": 14
-    },
-    {
-      "name": "Gold Knife",
-      "cmd": "#knifegold",
-      "prefab": "KnifeGold",
-      "cost": 13
-    },
-    {
-      "name": "Gold Blood Lightning Knife",
-      "cmd": "#knifegoldbloodlightning",
-      "prefab": "KnifeGold_BloodLightning",
-      "cost": 13
-    },
-    {
-      "name": "Gold Uncooked Knife",
-      "cmd": "#knifegolduncooked",
-      "prefab": "KnifeGoldUncooked",
-      "cost": 13
     },
     {
       "name": "Void Knife",
@@ -1439,24 +1397,6 @@ window.VALHEIM_TWITCH_STORE = {
       "cmd": "#macebronze",
       "prefab": "MaceBronze",
       "cost": 126
-    },
-    {
-      "name": "Gold Mace",
-      "cmd": "#macegold",
-      "prefab": "MaceGold",
-      "cost": 13
-    },
-    {
-      "name": "Gold Blood Lightning Mace",
-      "cmd": "#macegoldbloodlightning",
-      "prefab": "MaceGold_BloodLightning",
-      "cost": 13
-    },
-    {
-      "name": "Gold Uncooked Mace",
-      "cmd": "#macegolduncooked",
-      "prefab": "MaceGoldUncooked",
-      "cost": 13
     },
     {
       "name": "Mold Fistweapon",
@@ -1489,34 +1429,10 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 156
     },
     {
-      "name": "Buckler Gold Uncooked Shield",
-      "cmd": "#shieldbucklergolduncooked",
-      "prefab": "ShieldBucklerGoldUncooked",
-      "cost": 13
-    },
-    {
       "name": "Core Shield",
       "cmd": "#shieldcore",
       "prefab": "ShieldCore",
       "cost": 35
-    },
-    {
-      "name": "Gold Shield",
-      "cmd": "#shieldgold",
-      "prefab": "ShieldGold",
-      "cost": 13
-    },
-    {
-      "name": "Gold Buckler Shield",
-      "cmd": "#shieldgoldbuckler",
-      "prefab": "ShieldGoldBuckler",
-      "cost": 13
-    },
-    {
-      "name": "Gold Tower Shield",
-      "cmd": "#shieldgoldtower",
-      "prefab": "ShieldGoldTower",
-      "cost": 13
     },
     {
       "name": "Knight Shield",
@@ -1525,39 +1441,9 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 13
     },
     {
-      "name": "Round Gold Uncooked Shield",
-      "cmd": "#shieldroundgolduncooked",
-      "prefab": "ShieldRoundGoldUncooked",
-      "cost": 13
-    },
-    {
-      "name": "Tower Gold Uncooked Shield",
-      "cmd": "#shieldtowergolduncooked",
-      "prefab": "ShieldTowerGoldUncooked",
-      "cost": 13
-    },
-    {
       "name": "Cheat Sledge",
       "cmd": "#sledgecheat",
       "prefab": "SledgeCheat",
-      "cost": 13
-    },
-    {
-      "name": "Gold Sledge",
-      "cmd": "#sledgegold",
-      "prefab": "SledgeGold",
-      "cost": 13
-    },
-    {
-      "name": "Gold Blood Lightning Sledge",
-      "cmd": "#sledgegoldbloodlightning",
-      "prefab": "SledgeGold_BloodLightning",
-      "cost": 13
-    },
-    {
-      "name": "Gold Uncooked Sledge",
-      "cmd": "#sledgegolduncooked",
-      "prefab": "SledgeGoldUncooked",
       "cost": 13
     },
     {
@@ -1573,24 +1459,6 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 197
     },
     {
-      "name": "Gold Spear",
-      "cmd": "#speargold",
-      "prefab": "SpearGold",
-      "cost": 13
-    },
-    {
-      "name": "Gold Blood Lightning Spear",
-      "cmd": "#speargoldbloodlightning",
-      "prefab": "SpearGold_BloodLightning",
-      "cost": 13
-    },
-    {
-      "name": "Gold Uncooked Spear",
-      "cmd": "#speargolduncooked",
-      "prefab": "SpearGoldUncooked",
-      "cost": 13
-    },
-    {
       "name": "Bronze Sword",
       "cmd": "#swordbronze",
       "prefab": "SwordBronze",
@@ -1601,42 +1469,6 @@ window.VALHEIM_TWITCH_STORE = {
       "cmd": "#swordcheat",
       "prefab": "SwordCheat",
       "cost": 13
-    },
-    {
-      "name": "Gold Sword",
-      "cmd": "#swordgold",
-      "prefab": "SwordGold",
-      "cost": 13
-    },
-    {
-      "name": "Gold Blood Lightning Sword",
-      "cmd": "#swordgoldbloodlightning",
-      "prefab": "SwordGold_BloodLightning",
-      "cost": 13
-    },
-    {
-      "name": "Gold Uncooked Sword",
-      "cmd": "#swordgolduncooked",
-      "prefab": "SwordGoldUncooked",
-      "cost": 13
-    },
-    {
-      "name": "TH Sword Gold",
-      "cmd": "#thswordgold",
-      "prefab": "THSwordGold",
-      "cost": 11
-    },
-    {
-      "name": "TH Sword Gold Blood Lightning",
-      "cmd": "#thswordgoldbloodlightning",
-      "prefab": "THSwordGold_BloodLightning",
-      "cost": 11
-    },
-    {
-      "name": "TH Sword Gold Uncooked",
-      "cmd": "#thswordgolduncooked",
-      "prefab": "THSwordGoldUncooked",
-      "cost": 8
     },
     {
       "name": "TH Sword Krom",
@@ -1842,28 +1674,10 @@ window.VALHEIM_TWITCH_STORE = {
       "amount": 10
     },
     {
-      "name": "Gold Frost Fire Atgeir",
-      "cmd": "#atgeirgoldfrostfire",
-      "prefab": "AtgeirGold_FrostFire",
-      "cost": 26
-    },
-    {
-      "name": "Gold Frost Fire Axe",
-      "cmd": "#axegoldfrostfire",
-      "prefab": "AxeGold_FrostFire",
-      "cost": 26
-    },
-    {
       "name": "Crystal Battleaxe",
       "cmd": "#battleaxecrystal",
       "prefab": "BattleaxeCrystal",
       "cost": 1254
-    },
-    {
-      "name": "Gold Frost Fire Battleaxe",
-      "cmd": "#battleaxegoldfrostfire",
-      "prefab": "BattleaxeGold_FrostFire",
-      "cost": 26
     },
     {
       "name": "Bomb Blob Frost",
@@ -1878,46 +1692,16 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 504
     },
     {
-      "name": "Gold Frost Fire Bow",
-      "cmd": "#bowgoldfrostfire",
-      "prefab": "BowGold_FrostFire",
-      "cost": 26
-    },
-    {
-      "name": "Gold Frost Fire Crossbow",
-      "cmd": "#crossbowgoldfrostfire",
-      "prefab": "CrossbowGold_FrostFire",
-      "cost": 26
-    },
-    {
       "name": "Fist Fenrir Claw",
       "cmd": "#fistfenrirclaw",
       "prefab": "FistFenrirClaw",
       "cost": 504
     },
     {
-      "name": "Fist Gold Frost Fire",
-      "cmd": "#fistgoldfrostfire",
-      "prefab": "FistGold_FrostFire",
-      "cost": 21
-    },
-    {
-      "name": "Gold Frost Fire Knife",
-      "cmd": "#knifegoldfrostfire",
-      "prefab": "KnifeGold_FrostFire",
-      "cost": 26
-    },
-    {
       "name": "Silver Knife",
       "cmd": "#knifesilver",
       "prefab": "KnifeSilver",
       "cost": 504
-    },
-    {
-      "name": "Gold Frost Fire Mace",
-      "cmd": "#macegoldfrostfire",
-      "prefab": "MaceGold_FrostFire",
-      "cost": 26
     },
     {
       "name": "Silver Mace",
@@ -1932,40 +1716,16 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 812
     },
     {
-      "name": "Gold Frost Fire Sledge",
-      "cmd": "#sledgegoldfrostfire",
-      "prefab": "SledgeGold_FrostFire",
-      "cost": 26
-    },
-    {
-      "name": "Gold Frost Fire Spear",
-      "cmd": "#speargoldfrostfire",
-      "prefab": "SpearGold_FrostFire",
-      "cost": 26
-    },
-    {
       "name": "Wolf Fang Spear",
       "cmd": "#spearwolffang",
       "prefab": "SpearWolfFang",
       "cost": 504
     },
     {
-      "name": "Gold Frost Fire Sword",
-      "cmd": "#swordgoldfrostfire",
-      "prefab": "SwordGold_FrostFire",
-      "cost": 26
-    },
-    {
       "name": "Silver Sword",
       "cmd": "#swordsilver",
       "prefab": "SwordSilver",
       "cost": 872
-    },
-    {
-      "name": "TH Sword Gold Frost Fire",
-      "cmd": "#thswordgoldfrostfire",
-      "prefab": "THSwordGold_FrostFire",
-      "cost": 21
     },
     {
       "name": "Upgrader3Weapon",
@@ -3534,340 +3294,6 @@ window.VALHEIM_TWITCH_STORE = {
     },
     {
       "type": "section",
-      "title": "Cosmetic"
-    },
-    {
-      "name": "Gold Atgeir",
-      "cmd": "#atgeirgold",
-      "prefab": "AtgeirGold",
-      "cost": 13
-    },
-    {
-      "name": "Gold Blood Lightning Atgeir",
-      "cmd": "#atgeirgoldbloodlightning",
-      "prefab": "AtgeirGold_BloodLightning",
-      "cost": 13
-    },
-    {
-      "name": "Gold Frost Fire Atgeir",
-      "cmd": "#atgeirgoldfrostfire",
-      "prefab": "AtgeirGold_FrostFire",
-      "cost": 26
-    },
-    {
-      "name": "Gold Uncooked Atgeir",
-      "cmd": "#atgeirgolduncooked",
-      "prefab": "AtgeirGoldUncooked",
-      "cost": 13
-    },
-    {
-      "name": "Gold Axe",
-      "cmd": "#axegold",
-      "prefab": "AxeGold",
-      "cost": 13
-    },
-    {
-      "name": "Gold Blood Lightning Axe",
-      "cmd": "#axegoldbloodlightning",
-      "prefab": "AxeGold_BloodLightning",
-      "cost": 13
-    },
-    {
-      "name": "Gold Frost Fire Axe",
-      "cmd": "#axegoldfrostfire",
-      "prefab": "AxeGold_FrostFire",
-      "cost": 26
-    },
-    {
-      "name": "Gold Uncooked Axe",
-      "cmd": "#axegolduncooked",
-      "prefab": "AxeGoldUncooked",
-      "cost": 13
-    },
-    {
-      "name": "Gold Battleaxe",
-      "cmd": "#battleaxegold",
-      "prefab": "BattleaxeGold",
-      "cost": 13
-    },
-    {
-      "name": "Gold Blood Lightning Battleaxe",
-      "cmd": "#battleaxegoldbloodlightning",
-      "prefab": "BattleaxeGold_BloodLightning",
-      "cost": 13
-    },
-    {
-      "name": "Gold Frost Fire Battleaxe",
-      "cmd": "#battleaxegoldfrostfire",
-      "prefab": "BattleaxeGold_FrostFire",
-      "cost": 26
-    },
-    {
-      "name": "Gold Uncooked Battleaxe",
-      "cmd": "#battleaxegolduncooked",
-      "prefab": "BattleaxeGoldUncooked",
-      "cost": 13
-    },
-    {
-      "name": "Gold Bow",
-      "cmd": "#bowgold",
-      "prefab": "BowGold",
-      "cost": 13
-    },
-    {
-      "name": "Gold Blood Lightning Bow",
-      "cmd": "#bowgoldbloodlightning",
-      "prefab": "BowGold_BloodLightning",
-      "cost": 13
-    },
-    {
-      "name": "Gold Frost Fire Bow",
-      "cmd": "#bowgoldfrostfire",
-      "prefab": "BowGold_FrostFire",
-      "cost": 26
-    },
-    {
-      "name": "Gold Uncooked Bow",
-      "cmd": "#bowgolduncooked",
-      "prefab": "BowGoldUncooked",
-      "cost": 13
-    },
-    {
-      "name": "Gold Crossbow",
-      "cmd": "#crossbowgold",
-      "prefab": "CrossbowGold",
-      "cost": 13
-    },
-    {
-      "name": "Gold Blood Lightning Crossbow",
-      "cmd": "#crossbowgoldbloodlightning",
-      "prefab": "CrossbowGold_BloodLightning",
-      "cost": 13
-    },
-    {
-      "name": "Gold Frost Fire Crossbow",
-      "cmd": "#crossbowgoldfrostfire",
-      "prefab": "CrossbowGold_FrostFire",
-      "cost": 26
-    },
-    {
-      "name": "Gold Uncooked Crossbow",
-      "cmd": "#crossbowgolduncooked",
-      "prefab": "CrossbowGoldUncooked",
-      "cost": 13
-    },
-    {
-      "name": "Fist Gold",
-      "cmd": "#fistgold",
-      "prefab": "FistGold",
-      "cost": 11
-    },
-    {
-      "name": "Fist Gold Blood Lightning",
-      "cmd": "#fistgoldbloodlightning",
-      "prefab": "FistGold_BloodLightning",
-      "cost": 11
-    },
-    {
-      "name": "Fist Gold Frost Fire",
-      "cmd": "#fistgoldfrostfire",
-      "prefab": "FistGold_FrostFire",
-      "cost": 21
-    },
-    {
-      "name": "Fist Gold Uncooked",
-      "cmd": "#fistgolduncooked",
-      "prefab": "FistGoldUncooked",
-      "cost": 8
-    },
-    {
-      "name": "Gold Knife",
-      "cmd": "#knifegold",
-      "prefab": "KnifeGold",
-      "cost": 13
-    },
-    {
-      "name": "Gold Blood Lightning Knife",
-      "cmd": "#knifegoldbloodlightning",
-      "prefab": "KnifeGold_BloodLightning",
-      "cost": 13
-    },
-    {
-      "name": "Gold Frost Fire Knife",
-      "cmd": "#knifegoldfrostfire",
-      "prefab": "KnifeGold_FrostFire",
-      "cost": 26
-    },
-    {
-      "name": "Gold Uncooked Knife",
-      "cmd": "#knifegolduncooked",
-      "prefab": "KnifeGoldUncooked",
-      "cost": 13
-    },
-    {
-      "name": "Gold Mace",
-      "cmd": "#macegold",
-      "prefab": "MaceGold",
-      "cost": 13
-    },
-    {
-      "name": "Gold Blood Lightning Mace",
-      "cmd": "#macegoldbloodlightning",
-      "prefab": "MaceGold_BloodLightning",
-      "cost": 13
-    },
-    {
-      "name": "Gold Frost Fire Mace",
-      "cmd": "#macegoldfrostfire",
-      "prefab": "MaceGold_FrostFire",
-      "cost": 26
-    },
-    {
-      "name": "Gold Uncooked Mace",
-      "cmd": "#macegolduncooked",
-      "prefab": "MaceGoldUncooked",
-      "cost": 13
-    },
-    {
-      "name": "Buckler Gold Uncooked Shield",
-      "cmd": "#shieldbucklergolduncooked",
-      "prefab": "ShieldBucklerGoldUncooked",
-      "cost": 13
-    },
-    {
-      "name": "Gold Shield",
-      "cmd": "#shieldgold",
-      "prefab": "ShieldGold",
-      "cost": 13
-    },
-    {
-      "name": "Gold Buckler Shield",
-      "cmd": "#shieldgoldbuckler",
-      "prefab": "ShieldGoldBuckler",
-      "cost": 13
-    },
-    {
-      "name": "Gold Tower Shield",
-      "cmd": "#shieldgoldtower",
-      "prefab": "ShieldGoldTower",
-      "cost": 13
-    },
-    {
-      "name": "Round Gold Uncooked Shield",
-      "cmd": "#shieldroundgolduncooked",
-      "prefab": "ShieldRoundGoldUncooked",
-      "cost": 13
-    },
-    {
-      "name": "Tower Gold Uncooked Shield",
-      "cmd": "#shieldtowergolduncooked",
-      "prefab": "ShieldTowerGoldUncooked",
-      "cost": 13
-    },
-    {
-      "name": "Gold Sledge",
-      "cmd": "#sledgegold",
-      "prefab": "SledgeGold",
-      "cost": 13
-    },
-    {
-      "name": "Gold Blood Lightning Sledge",
-      "cmd": "#sledgegoldbloodlightning",
-      "prefab": "SledgeGold_BloodLightning",
-      "cost": 13
-    },
-    {
-      "name": "Gold Frost Fire Sledge",
-      "cmd": "#sledgegoldfrostfire",
-      "prefab": "SledgeGold_FrostFire",
-      "cost": 26
-    },
-    {
-      "name": "Gold Uncooked Sledge",
-      "cmd": "#sledgegolduncooked",
-      "prefab": "SledgeGoldUncooked",
-      "cost": 13
-    },
-    {
-      "name": "Gold Spear",
-      "cmd": "#speargold",
-      "prefab": "SpearGold",
-      "cost": 13
-    },
-    {
-      "name": "Gold Blood Lightning Spear",
-      "cmd": "#speargoldbloodlightning",
-      "prefab": "SpearGold_BloodLightning",
-      "cost": 13
-    },
-    {
-      "name": "Gold Frost Fire Spear",
-      "cmd": "#speargoldfrostfire",
-      "prefab": "SpearGold_FrostFire",
-      "cost": 26
-    },
-    {
-      "name": "Gold Uncooked Spear",
-      "cmd": "#speargolduncooked",
-      "prefab": "SpearGoldUncooked",
-      "cost": 13
-    },
-    {
-      "name": "Gold Sword",
-      "cmd": "#swordgold",
-      "prefab": "SwordGold",
-      "cost": 13
-    },
-    {
-      "name": "Gold Blood Lightning Sword",
-      "cmd": "#swordgoldbloodlightning",
-      "prefab": "SwordGold_BloodLightning",
-      "cost": 13
-    },
-    {
-      "name": "Gold Frost Fire Sword",
-      "cmd": "#swordgoldfrostfire",
-      "prefab": "SwordGold_FrostFire",
-      "cost": 26
-    },
-    {
-      "name": "Gold Uncooked Sword",
-      "cmd": "#swordgolduncooked",
-      "prefab": "SwordGoldUncooked",
-      "cost": 13
-    },
-    {
-      "name": "Tankard Odin",
-      "cmd": "#tankardodin",
-      "prefab": "TankardOdin",
-      "cost": 1
-    },
-    {
-      "name": "TH Sword Gold",
-      "cmd": "#thswordgold",
-      "prefab": "THSwordGold",
-      "cost": 11
-    },
-    {
-      "name": "TH Sword Gold Blood Lightning",
-      "cmd": "#thswordgoldbloodlightning",
-      "prefab": "THSwordGold_BloodLightning",
-      "cost": 11
-    },
-    {
-      "name": "TH Sword Gold Frost Fire",
-      "cmd": "#thswordgoldfrostfire",
-      "prefab": "THSwordGold_FrostFire",
-      "cost": 21
-    },
-    {
-      "name": "TH Sword Gold Uncooked",
-      "cmd": "#thswordgolduncooked",
-      "prefab": "THSwordGoldUncooked",
-      "cost": 8
-    },
-    {
-      "type": "section",
       "title": "Throwables"
     },
     {
@@ -4169,12 +3595,6 @@ window.VALHEIM_TWITCH_STORE = {
       "cmd": "#helmetleather",
       "prefab": "HelmetLeather",
       "cost": 32
-    },
-    {
-      "name": "SP Armor Leather Legs",
-      "cmd": "#sparmorleatherlegs",
-      "prefab": "SP_ArmorLeatherLegs",
-      "cost": 2
     },
     {
       "type": "section",
@@ -4601,10 +4021,16 @@ window.VALHEIM_TWITCH_STORE = {
       "cmd": "#helmetflametal",
       "prefab": "HelmetFlametal",
       "cost": 2155
+    }
+  ],
+  "cosmetics": [
+    {
+      "type": "help",
+      "text": "Hildir dresses/tunics/hats, Odin gear, Bloodgold cast/mould weapons & armor — vanity and Ashlands gold molds."
     },
     {
       "type": "section",
-      "title": "Cosmetic"
+      "title": "Cosmetic armor"
     },
     {
       "name": "Berserker Undead Chest",
@@ -4820,7 +4246,7 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Helmet Berserker Undead",
       "cmd": "#helmetberserkerundead",
       "prefab": "HelmetBerserkerUndead",
-      "cost": 95
+      "cost": 15
     },
     {
       "name": "Helmet Celebration",
@@ -4943,10 +4369,350 @@ window.VALHEIM_TWITCH_STORE = {
       "cost": 15
     },
     {
+      "name": "SP Armor Leather Legs",
+      "cmd": "#sparmorleatherlegs",
+      "prefab": "SP_ArmorLeatherLegs",
+      "cost": 2
+    },
+    {
       "name": "SP Armor Tunic5",
       "cmd": "#sparmortunic5",
       "prefab": "SP_ArmorTunic5",
       "cost": 15
+    },
+    {
+      "type": "section",
+      "title": "Cosmetic weapons"
+    },
+    {
+      "name": "Gold Atgeir",
+      "cmd": "#atgeirgold",
+      "prefab": "AtgeirGold",
+      "cost": 13
+    },
+    {
+      "name": "Gold Blood Lightning Atgeir",
+      "cmd": "#atgeirgoldbloodlightning",
+      "prefab": "AtgeirGold_BloodLightning",
+      "cost": 13
+    },
+    {
+      "name": "Gold Frost Fire Atgeir",
+      "cmd": "#atgeirgoldfrostfire",
+      "prefab": "AtgeirGold_FrostFire",
+      "cost": 26
+    },
+    {
+      "name": "Gold Uncooked Atgeir",
+      "cmd": "#atgeirgolduncooked",
+      "prefab": "AtgeirGoldUncooked",
+      "cost": 13
+    },
+    {
+      "name": "Gold Axe",
+      "cmd": "#axegold",
+      "prefab": "AxeGold",
+      "cost": 13
+    },
+    {
+      "name": "Gold Blood Lightning Axe",
+      "cmd": "#axegoldbloodlightning",
+      "prefab": "AxeGold_BloodLightning",
+      "cost": 13
+    },
+    {
+      "name": "Gold Frost Fire Axe",
+      "cmd": "#axegoldfrostfire",
+      "prefab": "AxeGold_FrostFire",
+      "cost": 26
+    },
+    {
+      "name": "Gold Uncooked Axe",
+      "cmd": "#axegolduncooked",
+      "prefab": "AxeGoldUncooked",
+      "cost": 13
+    },
+    {
+      "name": "Gold Battleaxe",
+      "cmd": "#battleaxegold",
+      "prefab": "BattleaxeGold",
+      "cost": 13
+    },
+    {
+      "name": "Gold Blood Lightning Battleaxe",
+      "cmd": "#battleaxegoldbloodlightning",
+      "prefab": "BattleaxeGold_BloodLightning",
+      "cost": 13
+    },
+    {
+      "name": "Gold Frost Fire Battleaxe",
+      "cmd": "#battleaxegoldfrostfire",
+      "prefab": "BattleaxeGold_FrostFire",
+      "cost": 26
+    },
+    {
+      "name": "Gold Uncooked Battleaxe",
+      "cmd": "#battleaxegolduncooked",
+      "prefab": "BattleaxeGoldUncooked",
+      "cost": 13
+    },
+    {
+      "name": "Gold Bow",
+      "cmd": "#bowgold",
+      "prefab": "BowGold",
+      "cost": 13
+    },
+    {
+      "name": "Gold Blood Lightning Bow",
+      "cmd": "#bowgoldbloodlightning",
+      "prefab": "BowGold_BloodLightning",
+      "cost": 13
+    },
+    {
+      "name": "Gold Frost Fire Bow",
+      "cmd": "#bowgoldfrostfire",
+      "prefab": "BowGold_FrostFire",
+      "cost": 26
+    },
+    {
+      "name": "Gold Uncooked Bow",
+      "cmd": "#bowgolduncooked",
+      "prefab": "BowGoldUncooked",
+      "cost": 13
+    },
+    {
+      "name": "Gold Crossbow",
+      "cmd": "#crossbowgold",
+      "prefab": "CrossbowGold",
+      "cost": 13
+    },
+    {
+      "name": "Gold Blood Lightning Crossbow",
+      "cmd": "#crossbowgoldbloodlightning",
+      "prefab": "CrossbowGold_BloodLightning",
+      "cost": 13
+    },
+    {
+      "name": "Gold Frost Fire Crossbow",
+      "cmd": "#crossbowgoldfrostfire",
+      "prefab": "CrossbowGold_FrostFire",
+      "cost": 26
+    },
+    {
+      "name": "Gold Uncooked Crossbow",
+      "cmd": "#crossbowgolduncooked",
+      "prefab": "CrossbowGoldUncooked",
+      "cost": 13
+    },
+    {
+      "name": "Fist Gold",
+      "cmd": "#fistgold",
+      "prefab": "FistGold",
+      "cost": 11
+    },
+    {
+      "name": "Fist Gold Blood Lightning",
+      "cmd": "#fistgoldbloodlightning",
+      "prefab": "FistGold_BloodLightning",
+      "cost": 11
+    },
+    {
+      "name": "Fist Gold Frost Fire",
+      "cmd": "#fistgoldfrostfire",
+      "prefab": "FistGold_FrostFire",
+      "cost": 21
+    },
+    {
+      "name": "Fist Gold Uncooked",
+      "cmd": "#fistgolduncooked",
+      "prefab": "FistGoldUncooked",
+      "cost": 8
+    },
+    {
+      "name": "Gold Knife",
+      "cmd": "#knifegold",
+      "prefab": "KnifeGold",
+      "cost": 13
+    },
+    {
+      "name": "Gold Blood Lightning Knife",
+      "cmd": "#knifegoldbloodlightning",
+      "prefab": "KnifeGold_BloodLightning",
+      "cost": 13
+    },
+    {
+      "name": "Gold Frost Fire Knife",
+      "cmd": "#knifegoldfrostfire",
+      "prefab": "KnifeGold_FrostFire",
+      "cost": 26
+    },
+    {
+      "name": "Gold Uncooked Knife",
+      "cmd": "#knifegolduncooked",
+      "prefab": "KnifeGoldUncooked",
+      "cost": 13
+    },
+    {
+      "name": "Gold Mace",
+      "cmd": "#macegold",
+      "prefab": "MaceGold",
+      "cost": 13
+    },
+    {
+      "name": "Gold Blood Lightning Mace",
+      "cmd": "#macegoldbloodlightning",
+      "prefab": "MaceGold_BloodLightning",
+      "cost": 13
+    },
+    {
+      "name": "Gold Frost Fire Mace",
+      "cmd": "#macegoldfrostfire",
+      "prefab": "MaceGold_FrostFire",
+      "cost": 26
+    },
+    {
+      "name": "Gold Uncooked Mace",
+      "cmd": "#macegolduncooked",
+      "prefab": "MaceGoldUncooked",
+      "cost": 13
+    },
+    {
+      "name": "Buckler Gold Uncooked Shield",
+      "cmd": "#shieldbucklergolduncooked",
+      "prefab": "ShieldBucklerGoldUncooked",
+      "cost": 13
+    },
+    {
+      "name": "Gold Shield",
+      "cmd": "#shieldgold",
+      "prefab": "ShieldGold",
+      "cost": 13
+    },
+    {
+      "name": "Gold Buckler Shield",
+      "cmd": "#shieldgoldbuckler",
+      "prefab": "ShieldGoldBuckler",
+      "cost": 13
+    },
+    {
+      "name": "Gold Tower Shield",
+      "cmd": "#shieldgoldtower",
+      "prefab": "ShieldGoldTower",
+      "cost": 13
+    },
+    {
+      "name": "Round Gold Uncooked Shield",
+      "cmd": "#shieldroundgolduncooked",
+      "prefab": "ShieldRoundGoldUncooked",
+      "cost": 13
+    },
+    {
+      "name": "Tower Gold Uncooked Shield",
+      "cmd": "#shieldtowergolduncooked",
+      "prefab": "ShieldTowerGoldUncooked",
+      "cost": 13
+    },
+    {
+      "name": "Gold Sledge",
+      "cmd": "#sledgegold",
+      "prefab": "SledgeGold",
+      "cost": 13
+    },
+    {
+      "name": "Gold Blood Lightning Sledge",
+      "cmd": "#sledgegoldbloodlightning",
+      "prefab": "SledgeGold_BloodLightning",
+      "cost": 13
+    },
+    {
+      "name": "Gold Frost Fire Sledge",
+      "cmd": "#sledgegoldfrostfire",
+      "prefab": "SledgeGold_FrostFire",
+      "cost": 26
+    },
+    {
+      "name": "Gold Uncooked Sledge",
+      "cmd": "#sledgegolduncooked",
+      "prefab": "SledgeGoldUncooked",
+      "cost": 13
+    },
+    {
+      "name": "Gold Spear",
+      "cmd": "#speargold",
+      "prefab": "SpearGold",
+      "cost": 13
+    },
+    {
+      "name": "Gold Blood Lightning Spear",
+      "cmd": "#speargoldbloodlightning",
+      "prefab": "SpearGold_BloodLightning",
+      "cost": 13
+    },
+    {
+      "name": "Gold Frost Fire Spear",
+      "cmd": "#speargoldfrostfire",
+      "prefab": "SpearGold_FrostFire",
+      "cost": 26
+    },
+    {
+      "name": "Gold Uncooked Spear",
+      "cmd": "#speargolduncooked",
+      "prefab": "SpearGoldUncooked",
+      "cost": 13
+    },
+    {
+      "name": "Gold Sword",
+      "cmd": "#swordgold",
+      "prefab": "SwordGold",
+      "cost": 13
+    },
+    {
+      "name": "Gold Blood Lightning Sword",
+      "cmd": "#swordgoldbloodlightning",
+      "prefab": "SwordGold_BloodLightning",
+      "cost": 13
+    },
+    {
+      "name": "Gold Frost Fire Sword",
+      "cmd": "#swordgoldfrostfire",
+      "prefab": "SwordGold_FrostFire",
+      "cost": 26
+    },
+    {
+      "name": "Gold Uncooked Sword",
+      "cmd": "#swordgolduncooked",
+      "prefab": "SwordGoldUncooked",
+      "cost": 13
+    },
+    {
+      "name": "Tankard Odin",
+      "cmd": "#tankardodin",
+      "prefab": "TankardOdin",
+      "cost": 1
+    },
+    {
+      "name": "TH Sword Gold",
+      "cmd": "#thswordgold",
+      "prefab": "THSwordGold",
+      "cost": 11
+    },
+    {
+      "name": "TH Sword Gold Blood Lightning",
+      "cmd": "#thswordgoldbloodlightning",
+      "prefab": "THSwordGold_BloodLightning",
+      "cost": 11
+    },
+    {
+      "name": "TH Sword Gold Frost Fire",
+      "cmd": "#thswordgoldfrostfire",
+      "prefab": "THSwordGold_FrostFire",
+      "cost": 21
+    },
+    {
+      "name": "TH Sword Gold Uncooked",
+      "cmd": "#thswordgolduncooked",
+      "prefab": "THSwordGoldUncooked",
+      "cost": 8
     }
   ],
   "food": [
@@ -8767,7 +8533,7 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Frostwood x10",
       "cmd": "#frostwood",
       "prefab": "Frostwood",
-      "cost": 210,
+      "cost": 30,
       "amount": 10
     },
     {
@@ -9271,7 +9037,7 @@ window.VALHEIM_TWITCH_STORE = {
       "name": "Frostwood x10",
       "cmd": "#frostwood",
       "prefab": "Frostwood",
-      "cost": 210,
+      "cost": 30,
       "amount": 10
     },
     {
