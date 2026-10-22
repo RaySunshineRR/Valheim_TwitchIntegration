@@ -23,6 +23,7 @@
     "mobs",
     "weapons",
     "armor",
+    "cosmetics",
     "food",
     "potions",
     "curses",
@@ -34,6 +35,7 @@
   const JUMP_TABS = new Set([
     "weapons",
     "armor",
+    "cosmetics",
     "food",
     "potions",
     "curses",
@@ -41,7 +43,7 @@
     "misc",
   ]);
 
-  /** Gold top row: progression tiers (T0–T6). */
+  /** Gold top row: progression tiers (T0–T7). */
   const TIER_TABS = new Set([
     "weapons",
     "armor",
@@ -53,6 +55,7 @@
   /** Second row: type / family jumps under the tier row. */
   const TYPE_TABS = new Set([
     "weapons",
+    "cosmetics",
     "food",
     "potions",
     "curses",
@@ -69,6 +72,7 @@
     "T4 · Plains",
     "T5 · Mistlands",
     "T6 · Ashlands",
+    "T7 · Deep North",
     "Special",
     "Other",
   ]);
@@ -77,6 +81,7 @@
   const FOOD_TYPE_ORDER = [
     "Feasts",
     "Raw ingredients",
+    "Uncooked",
     "Cooked meals",
     "Prepared dishes",
     "Crops & forage",

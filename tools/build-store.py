@@ -29,6 +29,10 @@ COIN_COSTS: dict[str, int] = {}
 DEFAULT_AMOUNTS: dict[str, int] = {}
 # prefab → tier int from economy catalog (mead biome overrides)
 ECONOMY_TIERS: dict[str, int] = {}
+# prefab → catalog category / subcategory (builder SoT — stop re-slop on rebuild)
+ECONOMY_CATEGORIES: dict[str, str] = {}
+ECONOMY_SUBCATEGORIES: dict[str, str] = {}
+PACK_PRICE: set[str] = set()
 TIER_LABEL = {
     0: "T0 · Meadows",
     1: "T1 · Black Forest",
@@ -37,6 +41,7 @@ TIER_LABEL = {
     4: "T4 · Plains",
     5: "T5 · Mistlands",
     6: "T6 · Ashlands",
+    7: "T7 · Deep North",
 }
 WIKI_IMG = "https://valheim.weirdgloop.org/images/"
 WIKI_API = "https://valheim.weirdgloop.org/api.php"
@@ -57,81 +62,416 @@ BIOME_ORDER = [
 
 # Prefab → wiki image overrides (when heuristics miss)
 ICON_OVERRIDES = {
-    "Unbjorn": "Vile.png",  # Plains Vile
-    "ArmorBronzeChest": "Bronze_Plate_Tunic.png",
-    "ArmorBronzeLegs": "Bronze_Plate_Leggings.png",
-    "ArmorBronzeHelmet": "Bronze_Helmet.png",
-    "ArmorIronChest": "Iron_Scale_Mail.png",
-    "ArmorIronLegs": "Iron_Greaves.png",
-    "ArmorIronHelmet": "Iron_Helmet.png",
-    "ArmorPaddedCuirass": "Padded_Cuirass.png",
-    "ArmorPaddedGreaves": "Padded_Greaves.png",
-    "ArmorPaddedHelmet": "Padded_Helmet.png",
-    "CookedMeat": "Cooked_Boar_Meat.png",
-    "CookedBoarMeat": "Cooked_Boar_Meat.png",
-    "CookedDeerMeat": "Cooked_Deer_Meat.png",
-    "CookedLoxMeat": "Cooked_Lox_Meat.png",
-    "QueensJam": "Queen's_Jam.png",
-    "SwordIron": "Iron_Sword.png",
-    "SwordBronze": "Bronze_Sword.png",
-    "SwordSilver": "Silver_Sword.png",
-    "SwordBlackmetal": "Black_Metal_Sword.png",
-    "ShieldWood": "Wood_Shield.png",
-    "ShieldBanded": "Banded_Shield.png",
-    "ArrowFire": "Fire_Arrow.png",
-    "ArrowFrost": "Frost_Arrow.png",
-    "ArrowPoison": "Poison_Arrow.png",
-    "MeadHealthMinor": "Minor_Healing_Mead.png",
-    "MeadHealthMedium": "Medium_Healing_Mead.png",
-    "MeadHealthMajor": "Major_Healing_Mead.png",
-    "MeadHealthLingering": "Lingering_Healing_Mead.png",
-    "MeadStaminaMinor": "Minor_Stamina_Mead.png",
-    "MeadStaminaMedium": "Medium_Stamina_Mead.png",
-    "MeadStaminaLingering": "Lingering_Stamina_Mead.png",
-    "MeadTasty": "Tasty_Mead.png",
-    "MeadPoisonResist": "Poison_Resistance_Mead.png",
-    "MeadFrostResist": "Frost_Resistance_Mead.png",
-    "MeadLightfoot": "Lightfoot_Mead.png",
-    "MeadBzerker": "Berserkir_Mead.png",
-    "MeadEitrMinor": "Minor_Eitr_Mead.png",
-    "MeadEitrLingering": "Lingering_Eitr_Mead.png",
-    "MeadBugRepellent": "Anti-Sting_Concoction.png",
-    "MeadHasty": "Tonic_of_Ratatosk.png",
-    "MeadStrength": "Mead_of_Troll_Endurance.png",
-    "MeadSwimmer": "Draught_of_Vananidir.png",
-    "MeadTamer": "Brew_of_Animal_Whispers.png",
-    "MeadTrollPheromones": "Love_Potion.png",
-    "BarleyWine": "Fire_Resistance_Barley_Wine.png",
-    "BarleyWineBase": "Barley_Wine_Base_-_Fire_Resistance.png",
-    "MeadBaseHealthMinor": "Mead_Base_-_Minor_Healing.png",
-    "MeadBaseHealthMedium": "Mead_Base_-_Medium_Healing.png",
-    "MeadBaseHealthMajor": "Mead_Base_-_Major_Healing.png",
-    "MeadBaseHealthLingering": "Mead_Base_-_Lingering_Health.png",
-    "MeadBaseStaminaMinor": "Mead_Base_-_Minor_Stamina.png",
-    "MeadBaseStaminaMedium": "Mead_Base_-_Medium_Stamina.png",
-    "MeadBaseStaminaLingering": "Mead_Base_-_Lingering_Stamina.png",
-    "MeadBaseTasty": "Mead_Base_-_Tasty.png",
-    "MeadBasePoisonResist": "Mead_Base_-_Poison_Resistance.png",
-    "MeadBaseFrostResist": "Mead_Base_-_Frost_Resistance.png",
-    "MeadBaseLightFoot": "Mead_Base_-_Lightfoot.png",
-    "MeadBaseBzerker": "Mead_Base_-_Berserkir.png",
-    "MeadBaseEitrMinor": "Mead_Base_-_Minor_Eitr.png",
-    "MeadBaseEitrLingering": "Mead_Base_-_Lingering_Eitr.png",
-    "MeadBaseBugRepellent": "Mead_Base_-_Anti-Sting.png",
-    "MeadBaseHasty": "Mead_Base_-_Ratatosk.png",
-    "MeadBaseStrength": "Mead_Base_-_Troll_Endurance.png",
-    "MeadBaseSwimmer": "Mead_Base_-_Vananidir.png",
-    "MeadBaseTamer": "Mead_Base_-_Animal_Whispers.png",
-    # Biome feasts (wiki dining names — Material prefabs)
-    "FeastMeadows_Material": "Whole_Roasted_Meadow_Boar.png",
-    "FeastBlackforest_Material": "Black_Forest_Buffet_Platter.png",
-    "FeastSwamps_Material": "Swamp_Dweller's_Delight.png",
-    "FeastOceans_Material": "Sailor's_Bounty.png",
-    "FeastMountains_Material": "Hearty_Mountain_Logger's_Stew.png",
-    "FeastPlains_Material": "Plains_Pie_Picnic.png",
-    "FeastMistlands_Material": "Mushrooms_Galore_á_la_Mistlands.png",
-    "FeastAshlands_Material": "Ashlands_Gourmet_Bowl.png",
-    "FeastDeepNorth_Material": "Northern_Morning_Fare.png",
+    'AncientSeed': 'Ancient_Seed.png',
+    'ArmorAshlandsMediumChest': 'Breastplate_of_Ask.png',
+    'ArmorAshlandsMediumlegs': 'Trousers_of_Ask.png',
+    'ArmorBronzeChest': 'Bronze_Plate_Tunic.png',
+    'ArmorBronzeHelmet': 'Bronze_Helmet.png',
+    'ArmorBronzeLegs': 'Bronze_Plate_Leggings.png',
+    'ArmorCarapaceChest': 'Carapace_Breastplate.png',
+    'ArmorCarapaceLegs': 'Carapace_Greaves.png',
+    'ArmorDeepNorthHeavyChest': 'Breastplate_of_the_Protector.png',
+    'ArmorDeepNorthHeavylegs': 'Trousers_of_the_Protector.png',
+    'ArmorDeepNorthMageChest': 'Robes_of_the_Caller.png',
+    'ArmorDeepNorthMagelegs': 'Trousers_of_the_Caller.png',
+    'ArmorDeepNorthMediumChest': 'Chestpiece_of_the_Vanguard.png',
+    'ArmorDeepNorthMediumlegs': 'Trousers_of_the_Vanguard.png',
+    'ArmorDress1': 'Simple_dress_brown.png',
+    'ArmorDress10': 'Simple_dress_natural.png',
+    'ArmorDress2': 'Shawl_dress_brown.png',
+    'ArmorDress3': 'Beaded_dress_brown.png',
+    'ArmorDress4': 'Simple_dress_blue.png',
+    'ArmorDress5': 'Shawl_dress_blue.png',
+    'ArmorDress6': 'Beaded_dress_blue.png',
+    'ArmorDress7': 'Simple_dress_yellow.png',
+    'ArmorDress8': 'Shawl_dress_yellow.png',
+    'ArmorDress9': 'Beaded_dress_yellow.png',
+    'ArmorFlametalChest': 'Flametal_Breastplate.png',
+    'ArmorFlametalLegs': 'Flametal_Greaves.png',
+    'ArmorGoldHeavyChestUncooked': 'Cast_Breastplate_of_the_Protector.png',
+    'ArmorGoldHeavyHelmetUncooked': 'Cast_Helmet_of_the_Protector.png',
+    'ArmorGoldHeavyLegsUncooked': 'Cast_Trousers_of_the_Protector.png',
+    'ArmorGoldMageChestUncooked': 'Cast_Robes_of_the_Caller.png',
+    'ArmorGoldMageHelmetUncooked': 'Cast_Headdress_of_the_Caller.png',
+    'ArmorGoldMageLegsUncooked': 'Cast_Trousers_of_the_Caller.png',
+    'ArmorGoldMediumChestUncooked': 'Cast_Chestpiece_of_the_Vanguard.png',
+    'ArmorGoldMediumHelmetUncooked': 'Cast_Hood_of_the_Vanguard.png',
+    'ArmorGoldMediumLegsUncooked': 'Cast_Trousers_of_the_Vanguard.png',
+    'ArmorHarvester1': 'Harvest_tunic.png',
+    'ArmorHarvester2': 'Harvest_dress.png',
+    'ArmorIronChest': 'Iron_Scale_Mail.png',
+    'ArmorIronHelmet': 'Iron_Helmet.png',
+    'ArmorIronLegs': 'Iron_Greaves.png',
+    'ArmorLoxChest': 'Lox_Fur_Jacket.png',
+    'ArmorLoxLegs': 'Lox_Fur_Trousers.png',
+    'ArmorMageChest': 'Eitr-weave_Robe.png',
+    'ArmorMageChest_Ashlands': 'Robes_of_Embla.png',
+    'ArmorMageLegs': 'Eitr-weave_Trousers.png',
+    'ArmorMageLegs_Ashlands': 'Trousers_of_Embla.png',
+    'ArmorPaddedCuirass': 'Padded_Cuirass.png',
+    'ArmorPaddedGreaves': 'Padded_Greaves.png',
+    'ArmorPaddedHelmet': 'Padded_Helmet.png',
+    'ArmorTunic1': 'Simple_tunic_blue.png',
+    'ArmorTunic10': 'Simple_tunic_natural.png',
+    'ArmorTunic2': 'Cape_tunic_blue.png',
+    'ArmorTunic3': 'Beaded_tunic_blue.png',
+    'ArmorTunic4': 'Simple_tunic_red.png',
+    'ArmorTunic5': 'Cape_tunic_red.png',
+    'ArmorTunic6': 'Beaded_tunic_red.png',
+    'ArmorTunic7': 'Simple_tunic_yellow.png',
+    'ArmorTunic8': 'Cape_tunic_yellow.png',
+    'ArmorTunic9': 'Beaded_tunic_yellow.png',
+    'ArmorWolfChest': 'Wolf_Hide_Chestpiece.png',
+    'ArmorWolfLegs': 'Wolf_Hide_Trousers.png',
+    'ArrowFire': 'Fire_Arrow.png',
+    'ArrowFrost': 'Frost_Arrow.png',
+    'ArrowPoison': 'Poison_Arrow.png',
+    'AtgeirGold': 'Nord_Atgeir.png',
+    'AtgeirGold_BloodLightning': 'Thunderblood_Atgeir.png',
+    'AtgeirGold_FrostFire': 'Frostfire_Atgeir.png',
+    'AxeGold': 'Nord_Axe.png',
+    'AxeGold_BloodLightning': 'Thunderblood_Axe.png',
+    'AxeGold_FrostFire': 'Frostfire_Axe.png',
+    'BarberKit': 'Barber_Kit.png',
+    'BarleyWine': 'Fire_Resistance_Barley_Wine.png',
+    'BarleyWineBase': 'Barley_Wine_Base_-_Fire_Resistance.png',
+    'BattleaxeGold': 'Nord_Greataxe.png',
+    'BattleaxeGold_BloodLightning': 'Thunderblood_Greataxe.png',
+    'BattleaxeGold_FrostFire': 'Frostfire_Greataxe.png',
+    'BeltStrength': 'Megingjord.png',
+    'Bjorn': 'Bear.png',
+    'BjornHide': 'Bear_Hide.png',
+    'BjornMeat': 'Bear_Meat.png',
+    'BjornPaw': 'Bear_Paw.png',
+    'BlackCore': 'Black_Core.png',
+    'BloodGoldKey': 'Bloodstone.png',
+    'BoltBlackmetal': 'Black_Metal_Bolt.png',
+    'BoltBloodGold': 'Bloodgold_Bolt.png',
+    'BoltBone': 'Bone_Bolt.png',
+    'BoltCarapace': 'Carapace_Bolt.png',
+    'BoltCharred': 'Charred_Bolt.png',
+    'BoltIron': 'Iron_Bolt.png',
+    'Bonemass': 'Bonemass.png',
+    'BowGold': 'Nord_Bow.png',
+    'BowGold_BloodLightning': 'Thunderblood_Bow.png',
+    'BowGold_FrostFire': 'Frostfire_Bow.png',
+    'CandleWick': 'Candle_Wick.png',
+    'CapeAsh': 'Ashen_cape.png',
+    'CapeAsksvin': 'Asksvin_cloak.png',
+    'CapeDeepNorth': 'Moose_Hide_Cape.png',
+    'CapeDeepNorthMage': 'Cape_of_the_Caller.png',
+    'CapeFeather': 'Feather_Cape.png',
+    'CapeLox': 'Lox_Cape.png',
+    'CapeOdin': 'Cape_of_Oden.png',
+    'CapeWolf': 'Wolf_Fur_Cape.png',
+    'CookedBjornMeat': 'Cooked_Bear_Meat.png',
+    'CookedBoarMeat': 'Cooked_Boar_Meat.png',
+    'CookedDeerMeat': 'Cooked_Deer_Meat.png',
+    'CookedLoxMeat': 'Cooked_Lox_Meat.png',
+    'CookedMeat': 'Cooked_Boar_Meat.png',
+    'CrossbowArbalest': 'Arbalest.png',
+    'CrossbowGold': 'Nord_Crossbow.png',
+    'CrossbowGold_BloodLightning': 'Thunderblood_Crossbow.png',
+    'CrossbowGold_FrostFire': 'Frostfire_Crossbow.png',
+    'CrossbowRipper': 'Ripper.png',
+    'CrossbowRipperBlood': 'Ripper.png',
+    'CrossbowRipperLightning': 'Ripper.png',
+    'CrossbowRipperNature': 'Ripper.png',
+    'CrownJewel': 'Scintillating_Shell.png',
+    'CryptKey': 'Swamp_key.png',
+    'Demister': 'Wisplight.png',
+    'Dragon': 'Moder.png',
+    'DragonTear': 'Dragon_Tear.png',
+    'DvergerDeepNorth': 'Imprisoned_Dvergr.png',
+    'Dverger': 'Dvergr_(race).png',
+    'DvergerArbalest': 'Dvergr_Rogue.png',
+    'DvergerMage': 'Dvergr_Mage_fire.png',
+    'DvergerMageFire': 'Dvergr_Mage_fire.png',
+    'DvergerMageIce': 'Dvergr_Mage_ice.png',
+    'DvergerMageSupport': 'Dvergr_Mage_support.png',
+    'DvergerAshlands': 'Ashlands_Dvergr.png',
+
+    'DvergrKey': 'Dvergr_Extractor.png',
+    'DvergrKeyFragment': 'Dvergr_Extractor.png',
+    'Eikthyr': 'Eikthyr.png',
+    'Fader': 'Fader.png',
+    'FeastAshlands_Material': 'Ashlands_Gourmet_Bowl.png',
+    'FeastBlackforest_Material': 'Black_Forest_Buffet_Platter.png',
+    'FeastDeepNorth_Material': 'Northern_Morning_Fare.png',
+    'FeastMeadows_Material': 'Whole_Roasted_Meadow_Boar.png',
+    'FeastMistlands_Material': 'Mushrooms_Galore_á_la_Mistlands.png',
+    'FeastMountains_Material': "Hearty_Mountain_Logger's_Stew.png",
+    'FeastOceans_Material': "Sailor's_Bounty.png",
+    'FeastPlains_Material': 'Plains_Pie_Picnic.png',
+    'FeastSwamps_Material': "Swamp_Dweller's_Delight.png",
+    'FireworksRocket_Blue': 'Blue_firework.png',
+    'FireworksRocket_Cyan': 'Cyan_firework.png',
+    'FireworksRocket_Green': 'Green_firework.png',
+    'FireworksRocket_Purple': 'Purple_firework.png',
+    'FireworksRocket_Red': 'Red_Fireworks.png',
+    'FireworksRocket_White': 'Basic_fireworks.png',
+    'FireworksRocket_Yellow': 'Yellow_firework.png',
+    'FishingBait': 'Fishing_Bait.png',
+    'FishingBaitAshlands': 'Hot_Fishing_Bait.png',
+    'FishingBaitCave': 'Cold_Fishing_Bait.png',
+    'FishingBaitDeepNorth': 'Frosty_Fishing_Bait.png',
+    'FishingBaitForest': 'Mossy_Fishing_Bait.png',
+    'FishingBaitMistlands': 'Misty_Fishing_Bait.png',
+    'FishingBaitOcean': 'Heavy_Fishing_Bait.png',
+    'FishingBaitPlains': 'Stingy_Fishing_Bait.png',
+    'FishingBaitSwamp': 'Sticky_Fishing_Bait.png',
+    'FistBjornClaw': 'Paws_of_the_Bear.png',
+    'FistBjornUndeadClaw': 'Vilebone_Maulclaws.png',
+    'FistFenrirClaw': 'Flesh_Rippers.png',
+    'FistGold': 'Nord_Knucklechains.png',
+    'FistGoldUncooked': 'Cast_Nord_Knucklechains.png',
+    'FistGold_BloodLightning': 'Thunderblood_Knucklechains.png',
+    'FistGold_FrostFire': 'Frostfire_Knucklechains.png',
+    'FrostCore': 'Frostcore.png',
+    'Frostwood': 'Timberwood.png',
+    'GoblinDeepNorth': 'Captive_Fuling.png',
+    'GoblinKing': 'Yagluth.png',
+    'GoblinTotem': 'Fuling_Totem.png',
+    'Greydwarf_Frozen': 'Greydwarf_(Deep_North).png',
+    'HardAntler': 'Hard_Antler.png',
+    'HelmetAshlandsMediumHood': 'Hood_of_Ask.png',
+    'HelmetCarapace': 'Carapace_Helmet.png',
+    'HelmetCelebration': 'Celebratory_Cap.png',
+    'HelmetCrownofValheim': 'Crown_of_Valheim.png',
+    'HelmetDNHeavy': 'Helmet_of_the_Protector.png',
+    'HelmetDNMage': 'Headdress_of_the_Caller.png',
+    'HelmetDNMediumHood': 'Hood_of_the_Vanguard.png',
+    'HelmetDrake': 'Drake_Helmet.png',
+    'HelmetDverger': 'Dverger_Circlet.png',
+    'HelmetFishingHat': 'Fishing_Hat.png',
+    'HelmetFlametal': 'Flametal_Helmet.png',
+    'HelmetHat1': 'Tied_headscarf_blue.png',
+    'HelmetHat10': 'Simple_cap_purple.png',
+    'HelmetHat2': 'Twisted_headscarf_green.png',
+    'HelmetHat3': 'Fur_cap_brown.png',
+    'HelmetHat4': 'Extravagant_cap_green.png',
+    'HelmetHat5': 'Simple_cap_red.png',
+    'HelmetHat6': 'Tied_headscarf_yellow.png',
+    'HelmetHat7': 'Twisted_headscarf_red.png',
+    'HelmetHat8': 'Fur_cap_grey.png',
+    'HelmetHat9': 'Extravagant_cap_orange.png',
+    'HelmetLox': 'Lox_Fur_Hood.png',
+    'HelmetMage': 'Eitr-weave_Hood.png',
+    'HelmetMage_Ashlands': 'Hood_of_Embla.png',
+    'HelmetMidsummerCrown': 'Midsummer_Crown.png',
+    'HelmetOdin': 'Hood_of_Odin.png',
+    'HelmetPointyHat': 'Pointy_hat.png',
+    'HelmetStrawHat': 'Straw_hat.png',
+    'HelmetSweatBand': 'Headband.png',
+    'HelmetYule': 'Yule_Hat.png',
+    'JuteBlue': 'Blue_Jute.png',
+    'JuteRed': 'Red_Jute.png',
+    'KnifeGold': 'Nord_Dagger.png',
+    'KnifeGold_BloodLightning': 'Thunderblood_Dagger.png',
+    'KnifeGold_FrostFire': 'Frostfire_Dagger.png',
+    'Lantern': 'Dvergr_Lantern.png',
+    'Lantern_DN': 'Snow_Lantern.png',
+    'Lantern_hooded': 'Hooded_Lantern.png',
+    'MaceGold': 'Nord_Mace.png',
+    'MaceGold_BloodLightning': 'Thunderblood_Mace.png',
+    'MaceGold_FrostFire': 'Frostfire_Mace.png',
+    'MeadBaseBugRepellent': 'Mead_Base_-_Anti-Sting.png',
+    'MeadBaseBzerker': 'Mead_Base_-_Berserkir.png',
+    'MeadBaseEitrLingering': 'Mead_Base_-_Lingering_Eitr.png',
+    'MeadBaseEitrMinor': 'Mead_Base_-_Minor_Eitr.png',
+    'MeadBaseFrostResist': 'Mead_Base_-_Frost_Resistance.png',
+    'MeadBaseHasty': 'Mead_Base_-_Ratatosk.png',
+    'MeadBaseHealthLingering': 'Mead_Base_-_Lingering_Health.png',
+    'MeadBaseHealthMajor': 'Mead_Base_-_Major_Healing.png',
+    'MeadBaseHealthMedium': 'Mead_Base_-_Medium_Healing.png',
+    'MeadBaseHealthMinor': 'Mead_Base_-_Minor_Healing.png',
+    'MeadBaseLightFoot': 'Mead_Base_-_Lightfoot.png',
+    'MeadBasePoisonResist': 'Mead_Base_-_Poison_Resistance.png',
+    'MeadBaseStaminaLingering': 'Mead_Base_-_Lingering_Stamina.png',
+    'MeadBaseStaminaMedium': 'Mead_Base_-_Medium_Stamina.png',
+    'MeadBaseStaminaMinor': 'Mead_Base_-_Minor_Stamina.png',
+    'MeadBaseStrength': 'Mead_Base_-_Troll_Endurance.png',
+    'MeadBaseSwimmer': 'Mead_Base_-_Vananidir.png',
+    'MeadBaseTamer': 'Mead_Base_-_Animal_Whispers.png',
+    'MeadBaseTasty': 'Mead_Base_-_Tasty.png',
+    'MeadBugRepellent': 'Anti-Sting_Concoction.png',
+    'MeadBzerker': 'Berserkir_Mead.png',
+    'MeadEitrLingering': 'Lingering_Eitr_Mead.png',
+    'MeadEitrMinor': 'Minor_Eitr_Mead.png',
+    'MeadFrostResist': 'Frost_Resistance_Mead.png',
+    'MeadHasty': 'Tonic_of_Ratatosk.png',
+    'MeadHealthLingering': 'Lingering_Healing_Mead.png',
+    'MeadHealthMajor': 'Major_Healing_Mead.png',
+    'MeadHealthMedium': 'Medium_Healing_Mead.png',
+    'MeadHealthMinor': 'Minor_Healing_Mead.png',
+    'MeadLightfoot': 'Lightfoot_Mead.png',
+    'MeadPoisonResist': 'Poison_Resistance_Mead.png',
+    'MeadStaminaLingering': 'Lingering_Stamina_Mead.png',
+    'MeadStaminaMedium': 'Medium_Stamina_Mead.png',
+    'MeadStaminaMinor': 'Minor_Stamina_Mead.png',
+    'MeadStrength': 'Mead_of_Troll_Endurance.png',
+    'MeadSwimmer': 'Draught_of_Vananidir.png',
+    'MeadTamer': 'Brew_of_Animal_Whispers.png',
+    'MeadTasty': 'Tasty_Mead.png',
+    'MeadTrollPheromones': 'Love_Potion.png',
+    'MoldArmorGoldChest': 'Mould_Breastplate_of_the_Protector.png',
+    'MoldArmorGoldHelmet': 'Mould_Helmet_of_the_Protector.png',
+    'MoldArmorGoldLegs': 'Mould_Trousers_of_the_Protector.png',
+    'MoldArmorMageChest': 'Mould_Robes_of_the_Caller.png',
+    'MoldArmorMageHelmet': 'Mould_Headdress_of_the_Caller.png',
+    'MoldArmorMageLegs': 'Mould_Trousers_of_the_Caller.png',
+    'MoldArmorMediumHelmet': 'Mould_Hood_of_the_Vanguard.png',
+    'MoldArmorMediumLegs': 'Mould_Trousers_of_the_Vanguard.png',
+    'MoldArmormediumChest': 'Mould_Chestpiece_of_the_Vanguard.png',
+    'MoldAtgeir': 'Mould_Nord_Atgeir.png',
+    'MoldAxe': 'Mould_Nord_Axe.png',
+    'MoldAxe2H': 'Mould_Nord_Greataxe.png',
+    'MoldBow': 'Mould_Nord_Bow.png',
+    'MoldCrossbow': 'Mould_Nord_Crossbow.png',
+    'MoldFistweapon': 'Mould_Nord_Knucklechains.png',
+    'MoldKnife': 'Mould_Nord_Dagger.png',
+    'MoldMace': 'Mould_Nord_Mace.png',
+    'MoldMace2H': 'Mould_Nord_Sledge.png',
+    'MoldShieldBuckler': 'Mould_Nord_Buckler.png',
+    'MoldShieldRound': 'Mould_Nord_Shield.png',
+    'MoldShieldTower': 'Mould_Nord_Greatshield.png',
+    'MoldSpear': 'Mould_Nord_Spear.png',
+    'MoldStaffOrbofAhri': 'Mould_Echo_Spike.png',
+    'MoldStafffrostorbs': 'Mould_Northern_Vengeance.png',
+    'MoldStaffspiritcaller': 'Mould_Spirit_Caller.png',
+    'MoldStaffthunderblood': 'Mould_Lightning_Strike.png',
+    'MoldSword': 'Mould_Nord_Sword.png',
+    'MoldSword2H': 'Mould_Nord_Greatsword.png',
+    'MoltenCore': 'Molten_Core.png',
+    'Moose': 'Moose.png',
+    'MooseHide': 'Moose_Hide.png',
+    'QueensJam': "Queen's_Jam.png",
+    'RawMeat': 'Boar_Meat.png',
+    'Scythe': 'Scythe.png',
+    'ScytheHandle': 'Scythe_Handle.png',
+    'SeekerQueen': 'The_Queen.png',
+    'ShieldBanded': 'Banded_Shield.png',
+    'ShieldBlackmetal': 'Black_Metal_Shield.png',
+    'ShieldBlackmetalTower': 'Black_Metal_Tower_Shield.png',
+    'ShieldBoneTower': 'Bone_Tower_Shield.png',
+    'ShieldBronzeBuckler': 'Bronze_Buckler.png',
+    'ShieldCarapace': 'Carapace_Shield.png',
+    'ShieldCarapaceBuckler': 'Carapace_Buckler.png',
+    'ShieldFlametal': 'Flametal_Shield.png',
+    'ShieldFlametalTower': 'Flametal_Tower_Shield.png',
+    'ShieldGold': 'Nord_Shield.png',
+    'ShieldGoldBuckler': 'Nord_Buckler.png',
+    'ShieldGoldTower': 'Nord_Greatshield.png',
+    'ShieldIronBuckler': 'Iron_Buckler.png',
+    'ShieldIronTower': 'Iron_Tower_Shield.png',
+    'ShieldSerpentscale': 'Serpent_Scale_Shield.png',
+    'ShieldSilver': 'Silver_Shield.png',
+    'ShieldWood': 'Wood_Shield.png',
+    'ShieldWoodTower': 'Wood_Tower_Shield.png',
+    'SilverNecklace': 'Silver_Necklace.png',
+    'Skeleton_DeepNorth': 'Skeleton_(Deep_North).png',
+    'SledgeGold': 'Nord_Sledge.png',
+    'SledgeGold_BloodLightning': 'Thunderblood_Sledge.png',
+    'SledgeGold_FrostFire': 'Frostfire_Sledge.png',
+    'Sparkler': 'Sparkler.png',
+    'SpearGold': 'Nord_Spear.png',
+    'SpearGold_BloodLightning': 'Thunderblood_Spear.png',
+    'SpearGold_FrostFire': 'Frostfire_Spear.png',
+    'StaffClusterbomb': 'Staff_of_Fracturing.png',
+    'StaffFireball': 'Staff_of_Embers.png',
+    'StaffFrostOrbs': 'Northern_Vengeance.png',
+    'StaffFrostOrbsUncooked': 'Cast_Northern_Vengeance.png',
+    'StaffGreenRoots': 'Staff_of_the_Wild.png',
+    'StaffIceShards': 'Staff_of_Frost.png',
+    'StaffLightning': 'Dundr.png',
+    'StaffOrbofAhri': 'Echo_Spike.png',
+    'StaffOrbofAhriUncooked': 'Cast_Echo_Spike.png',
+    'StaffRedTroll': 'Trollstav.png',
+    'StaffShield': 'Staff_of_Protection.png',
+    'StaffSkeleton': 'Dead_Raiser.png',
+    'StaffSpiritCaller': 'Spirit_Caller.png',
+    'StaffSpiritCallerUncooked': 'Cast_Spirit_Caller.png',
+    'StaffThunderBlood': 'Lightning_Strike.png',
+    'StaffThunderbloodUncooked': 'Cast_Lightning_Strike.png',
+    'SwordBlackmetal': 'Black_Metal_Sword.png',
+    'SwordBronze': 'Bronze_Sword.png',
+    'SwordGold': 'Nord_Sword.png',
+    'SwordGold_BloodLightning': 'Thunderblood_Sword.png',
+    'SwordGold_FrostFire': 'Frostfire_Sword.png',
+    'SwordIron': 'Iron_Sword.png',
+    'SwordSilver': 'Silver_Sword.png',
+    'THSwordGold': 'Nord_Greatsword.png',
+    'THSwordGold_BloodLightning': 'Thunderblood_Greatsword.png',
+    'THSwordGold_FrostFire': 'Frostfire_Greatsword.png',
+    'TankardOdin': 'Mead_Horn_of_Odin.png',
+    'Thunderstone': 'Thunder_Stone.png',
+    'Torch': 'Torch.png',
+    'TreasureChest_ashland_stone': 'Treasure_Chest.png',
+    'TreasureChest_blackforest': 'Treasure_Chest.png',
+    'TreasureChest_charredfortress': 'Treasure_Chest.png',
+    'TreasureChest_deepnorth_village': 'Treasure_Chest.png',
+    'TreasureChest_dvergr_loose_stone': 'Treasure_Chest.png',
+    'TreasureChest_dvergrtower': 'Treasure_Chest.png',
+    'TreasureChest_dvergrtown': 'Treasure_Chest.png',
+    'TreasureChest_fCrypt': 'Treasure_Chest.png',
+    'TreasureChest_forestcrypt': 'Treasure_Chest.png',
+    'TreasureChest_forestcrypt_hildir': 'Treasure_Chest.png',
+    'TreasureChest_heath': 'Treasure_Chest.png',
+    'TreasureChest_heath_hildir': 'Treasure_Chest.png',
+    'TreasureChest_meadows': 'Treasure_Chest.png',
+    'TreasureChest_meadows_01': 'Treasure_Chest.png',
+    'TreasureChest_meadows_02': 'Treasure_Chest.png',
+    'TreasureChest_meadows_buried': 'Treasure_Chest.png',
+    'TreasureChest_meadows_combat': 'Treasure_Chest.png',
+    'TreasureChest_memorial_buried': 'Treasure_Chest.png',
+    'TreasureChest_morkhalla': 'Treasure_Chest.png',
+    'TreasureChest_mountaincave': 'Treasure_Chest.png',
+    'TreasureChest_mountaincave_hildir': 'Treasure_Chest.png',
+    'TreasureChest_mountains': 'Treasure_Chest.png',
+    'TreasureChest_plains_stone': 'Treasure_Chest.png',
+    'TreasureChest_plainsfortress_hildir': 'Treasure_Chest.png',
+    'TreasureChest_sunkencrypt': 'Treasure_Chest.png',
+    'TreasureChest_swamp': 'Treasure_Chest.png',
+    'TreasureChest_trollcave': 'Treasure_Chest.png',
+    'TrinketBlackDamageHealth': 'Bracelets_of_the_Brave.png',
+    'TrinketBlackStamina': 'Evasion_Mantle.png',
+    'TrinketBloodGoldHealth': 'Neckstabber.png',
+    'TrinketBloodGoldStamina': 'Witch_Crown.png',
+    'TrinketBronzeHealth': 'Heart_of_the_Forest.png',
+    'TrinketBronzeStamina': 'Bronze_Pendant.png',
+    'TrinketCarapaceEitr': 'Pulsating_Earrings.png',
+    'TrinketChitinSwim': 'Fins_of_Destiny.png',
+    'TrinketFlametalEitr': 'Jörmundling.png',
+    'TrinketFlametalStaminaHealth': 'Brimstone.png',
+    'TrinketIronHealth': 'Iron_Brooch.png',
+    'TrinketIronStamina': 'Nimble_Anklet.png',
+    'TrinketScaleStaminaDamage': 'Resounding_Shackle.png',
+    'TrinketSilverDamage': 'Wolf_Sight.png',
+    'TrinketSilverResist': 'Crystal_Heart.png',
+    'TrophyBjorn': 'Bear_Trophy.png',
+    'Unbjorn': 'Vile.png',
+    'Upgrader0Armor': 'Wooden_Protection_Idol.png',
+    'Upgrader0Weapon': 'Wooden_Battle_Idol.png',
+    'Upgrader1Armor': 'Bronze_Protection_Idol.png',
+    'Upgrader1Weapon': 'Bronze_Battle_Idol.png',
+    'Upgrader2Armor': 'Iron_Protection_Idol.png',
+    'Upgrader2Weapon': 'Iron_Battle_Idol.png',
+    'Upgrader3Armor': 'Silver_Protection_Idol.png',
+    'Upgrader3Weapon': 'Silver_Battle_Idol.png',
+    'Upgrader4Armor': 'Black_Metal_Protection_Idol.png',
+    'Upgrader4Weapon': 'Black_Metal_Battle_Idol.png',
+    'Upgrader5Armor': 'Black_Marble_Protection_Idol.png',
+    'Upgrader5Weapon': 'Black_Marble_Battle_Idol.png',
+    'Upgrader6Armor': 'Flametal_Protection_Idol.png',
+    'Upgrader6Weapon': 'Flametal_Battle_Idol.png',
+    'Upgrader7Armor': 'Bloodgold_Protection_Idol.png',
+    'Upgrader7Weapon': 'Bloodgold_Battle_Idol.png',
+    'Wishbone': 'Wishbone.png',
+    'Wisp': 'Wisp.png',
+    'WitheredBone': 'Withered_Bone.png',
+    'gd_king': 'The_Elder.png',
+    'loot_chest_stone': 'Reinforced_Chest.png',
+    'loot_chest_wood': 'Chest.png',
 }
 
 
@@ -148,24 +488,159 @@ def title_case(words: list[str]) -> str:
 
 # SoftRef ids → streamer-friendly labels (wiki names)
 DISPLAY_NAME = {
-    "RawMeat": "Boar Meat",
-    "CookedMeat": "Cooked Boar Meat",
-    "NeckTail": "Neck Tail",
-    "NeckTailGrilled": "Grilled Neck Tail",
-    "Unbjorn": "Vile",  # Plains night undead bear
-    "gd_king": "The Elder",
-    "GoblinKing": "Yagluth",
-    "Dragon": "Moder",
-    "SeekerQueen": "The Queen",
-    "FeastMeadows_Material": "Whole Roasted Meadow Boar",
-    "FeastBlackforest_Material": "Black Forest Buffet Platter",
-    "FeastSwamps_Material": "Swamp Dweller's Delight",
-    "FeastOceans_Material": "Sailor's Bounty",
-    "FeastMountains_Material": "Hearty Mountain Logger's Stew",
-    "FeastPlains_Material": "Plains Pie Picnic",
-    "FeastMistlands_Material": "Mushrooms Galore á la Mistlands",
-    "FeastAshlands_Material": "Ashlands Gourmet Bowl",
-    "FeastDeepNorth_Material": "Northern Morning Fare",
+    'ArmorDress1': 'Simple Dress Brown',
+    'ArmorDress10': 'Simple Dress Natural',
+    'ArmorDress2': 'Shawl Dress Brown',
+    'ArmorDress3': 'Beaded Dress Brown',
+    'ArmorDress4': 'Simple Dress Blue',
+    'ArmorDress5': 'Shawl Dress Blue',
+    'ArmorDress6': 'Beaded Dress Blue',
+    'ArmorDress7': 'Simple Dress Yellow',
+    'ArmorDress8': 'Shawl Dress Yellow',
+    'ArmorDress9': 'Beaded Dress Yellow',
+    'ArmorHarvester1': 'Harvest Tunic',
+    'ArmorHarvester2': 'Harvest Dress',
+    'ArmorTunic1': 'Simple Tunic Blue',
+    'ArmorTunic10': 'Simple Tunic Natural',
+    'ArmorTunic2': 'Cape Tunic Blue',
+    'ArmorTunic3': 'Beaded Tunic Blue',
+    'ArmorTunic4': 'Simple Tunic Red',
+    'ArmorTunic5': 'Cape Tunic Red',
+    'ArmorTunic6': 'Beaded Tunic Red',
+    'ArmorTunic7': 'Simple Tunic Yellow',
+    'ArmorTunic8': 'Cape Tunic Yellow',
+    'ArmorTunic9': 'Beaded Tunic Yellow',
+    'BakedPoteitr': 'Baked Poteitr',
+    'BarkaBranch': 'Frozen Branch',
+    'CapeOdin': 'Cape of Odin',
+    'CharredCogwheel': 'Charred Cogwheel',
+    'CookedMeat': 'Cooked Boar Meat',
+    'CuredSquirrelHamstring': 'Cured Squirrel Hamstring',
+    'Dragon': 'Moder',
+    'FeastAshlands_Material': 'Ashlands Gourmet Bowl',
+    'FeastBlackforest_Material': 'Black Forest Buffet Platter',
+    'FeastDeepNorth_Material': 'Northern Morning Fare',
+    'FeastMeadows_Material': 'Whole Roasted Meadow Boar',
+    'FeastMistlands_Material': 'Mushrooms Galore á la Mistlands',
+    'FeastMountains_Material': "Hearty Mountain Logger's Stew",
+    'FeastOceans_Material': "Sailor's Bounty",
+    'FeastPlains_Material': 'Plains Pie Picnic',
+    'FeastSwamps_Material': "Swamp Dweller's Delight",
+    'FistBjornClaw': 'Paws of the Bear',
+    'FistBjornUndeadClaw': 'Vilebone Maulclaws',
+    'FistFenrirClaw': 'Flesh Rippers',
+    'FistGold': 'Nord Knucklechains',
+    'FistGoldUncooked': 'Cast Nord Knucklechains',
+    'FistGold_BloodLightning': 'Thunderblood Knucklechains',
+    'FistGold_FrostFire': 'Frostfire Knucklechains',
+    'FreshSeaweed': 'Fresh Seaweed',
+    'GiantBloodSack': 'Blood Clot',
+    'GoblinKing': 'Yagluth',
+    'GrapplingHook': 'Grappling Hook',
+    'GreydwarfEye': 'Greydwarf Eye',
+    'HelmetCelebration': 'Celebratory Cap',
+    'HelmetCrownofValheim': 'Crown of Valheim',
+    'HelmetFishingHat': 'Fishing Hat',
+    'HelmetHat1': 'Blue Tied Headscarf',
+    'HelmetHat10': 'Simple Cap Purple',
+    'HelmetHat2': 'Twisted Headscarf Green',
+    'HelmetHat3': 'Fur Cap Brown',
+    'HelmetHat4': 'Extravagant Cap Green',
+    'HelmetHat5': 'Simple Cap Red',
+    'HelmetHat6': 'Tied Headscarf Yellow',
+    'HelmetHat7': 'Twisted Headscarf Red',
+    'HelmetHat8': 'Fur Cap Grey',
+    'HelmetHat9': 'Extravagant Cap Orange',
+    'HelmetMidsummerCrown': 'Midsummer Crown',
+    'HelmetOdin': 'Hood of Odin',
+    'HelmetPointyHat': 'Pointy Hat',
+    'HelmetStrawHat': 'Straw Hat',
+    'HelmetSweatBand': 'Headband',
+    'HelmetYule': 'Yule Hat',
+    'Hook': 'Hook',
+    'MechanicalSpring': 'Mechanical Spring',
+    'MoldArmorGoldChest': 'Mould Breastplate of the Protector',
+    'MoldArmorGoldHelmet': 'Mould Helmet of the Protector',
+    'MoldArmorGoldLegs': 'Mould Trousers of the Protector',
+    'MoldArmorMageChest': 'Mould Robes of the Caller',
+    'MoldArmorMageHelmet': 'Mould Headdress of the Caller',
+    'MoldArmorMageLegs': 'Mould Trousers of the Caller',
+    'MoldArmorMediumHelmet': 'Mould Hood of the Vanguard',
+    'MoldArmorMediumLegs': 'Mould Trousers of the Vanguard',
+    'MoldArmormediumChest': 'Mould Chestpiece of the Vanguard',
+    'MoldAtgeir': 'Mould Nord Atgeir',
+    'MoldAxe': 'Mould Nord Axe',
+    'MoldAxe2H': 'Mould Nord Greataxe',
+    'MoldBow': 'Mould Nord Bow',
+    'MoldCrossbow': 'Mould Nord Crossbow',
+    'MoldFistweapon': 'Mould Nord Knucklechains',
+    'MoldKnife': 'Mould Nord Dagger',
+    'MoldMace': 'Mould Nord Mace',
+    'MoldMace2H': 'Mould Nord Sledge',
+    'MoldShieldBuckler': 'Mould Nord Buckler',
+    'MoldShieldRound': 'Mould Nord Shield',
+    'MoldShieldTower': 'Mould Nord Greatshield',
+    'MoldSpear': 'Mould Nord Spear',
+    'MoldStaffOrbofAhri': 'Mould Echo Spike',
+    'MoldStafffrostorbs': 'Mould Northern Vengeance',
+    'MoldStaffspiritcaller': 'Mould Spirit Caller',
+    'MoldStaffthunderblood': 'Mould Lightning Strike',
+    'MoldSword': 'Mould Nord Sword',
+    'MoldSword2H': 'Mould Nord Greatsword',
+    'MooseKebab': 'Meat In Bread',
+    'NeckTail': 'Neck Tail',
+    'NeckTailGrilled': 'Grilled Neck Tail',
+    'OatmealLingonberryJam': 'Oatmeal',
+    'OvenPancake': 'Oven Pancake',
+    'OvenPancakeUncooked': 'Oven Pancake Batter',
+    'Pancakes': 'Pancakes',
+    'QueenBee': 'Queen Bee',
+    'RawMeat': 'Boar Meat',
+    'ScorchingMedley': 'Scorching Medley',
+    'Scythe': 'Scythe',
+    'ScytheHandle': 'Scythe Handle',
+    'SeekerAspic': 'Seeker Aspic',
+    'SeekerQueen': 'The Queen',
+    'SerpentScale': 'Serpent Scale',
+    'SparklingShroomshake': 'Sparkling Shroomshake',
+    'SpicyMarmalade': 'Spicy Marmalade',
+    'StaffClusterbomb': 'Staff of Fracturing',
+    'StaffFireball': 'Staff of Embers',
+    'StaffFrostOrbs': 'Northern Vengeance',
+    'StaffFrostOrbsUncooked': 'Cast Northern Vengeance',
+    'StaffGreenRoots': 'Staff of the Wild',
+    'StaffIceShards': 'Staff of Frost',
+    'StaffLightning': 'Dundr',
+    'StaffOrbofAhri': 'Echo Spike',
+    'StaffOrbofAhriUncooked': 'Cast Echo Spike',
+    'StaffRedTroll': 'Trollstav',
+    'StaffShield': 'Staff of Protection',
+    'StaffSkeleton': 'Dead Raiser',
+    'StaffSpiritCaller': 'Spirit Caller',
+    'StaffSpiritCallerUncooked': 'Cast Spirit Caller',
+    'StaffThunderBlood': 'Lightning Strike',
+    'StaffThunderbloodUncooked': 'Cast Lightning Strike',
+    'TankardOdin': 'Mead Horn of Odin',
+    'Unbjorn': 'Vile',
+    'UndeadBjornRibcage': 'Vile Ribcage',
+    'Upgrader0Armor': 'Wooden Protection Idol',
+    'Upgrader0Weapon': 'Wooden Battle Idol',
+    'Upgrader1Armor': 'Bronze Protection Idol',
+    'Upgrader1Weapon': 'Bronze Battle Idol',
+    'Upgrader2Armor': 'Iron Protection Idol',
+    'Upgrader2Weapon': 'Iron Battle Idol',
+    'Upgrader3Armor': 'Silver Protection Idol',
+    'Upgrader3Weapon': 'Silver Battle Idol',
+    'Upgrader4Armor': 'Black Metal Protection Idol',
+    'Upgrader4Weapon': 'Black Metal Battle Idol',
+    'Upgrader5Armor': 'Black Marble Protection Idol',
+    'Upgrader5Weapon': 'Black Marble Battle Idol',
+    'Upgrader6Armor': 'Flametal Protection Idol',
+    'Upgrader6Weapon': 'Flametal Battle Idol',
+    'Upgrader7Armor': 'Bloodgold Protection Idol',
+    'Upgrader7Weapon': 'Bloodgold Battle Idol',
+    'UpgraderGlow': 'Glow Idol',
+    'gd_king': 'The Elder',
 }
 
 
@@ -219,8 +694,11 @@ def entry(prefab: str, alias: str | None, command: str | None = None, desc: str 
     }
     cost = COIN_COSTS.get(prefab)
     if cost is not None:
-        # Stack-aware: charge unit × defaultAmount (matches bridge costFor)
-        e["cost"] = int(cost) * amt
+        # Materials: unit × amount. PackPrice (seeds/crops/arrows/feasts): coinCost is pack.
+        if prefab in PACK_PRICE and amt > 1:
+            e["cost"] = int(cost)
+        else:
+            e["cost"] = int(cost) * amt
     if amt > 1:
         e["amount"] = amt
     if desc:
@@ -230,17 +708,29 @@ def entry(prefab: str, alias: str | None, command: str | None = None, desc: str 
 
 def load_economy_meta(
     path: Path = ECONOMY_CATALOG,
-) -> tuple[dict[str, int], dict[str, int], dict[str, int], dict[str, str], dict[str, str]]:
-    """Map prefab → coinCost, defaultAmount, tier, command, alias from Heim-Heim economy catalog."""
+) -> tuple[
+    dict[str, int],
+    dict[str, int],
+    dict[str, int],
+    dict[str, str],
+    dict[str, str],
+    dict[str, str],
+    dict[str, str],
+    set[str],
+]:
+    """Map prefab → coinCost, defaultAmount, tier, command, alias, category, subcategory, packPrice."""
     if not path.is_file():
         print(f"WARNING: economy catalog missing at {path} — cards will omit 🪙")
-        return {}, {}, {}, {}, {}
+        return {}, {}, {}, {}, {}, {}, {}, set()
     raw = json.loads(path.read_text())
     costs: dict[str, int] = {}
     amounts: dict[str, int] = {}
     tiers: dict[str, int] = {}
     commands: dict[str, str] = {}
     aliases: dict[str, str] = {}
+    categories: dict[str, str] = {}
+    subcategories: dict[str, str] = {}
+    pack_price: set[str] = set()
     rows = raw.get("entries") or list((raw.get("byId") or {}).values())
     for row in rows:
         pid = row.get("id") or row.get("prefab")
@@ -259,7 +749,7 @@ def load_economy_meta(
             pass
         try:
             if row.get("tier") is not None:
-                tiers[pid] = max(0, min(6, int(row["tier"])))
+                tiers[pid] = max(0, min(7, int(row["tier"])))
         except (TypeError, ValueError):
             pass
         cmd = row.get("command")
@@ -268,13 +758,54 @@ def load_economy_meta(
         al = row.get("alias")
         if isinstance(al, str) and al.strip():
             aliases[pid] = al.strip().lstrip("#").lower()
-    return costs, amounts, tiers, commands, aliases
+        cat = row.get("category")
+        if isinstance(cat, str) and cat.strip():
+            categories[pid] = cat.strip().lower()
+        sub = row.get("subcategory")
+        if isinstance(sub, str) and sub.strip():
+            subcategories[pid] = sub.strip()
+        if row.get("packPrice") is True:
+            pack_price.add(pid)
+    return costs, amounts, tiers, commands, aliases, categories, subcategories, pack_price
 
 
 def load_coin_costs(path: Path = ECONOMY_CATALOG) -> dict[str, int]:
     """Map prefab id → coinCost from Heim-Heim economy catalog."""
-    costs, _, _, _, _ = load_economy_meta(path)
+    costs, _, _, _, _, _, _, _ = load_economy_meta(path)
     return costs
+
+GEAR_UNCOOKED_PREFIXES = (
+    "Armor",
+    "Helmet",
+    "Cape",
+    "Staff",
+    "Shield",
+    "Sword",
+    "THSword",
+    "Axe",
+    "Battleaxe",
+    "Mace",
+    "Sledge",
+    "Spear",
+    "Atgeir",
+    "Knife",
+    "Bow",
+    "Crossbow",
+    "Fist",
+)
+GEAR_UNCOOKED_MISC = {
+    "GenericMoldUncooked",
+    "KeysGoldUncooked",
+    "SmallPartsGoldUncooked",
+}
+
+
+def is_gear_uncooked(prefab: str) -> bool:
+    if prefab in GEAR_UNCOOKED_MISC:
+        return True
+    if not prefab.endswith("Uncooked"):
+        return False
+    return prefab.startswith(GEAR_UNCOOKED_PREFIXES)
 
 
 # ---- Item classification ----
@@ -297,6 +828,8 @@ WEAPON_PREFIX = {
     "Bolt": "Arrows & bolts",
     "Shield": "Shields",
     "Staff": "Magic",
+    "Fist": "Fists",
+    "Scythe": "Utility weapons",
     "Tankard": "Utility weapons",
     "Torch": "Utility weapons",
 }
@@ -310,12 +843,18 @@ TIER_ORDER = [
     "T4 · Plains",
     "T5 · Mistlands",
     "T6 · Ashlands",
+    "T7 · Deep North",
     "Special",
     "Other",
 ]
 
 # Armor → unified tier (first substring match wins; Troll before Leather)
 ARMOR_TIER_HINTS = [
+    ("DeepNorth", "T7 · Deep North"),
+    ("DNHeavy", "T7 · Deep North"),
+    ("DNMedium", "T7 · Deep North"),
+    ("DNMage", "T7 · Deep North"),
+    ("HelmetDN", "T7 · Deep North"),
     ("Berserker", "T6 · Ashlands"),
     ("Rags", "T0 · Meadows"),
     ("Troll", "T1 · Black Forest"),
@@ -324,7 +863,6 @@ ARMOR_TIER_HINTS = [
     ("Root", "T2 · Swamp"),
     ("Iron", "T2 · Swamp"),
     ("Fenring", "T3 · Mountain"),
-    ("DeepNorth", "T3 · Mountain"),
     ("Wolf", "T3 · Mountain"),
     # Full Lox set (chest/legs/helmet/cape) stays with Padded on Plains
     ("Lox", "T4 · Plains"),
@@ -346,7 +884,8 @@ CAPE_TIER = {
     "CapeLinen": "T4 · Plains",
     "CapeFeather": "T5 · Mistlands",
     "CapeAsh": "T6 · Ashlands",
-    "CapeDeepNorth": "T3 · Mountain",
+    "CapeDeepNorth": "T7 · Deep North",
+    "CapeDeepNorthMage": "T7 · Deep North",
     "CapeOdin": "T0 · Meadows",
 }
 
@@ -411,8 +950,33 @@ CORE_MATERIAL_PREFABS = {
     "SulfurStone",
 }
 
-# Keyword → tier for weapons / food / potions / materials (checked T6→T0)
+# Keyword → tier for weapons / food / potions / materials (checked T7→T0)
 TIER_KEYWORDS = [
+    (
+        "T7 · Deep North",
+        (
+            "deepnorth",
+            "frostwood",
+            "frostcore",
+            "firconefrost",
+            "frysling",
+            "frostwisp",
+            "frozenking",
+            "elaking",
+            "barka",
+            "helmetdn",
+            "dnheavy",
+            "dnmedium",
+            "dnmage",
+            "bjorn",
+            "moose",
+            "oatflour",
+            "oatmilk",
+            "oatseeds",
+            "poteitr",
+            "kale",
+        ),
+    ),
     (
         "T6 · Ashlands",
         (
@@ -507,8 +1071,6 @@ TIER_KEYWORDS = [
             "hatchling",
             "wolfjerky",
             "wolfmeat",
-            "bjornmeat",
-            "moosemeat",
             "dragonegg",
         ),
     ),
@@ -635,49 +1197,17 @@ FOOD_CROP = {
     "Honey",
     "Dandelion",
     "Thistle",
-    "Entrails",  # sausage craft ingredient (food mat, not misc)
-    "QueensJam",
     "JotunPuffs",
     "Magecap",
     "Fiddleheadfern",
-    "OnionSoup",
-    "CarrotSoup",
-    "DeerStew",
-    "Sausages",
-    "BloodPudding",
-    "Bread",
-    "LoxPie",
-    "FishWraps",
-    "Eyescream",
-    "Salad",
-    "MeatPlatter",
-    "MisthareSupreme",
-    "HoneyGlazedChicken",
-    "MushroomOmelette",
-    "PiquantPie",
-    "RoastedCrustPie",
-    "SpicyMarmalade",
-    "CookedEgg",
-    "BoarJerky",
-    "WolfJerky",
-    "BlackSoup",
-    "SerpentStew",
-    # Deep North / mis-tagged Misc foods
     "Oat",
     "OatFlour",
     "OatMilk",
     "Kale",
-    "KaleChips",
     "Poteitr",
-    "GreydwarfSurprise",
-    "MagicallyStuffedShroom",
-    "MarinatedGreens",
-    "PulledBear",
-    "Lingondricka",
-    "ShocklateSmoothie",
-    "MinceMeatSauce",
-    "VikingCupcake",
-    "Larva",
+    "Vineberry",
+    "Lingonberry",
+    "RoyalJelly",
 }
 
 # Misc-catalog drops that are Mountain/crafting materials (not Utility & oddities)
@@ -730,10 +1260,123 @@ FORCE_MATERIAL_PREFABS = {
 }
 
 
+def is_nord_weapon(prefab: str) -> bool:
+    """Wiki Nord SoftRefs (*Gold finished) — Deep North weapons, not cosmetics."""
+    if prefab.endswith("Uncooked") or prefab.startswith("Mold"):
+        return False
+    if prefab.endswith(("_FrostFire", "_BloodLightning")) and "Gold" in prefab:
+        return True
+    return prefab in {
+        "SwordGold",
+        "THSwordGold",
+        "AxeGold",
+        "BattleaxeGold",
+        "MaceGold",
+        "SledgeGold",
+        "SpearGold",
+        "AtgeirGold",
+        "KnifeGold",
+        "BowGold",
+        "CrossbowGold",
+        "FistGold",
+        "ShieldGold",
+        "ShieldGoldBuckler",
+        "ShieldGoldTower",
+    }
+
+
+def is_cosmetic_gear(prefab: str) -> bool:
+    # Catalog SoT when present
+    eco = ECONOMY_CATEGORIES.get(prefab)
+    if eco in ("weapons", "armor", "materials") and (
+        prefab.startswith("Mold") or prefab.endswith("Uncooked")
+    ):
+        return False
+    if eco == "weapons" and is_nord_weapon(prefab):
+        return False
+    if eco == "cosmetics":
+        return True
+    if ECONOMY_SUBCATEGORIES.get(prefab) == "cosmetic":
+        return True
+    # Finished Nord SoftRefs are weapons (wiki Deep North)
+    if is_nord_weapon(prefab):
+        return False
+    # SoftRef Mold* / gear Uncooked are armor|weapons — not Cosmetics
+    if prefab.startswith("Mold") or (
+        prefab.endswith("Uncooked")
+        and prefab.startswith(
+            (
+                "Sword",
+                "THSword",
+                "Axe",
+                "Battleaxe",
+                "Mace",
+                "Sledge",
+                "Spear",
+                "Atgeir",
+                "Knife",
+                "Bow",
+                "Crossbow",
+                "Shield",
+                "Fist",
+                "Staff",
+                "Armor",
+                "Helmet",
+                "Cape",
+            )
+        )
+    ):
+        return False
+    if prefab.endswith("Uncooked"):
+        return False
+    return bool(
+        re.search(
+            r"(?i)(Dress|Tunic|Harvester|HelmetHat|HelmetCelebration|HelmetYule|"
+            r"HelmetOdin|HelmetPointy|HelmetStraw|HelmetSweat|HelmetMidsummer|"
+            r"HelmetFishing|CapeOdin|ArmorGold|TankardOdin)",
+            prefab,
+        )
+    )
+
+
+def cosmetics_section(prefab: str) -> str:
+    """Single Cosmetics chip — Hildir/Odin vanity (no Cosmetic weapons)."""
+    return "Cosmetic armor"
+
+
+_CATALOG_WEAPON_SUB = {
+    "swords": "Swords",
+    "axes": "Axes",
+    "maces": "Maces & clubs",
+    "spears": "Spears",
+    "knives": "Knives",
+    "bows": "Bows",
+    "arrows": "Arrows & bolts",
+    "shields": "Shields",
+    "magic": "Magic",
+    "fists": "Fists",
+    "utility": "Utility weapons",
+    "other": "Other weapons",
+}
+
+
 def weapon_section(prefab: str) -> str:
+    eco_sub = ECONOMY_SUBCATEGORIES.get(prefab)
+    if eco_sub in _CATALOG_WEAPON_SUB:
+        return _CATALOG_WEAPON_SUB[eco_sub]
+    if prefab.startswith("MoldFist") or prefab.startswith("Fist"):
+        return "Fists"
     for prefix, section in WEAPON_PREFIX.items():
         if prefab.startswith(prefix):
             return section
+    # MoldSword / MoldMace / … → strip Mold then rematch
+    if prefab.startswith("Mold") and len(prefab) > 4:
+        stem = prefab[4:]
+        if stem.startswith("Fist"):
+            return "Fists"
+        for prefix, section in WEAPON_PREFIX.items():
+            if stem.startswith(prefix):
+                return section
     if prefab.startswith("TurretBolt") or prefab.startswith("Turret"):
         return "Arrows & bolts"
     if "Bomb" in prefab or "Grenade" in prefab:
@@ -749,8 +1392,14 @@ def armor_section(prefab: str) -> str:
         return progression_tier(prefab)
     if prefab.startswith("Trinket"):
         return progression_tier(prefab)
-    if "DNHeavy" in prefab or "DNMedium" in prefab:
-        return "T3 · Mountain"
+    if (
+        "DNHeavy" in prefab
+        or "DNMedium" in prefab
+        or "DNMage" in prefab
+        or "HelmetDN" in prefab
+        or "DeepNorth" in prefab
+    ):
+        return "T7 · Deep North"
     for key, section in ARMOR_TIER_HINTS:
         if key.lower() in prefab.lower():
             return section
@@ -765,6 +1414,9 @@ def progression_tier(prefab: str) -> str:
     # Capes / odd armor-adjacent pieces already handled for armor tab
     for tier, keys in TIER_KEYWORDS:
         for key in keys:
+            # Unbjorn (Plains Vile) must not match Deep North "bjorn"
+            if key == "bjorn" and "unbjorn" in p:
+                continue
             if key in p:
                 return tier
     if prefab.startswith(("Mead", "MeadBase", "BarleyWine", "BarleyWineBase")):
@@ -803,10 +1455,21 @@ def is_feast_item(prefab: str) -> bool:
 
 
 def food_section(prefab: str) -> str:
+    # Prefer Heim-Heim catalog subcategory (builder SoT)
+    eco = ECONOMY_SUBCATEGORIES.get(prefab)
+    if eco in {
+        "Feasts",
+        "Raw ingredients",
+        "Uncooked",
+        "Cooked meals",
+        "Prepared dishes",
+        "Crops & forage",
+    }:
+        return eco
     if is_feast_item(prefab):
         return "Feasts"
-    # Uncooked doughs / pies before "pie" / prepared heuristics
-    if prefab.endswith("Uncooked"):
+    # Uncooked doughs / pies before "pie" / prepared heuristics — never gear molds
+    if prefab.endswith("Uncooked") and not is_gear_uncooked(prefab):
         return "Uncooked"
     if FOOD_COOKED.search(prefab) or prefab.startswith(("Cooked", "Smoked", "Grilled")):
         return "Cooked meals"
@@ -839,11 +1502,15 @@ def food_section(prefab: str) -> str:
             "Pudding",
             "Bread",
             "Sausages",
+            "Jam",
+            "Pulled",
+            "Sauce",
+            "Porridge",
         )
     ):
         return "Prepared dishes"
     # Crafting guts / thistle sit with raw cook ingredients, not crop bushes
-    if prefab in {"Entrails", "Thistle"}:
+    if prefab in {"Entrails", "Thistle", "Bloodbag", "Ooze", "Larva"}:
         return "Raw ingredients"
     if prefab in FOOD_CROP or any(
         prefab.startswith(x)
@@ -894,14 +1561,24 @@ def is_food_item(prefab: str) -> bool:
         return False
     if is_potion_item(prefab):
         return False
+    if is_gear_uncooked(prefab):
+        return False
     if prefab.startswith(("Staff", "Armor", "Helmet", "Cape", "Trophy", "Pickable")):
+        return False
+    # Economy catalog already classified
+    eco_cat = ECONOMY_CATEGORIES.get(prefab)
+    if eco_cat == "food":
+        return True
+    if eco_cat in ("weapons", "armor", "cosmetics", "materials", "potions", "misc", "curses"):
         return False
     p = prefab.lower()
     if prefab in FOOD_CROP:
         return True
     if FOOD_COOKED.search(prefab) or (FOOD_RAW.search(prefab) and prefab not in NOT_FOOD_ITEMS):
         return True
-    if prefab.endswith(("Meat", "Uncooked", "Skewer", "Jerky", "Blubber")):
+    if prefab.endswith(("Meat", "Skewer", "Jerky", "Blubber")):
+        return True
+    if prefab.endswith("Uncooked") and not is_gear_uncooked(prefab):
         return True
     if "meat" in p and not prefab.startswith("Trophy"):
         return True
@@ -948,34 +1625,13 @@ def is_food_item(prefab: str) -> bool:
 
 
 def is_accessory_item(prefab: str) -> bool:
-    """Keys, belts, wishbone, demister, etc."""
-    if prefab.startswith("Mold"):
-        return False
-    if prefab in {
-        "Wishbone",
-        "BarberKit",
-        "BeltStrength",
-        "Demister",
-        "IceSkates",
-        "CryptKey",
-        "DvergrKey",
-        "DvergrKeyFragment",
-        "BloodGoldKey",
-        "KeysGoldUncooked",
-        "GoblinTotem",
-        "CrownJewel",
-        "Wisp",
-        "DragonTear",
-        "HardAntler",
-    }:
-        return True
-    if prefab.startswith("HildirKey"):
-        return True
-    if prefab.endswith("Key") or "Key_" in prefab:
-        return True
-    if prefab.startswith("Trinket"):
-        return True
-    return False
+    """Megingjord / Wisplight only (Wishbone → Materials Boss & rare drops)."""
+    return prefab in {"BeltStrength", "Demister"}
+
+
+def is_trinket_item(prefab: str) -> bool:
+    """Wiki Trinkets page SoftRefs — separate from Accessories."""
+    return prefab.startswith("Trinket")
 
 
 def is_weapon_like(prefab: str) -> bool:
@@ -1088,9 +1744,50 @@ def looks_like_material(prefab: str) -> bool:
 
 
 def material_section(prefab: str) -> str:
+    eco_sub = ECONOMY_SUBCATEGORIES.get(prefab)
+    if eco_sub == "Seeds":
+        return "Seeds"
+    if eco_sub == "Boss & rare drops":
+        return "Boss & rare drops"
+    if prefab in {
+        "DragonEgg",
+        "Wishbone",
+        "CryptKey",
+        "AncientSeed",
+        "WitheredBone",
+        "GoblinTotem",
+        "DragonTear",
+        "YagluthDrop",
+        "QueenDrop",
+        "FaderDrop",
+        "Thunderstone",
+        "BloodGoldKey",
+        "DvergrKey",
+        "Sealbreaker",
+    } or prefab.startswith("HildirKey"):
+        return "Boss & rare drops"
     if prefab == "DragonEgg":
         return "Boss & rare drops"
     p = prefab.lower()
+    if prefab == "AncientSeed":
+        pass  # Elder key — not plantable Seeds
+    elif prefab in {
+        "PineCone",
+        "FirCone",
+        "FirConeFrost",
+        "Acorn",
+        "BeechSeeds",
+        "BirchSeeds",
+        "CarrotSeeds",
+        "TurnipSeeds",
+        "OnionSeeds",
+        "KaleSeeds",
+        "OatSeeds",
+        "PoteitrSeeds",
+    } or (prefab.endswith("Seeds") or prefab.endswith("Cone")):
+        return "Seeds"
+    if prefab == "Pukeberries":
+        return "Crafting parts"
     # Mountain wolf parts — crafting mats, not mounts
     if prefab in {"WolfClaw", "WolfFang", "WolfHairBundle"}:
         return "Crafting parts"
@@ -1209,40 +1906,55 @@ def material_section(prefab: str) -> str:
 
 
 def should_skip_item(prefab: str) -> bool:
-    """Drop cosmetics, world pickables, projectiles — not useful Twitch targets."""
+    """Drop world pickables / projectiles — not useful Twitch targets."""
     if prefab.startswith(("Beard", "Hair", "Player", "Pickable")):
         return True
     if "projectile" in prefab.lower():
         return True
     if "ragdoll" in prefab.lower() or prefab.endswith("Corpse"):
         return True
-    if prefab.startswith("MoldArmor") or prefab.startswith("MoldHelmet"):
-        return True
     return False
 
 
 def misc_section(prefab: str) -> str:
     p = prefab.lower()
-    if prefab.startswith("Mold") or "mold" in p:
-        return "Crafting molds"
-    if "treasure" in p or "chest" in p or "coffer" in p or prefab.startswith("loot_"):
-        return "Chests & treasure"
-    if "firework" in p or "bell" in p or "sparkler" in p:
-        return "Fun & fireworks"
-    if is_accessory_item(prefab):
+    if (
+        "treasure" in p
+        or "chest" in p
+        or "coffer" in p
+        or prefab.startswith("loot_")
+        or prefab
+        in {
+            "Amber",
+            "AmberPearl",
+            "AncientCoin",
+            "Coins",
+            "Gold",
+            "Ruby",
+            "SilverNecklace",
+            "AncientGemstoneBlack",
+            "AncientGemstoneGreen",
+            "AncientGemstoneOrange",
+            "AncientGemstonePurple",
+            "GemstoneBlue",
+            "GemstoneGreen",
+            "GemstoneRed",
+        }
+    ):
+        return "Treasure"
+    if is_accessory_item(prefab) or is_trinket_item(prefab) or prefab.startswith("Saddle") or prefab == "AsksvinEgg":
         return "Accessories"
-    if "saddle" in p or ("asksvin" in p and "egg" in p) or prefab.endswith("Egg"):
-        return "Mounts & eggs"
-    if any(x in p for x in ("torch", "lantern", "candle", "firepit", "campfire")):
-        return "Light sources"
+    if prefab.startswith("FishingBait"):
+        return "Fishing bait"
     if any(
-        x in p for x in ("hammer", "hoe", "cultivator", "pickaxe", "fishing", "harpoon", "shovel")
-    ) or prefab in {"Shovel", "GrapplingHook", "Hook"}:
-        return "Tools"
+        x in p
+        for x in ("torch", "lantern", "candle", "firework", "sparkler", "firepit", "campfire")
+    ):
+        return "Light sources"
+    if prefab in {"Shovel", "GrapplingHook", "Hook", "IceShoes", "IceSkates"}:
+        return "Utility & oddities"
     if "trophy" in p:
         return "Trophies"
-    if any(x in p for x in ("seed", "cone", "acorn")) or prefab.endswith("Seeds"):
-        return "Utility & oddities"
     return "Utility & oddities"
 
 
@@ -1251,28 +1963,79 @@ def classify_item(it: dict) -> tuple[str, str]:
     prefab = it["prefab"]
     cat = it.get("category") or "Misc"
 
+    # Heim-Heim catalog category is SoT when present (stops Uncooked-gear → Food re-slop)
+    eco = ECONOMY_CATEGORIES.get(prefab)
+    if eco == "potions":
+        return "potions", potion_section(prefab)
+    if eco == "food":
+        return "food", food_section(prefab)
+    if eco == "cosmetics":
+        return "cosmetics", cosmetics_section(prefab)
+    if eco == "weapons":
+        return "weapons", weapon_section(prefab)
+    if eco == "armor":
+        return "armor", armor_section(prefab)
+    if eco == "materials":
+        return "materials", material_section(prefab)
+    if eco == "curses":
+        sub = ECONOMY_SUBCATEGORIES.get(prefab) or "Good"
+        return "curses", sub if sub in ("Good", "Bad") else "Good"
+    if eco == "misc":
+        sub = ECONOMY_SUBCATEGORIES.get(prefab) or misc_section(prefab)
+        return "misc", sub
+
+    # SoftRef Mold* / *GoldUncooked: trust economy catalog (armor|weapons|materials)
+    if prefab.startswith("Mold") or (
+        prefab.endswith("Uncooked")
+        and not ECONOMY_CATEGORIES.get(prefab) == "food"
+    ):
+        eco = ECONOMY_CATEGORIES.get(prefab)
+        if eco == "armor":
+            return "armor", armor_section(prefab)
+        if eco == "weapons":
+            return "weapons", weapon_section(prefab)
+        if eco == "materials":
+            return "materials", material_section(prefab)
+
+    if is_cosmetic_gear(prefab):
+        return "cosmetics", cosmetics_section(prefab)
+
     if is_potion_item(prefab):
         return "potions", potion_section(prefab)
-    if is_tool_item(prefab):
-        return "misc", "Tools"
-    if is_weapon_like(prefab) or prefab.startswith(("Tankard", "Torch")):
-        if prefab.startswith("Torch") or prefab.startswith("Tankard"):
+    if prefab.startswith("FishingBait"):
+        return "misc", "Fishing bait"
+
+    if prefab.startswith("Upgrader"):
+        return "materials", "Crafting parts"
+    if prefab == "ScytheHandle":
+        return "materials", "Crafting parts"
+    if is_tool_item(prefab) or prefab == "Scythe":
+        # Hammer/Hoe/Pickaxe/Scythe live under Weapons — no Misc Tools chip
+        return "weapons", "Utility weapons"
+    if prefab.startswith("Torch") or prefab.startswith(("Lantern", "FireworksRocket")) or prefab in (
+        "CandleWick",
+        "Sparkler",
+    ):
+        return "misc", "Light sources"
+    if is_weapon_like(prefab) or prefab.startswith("Tankard"):
+        if prefab.startswith("Tankard") and prefab != "TankardOdin":
             return "weapons", "Utility weapons"
+        if prefab == "TankardOdin":
+            return "cosmetics", "Cosmetic armor"
         return "weapons", weapon_section(prefab)
 
-    # Trinkets / armor wearables before material keyword rescue (TrinketBronze ≠ metal bar)
+    # Wiki Accessories + Trinkets + mounts (unified Accessories chip)
+    if is_accessory_item(prefab) or is_trinket_item(prefab) or prefab.startswith("Saddle") or prefab == "AsksvinEgg":
+        return "misc", "Accessories"
+
+    # Armor wearables before material keyword rescue
     if (
-        prefab.startswith("Trinket")
-        or prefab.startswith("SP_Armor")
+        prefab.startswith("SP_Armor")
         or prefab.startswith("Armor")
         or prefab.startswith("Helmet")
         or prefab.startswith("Cape")
     ):
         return "armor", armor_section(prefab)
-
-    # Accessories (CryptKey / skeleton-dungeon keys, wishbone, megingjord…)
-    if is_accessory_item(prefab):
-        return "misc", "Accessories"
 
     # Moder nest egg — Mountain rare summon mat (never Food / Misc junk)
     if prefab == "DragonEgg":
@@ -1297,7 +2060,7 @@ def classify_item(it: dict) -> tuple[str, str]:
     if cat == "Armor":
         return "armor", armor_section(prefab)
     if cat == "Valuables":
-        return "materials", "Valuables"
+        return "misc", "Treasure"
     if prefab.startswith(("THSword", "Dyrnwyn")):
         return "weapons", "Swords"
     if prefab.startswith("Trophy"):
@@ -1391,6 +2154,7 @@ def build_store(data: dict) -> dict:
         "mobs": [],
         "weapons": [],
         "armor": [],
+        "cosmetics": [],
         "food": [],
         "potions": [],
         "curses": [
@@ -1497,23 +2261,24 @@ def build_store(data: dict) -> dict:
         tab, section = classify_item(it)
         buckets[tab][section].append(it)
 
-    weapon_families = [
-        "Swords",
-        "Axes",
-        "Maces & clubs",
-        "Spears",
-        "Knives",
-        "Bows",
-        "Arrows & bolts",
-        "Shields",
-        "Magic",
-        "Throwables",
-        "Utility weapons",
-        "Other weapons",
-    ]
     section_order = {
-        "weapons": weapon_families,
+        "weapons": [
+            "Swords",
+            "Axes",
+            "Maces & clubs",
+            "Spears",
+            "Knives",
+            "Bows",
+            "Arrows & bolts",
+            "Shields",
+            "Magic",
+            "Fists",
+            "Throwables",
+            "Utility weapons",
+            "Other weapons",
+        ],
         "armor": list(TIER_ORDER),
+        "cosmetics": ["Cosmetic armor"],
         "food": [
             "Feasts",
             "Raw ingredients",
@@ -1534,18 +2299,15 @@ def build_store(data: dict) -> dict:
             "Stone & crystal",
             "Metals",
             "Hides & scales",
+            "Seeds",
             "Boss & rare drops",
-            "Valuables",
             "Crafting parts",
         ],
         "misc": [
-            "Tools",
             "Light sources",
-            "Mounts & eggs",
             "Accessories",
-            "Fun & fireworks",
-            "Chests & treasure",
-            "Crafting molds",
+            "Fishing bait",
+            "Treasure",
             "Trophies",
             "Utility & oddities",
         ],
@@ -1556,12 +2318,13 @@ def build_store(data: dict) -> dict:
 
     for tab, order in section_order.items():
         help_text = {
-            "weapons": "Gold row = tiers (T0–T6). Second row = weapon family. Catalog starts with tier sets.",
-            "armor": "Unified tiers — each T# holds the full armor sets for that step.",
+            "weapons": "Gold row = tiers (T0–T7). Second row = weapon family. Catalog starts with tier sets.",
+            "armor": "Unified tiers (T0–T7) — each T# holds the full armor sets for that step.",
+            "cosmetics": "Hildir dresses/tunics/hats, Odin gear — vanity only. Single Cosmetic armor chip.",
             "food": "Gold row = tiers. Second row = feasts / raw / cooked / prepared / crops. Feasts are type-only (not under tiers).",
             "potions": "Gold row = tiers. Second row = meads / bases / wines. Catalog starts with tiers.",
             "materials": "Gold row = tiers. Second row = wood / metals / etc. Catalog starts with tiers.",
-            "misc": "Tools, lights, mounts, fireworks, chests — streamer-useful leftovers.",
+            "misc": "Lights (+fireworks), Accessories (+trinkets/mounts), Treasure (chests+valuables), bait — no Tools / molds chips.",
         }[tab]
         store[tab].append({"type": "help", "text": help_text})
 
@@ -1760,12 +2523,21 @@ def main() -> None:
     args = ap.parse_args()
 
     global COIN_COSTS, DEFAULT_AMOUNTS, ECONOMY_TIERS, ECONOMY_COMMANDS, ECONOMY_ALIASES
-    COIN_COSTS, DEFAULT_AMOUNTS, ECONOMY_TIERS, ECONOMY_COMMANDS, ECONOMY_ALIASES = (
-        load_economy_meta()
-    )
+    global ECONOMY_CATEGORIES, ECONOMY_SUBCATEGORIES, PACK_PRICE
+    (
+        COIN_COSTS,
+        DEFAULT_AMOUNTS,
+        ECONOMY_TIERS,
+        ECONOMY_COMMANDS,
+        ECONOMY_ALIASES,
+        ECONOMY_CATEGORIES,
+        ECONOMY_SUBCATEGORIES,
+        PACK_PRICE,
+    ) = load_economy_meta()
     print(
         f"Loaded {len(COIN_COSTS)} coin costs, {len(DEFAULT_AMOUNTS)} defaultAmounts, "
-        f"{len(ECONOMY_TIERS)} tiers, {len(ECONOMY_COMMANDS)} commands from {ECONOMY_CATALOG}"
+        f"{len(ECONOMY_TIERS)} tiers, {len(ECONOMY_COMMANDS)} commands, "
+        f"{len(ECONOMY_CATEGORIES)} cats from {ECONOMY_CATALOG}"
     )
 
     data = json.loads(CATALOG.read_text())
